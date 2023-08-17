@@ -8,7 +8,7 @@
 		<title>AiOP 2023 DRESS</title>
 		<!-- meta data -->
 		<meta charset="UTF-8">
-		<meta name="description" content="Art in Odd Places 2022: Story">
+		<meta name="description" content="Art in Odd Places 2023: Dress">
 		<meta name="keywords" content="AiOP, Festival, Performance, New York City">
 		<meta name="author" content="Laurie Waxman">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">

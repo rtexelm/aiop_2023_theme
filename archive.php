@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package WordPress
- * @subpackage AiOP_2022
+ * @subpackage AiOP_2023
  * @copyright  AiOP, Laurie Waxman
  * @since 1.0.0
  * @version 1.0.0

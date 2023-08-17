@@ -21,7 +21,7 @@ get_header();
 			</section>
 			<section id="about">
 				<div class="about">
-					<p class="p1">Curated by Schmee Schmoo, <span class="italic">Art in Odd Places 2022: STORY</span> features visual and performance artists on 14th Street from Avenue C to the Hudson River.</p>
+					<p class="p1">Curated by Gretchen Vitamas, <span class="italic">Art in Odd Places 2023: Dress</span> features visual and performance artists on 14th Street from Avenue C to the Hudson River.</p>
 					<a class="button primary" href="<?php bloginfo('template_url'); ?>/about">Read more</a>
 				</div>
 			</section>
