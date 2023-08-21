@@ -55,7 +55,7 @@ get_header();
 			$project_schedule		= get_field('project_schedule', $thisID);
 			$project_location		= get_field('project_location', $thisID);
 			$artist_1_bio			= get_field('artist_1_bio', $thisID);
-			$artist_1_link			= get_field('artist_1_weblink', $thisID);
+			$artist_1_link			= get_field('artist_weblink', $thisID);
 			$artist_2_bio			= get_field('artist_2_bio', $thisID);
 			$artist_2_link			= get_field('artist_2_weblink', $thisID);
 			$artist_3_bio			= get_field('artist_3_bio', $thisID);
