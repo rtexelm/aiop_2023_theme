@@ -47,9 +47,9 @@ get_header();
     <?php if (function_exists('get_field')): ?>
 		    <?php 
 			
-			$first_name				= get_field('first_name', $thisID);
-			$last_name 				= get_field('last_name', $thisID);
 			$is_group				= get_field('is_group', $thisID);
+			$first_name				 = get_field('first_name', $thisID);
+			$last_name 				= get_field('last_name', $thisID);
 			$additional_names 		= get_field('additional_names', $thisID);
 			$project_title			= get_field('project_title', $thisID);
 			$project_description	= get_field('project_description', $thisID);
