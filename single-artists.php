@@ -50,6 +50,7 @@ get_header();
 			$is_group				= get_field('is_group', $thisID);
 			$first_name				 = get_field('first_name', $thisID);
 			$last_name 				= get_field('last_name', $thisID);
+			$group_name 			= get_field('group_name', $thisID);
 			$group_artists 			= get_field('group_artists', $thisID);
 			$project_title			= get_field('project_title', $thisID);
 			$project_description	= get_field('project_description', $thisID);
