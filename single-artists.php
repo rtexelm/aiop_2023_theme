@@ -56,7 +56,7 @@ get_header();
 			$project_description	= get_field('project_description', $thisID);
 			$project_schedule		= get_field('project_schedule', $thisID);
 			$project_location		= get_field('project_location', $thisID);
-			$artist_1_bio			= get_field('artist_1_bio', $thisID);
+			$artist_1_bio			= get_field('artist_bio', $thisID);
 			$artist_1_link			= get_field('artist_weblink', $thisID);
 			$artist_2_bio			= get_field('artist_2_bio', $thisID);
 			$artist_2_link			= get_field('artist_2_weblink', $thisID);
@@ -117,8 +117,8 @@ get_header();
 					<section class="bios">
 						<?php 
 							
-							if($artist_1_bio){
-								echo "<p>" . $artist_1_bio . "</p>";
+							if($artist_bio){
+								echo "<p>" . $artist_bio . "</p>";
 							}
 							if($artist_1_link){
 								echo "<a target='blank' class='test' href='" . esc_url($artist_1_link['url']) . "'>" . esc_attr( $artist_1_link['title'] ) . "</a>";
