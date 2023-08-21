@@ -50,7 +50,7 @@ get_header();
 			$is_group				= get_field('is_group', $thisID);
 			$first_name				 = get_field('first_name', $thisID);
 			$last_name 				= get_field('last_name', $thisID);
-			$additional_names 		= get_field('additional_names', $thisID);
+			$group_artists 			= get_field('group_artists', $thisID);
 			$project_title			= get_field('project_title', $thisID);
 			$project_description	= get_field('project_description', $thisID);
 			$project_schedule		= get_field('project_schedule', $thisID);
@@ -88,11 +88,11 @@ get_header();
 				<div class="artist-textures">
 					<div id="left-page"></div><div id="right-page"></div>
 				</div>
-			    <h1 class="hidden"><?php echo $first_name . " " . $last_name . " " . $additional_names ?></h1>
+			    <h1 class="hidden"><?php echo $first_name . " " . $last_name . " " . $group_artists ?></h1>
 			   
 			    <section class="left">
 			    	<!-- <p class="chapter">No. 12</p> -->
-					<h2 class="h1 project-artists"><?php echo $first_name . " " . $last_name . " " . $additional_names ?></h2>
+					<h2 class="h1 project-artists"><?php echo $first_name . " " . $last_name . " " . $group_artists ?></h2>
 					<h3 class="h2 project-title"><?php echo $project_title ?></h3>
 					<div class="date">
 				    	<h5>DATE & TIME</h5>
