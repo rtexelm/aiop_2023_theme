@@ -117,8 +117,8 @@ get_header();
 					<section class="bios">
 						<?php 
 							
-							if($artist_bio){
-								echo "<p>" . $artist_bio . "</p>";
+							if($artist_1_bio){
+								echo "<p>" . $artist_1_bio . "</p>";
 							}
 							if($artist_1_link){
 								echo "<a target='blank' class='test' href='" . esc_url($artist_1_link['url']) . "'>" . esc_attr( $artist_1_link['title'] ) . "</a>";
