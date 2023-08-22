@@ -20,7 +20,7 @@ get_header();
 
    	$artistsArgs = array(
 	    'post_type' => 'artists',
-	    'meta_key' => 'last_name',
+	    'meta_key' => 'group_name',
 		'orderby' => 'meta_value',
 	    'order'	=> 'ASC',
 	    'posts_per_page' => 100
@@ -44,7 +44,7 @@ get_header();
 				    <?php if (function_exists('get_field')): ?>
 					    <?php 
 						
-						$first_name			= get_field('first_name');
+						$first_name			 = get_field('first_name');
 						$last_name 			= get_field('last_name');
 						$additional_names 	= get_field('additional_names');
 						$project_title		= get_field('project_title');
