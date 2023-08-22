@@ -105,11 +105,11 @@ get_header();
 					<h3 class="h2 project-title"><?php echo $project_title ?></h3>
 					<div class="date">
 				    	<h5>DATE & TIME</h5>
-						<p class="p1"><?php echo $project_schedule ?></p>
+						<p class="p1"><?php echo $friday_start ?></p>
 					</div>
 					<div class="location">
 						<h5>LOCATION</h5>
-						<p class="p1"><?php echo $project_location ?></p>
+						<p class="p1"><?php echo $friday_location ?></p>
 					</div>
 				</section>
 				<section class="right">
