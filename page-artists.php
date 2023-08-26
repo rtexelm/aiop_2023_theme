@@ -27,7 +27,7 @@ get_header();
 	);
 
 	$artistQuery = new WP_Query($artistsArgs);
-
+	
 	$last_letter = ' ';
 
 ?>
