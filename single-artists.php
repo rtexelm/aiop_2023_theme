@@ -47,22 +47,32 @@ get_header();
     <?php if (function_exists('get_field')): ?>
 		    <?php 
 			
-			$first_name				= get_field('first_name', $thisID);
+			$is_group				= get_field('is_group', $thisID);
+			$first_name				 = get_field('first_name', $thisID);
 			$last_name 				= get_field('last_name', $thisID);
-			$additional_names 		= get_field('additional_names', $thisID);
-			$project_title			= get_field('project_title', $thisID);
-			$project_description	= get_field('project_description', $thisID);
-			$project_schedule		= get_field('project_schedule', $thisID);
-			$project_location		= get_field('project_location', $thisID);
-			$artist_1_bio			= get_field('artist_1_bio', $thisID);
-			$artist_1_link			= get_field('artist_1_weblink', $thisID);
+			$group_name 			= get_field('group_name', $thisID);
+			$group_artists 			= get_field('group_artists', $thisID);
+			$artist_1_bio			= get_field('artist_bio', $thisID);
+			$artist_1_link			= get_field('artist_weblink', $thisID);
 			$artist_2_bio			= get_field('artist_2_bio', $thisID);
 			$artist_2_link			= get_field('artist_2_weblink', $thisID);
 			$artist_3_bio			= get_field('artist_3_bio', $thisID);
 			$artist_3_link			= get_field('artist_3_weblink', $thisID);
-			$artist_3_link			= get_field('artist_3_weblink', $thisID);
+			$project_title			= get_field('project_title', $thisID);
+			$project_description	= get_field('project_description', $thisID);
+			$project_schedule		= get_field('project_schedule', $thisID);
+			$project_location		= get_field('project_location', $thisID);
 			$project_image			= get_field('project_image', $thisID);
-			$project_link			= get_field('project_link', $thisID);
+			$project_link			= get_field('project_website', $thisID);
+			$friday_start			= get_field('friday_start', $thisID);
+			$friday_end				= get_field('friday_end', $thisID);
+			$friday_location		= get_field('friday_location', $thisID);
+			$saturday_start			= get_field('saturday_start', $thisID);
+			$saturday_end			= get_field('saturday_end', $thisID);
+			$saturday_location		= get_field('saturday_location', $thisID);
+			$sunday_start			= get_field('sunday_start', $thisID);
+			$sunday_end				= get_field('sunday_end', $thisID);
+			$sunday_location		= get_field('sunday_location', $thisID);
 			$digital_true			= get_field('digital_true', $thisID);
 			if ($digital_true) {
 				$digital_link		= get_field('digital_link', $thisID);
@@ -87,19 +97,19 @@ get_header();
 				<div class="artist-textures">
 					<div id="left-page"></div><div id="right-page"></div>
 				</div>
-			    <h1 class="hidden"><?php echo $first_name . " " . $last_name . " " . $additional_names ?></h1>
+			    <h1 class="hidden"><?php echo $first_name . " " . $last_name . " " . $group_artists ?></h1>
 			   
 			    <section class="left">
 			    	<!-- <p class="chapter">No. 12</p> -->
-					<h2 class="h1 project-artists"><?php echo $first_name . " " . $last_name . " " . $additional_names ?></h2>
+					<h2 class="h1 project-artists"><?php echo $first_name . " " . $last_name . " " . $group_artists ?></h2>
 					<h3 class="h2 project-title"><?php echo $project_title ?></h3>
 					<div class="date">
 				    	<h5>DATE & TIME</h5>
-						<p class="p1"><?php echo $project_schedule ?></p>
+						<p class="p1"><?php echo $friday_start ?></p>
 					</div>
 					<div class="location">
 						<h5>LOCATION</h5>
-						<p class="p1"><?php echo $project_location ?></p>
+						<p class="p1"><?php echo $friday_location ?></p>
 					</div>
 				</section>
 				<section class="right">

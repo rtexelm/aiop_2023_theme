@@ -38,7 +38,7 @@ get_header();
 					<span class="p2"><?php the_field('about_cs_highlight'); ?></span>
 					<?php the_field('about_cs_full'); ?>
 				</p>
-				<p class="p2r">—Jessica Elaine Blinkhorn, Curator</p>
+				<p class="p2r">—The curator, Curator</p>
 		    </section>
 		    <img src="<?php bloginfo('template_url'); ?>/assets/about-festival-buffer-00.png" alt="" class="image-buffer buffer">	
 		    <section class="festival">
