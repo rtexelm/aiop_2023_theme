@@ -20,18 +20,18 @@ get_header();
 
    	$artistsArgs = array(
 	    'post_type' => 'artists',
-	    'meta_query' => array(
-			'relation'	=> 'AND',
+		'meta_query' => array(
+			'relation' => 'OR',
 			array(
-				'key'	=> 'last_name',
-				'compare'	=> 'EXISTS',
+				'key'     => 'last_name',
+				'compare' => 'EXISTS',
 			),
 			array(
-				'key'	=> 'group_name',
-				'compare'	=> 'EXISTS',
+				'key'     => 'group_name',
+				'compare' => 'EXISTS',
 			),
 		),
-		'orderby' => 'meta_value',
+		'orderby' => 'title',
 	    'order'	=> 'ASC',
 	    'posts_per_page' => 100
 	);
