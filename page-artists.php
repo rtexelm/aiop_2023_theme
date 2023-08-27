@@ -18,9 +18,11 @@ get_header();
 <?php
     wp_reset_query();
 
+	$meta_key_combo = 'last_name' ? 'last_name' : 'group_name';
+
    	$artistsArgs = array(
 	    'post_type' => 'artists',
-	    'meta_key' => 'group_name',
+	    'meta_key' => $meta_key_combo,
 		'orderby' => 'meta_value',
 	    'order'	=> 'ASC',
 	    'posts_per_page' => 100
