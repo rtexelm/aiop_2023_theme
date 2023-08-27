@@ -74,6 +74,7 @@ get_header();
 			$sunday_end				= get_field('sunday_end', $thisID);
 			$sunday_location		= get_field('sunday_location', $thisID);
 			$digital_true			= get_field('digital_true', $thisID);
+			/* 
 			if ($digital_true) {
 				$digital_link		= get_field('digital_link', $thisID);
 				$digital_gallery	= get_field('digital_gallery', $thisID);
@@ -83,6 +84,7 @@ get_header();
 				$digital_image_04	= get_field('digital_artist_image_04', $thisID);
 				$digital_image_05	= get_field('digital_artist_image_05', $thisID);
 			}
+			*/
 
 			if(str_contains($project_schedule,"(CM)")){
 				// $critical_mass = "/assets/critical-mass.png";
