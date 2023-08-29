@@ -20,24 +20,24 @@ get_header();
 
    	$artistsArgs = array(
 	    'post_type' => 'artists',
-		// 'meta_query' => array(
-		// 	'relation' => 'OR',
-		// 	array(
-		// 		'key'     => 'last_name',
-		// 		'compare' => 'EXISTS',
-		// 	),
-		// 	array(
-		// 		'key'     => 'group_name',
-		// 		'compare' => 'EXISTS',
-		// 	),
-		// ),
-		'orderby' => 'title',
+		'meta_query' => array(
+			'relation' => 'OR',
+			'groups' => array(
+				'key'     => 'group_name',
+				'compare' => 'EXISTS',
+			),
+			'last_names' => array(
+				'key'     => 'last_name',
+				'compare' => 'EXISTS',
+			),
+		),
+		'orderby' => 'meta_query',
 	    'order'	=> 'ASC',
-	    'posts_per_page' => 100
+	    'posts_per_page' => -1
 	);
 
 	$artistQuery = new WP_Query($artistsArgs);
-	
+
 	$last_letter = ' ';
 
 ?>
