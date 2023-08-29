@@ -27,15 +27,26 @@ get_header();
 	$artistQuery = new WP_Query($args);
 
 	$all_posts = new WP_Query(array(
-		'post_type' => 'artists',
-	    'meta_key' => 'last_name',
-		'orderby' => 'meta_value',
-        'order' => 'ASC',
-        'posts_per_page' => -1
+	    'post_type' => 'artists',
+		'meta_query' => array(
+			'relation' => 'OR',
+			'groups' => array(
+				'key'     => 'group_name',
+				'compare' => 'EXISTS',
+			),
+			'last_names' => array(
+				'key'     => 'last_name',
+				'compare' => 'EXISTS',
+			),
+		),
+		'orderby' => 'meta_query',
+	    'order'	=> 'ASC',
+	    'posts_per_page' => -1
     ));
 
     foreach($all_posts->posts as $key => $value) {
         if($value->ID == $post->ID){
+			
             $nextID = $all_posts->posts[$key + 1]->ID;
             $prevID = $all_posts->posts[$key - 1]->ID;
             break;
@@ -73,7 +84,7 @@ get_header();
 			$sunday_start			= get_field('sunday_start', $thisID);
 			$sunday_end				= get_field('sunday_end', $thisID);
 			$sunday_location		= get_field('sunday_location', $thisID);
-			$digital_true			= get_field('digital_true', $thisID);
+			// $digital_true			= get_field('digital_true', $thisID);
 			/* 
 			if ($digital_true) {
 				$digital_link		= get_field('digital_link', $thisID);
@@ -231,7 +242,7 @@ get_header();
 			    	<?php endif; ?>
     	    	</div>
 		    </nav>
-		     <?php if($digital_true): ?>
+		     <!-- <?php if($digital_true): ?>
 			 	<section class="digital">
 			 		<h2>Digital Content</h2>
 			 		<?php if($digital_link): ?>
@@ -257,7 +268,7 @@ get_header();
 			 			</div>
 			 		<?php endif; ?>
 			 	</section>
-		    <?php endif; ?>
+		    <?php endif; ?> -->
 
 	<?php endif ?>
 <?php endwhile ?>
