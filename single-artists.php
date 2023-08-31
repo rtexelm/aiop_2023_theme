@@ -46,12 +46,9 @@ get_header();
 
     foreach($all_posts->posts as $key => $value) {
         if($value->ID == $post->ID){
-			
-            if ($key !== count($all_posts->posts) -1) {
-				$nextID = $all_posts->posts[$key + 1]->ID;
-			}
-            if ($key !== 0) $prevID = $all_posts->posts[$key - 1]->ID;
-            break;
+
+			$nextID = $all_posts->posts[$key + 1]->ID ?? null;
+			$prevID = $all_posts->posts[$key - 1]->ID ?? null; 
         }
     }
 ?>
