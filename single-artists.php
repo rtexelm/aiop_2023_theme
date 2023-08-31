@@ -47,8 +47,10 @@ get_header();
     foreach($all_posts->posts as $key => $value) {
         if($value->ID == $post->ID){
 			
-            $nextID = $all_posts->posts[$key + 1]->ID;
-            $prevID = $all_posts->posts[$key - 1]->ID;
+            if ($key !== count($all_posts->posts) -1) {
+				$nextID = $all_posts->posts[$key + 1]->ID;
+			}
+            if ($key !== 0) $prevID = $all_posts->posts[$key - 1]->ID;
             break;
         }
     }
@@ -57,7 +59,8 @@ get_header();
 <?php while($artistQuery->have_posts()): $artistQuery->the_post(); ?>
     <?php if (function_exists('get_field')): ?>
 		    <?php 
-			
+			global $thisID;
+
 			$is_group				= get_field('is_group', $thisID);
 			$first_name				 = get_field('first_name', $thisID);
 			$last_name 				= get_field('last_name', $thisID);
@@ -128,7 +131,7 @@ get_header();
 				<section class="right">
 					<img src="<?php echo esc_url($project_image['url']); ?>" class="feature-img" alt="\<?php echo esc_attr($project_image['alt']); ?>" />
 					<div class="project p1">
-						<?php echo $project_description ?>
+						<?php echo "<p>" . $project_description . "</p>"?>
 						<?php 
 							if($project_link){
 								echo "<a class='button primary' target='blank' href='" . esc_url($project_link['url']) . "'>" . esc_attr( $project_link['title'] ) . "</a>";
