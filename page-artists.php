@@ -20,19 +20,19 @@ get_header();
 
    	$artistsArgs = array(
 	    'post_type' => 'artists',
-		'meta_query' => array(
-			'relation' => 'OR',
-			'groups' => array(
-				'key'     => 'group_name',
-				'compare' => 'EXISTS',
-			),
-			'last_names' => array(
-				'key'     => 'last_name',
-				'compare' => 'EXISTS',
-			),
-		),
-		'orderby' => 'meta_query',
-	    'order'	=> 'ASC',
+		// 'meta_query' => array(
+		// 	'relation' => 'OR',
+		// 	'groups' => array(
+		// 		'key'     => 'group_name',
+		// 		'compare' => 'EXISTS',
+		// 	),
+		// 	'last_names' => array(
+		// 		'key'     => 'last_name',
+		// 		'compare' => 'EXISTS',
+		// 	),
+		// ),
+		// 'orderby' => '',
+	    // 'order'	=> 'ASC',
 	    'posts_per_page' => -1
 	);
 
@@ -44,6 +44,7 @@ get_header();
 <div id="artists-background"></div>
 <main class="site-content artists artist-listing" id="main-content">
 	    <h1 class="hidden">Artists</h1>
+
 
 	    <section class="artists">
 		    <!-- <span class="h5 page-title">ARTISTS</span> -->
