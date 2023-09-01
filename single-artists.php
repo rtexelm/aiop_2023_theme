@@ -97,13 +97,6 @@ get_header();
 			}
 			*/
 
-			if(str_contains($project_schedule,"(CM)")){
-				// $critical_mass = "/assets/critical-mass.png";
-				$critical_mass = get_template_directory_uri()."/assets/critical-mass.png";
-				// echo "<h1>".$critical_mass."</h1>";
-				$project_schedule = str_replace('(CM)', '<img src="'.$critical_mass.'" alt="Critical Mass">', $project_schedule);
-			}
-
 
 		    ?> 
 		    <main class="artist-single">	
