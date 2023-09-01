@@ -116,13 +116,20 @@ get_header();
 			    	<!-- <p class="chapter">No. 12</p> -->
 					<h2 class="h1 project-artists"><?php echo $first_name . " " . $last_name . " " . $group_artists ?></h2>
 					<h3 class="h2 project-title"><?php echo $project_title ?></h3>
-					<div class="date">
-				    	<h5>DATE & TIME</h5>
-						<p class="p1"><?php echo $friday_start ?></p>
+					<div class="location">
+				    	<h5>Friday</h5>
+						<p class="p1"><?php echo $friday_start . "-" . $friday_end ?></p>
+						<p class="p1"><?php echo $friday_location ?></p>
 					</div>
 					<div class="location">
-						<h5>LOCATION</h5>
-						<p class="p1"><?php echo $friday_location ?></p>
+						<h5>Saturday</h5>
+						<p class="p1"><?php echo $saturday_start . "-" . $saturday_end ?></p>
+						<p class="p1"><?php echo $saturday_location ?></p>
+					</div>
+					<div class="location">
+						<h5>Sunday</h5>
+						<p class="p1"><?php echo $sunday_start . "-" . $sunday_end ?></p>
+						<p class="p1"><?php echo $sunday_location ?></p>
 					</div>
 				</section>
 				<section class="right">
