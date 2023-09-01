@@ -508,7 +508,7 @@ main.about section.people div.staff p.staff_name {
 }
 main.about section.people div.staff p.staff_title {
   text-transform: uppercase;
-  weight: normal;
+  font-weight: normal;
   color: #216972;
   margin-bottom: 0.25em;
 }
