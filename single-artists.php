@@ -84,18 +84,6 @@ get_header();
 			$sunday_start			= get_field('sunday_start', $thisID);
 			$sunday_end				= get_field('sunday_end', $thisID);
 			$sunday_location		= get_field('sunday_location', $thisID);
-			// $digital_true			= get_field('digital_true', $thisID);
-			/* 
-			if ($digital_true) {
-				$digital_link		= get_field('digital_link', $thisID);
-				$digital_gallery	= get_field('digital_gallery', $thisID);
-				$digital_image_01	= get_field('digital_artist_image_01', $thisID);
-				$digital_image_02	= get_field('digital_artist_image_02', $thisID);
-				$digital_image_03	= get_field('digital_artist_image_03', $thisID);
-				$digital_image_04	= get_field('digital_artist_image_04', $thisID);
-				$digital_image_05	= get_field('digital_artist_image_05', $thisID);
-			}
-			*/
 
 
 		    ?> 
@@ -242,33 +230,6 @@ get_header();
 			    	<?php endif; ?>
     	    	</div>
 		    </nav>
-		     <!-- <?php if($digital_true): ?>
-			 	<section class="digital">
-			 		<h2>Digital Content</h2>
-			 		<?php if($digital_link): ?>
-			 			<iframe src="<?php echo esc_url($digital_link['url']) ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			 		<?php endif; ?>
-			 		<?php if($digital_gallery): ?>
-			 			<div class="gallery">
-				 			<?php if($digital_image_01): ?>
-					 			<img src="<?php echo esc_url($digital_image_01['url']); ?>" class="" alt="\<?php echo esc_attr($digital_image_01['alt']); ?>" />
-					 		<?php endif; ?>
-					 		<?php if($digital_image_02): ?>
-					 			<img src="<?php echo esc_url($digital_image_02['url']); ?>" class="" alt="\<?php echo esc_attr($digital_image_02['alt']); ?>" />
-					 		<?php endif; ?>
-					 		<?php if($digital_image_03): ?>
-					 			<img src="<?php echo esc_url($digital_image_03['url']); ?>" class="" alt="\<?php echo esc_attr($digital_image_03['alt']); ?>" />
-					 		<?php endif; ?>
-					 		<?php if($digital_image_04): ?>
-					 			<img src="<?php echo esc_url($digital_image_04['url']); ?>" class="" alt="\<?php echo esc_attr($digital_image_04['alt']); ?>" />
-					 		<?php endif; ?>
-					 		<?php if($digital_image_05): ?>
-					 			<img src="<?php echo esc_url($digital_image_05['url']); ?>" class="" alt="\<?php echo esc_attr($digital_image_05['alt']); ?>" />
-					 		<?php endif; ?>
-			 			</div>
-			 		<?php endif; ?>
-			 	</section>
-		    <?php endif; ?> -->
 
 	<?php endif ?>
 <?php endwhile ?>
