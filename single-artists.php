@@ -46,10 +46,9 @@ get_header();
 
     foreach($all_posts->posts as $key => $value) {
         if($value->ID == $post->ID){
-			
-            $nextID = $all_posts->posts[$key + 1]->ID;
-            $prevID = $all_posts->posts[$key - 1]->ID;
-            break;
+
+			$nextID = $all_posts->posts[$key + 1]->ID ?? null;
+			$prevID = $all_posts->posts[$key - 1]->ID ?? null; 
         }
     }
 ?>
@@ -57,7 +56,8 @@ get_header();
 <?php while($artistQuery->have_posts()): $artistQuery->the_post(); ?>
     <?php if (function_exists('get_field')): ?>
 		    <?php 
-			
+			global $thisID;
+
 			$is_group				= get_field('is_group', $thisID);
 			$first_name				 = get_field('first_name', $thisID);
 			$last_name 				= get_field('last_name', $thisID);
@@ -84,25 +84,6 @@ get_header();
 			$sunday_start			= get_field('sunday_start', $thisID);
 			$sunday_end				= get_field('sunday_end', $thisID);
 			$sunday_location		= get_field('sunday_location', $thisID);
-			// $digital_true			= get_field('digital_true', $thisID);
-			/* 
-			if ($digital_true) {
-				$digital_link		= get_field('digital_link', $thisID);
-				$digital_gallery	= get_field('digital_gallery', $thisID);
-				$digital_image_01	= get_field('digital_artist_image_01', $thisID);
-				$digital_image_02	= get_field('digital_artist_image_02', $thisID);
-				$digital_image_03	= get_field('digital_artist_image_03', $thisID);
-				$digital_image_04	= get_field('digital_artist_image_04', $thisID);
-				$digital_image_05	= get_field('digital_artist_image_05', $thisID);
-			}
-			*/
-
-			if(str_contains($project_schedule,"(CM)")){
-				// $critical_mass = "/assets/critical-mass.png";
-				$critical_mass = get_template_directory_uri()."/assets/critical-mass.png";
-				// echo "<h1>".$critical_mass."</h1>";
-				$project_schedule = str_replace('(CM)', '<img src="'.$critical_mass.'" alt="Critical Mass">', $project_schedule);
-			}
 
 
 		    ?> 
@@ -116,19 +97,26 @@ get_header();
 			    	<!-- <p class="chapter">No. 12</p> -->
 					<h2 class="h1 project-artists"><?php echo $first_name . " " . $last_name . " " . $group_artists ?></h2>
 					<h3 class="h2 project-title"><?php echo $project_title ?></h3>
-					<div class="date">
-				    	<h5>DATE & TIME</h5>
-						<p class="p1"><?php echo $friday_start ?></p>
+					<div class="location">
+				    	<h5>Friday</h5>
+						<p class="p1"><?php echo $friday_start . "-" . $friday_end ?></p>
+						<p class="p1"><?php echo $friday_location ?></p>
 					</div>
 					<div class="location">
-						<h5>LOCATION</h5>
-						<p class="p1"><?php echo $friday_location ?></p>
+						<h5>Saturday</h5>
+						<p class="p1"><?php echo $saturday_start . "-" . $saturday_end ?></p>
+						<p class="p1"><?php echo $saturday_location ?></p>
+					</div>
+					<div class="location">
+						<h5>Sunday</h5>
+						<p class="p1"><?php echo $sunday_start . "-" . $sunday_end ?></p>
+						<p class="p1"><?php echo $sunday_location ?></p>
 					</div>
 				</section>
 				<section class="right">
 					<img src="<?php echo esc_url($project_image['url']); ?>" class="feature-img" alt="\<?php echo esc_attr($project_image['alt']); ?>" />
 					<div class="project p1">
-						<?php echo $project_description ?>
+						<?php echo "<p>" . $project_description . "</p>"?>
 						<?php 
 							if($project_link){
 								echo "<a class='button primary' target='blank' href='" . esc_url($project_link['url']) . "'>" . esc_attr( $project_link['title'] ) . "</a>";
@@ -242,33 +230,6 @@ get_header();
 			    	<?php endif; ?>
     	    	</div>
 		    </nav>
-		     <!-- <?php if($digital_true): ?>
-			 	<section class="digital">
-			 		<h2>Digital Content</h2>
-			 		<?php if($digital_link): ?>
-			 			<iframe src="<?php echo esc_url($digital_link['url']) ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			 		<?php endif; ?>
-			 		<?php if($digital_gallery): ?>
-			 			<div class="gallery">
-				 			<?php if($digital_image_01): ?>
-					 			<img src="<?php echo esc_url($digital_image_01['url']); ?>" class="" alt="\<?php echo esc_attr($digital_image_01['alt']); ?>" />
-					 		<?php endif; ?>
-					 		<?php if($digital_image_02): ?>
-					 			<img src="<?php echo esc_url($digital_image_02['url']); ?>" class="" alt="\<?php echo esc_attr($digital_image_02['alt']); ?>" />
-					 		<?php endif; ?>
-					 		<?php if($digital_image_03): ?>
-					 			<img src="<?php echo esc_url($digital_image_03['url']); ?>" class="" alt="\<?php echo esc_attr($digital_image_03['alt']); ?>" />
-					 		<?php endif; ?>
-					 		<?php if($digital_image_04): ?>
-					 			<img src="<?php echo esc_url($digital_image_04['url']); ?>" class="" alt="\<?php echo esc_attr($digital_image_04['alt']); ?>" />
-					 		<?php endif; ?>
-					 		<?php if($digital_image_05): ?>
-					 			<img src="<?php echo esc_url($digital_image_05['url']); ?>" class="" alt="\<?php echo esc_attr($digital_image_05['alt']); ?>" />
-					 		<?php endif; ?>
-			 			</div>
-			 		<?php endif; ?>
-			 	</section>
-		    <?php endif; ?> -->
 
 	<?php endif ?>
 <?php endwhile ?>

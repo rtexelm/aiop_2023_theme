@@ -20,7 +20,7 @@ get_header();
 
    	$fridayArtistArgs = array(
 	    'post_type' => 'artists',
-	    'meta_key' => 'schedule_friday_start',
+	    'meta_key' => 'friday_start',
 		'orderby' => 'meta_value',
 	    'order'	=> 'ASC',
 	    'posts_per_page' => 100
@@ -29,7 +29,7 @@ get_header();
 
 	$saturdayArtistArgs = array(
 	    'post_type' => 'artists',
-	    'meta_key' => 'schedule_saturday_start',
+	    'meta_key' => 'saturday_start',
 		'orderby' => 'meta_value',
 	    'order'	=> 'ASC',
 	    'posts_per_page' => 100
@@ -38,7 +38,7 @@ get_header();
 
 	$sundayArtistArgs = array(
 	    'post_type' => 'artists',
-	    'meta_key' => 'schedule_sunday_start',
+	    'meta_key' => 'sunday_start',
 		'orderby' => 'meta_value',
 	    'order'	=> 'ASC',
 	    'posts_per_page' => 100
@@ -64,15 +64,15 @@ get_header();
 							$last_name 			= get_field('last_name');
 							$additional_names 	= get_field('additional_names');
 							$project_title		= get_field('project_title');
-							$project_location 	= get_field('project_location');
+							$friday_location 	= get_field('friday_location');
 
-							$f_start = get_field('schedule_friday_start');
+							$f_start = get_field('friday_start');
 							$f_start_h = explode(":", $f_start)[0];
 							$f_start_temp = explode(":", $f_start)[1];
 							$f_start_m = substr($f_start_temp,0,2);
 							$f_start_ap = substr($f_start_temp, -2);
 
-							$f_end = get_field('schedule_friday_end');
+							$f_end = get_field('friday_end');
 							$f_end_h = explode(":", $f_end)[0];
 							$f_end_temp = explode(":", $f_end)[1];
 							$f_end_m = substr($f_end_temp,0,2);
@@ -103,7 +103,7 @@ get_header();
 										<span class="h3 artist-title"><?php echo $first_name . " " . $last_name . " " . $additional_names ?></span>
 										<p class="artist-title"><?php echo $project_title ?></p>
 									</div>
-									<p class="location"><?php echo $project_location ?></p>
+									<p class="location"><?php echo $friday_location ?></p>
 									<a class="button secondary" title="view <?php echo $first_name . ' ' . $last_name . ' ' . $additional_names ?>" href="<?php echo the_permalink(); ?>">View project</a>
 								</div>
 							<?php endif ?>
@@ -124,15 +124,15 @@ get_header();
 							$last_name 			= get_field('last_name');
 							$additional_names 	= get_field('additional_names');
 							$project_title		= get_field('project_title');
-							$project_location 	= get_field('project_location');
+							$saturday_location 	= get_field('saturday_location');
 
-							$sat_start = get_field('schedule_saturday_start');
+							$sat_start = get_field('saturday_start');
 							$sat_start_h = explode(":", $sat_start)[0];
 							$sat_start_temp = explode(":", $sat_start)[1];
 							$sat_start_m = substr($sat_start_temp,0,2);
 							$sat_start_ap = substr($sat_start_temp, -2);
 
-							$sat_end = get_field('schedule_saturday_end');
+							$sat_end = get_field('saturday_end');
 							$sat_end_h = explode(":", $sat_end)[0];
 							$sat_end_temp = explode(":", $sat_end)[1];
 							$sat_end_m = substr($sat_end_temp,0,2);
@@ -162,7 +162,7 @@ get_header();
 										<span class="h3 artist-title"><?php echo $first_name . " " . $last_name . " " . $additional_names ?></span>
 										<p class="artist-title"><?php echo $project_title ?></p>
 									</div>
-									<p class="location"><?php echo $project_location ?></p>
+									<p class="location"><?php echo $saturday_location ?></p>
 									<a class="button secondary" title="view <?php echo $first_name . ' ' . $last_name . ' ' . $additional_names ?>" href="<?php echo the_permalink(); ?>">View project</a>
 								</div>
 							<?php endif ?>
@@ -183,17 +183,15 @@ get_header();
 							$last_name 			= get_field('last_name');
 							$additional_names 	= get_field('additional_names');
 							$project_title		= get_field('project_title');
-							$project_location 	= get_field('project_location');
-							$schedule_sunday_start		= get_field('schedule_sunday_start');
-							$schedule_sunday_end		= get_field('schedule_sunday_end');
+							$sunday_location 	= get_field('sunday_location');
 
-							$sun_start = get_field('schedule_sunday_start');
+							$sun_start = get_field('sunday_start');
 							$sun_start_h = explode(":", $sun_start)[0];
 							$sun_start_temp = explode(":", $sun_start)[1];
 							$sun_start_m = substr($sun_start_temp,0,2);
 							$sun_start_ap = substr($sun_start_temp, -2);
 
-							$sun_end = get_field('schedule_sunday_end');
+							$sun_end = get_field('sunday_end');
 							$sun_end_h = explode(":", $sun_end)[0];
 							$sun_end_temp = explode(":", $sun_end)[1];
 							$sun_end_m = substr($sun_end_temp,0,2);
@@ -223,7 +221,7 @@ get_header();
 										<span class="h3 artist-title"><?php echo $first_name . " " . $last_name . " " . $additional_names ?></span>
 										<p class="artist-title"><?php echo $project_title ?></p>
 									</div>
-									<p class="location"><?php echo $project_location ?></p>
+									<p class="location"><?php echo $sunday_location ?></p>
 									<a class="button secondary" title="view <?php echo $first_name . ' ' . $last_name . ' ' . $additional_names ?>" href="<?php echo the_permalink(); ?>">View project</a>
 								</div>
 							<?php endif ?>
