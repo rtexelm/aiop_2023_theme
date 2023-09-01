@@ -62,9 +62,12 @@ get_header();
 						    <?php 
 							$first_name			 = get_field('first_name');
 							$last_name 			= get_field('last_name');
+							$group_name 		= get_field('group_name');
 							$group_names 		= get_field('group_names');
 							$project_title		= get_field('project_title');
 							$friday_location 	= get_field('friday_location');
+
+							$sortable_name = $last_name ? $last_name : $group_name;
 
 							$f_start = get_field('friday_start');
 							$f_start_h = explode(":", $f_start)[0];
@@ -100,11 +103,11 @@ get_header();
 										<?php echo $f_start_final."&ndash;".$f_end_final ?>	
 									</p>
 									<div class="project">
-										<span class="h3 artist-title"><?php echo $first_name . " " . $last_name . " " . $group_names ?></span>
+										<span class="h3 artist-title"><?php echo $first_name . " " . $sortable_name . " " . $group_names ?></span>
 										<p class="artist-title"><?php echo $project_title ?></p>
 									</div>
 									<p class="location"><?php echo $friday_location ?></p>
-									<a class="button secondary" title="view <?php echo $first_name . ' ' . $last_name . ' ' . $group_names ?>" href="<?php echo the_permalink(); ?>">View project</a>
+									<a class="button secondary" title="view <?php echo $first_name . ' ' . $sortable_name . ' ' . $group_names ?>" href="<?php echo the_permalink(); ?>">View project</a>
 								</div>
 							<?php endif ?>
 
@@ -122,9 +125,12 @@ get_header();
 						    <?php 
 							$first_name			 = get_field('first_name');
 							$last_name 			= get_field('last_name');
+							$group_name 		= get_field('group_name');
 							$group_names 		= get_field('group_names');
 							$project_title		= get_field('project_title');
 							$saturday_location 	= get_field('saturday_location');
+
+							$sortable_name = $last_name ? $last_name : $group_name;
 
 							$sat_start = get_field('saturday_start');
 							$sat_start_h = explode(":", $sat_start)[0];
@@ -159,11 +165,11 @@ get_header();
 										<?php echo $sat_start_final."&ndash;".$sat_end_final ?>	
 									</p>
 									<div class="project">
-										<span class="h3 artist-title"><?php echo $first_name . " " . $last_name . " " . $group_names ?></span>
+										<span class="h3 artist-title"><?php echo $first_name . " " . $sortable_name . " " . $group_names ?></span>
 										<p class="artist-title"><?php echo $project_title ?></p>
 									</div>
 									<p class="location"><?php echo $saturday_location ?></p>
-									<a class="button secondary" title="view <?php echo $first_name . ' ' . $last_name . ' ' . $group_names ?>" href="<?php echo the_permalink(); ?>">View project</a>
+									<a class="button secondary" title="view <?php echo $first_name . ' ' . $sortable_name . ' ' . $group_names ?>" href="<?php echo the_permalink(); ?>">View project</a>
 								</div>
 							<?php endif ?>
 
@@ -179,11 +185,14 @@ get_header();
 					    <?php if (function_exists('get_field')): ?>
 
 						    <?php 
-							$first_name			= get_field('first_name');
+							$first_name			 = get_field('first_name');
 							$last_name 			= get_field('last_name');
-							$additional_names 	= get_field('additional_names');
+							$group_name 		= get_field('group_name');
+							$group_names 		= get_field('group_names');
 							$project_title		= get_field('project_title');
 							$sunday_location 	= get_field('sunday_location');
+
+							$sortable_name = $last_name ? $last_name : $group_name;
 
 							$sun_start = get_field('sunday_start');
 							$sun_start_h = explode(":", $sun_start)[0];
@@ -218,11 +227,11 @@ get_header();
 										<?php echo $sun_start_final."&ndash;".$sun_end_final ?>	
 									</p>
 									<div class="project">
-										<span class="h3 artist-title"><?php echo $first_name . " " . $last_name . " " . $additional_names ?></span>
+										<span class="h3 artist-title"><?php echo $first_name . " " . $sortable_name . " " . $group_names ?></span>
 										<p class="artist-title"><?php echo $project_title ?></p>
 									</div>
 									<p class="location"><?php echo $sunday_location ?></p>
-									<a class="button secondary" title="view <?php echo $first_name . ' ' . $last_name . ' ' . $additional_names ?>" href="<?php echo the_permalink(); ?>">View project</a>
+									<a class="button secondary" title="view <?php echo $first_name . ' ' . $sortable_name . ' ' . $group_names ?>" href="<?php echo the_permalink(); ?>">View project</a>
 								</div>
 							<?php endif ?>
 
