@@ -48,7 +48,7 @@ get_header();
 						$first_name			 = get_field('first_name');
 						$last_name 			= get_field('last_name');
 						$group_name			= get_field('group_name');
-						$additional_names 	= get_field('additional_names');
+						$additional_names 	= get_field('group_artists');
 						$project_title		= get_field('project_title');
 
 						$sortable_name = $last_name ?: $group_name;
