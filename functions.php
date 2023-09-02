@@ -90,9 +90,7 @@
 	function create_sortable_name($post_id, $post) {
 
 		if ( $post->post_type == 'artists') {
-			$group_name = explode(" ", $post->group_name)[1] ?: $post->group_name;
-			
-			$sortable_name = $post->last_name ?: $group_name;
+			$sortable_name = $post->last_name ?: $post->group_name;
 		}
 		update_post_meta($post_id, 'sortable_name', $sortable_name);
 	}
