@@ -20,18 +20,8 @@ get_header();
 
    	$artistsArgs = array(
 	    'post_type' => 'artists',
-		'meta_query' => array(
-			'relation' => 'OR',
-			'groups' => array(
-				'key'     => 'group_name',
-				'compare' => 'EXISTS',
-			),
-			'last_names' => array(
-				'key'     => 'last_name',
-				'compare' => 'EXISTS',
-			),
-		),
-		'orderby' => 'meta_query',
+		'meta_key' => 'sortable_name',
+		'orderby' => 'meta_value',
 	    'order'	=> 'ASC',
 	    'posts_per_page' => -1
 	);
@@ -45,6 +35,7 @@ get_header();
 <main class="site-content artists artist-listing" id="main-content">
 	    <h1 class="hidden">Artists</h1>
 
+
 	    <section class="artists">
 		    <!-- <span class="h5 page-title">ARTISTS</span> -->
 		<?php 
@@ -57,10 +48,10 @@ get_header();
 						$first_name			 = get_field('first_name');
 						$last_name 			= get_field('last_name');
 						$group_name			= get_field('group_name');
-						$additional_names 	= get_field('additional_names');
+						$additional_names 	= get_field('group_artists');
 						$project_title		= get_field('project_title');
 
-						$sortable_name = $last_name ? $last_name : $group_name;
+						$sortable_name = $last_name ?: $group_name;
 
 						?>
 						<div class="artist-container">

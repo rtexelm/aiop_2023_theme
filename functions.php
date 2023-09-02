@@ -75,6 +75,7 @@
 	// Load up custom post types
 	add_action('init', 'register_press');
 
+	// Sort artists posts by title
 	function sort_posts_alpha( $query ) {
 		if ( $query->is_tax('artists') && $query->is_main_query() ) {
 			$query->set( 'orderby', 'title' );
@@ -82,6 +83,17 @@
 		}
 	}
 	add_action( 'pre_get_posts', 'sort_posts_alpha' );
+
+
+	//Add sortable name field from artist's either group or last name
+	add_filter('save_post', 'create_sortable_name', 10, 2);
+	function create_sortable_name($post_id, $post) {
+
+		if ( $post->post_type == 'artists') {
+			$sortable_name = $post->last_name ?: $post->group_name;
+		}
+		update_post_meta($post_id, 'sortable_name', $sortable_name);
+	}
 
 
 	// add css & javascript

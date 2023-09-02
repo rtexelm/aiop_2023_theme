@@ -28,18 +28,8 @@ get_header();
 
 	$all_posts = new WP_Query(array(
 	    'post_type' => 'artists',
-		'meta_query' => array(
-			'relation' => 'OR',
-			'groups' => array(
-				'key'     => 'group_name',
-				'compare' => 'EXISTS',
-			),
-			'last_names' => array(
-				'key'     => 'last_name',
-				'compare' => 'EXISTS',
-			),
-		),
-		'orderby' => 'meta_query',
+		'meta_key' => 'sortable_name',
+		'orderby' => 'meta_value',
 	    'order'	=> 'ASC',
 	    'posts_per_page' => -1
     ));
@@ -91,12 +81,12 @@ get_header();
 				<div class="artist-textures">
 					<div id="left-page"></div><div id="right-page"></div>
 				</div>
-			    <h1 class="hidden"><?php echo $first_name . " " . $last_name . " " . $group_artists ?></h1>
+			    <h1 class="hidden"><?php echo $first_name . " " . $last_name . " " . $group_name ?></h1>
 			   
 			    <section class="left">
 			    	<!-- <p class="chapter">No. 12</p> -->
-					<h2 class="h1 project-artists"><?php echo $first_name . " " . $last_name . " " . $group_artists ?></h2>
-					<h3 class="h2 project-title"><?php echo $project_title ?></h3>
+					<h2 class="h1 project-artists"><?php echo $project_title ?></h2>
+					<h3 class="h2 project-title"><?php echo $first_name . " " . $last_name . " " . $group_name . " " . $group_artists ?></h3>
 					<div class="location">
 				    	<h5>Friday</h5>
 						<p class="p1"><?php echo $friday_start . "-" . $friday_end ?></p>
