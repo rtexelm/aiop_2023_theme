@@ -86,13 +86,13 @@
 
 
 	//Add sortable name field from artist's either group or last name
-	add_filter('save_post', 'create_sortable_name');
-	function create_sortable_name($post_id) {
+	add_filter('save_post', 'create_sortable_name', 10, 2);
+	function create_sortable_name($post_id, $post) {
 
-		$post = get_post($post_id);
-		
 		if ( $post->post_type == 'artists') {
-			$sortable_name = $post->last_name ?: $post->group_name;
+			$group_name = explode(" ", $post->group_name)[1] ?: $post->group_name;
+			
+			$sortable_name = $post->last_name ?: $group_name;
 		}
 		update_post_meta($post_id, 'sortable_name', $sortable_name);
 	}

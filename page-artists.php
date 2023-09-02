@@ -21,17 +21,6 @@ get_header();
    	$artistsArgs = array(
 	    'post_type' => 'artists',
 		'meta_key' => 'sortable_name',
-		// 'meta_query' => array(
-		// 	'relation' => 'OR',
-		// 	'groups' => array(
-		// 		'key'     => 'group_name',
-		// 		'compare' => 'EXISTS',
-		// 	),
-		// 	'last_names' => array(
-		// 		'key'     => 'last_name',
-		// 		'compare' => 'EXISTS',
-		// 	),
-		// ),
 		'orderby' => 'meta_value',
 	    'order'	=> 'ASC',
 	    'posts_per_page' => -1
@@ -62,7 +51,7 @@ get_header();
 						$additional_names 	= get_field('additional_names');
 						$project_title		= get_field('project_title');
 
-						$sortable_name = $last_name ? $last_name : $group_name;
+						$sortable_name = $last_name ?: $group_name;
 
 						?>
 						<div class="artist-container">
