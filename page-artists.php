@@ -20,6 +20,7 @@ get_header();
 
    	$artistsArgs = array(
 	    'post_type' => 'artists',
+		'meta_key' => 'sortable_name',
 		// 'meta_query' => array(
 		// 	'relation' => 'OR',
 		// 	'groups' => array(
@@ -31,8 +32,8 @@ get_header();
 		// 		'compare' => 'EXISTS',
 		// 	),
 		// ),
-		// 'orderby' => '',
-	    // 'order'	=> 'ASC',
+		'orderby' => 'meta_value',
+	    'order'	=> 'ASC',
 	    'posts_per_page' => -1
 	);
 
