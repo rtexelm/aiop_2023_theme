@@ -97,7 +97,7 @@ get_header();
 
 							?>
 
-							<?php if($f_start): ?>
+							<?php if($friday_location): ?>
 								<div class="artist-container">
 									<p class="h4 artist-time">
 										<?php echo $f_start_final."&ndash;".$f_end_final ?>	
@@ -159,7 +159,7 @@ get_header();
 							}
 							?>
 
-							<?php if($sat_start): ?>
+							<?php if($saturday_location): ?>
 								<div class="artist-container">
 									<p class="h4 artist-time">
 										<?php echo $sat_start_final."&ndash;".$sat_end_final ?>	
@@ -221,7 +221,7 @@ get_header();
 							}
 							?>
 
-							<?php if($sun_start): ?>
+							<?php if($sunday_location): ?>
 								<div class="artist-container">
 									<p class="h4 artist-time">
 										<?php echo $sun_start_final."&ndash;".$sun_end_final ?>	
