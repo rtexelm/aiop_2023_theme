@@ -44,37 +44,6 @@ get_header();
 
 	$artistQuery = new WP_Query($artistArgs);
 
-   	// $fridayArtistArgs = array(
-	//     'post_type' => 'artists',
-	//     'meta_key' => 'friday_start',
-	// 	'orderby' => 'meta_value',
-	//     'order'	=> 'ASC',
-	//     'posts_per_page' => 100
-	// );
-	// $fridayQuery = new WP_Query($fridayArtistArgs);
-
-	// $saturdayArtistArgs = array(
-	//     'post_type' => 'artists',
-	//     'meta_key' => 'saturday_start',
-	// 	'orderby' => 'meta_value',
-	//     'order'	=> 'ASC',
-	//     'posts_per_page' => 100
-	// );
-	// $saturdayQuery = new WP_Query($saturdayArtistArgs);
-
-	// $sundayArtistArgs = array(
-	//     'post_type' => 'artists',
-	//     'meta_key' => 'sunday_start',
-	// 	'orderby' => 'meta_value',
-	//     'order'	=> 'ASC',
-	//     'posts_per_page' => 100
-	// );
-	// $sundayQuery = new WP_Query($sundayArtistArgs);
-
-	// $isFriday = get_post_meta( get_the_ID(), 'friday_start', true);
-	// $isSaturday = get_post_meta( get_the_ID(), 'saturday_start', true);
-	// $isSunday = get_post_meta( get_the_ID(), 'sunday_start', true);
-
 ?>
 <div id="schedule-background"></div>
 <main class="site-content schedule" id="main-content">
@@ -106,39 +75,13 @@ get_header();
 
 						$sortable_name = $last_name ?: $group_name;
 
-						$displayName = artistNameFormat($first_name, $sortable_name, $additional_names);
+						$displayName = artistNameFormat($first_name, $sortable_name, $additional_artists);
 						$fri_final = scheduleFormat($f_start, $f_end);
 						$sat_final = scheduleFormat($sat_start, $sat_end);
 						$sun_final = scheduleFormat($sun_start, $sun_end);
 
-						// $f_start = get_field('friday_start') ?: '12:00pm';
-						// $f_start_h = explode(":", $f_start)[0];
-						// $f_start_temp = explode(":", $f_start)[1] ?? null;
-						// $f_start_m = substr($f_start_temp,0,2);
-						// $f_start_ap = substr($f_start_temp, -2);
-
-						// $f_end = get_field('friday_end') ?: '7:00pm';
-						// $f_end_h = explode(":", $f_end)[0];
-						// $f_end_temp = explode(":", $f_end)[1] ?? null;
-						// $f_end_m = substr($f_end_temp,0,2);
-						// $f_end_ap = substr($f_end_temp, -2);
-
-						// $f_start_final;
-						// if($f_start_m == "00"){
-						// 	$f_start_final = $f_start_h.$f_start_ap;
-						// }else{
-						// 	$f_start_final = $f_start_h.':'.$f_start_m.$f_start_ap;
-						// }
-
-						// $f_end_final;
-						// if($f_end_m == "00"){
-						// 	$f_end_final = $f_end_h.$f_end_ap;
-						// }else{
-						// 	$f_end_final = $f_end_h.':'.$f_end_m.$f_end_ap;
-						// }
-
+						endif
 						?>
-					<?php endif ?>
 
 
 					<div class="day" id="friday">
@@ -161,11 +104,8 @@ get_header();
 
 					</div>
 
-			<div class="day" id="saturday">
-				<h2>Saturday</h2>
-				<?php if($saturdayQuery->have_posts()): ?>
-					<?php while($saturdayQuery->have_posts()): $saturdayQuery->the_post(); ?>
-					    <?php if (function_exists('get_field')): ?>
+					<div class="day" id="saturday">
+						<h2>Saturday</h2>
 
 						    <?php 
 							// $first_name			 = get_field('first_name');
@@ -204,30 +144,24 @@ get_header();
 							// }
 							?>
 
-							<?php if($saturday_location): ?>
-								<div class="artist-container">
-									<p class="h4 artist-time">
-										<?php echo $sat_final ?>	
-									</p>
-									<div class="project">
-										<span class="h3 artist-title"><?php echo $displayName ?></span>
-										<p class="artist-title"><?php echo $project_title ?></p>
-									</div>
-									<p class="location"><?php echo $saturday_location ?></p>
-									<a class="button secondary" title="view <?php echo $displayName ?>" href="<?php echo the_permalink(); ?>">View project</a>
+						<?php if($saturday_location): ?>
+							<div class="artist-container">
+								<p class="h4 artist-time">
+									<?php echo $sat_final ?>	
+								</p>
+								<div class="project">
+									<span class="h3 artist-title"><?php echo $displayName ?></span>
+									<p class="artist-title"><?php echo $project_title ?></p>
 								</div>
-							<?php endif ?>
-
+								<p class="location"><?php echo $saturday_location ?></p>
+								<a class="button secondary" title="view <?php echo $displayName ?>" href="<?php echo the_permalink(); ?>">View project</a>
+							</div>
 						<?php endif ?>
-					<?php endwhile ?>
-				<?php endif ?>
-			</div>
 
-			<div class="day" id="sunday">
-				<h2>Sunday</h2>
-				<?php if($sundayQuery->have_posts()): ?>
-					<?php while($sundayQuery->have_posts()): $sundayQuery->the_post(); ?>
-					    <?php if (function_exists('get_field')): ?>
+					</div>
+
+					<div class="day" id="sunday">
+						<h2>Sunday</h2>
 
 						    <?php 
 							// $first_name			 = get_field('first_name');
@@ -267,24 +201,22 @@ get_header();
 							// }
 							?>
 
-							<?php if($sunday_location): ?>
-								<div class="artist-container">
-									<p class="h4 artist-time">
-										<?php echo $sun_final ?>
-									</p>
-									<div class="project">
-										<span class="h3 artist-title"><?php echo $displayName ?></span>
-										<p class="artist-title"><?php echo $project_title ?></p>
-									</div>
-									<p class="location"><?php echo $sunday_location ?></p>
-									<a class="button secondary" title="view <?php echo $displayName ?>" href="<?php echo the_permalink(); ?>">View project</a>
+						<?php if($sunday_location): ?>
+							<div class="artist-container">
+								<p class="h4 artist-time">
+									<?php echo $sun_final ?>
+								</p>
+								<div class="project">
+									<span class="h3 artist-title"><?php echo $displayName ?></span>
+									<p class="artist-title"><?php echo $project_title ?></p>
 								</div>
-							<?php endif ?>
-
+								<p class="location"><?php echo $sunday_location ?></p>
+								<a class="button secondary" title="view <?php echo $displayName ?>" href="<?php echo the_permalink(); ?>">View project</a>
+							</div>
 						<?php endif ?>
-					<?php endwhile ?>
-				<?php endif ?>
-			</div>
+					</div>		
+				<?php endwhile ?>
+			<?php endif ?>
 			
 	    </section>
 </main><!-- #primary -->

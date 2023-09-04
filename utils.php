@@ -10,13 +10,10 @@ function artistNameFormat($name1, $name2, $name3) {
 function scheduleFormat($start, $end) {
 
     [$start_h, $start_temp] = explode(":", $start);
-    // $start_temp = explode(":", $start)[1] ?? null;
     $start_m = substr($start_temp,0,2);
     $start_ap = substr($start_temp, -2);
 
     [$end_h, $end_temp] = explode(":", $end);
-    // $end_h = explode(":", $end)[0];
-    // $end_temp = explode(":", $end)[1] ?? null;
     $end_m = substr($end_temp,0,2);
     $end_ap = substr($end_temp, -2);
 
