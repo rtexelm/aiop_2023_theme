@@ -11,6 +11,8 @@
  * @version 1.0.0
  */
 
+require 'utils.php';
+
 get_header();
 	
 ?>
@@ -52,6 +54,7 @@ get_header();
 						$project_title		= get_field('project_title');
 
 						$sortable_name = $last_name ?: $group_name;
+						$displayName = artistNameFormat($first_name, $sortable_name, $additional_names);
 
 						?>
 						<div class="artist-container">
@@ -63,13 +66,13 @@ get_header();
 							?>
 							<div class="artist-copy">
 								<span class="artist-title">
-									<?php echo $first_name . " " . $sortable_name . " " . $additional_names ?>
+									<?php echo $displayName ?>
 								</span>
 								<p class="project-title">
 									<?php echo $project_title ?>
 								</p>
 							</div>
-							<a class="button secondary" title="view <?php echo $first_name . ' ' . $sortable_name . ' ' . $additional_names ?>" href="<?php echo the_permalink(); ?>">View project</a>
+							<a class="button secondary" title="view <?php echo $displayName ?>" href="<?php echo the_permalink(); ?>">View project</a>
 						</div>
 					<?php endif ?>
 				<?php endwhile ?>
