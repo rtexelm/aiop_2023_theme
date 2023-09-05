@@ -71,8 +71,6 @@ get_header();
 						$sun_start			= get_field('sunday_start') ?: '12:00pm';
 						$sun_end 			= get_field('sunday_end') ?: '7:00pm';
 
-
-
 						$sortable_name = $last_name ?: $group_name;
 
 						$displayName = artistNameFormat($first_name, $sortable_name, $additional_artists);
@@ -87,8 +85,22 @@ get_header();
 					<div class="day" id="friday">
 						<h2>Friday</h2>
 
+						<?php 
+						$fridayArtistArgs = array(
+						    'post_type' => 'artists',
+						    'meta_key' => 'friday_start',
+							'orderby' => 'meta_value',
+						    'order'	=> 'ASC',
+						    'posts_per_page' => 100
+						);
+						$fridayQuery = new WP_Query($fridayArtistArgs);
+						?>
 
-						<?php if($friday_location): ?>
+						<?php
+						while($fridayQuery->have_posts()):
+							$fridayQuery->the_post();
+							if($friday_location): 
+						?>
 							<div class="artist-container">
 								<p class="h4 artist-time">
 									<?php echo $fri_final ?>	
@@ -100,49 +112,14 @@ get_header();
 								<p class="location"><?php echo $friday_location ?></p>
 								<a class="button secondary" title="view <?php echo $displayName ?>" href="<?php echo the_permalink(); ?>">View project</a>
 							</div>
-						<?php endif ?>
+						<?php 
+							endif;
+						endwhile ?>
 
 					</div>
 
 					<div class="day" id="saturday">
 						<h2>Saturday</h2>
-
-						    <?php 
-							// $first_name			 = get_field('first_name');
-							// $last_name 			= get_field('last_name');
-							// $group_name 		= get_field('group_name');
-							// $additional_artists = get_field('group_artists');
-							// $project_title		= get_field('project_title');
-							// $saturday_location 	= get_field('saturday_location');
-
-							// $sortable_name = $last_name ?: $group_name;
-
-							// $sat_start = get_field('saturday_start') ?: '12:00pm';
-							// $sat_start_h = explode(":", $sat_start)[0];
-							// $sat_start_temp = explode(":", $sat_start)[1] ?? null;
-							// $sat_start_m = substr($sat_start_temp,0,2);
-							// $sat_start_ap = substr($sat_start_temp, -2);
-
-							// $sat_end = get_field('saturday_end') ?: '7:00pm';
-							// $sat_end_h = explode(":", $sat_end)[0];
-							// $sat_end_temp = explode(":", $sat_end)[1] ?? null;
-							// $sat_end_m = substr($sat_end_temp,0,2);
-							// $sat_end_ap = substr($sat_end_temp, -2);
-
-							// $sat_start_final;
-							// if($sat_start_m == "00"){
-							// 	$sat_start_final = $sat_start_h.$sat_start_ap;
-							// }else{
-							// 	$sat_start_final = $sat_start_h.':'.$sat_start_m.$sat_start_ap;
-							// }
-
-							// $sat_end_final;
-							// if($sat_end_m == "00"){
-							// 	$sat_end_final = $sat_end_h.$sat_end_ap;
-							// }else{
-							// 	$sat_end_final = $sat_end_h.':'.$sat_end_m.$sat_end_ap;
-							// }
-							?>
 
 						<?php if($saturday_location): ?>
 							<div class="artist-container">
@@ -162,44 +139,6 @@ get_header();
 
 					<div class="day" id="sunday">
 						<h2>Sunday</h2>
-
-						    <?php 
-							// $first_name			 = get_field('first_name');
-							// $last_name 			= get_field('last_name');
-							// $group_name 		= get_field('group_name');
-							// $additional_artists = get_field('group_artists');
-							// $project_title		= get_field('project_title');
-							// $sunday_location 	= get_field('sunday_location');
-
-							// $sortable_name = $last_name ?: $group_name;
-
-							// $sun_start = get_field('sunday_start') ?: '12:00pm';
-							// $sun_start_h = explode(":", $sun_start)[0];
-							// $sun_start_temp = explode(":", $sun_start)[1] ?? null;
-							// $sun_start_m = substr($sun_start_temp,0,2);
-							// $sun_start_ap = substr($sun_start_temp, -2);
-
-
-							// $sun_end = get_field('sunday_end') ?: '7:00pm';
-							// $sun_end_h = explode(":", $sun_end)[0];
-							// $sun_end_temp = explode(":", $sun_end)[1] ?? null;
-							// $sun_end_m = substr($sun_end_temp,0,2);
-							// $sun_end_ap = substr($sun_end_temp, -2);
-
-							// $sun_start_final;
-							// if($sun_start_m == "00"){
-							// 	$sun_start_final = $sun_start_h.$sun_start_ap;
-							// }else{
-							// 	$sun_start_final = $sun_start_h.':'.$sun_start_m.$sun_start_ap;
-							// }
-
-							// $sun_end_final;
-							// if($sun_end_m == "00"){
-							// 	$sun_end_final = $sun_end_h.$sun_end_ap;
-							// }else{
-							// 	$sun_end_final = $sun_end_h.':'.$sun_end_m.$sat_end_ap;
-							// }
-							?>
 
 						<?php if($sunday_location): ?>
 							<div class="artist-container">
