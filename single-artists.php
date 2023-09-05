@@ -12,6 +12,8 @@
  * @version 1.0.0
  */
 
+require 'utils.php';
+
 get_header();
 	
 ?>
@@ -52,7 +54,7 @@ get_header();
 			$first_name				 = get_field('first_name', $thisID);
 			$last_name 				= get_field('last_name', $thisID);
 			$group_name 			= get_field('group_name', $thisID);
-			$group_artists 			= get_field('group_artists', $thisID);
+			$additional_names 		= get_field('group_artists', $thisID);
 			$artist_1_bio			= get_field('artist_bio', $thisID);
 			$artist_1_link			= get_field('artist_weblink', $thisID);
 			$artist_2_bio			= get_field('artist_2_bio', $thisID);
@@ -75,18 +77,20 @@ get_header();
 			$sunday_end				= get_field('sunday_end', $thisID);
 			$sunday_location		= get_field('sunday_location', $thisID);
 
+			$sortable_name = $last_name ?: $group_name;
+			$displayName = artistNameFormat($first_name, $sortable_name, $additional_names);
 
 		    ?> 
 		    <main class="artist-single">	
 				<div class="artist-textures">
 					<div id="left-page"></div><div id="right-page"></div>
 				</div>
-			    <h1 class="hidden"><?php echo $first_name . " " . $last_name . " " . $group_name ?></h1>
+			    <h1 class="hidden"><?php echo $displayName ?></h1>
 			   
 			    <section class="left">
 			    	<!-- <p class="chapter">No. 12</p> -->
 					<h2 class="h1 project-artists"><?php echo $project_title ?></h2>
-					<h3 class="h2 project-title"><?php echo $first_name . " " . $last_name . " " . $group_name . " " . $group_artists ?></h3>
+					<h3 class="h2 project-title"><?php echo $displayName ?></h3>
 					<div class="location">
 				    	<h5>Friday</h5>
 						<p class="p1"><?php echo $friday_start . "-" . $friday_end ?></p>
