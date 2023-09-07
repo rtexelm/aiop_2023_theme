@@ -258,7 +258,7 @@ nav a#skip-content:focus {
   padding: 1.5rem;
   text-align: center;
   background: #216972;
-  color: #f0fa00;
+  color: white;
   left: 9rem;
   top: 0px;
 }
@@ -508,7 +508,7 @@ main.about section.people div.staff p.staff_name {
 }
 main.about section.people div.staff p.staff_title {
   text-transform: uppercase;
-  weight: normal;
+  font-weight: normal;
   color: #216972;
   margin-bottom: 0.25em;
 }
@@ -1695,4 +1695,4 @@ footer .social .social-icon svg {
   main.about section.people div.thinkers_col_2 {
     grid-column: 6/10;
   }
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style2022.css.map */
