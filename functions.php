@@ -85,7 +85,7 @@
 	add_action( 'pre_get_posts', 'sort_posts_alpha' );
 
 
-	//Add sortable name field from artist's either group or last name
+	// Add sortable name field from artist's either group or last name
 	add_filter('save_post', 'create_sortable_name', 10, 2);
 	function create_sortable_name($post_id, $post) {
 

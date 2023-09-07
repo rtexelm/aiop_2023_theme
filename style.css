@@ -249,6 +249,7 @@ nav {
   position: fixed;
   z-index: 10;
   width: 100vw;
+  background-color: hsl(62, 100%, 49%);
 }
 nav a#skip-content {
   position: absolute;
@@ -258,7 +259,7 @@ nav a#skip-content:focus {
   padding: 1.5rem;
   text-align: center;
   background: #216972;
-  color: #f0fa00;
+  color: white;
   left: 9rem;
   top: 0px;
 }
@@ -941,6 +942,7 @@ footer .social .social-icon svg {
     align-items: center;
     justify-content: space-between;
     height: auto;
+    background-color: hsl(62, 100%, 49%);
   }
   nav.top {
     top: 2rem;
@@ -981,24 +983,19 @@ footer .social .social-icon svg {
   }
   nav .menuFull .left {
     flex-grow: 6;
-    background: url("assets/menu_paper_LL.jpg");
     background-size: cover;
     background-position-x: right;
     background-position-y: top;
     height: 100%;
   }
-  nav .menuFull .left #aiopLogo {
-    top: 2rem;
-  }
   nav .menuFull .right {
     flex-grow: 7;
     margin-left: -1px;
-    background: url("assets/menu_paper_RR.jpg");
-    background-size: cover;
-    background-position-x: -1px;
-    background-position-y: top;
     height: 100%;
     padding-left: 3rem;
+  }
+  nav .menuFull .right #aiopLogo {
+    top: 2rem;
   }
   nav a#menuToggleAnchor {
     position: absolute;

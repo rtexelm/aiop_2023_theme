@@ -40,13 +40,13 @@
 			</a>
 			<div class="menuFull" id="menuFull">
 				<section class="left">
-					<a href="<?php echo get_home_url(); ?>" id="home">
-						<img src="<?php bloginfo('template_url'); ?>/assets/AiOP_Logo_simple.png" id="aiopLogo" alt="Art in Odd Places">
-					</a>
-				</section>
-				<section class="right">
-					<p id="toc">Table of Contents</p>
-					<?php 
+					</section>
+					<section class="right">
+						<a href="<?php echo get_home_url(); ?>" id="home">
+							<img src="<?php bloginfo('template_url'); ?>/assets/AiOP_Logo_simple.png" id="aiopLogo" alt="Art in Odd Places">
+						</a>
+						<p id="toc">Table of Contents</p>
+						<?php 
 					wp_nav_menu( array( 
 						'theme_location' => 'full-navigation', 
 						'container_class' => 'fullNav' 

@@ -10,23 +10,10 @@ Tags: dress, orange
 Text Domain: aiop-dress
 */
 
-$primary-red: #d72027;
-$secondary-red: #ad1f25;
-$pale-blue: #d4f2ff; // #a6d6ea;
-$darker-blue: #6b98ad;
-$aiop-purple: #210542;
-$grey: #212326;
-$grey-2: #2b2d31;
-$white: #fff;
-
-$beige: #e4dbcc; //#eddfc5; //#e6ddcb;
-$beige-02: #dfd6c5;
-$beige-dark: #d0c2b0;
-$dark: #0f3a46; // #285562;
-$dark-grey: #393d3f;
-$teal: #216972;
-$primary-type: IvyJournal, serif;
-$secondary-type: Degular, sans-serif;
+@use "styles/constants";
+@use "styles/nav";
+@use "styles/nav720";
+@use "styles/nav1400";
 
 body {
   background: $beige;
@@ -232,103 +219,6 @@ div.button {
 }
 div.button p {
   display: inline-block;
-}
-
-nav {
-  position: fixed;
-  z-index: 10;
-  width: 100vw;
-  a#skip-content {
-    position: absolute;
-    top: -4rem;
-    &:focus {
-      padding: 1.5rem;
-      text-align: center;
-      background: $teal;
-      color: #f0fa00;
-      left: 9rem;
-      top: 0px;
-    }
-  }
-  a#home {
-    margin: 0px;
-    padding: 0px;
-    // order: 1;
-    img#aiopLogo {
-      position: fixed;
-      padding: 1.5rem;
-      width: 5rem;
-      z-index: 11;
-    }
-  }
-  a#menuToggleAnchor {
-    // order: 3;
-    width: auto;
-    height: auto;
-    position: fixed;
-    right: 1rem;
-    top: 0.5rem;
-    padding: 1.5rem;
-    z-index: 13;
-    // background: url(assets/Menu-Icon.svg);
-    // background-size: contain;
-  }
-  .menuVisible {
-    display: none;
-  }
-  .menuFull {
-    z-index: 12;
-    position: fixed;
-    background: url("assets/menu_paper_MM.jpg");
-    background-size: cover;
-    background-position: 0 0;
-    top: 0px;
-    transform: rotate(-10deg);
-    left: 140vw;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    transition: all 1s;
-    // box-shadow:
-    -webkit-box-shadow: -5px 0px 15px 5px rgba(0, 0, 0, 0.1);
-    box-shadow: -5px 0px 15px 5px rgba(0, 0, 0, 0.1);
-    p#toc {
-      margin: 8rem 1.5rem 1.5rem 1.5em;
-      font-size: 1rem;
-      font-family: $primary-type;
-    }
-    a {
-      text-decoration: none;
-      &:visited {
-        color: $dark;
-      }
-    }
-    ul {
-      margin: 0px;
-      padding: 0px;
-      &#menu-full-navigation {
-        li {
-          display: block;
-          list-style: none;
-          margin: 1rem 1.5rem;
-          font-size: 2rem;
-          a {
-            font-family: $primary-type;
-            font-weight: 400;
-          }
-        }
-      }
-      &#menu-sub-navigation {
-        li {
-          display: block;
-          list-style: none;
-          margin: 1rem 1.5rem;
-          font-size: 1.5rem;
-        }
-      }
-    }
-  }
 }
 
 main.home {
@@ -977,6 +867,7 @@ footer {
     align-items: center;
     justify-content: space-between;
     height: auto;
+    background-color: hsla(62, 100%, 49%, 1);
     &.top {
       top: 2rem;
     }
@@ -1016,25 +907,25 @@ footer {
       flex-direction: row;
       .left {
         flex-grow: 6;
-        background: url("assets/menu_paper_LL.jpg");
+        // background: url("assets/menu_paper_LL.jpg");
         background-size: cover;
         background-position-x: right;
         background-position-y: top;
         height: 100%;
-        #aiopLogo {
-          top: 2rem;
-        }
       }
       .right {
         flex-grow: 7;
         margin-left: -1px;
-        background: url("assets/menu_paper_RR.jpg");
-        background-size: cover;
-        background-position-x: -1px;
-        background-position-y: top;
+        // background: url("assets/menu_paper_RR.jpg");
+        // background-size: cover;
+        // background-position-x: -1px;
+        // background-position-y: top;
         height: 100%;
         padding-left: 3rem;
         .fullNav {
+        }
+        #aiopLogo {
+          top: 2rem;
         }
       }
     }
