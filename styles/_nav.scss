@@ -87,12 +87,12 @@ nav {
         }
         .submenu {
           &:not(.submenu ~ .submenu) {
-            margin-top: -0.3rem;
+            margin-top: -0.2rem;
           }
           font-size: 1.4rem;
           display: block;
           list-style: none;
-          margin: 1rem 1.5rem;
+          margin: 0.6rem 1.5rem;
           // font-size: 1.5rem;
         }
       }
