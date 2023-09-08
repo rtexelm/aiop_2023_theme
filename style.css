@@ -27,6 +27,9 @@ nav a#skip-content:focus {
   left: 9rem;
   top: 0px;
 }
+nav ul {
+  list-style: none;
+}
 nav a#home {
   margin: 0px;
   padding: 0px;
@@ -45,6 +48,9 @@ nav a#menuToggleAnchor {
   top: 0.5rem;
   padding: 1.5rem;
   z-index: 13;
+}
+nav .menuVisible {
+  display: none;
 }
 nav .menuFull {
   z-index: 12;

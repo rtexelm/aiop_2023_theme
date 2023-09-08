@@ -15,6 +15,9 @@ nav {
       top: 0px;
     }
   }
+  ul {
+    list-style: none;
+  }
   a#home {
     margin: 0px;
     padding: 0px;
@@ -39,7 +42,7 @@ nav {
     // background-size: contain;
   }
   .menuVisible {
-    // display: none;
+    display: none;
   }
   .menuFull {
     z-index: 12;

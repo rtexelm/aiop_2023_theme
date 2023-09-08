@@ -91,8 +91,8 @@
 
 		if ( $post->post_type == 'artists') {
 			$sortable_name = $post->last_name ?: $post->group_name;
+			update_post_meta($post_id, 'sortable_name', $sortable_name);
 		}
-		update_post_meta($post_id, 'sortable_name', $sortable_name);
 	}
 
 
