@@ -5,7 +5,6 @@ $darker-blue: #6b98ad;
 $aiop-purple: #210542;
 $grey: #212326;
 $grey-2: #2b2d31;
-$white: #fff;
 
 $beige: #e4dbcc; //#eddfc5; //#e6ddcb;
 $beige-02: #dfd6c5;
@@ -13,8 +12,6 @@ $beige-dark: #d0c2b0;
 $dark: #0f3a46; // #285562;
 $dark-grey: #393d3f;
 $teal: #216972;
-$primary-type: Degular, sans-serif;
-$secondary-type: Degular, sans-serif;
 
 // 2023 Colors
 $primary-orange: #f74500;
@@ -25,6 +22,11 @@ $neon-yellow: #f0fa00;
 $dadbod-yellow: #dadb0d;
 $deep-green: #05633e;
 $coal: #2c2c2c;
+$white: #fff;
+
+$primary-type: Degular, sans-serif;
+$secondary-type: Degular, sans-serif;
+$display-type: Degular, sans-serif;
 
 @mixin twelve-col-grid {
   display: grid;
@@ -32,4 +34,10 @@ $coal: #2c2c2c;
   column-gap: 1rem;
   width: calc(100vw - 3rem);
   padding: 1.5rem;
+}
+
+@mixin title-display {
+  font: normal 400, 2.5rem $display-type;
+  margin: 0;
+  line-height: 1.5rem;
 }

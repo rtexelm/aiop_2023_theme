@@ -9,6 +9,242 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: dress, orange
 Text Domain: aiop-dress
 */
+body {
+  background: #f74500;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 0px;
+}
+
+canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid blue;
+  box-sizing: border-box;
+  z-index: -20;
+  mix-blend-mode: exclusion;
+}
+
+.d1,
+h1,
+.h1 {
+  display: block;
+  font-style: bold;
+  font-family: Degular, sans-serif;
+  line-height: 1em;
+  margin: 0px;
+}
+
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5 {
+  display: block;
+  font-family: Degular, sans-serif;
+  line-height: 1em;
+  margin: 0px;
+}
+
+span.d1 {
+  font-size: 2.5rem;
+}
+
+h1,
+.h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+h2,
+.h2 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+h3,
+.h3 {
+  font-size: 1.5rem;
+}
+
+h4,
+.h4 {
+  font-size: 1rem;
+  color: #6b98ad;
+}
+
+h5,
+.h5 {
+  font-size: 0.875rem;
+  color: #6b98ad;
+}
+
+p,
+a {
+  font-family: Degular, sans-serif;
+  font-weight: 300;
+  margin: 0;
+  margin-bottom: 1em;
+}
+p.p1,
+p span.p1, p.p1r,
+a.p1,
+a span.p1,
+a.p1r {
+  font-size: 1.25rem;
+  line-height: 1.25em;
+  margin-bottom: 1em;
+}
+p.p2,
+p span.p2, p.p2r,
+a.p2,
+a span.p2,
+a.p2r {
+  font-size: 1rem;
+  line-height: 1.25em;
+  margin-bottom: 1em;
+}
+p.p1,
+p span.p1, p.p2,
+p span.p2,
+a.p1,
+a span.p1,
+a.p2,
+a span.p2 {
+  font-family: Degular, sans-serif;
+}
+p.light,
+a.light {
+  font-weight: 300;
+}
+p span.italic,
+a span.italic {
+  font-style: italic;
+}
+
+p.p1,
+p.p2,
+.p2 p,
+.p1 p {
+  display: block;
+  font-family: Degular, sans-serif;
+  line-height: 1.4em;
+  margin: 0px;
+  margin-bottom: 1em;
+}
+
+h1.hidden {
+  font-size: 0;
+  width: 1px;
+  height: 1px;
+  display: inline-block;
+  overflow: hidden;
+  position: absolute !important;
+  border: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+a.button,
+div.button {
+  display: inline-block;
+  padding: 0.5em 1em;
+  border-radius: 1.25em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 300;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+a.button.primary,
+div.button.primary {
+  background: #0f3a46;
+  color: white;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+a.button.primary::after,
+div.button.primary::after {
+  content: url(assets/arrow-right-w.png);
+  margin-left: 0.5rem;
+}
+a.button.primary#cs_read_more::after,
+div.button.primary#cs_read_more::after {
+  content: none;
+}
+a.button.primary:hover,
+div.button.primary:hover {
+  background: #216972;
+  color: white;
+}
+a.button.primary:focus,
+div.button.primary:focus {
+  border: 2px solid white;
+  outline: none;
+}
+a.button.secondary,
+div.button.secondary {
+  border: 1px solid #0f3a46;
+  color: #0f3a46;
+}
+a.button.secondary::after,
+div.button.secondary::after {
+  content: url(assets/arrow-right.png);
+  margin-left: 0.5rem;
+}
+a.button.secondary:hover,
+div.button.secondary:hover {
+  border-color: #216972;
+  background: #216972;
+  color: white;
+}
+a.button.secondary:hover::after,
+div.button.secondary:hover::after {
+  content: url(assets/arrow-right-w.png);
+}
+a.button.secondary:focus,
+div.button.secondary:focus {
+  border: 2px solid #0f3a46;
+  outline: none;
+}
+a.button.inline,
+div.button.inline {
+  padding: 0 0 0.25rem 0;
+  border-radius: 0;
+  color: #0f3a46;
+}
+a.button.inline::after,
+div.button.inline::after {
+  content: url(assets/arrow-right.png);
+  margin-left: 0.5rem;
+}
+a.button.inline:hover,
+div.button.inline:hover {
+  opacity: 0.8;
+}
+a.button.inline:focus,
+div.button.inline:focus {
+  outline: none;
+  text-decoration: underline;
+}
+
+div.button p {
+  display: inline-block;
+}
+
 nav {
   position: sticky;
   top: 0px;
@@ -103,10 +339,14 @@ main.home {
 main.home .header {
   height: 70%;
   width: 100vw;
+  background: no-repeat url(assets/dress/home-header-bg.png);
+  background-size: cover;
   position: relative;
 }
-main.home .header img {
-  width: 100%;
+main.home .header .title h1 {
+  font: normal 400, 2.5rem Degular, sans-serif;
+  margin: 0;
+  line-height: 1.5rem;
 }
 main.home #about,
 main.home #schedule,
@@ -129,7 +369,6 @@ main.home #about {
   padding: 10rem 1.5rem 6rem 1.5rem;
   color: white;
   min-height: 0px;
-  margin-top: -8rem;
 }
 main.home #about a.primary {
   color: #fff;
@@ -1008,242 +1247,6 @@ main.home #covid p {
     grid-column: 6/10;
   }
 }
-body {
-  background: #f74500;
-  color: #0f3a46;
-  padding: 0;
-  margin: 0;
-  position: absolute;
-  top: 0px;
-}
-
-canvas {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border: 2px solid blue;
-  box-sizing: border-box;
-  z-index: -20;
-  mix-blend-mode: exclusion;
-}
-
-.d1,
-h1,
-.h1 {
-  display: block;
-  font-style: bold;
-  font-family: Degular, sans-serif;
-  line-height: 1em;
-  margin: 0px;
-}
-
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5 {
-  display: block;
-  font-family: Degular, sans-serif;
-  line-height: 1em;
-  margin: 0px;
-}
-
-span.d1 {
-  font-size: 2.5rem;
-}
-
-h1,
-.h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
-h2,
-.h2 {
-  font-weight: 300;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-}
-
-h3,
-.h3 {
-  font-size: 1.5rem;
-}
-
-h4,
-.h4 {
-  font-size: 1rem;
-  color: #6b98ad;
-}
-
-h5,
-.h5 {
-  font-size: 0.875rem;
-  color: #6b98ad;
-}
-
-p,
-a {
-  font-family: Degular, sans-serif;
-  font-weight: 300;
-  margin: 0;
-  margin-bottom: 1em;
-}
-p.p1,
-p span.p1, p.p1r,
-a.p1,
-a span.p1,
-a.p1r {
-  font-size: 1.25rem;
-  line-height: 1.25em;
-  margin-bottom: 1em;
-}
-p.p2,
-p span.p2, p.p2r,
-a.p2,
-a span.p2,
-a.p2r {
-  font-size: 1rem;
-  line-height: 1.25em;
-  margin-bottom: 1em;
-}
-p.p1,
-p span.p1, p.p2,
-p span.p2,
-a.p1,
-a span.p1,
-a.p2,
-a span.p2 {
-  font-family: Degular, sans-serif;
-}
-p.light,
-a.light {
-  font-weight: 300;
-}
-p span.italic,
-a span.italic {
-  font-style: italic;
-}
-
-p.p1,
-p.p2,
-.p2 p,
-.p1 p {
-  display: block;
-  font-family: Degular, sans-serif;
-  line-height: 1.4em;
-  margin: 0px;
-  margin-bottom: 1em;
-}
-
-h1.hidden {
-  font-size: 0;
-  width: 1px;
-  height: 1px;
-  display: inline-block;
-  overflow: hidden;
-  position: absolute !important;
-  border: 0 !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  clip: rect(1px, 1px, 1px, 1px);
-}
-
-a.button,
-div.button {
-  display: inline-block;
-  padding: 0.5em 1em;
-  border-radius: 1.25em;
-  box-sizing: border-box;
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: 300;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-a.button.primary,
-div.button.primary {
-  background: #0f3a46;
-  color: white;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
-a.button.primary::after,
-div.button.primary::after {
-  content: url(assets/arrow-right-w.png);
-  margin-left: 0.5rem;
-}
-a.button.primary#cs_read_more::after,
-div.button.primary#cs_read_more::after {
-  content: none;
-}
-a.button.primary:hover,
-div.button.primary:hover {
-  background: #216972;
-  color: white;
-}
-a.button.primary:focus,
-div.button.primary:focus {
-  border: 2px solid white;
-  outline: none;
-}
-a.button.secondary,
-div.button.secondary {
-  border: 1px solid #0f3a46;
-  color: #0f3a46;
-}
-a.button.secondary::after,
-div.button.secondary::after {
-  content: url(assets/arrow-right.png);
-  margin-left: 0.5rem;
-}
-a.button.secondary:hover,
-div.button.secondary:hover {
-  border-color: #216972;
-  background: #216972;
-  color: white;
-}
-a.button.secondary:hover::after,
-div.button.secondary:hover::after {
-  content: url(assets/arrow-right-w.png);
-}
-a.button.secondary:focus,
-div.button.secondary:focus {
-  border: 2px solid #0f3a46;
-  outline: none;
-}
-a.button.inline,
-div.button.inline {
-  padding: 0 0 0.25rem 0;
-  border-radius: 0;
-  color: #0f3a46;
-}
-a.button.inline::after,
-div.button.inline::after {
-  content: url(assets/arrow-right.png);
-  margin-left: 0.5rem;
-}
-a.button.inline:hover,
-div.button.inline:hover {
-  opacity: 0.8;
-}
-a.button.inline:focus,
-div.button.inline:focus {
-  outline: none;
-  text-decoration: underline;
-}
-
-div.button p {
-  display: inline-block;
-}
-
 #about-background {
   z-index: -10;
   position: fixed;

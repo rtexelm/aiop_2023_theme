@@ -7,9 +7,13 @@ main.home {
   .header {
     height: 70%;
     width: 100vw;
+    background: no-repeat url(assets/dress/home-header-bg.png);
+    background-size: cover;
     position: relative;
-    img {
-      width: 100%;
+    .title {
+      h1 {
+        @include title-display;
+      }
     }
   }
   #about,
@@ -31,9 +35,6 @@ main.home {
     color: white;
     min-height: 0px;
     // background: $dark;
-    // background: url(assets/home-texture-01.png);
-    // background:
-    margin-top: -8rem;
     a.primary {
       color: $white;
       border: 1px solid white;

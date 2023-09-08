@@ -17,7 +17,12 @@ get_header();
 
 		<main class="home" id="main-content">
 			<section class="header">
-				<img src="<?php bloginfo('template_url'); ?>/assets/home-header-02.png" id="home-header-01" alt="Story">
+				<figure class="title">
+					<h1 class="title-left">Art in</h1>
+					<h1 class="title-right">Odd Places</h1>
+					<h1 class="title-right">2023</h1>
+					<h1 class="title-center">DRESS</h1>
+				</figure>
 			</section>
 			<section id="about">
 				<div class="about">
