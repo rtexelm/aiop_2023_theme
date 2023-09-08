@@ -9,246 +9,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: dress, orange
 Text Domain: aiop-dress
 */
-body {
-  background: #e4dbcc;
-  color: #0f3a46;
-  padding: 0;
-  margin: 0;
-  position: absolute;
-  top: 0px;
-}
-
-canvas {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border: 2px solid blue;
-  box-sizing: border-box;
-  z-index: -20;
-  mix-blend-mode: exclusion;
-}
-
-.d1,
-h1,
-.h1 {
-  display: block;
-  font-style: bold;
-  font-family: IvyJournal, serif;
-  line-height: 1em;
-  margin: 0px;
-}
-
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5 {
-  display: block;
-  font-family: Degular, sans-serif;
-  line-height: 1em;
-  margin: 0px;
-}
-
-span.d1 {
-  font-size: 2.5rem;
-}
-
-h1,
-.h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
-h2,
-.h2 {
-  font-weight: 300;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-}
-
-h3,
-.h3 {
-  font-size: 1.5rem;
-}
-
-h4,
-.h4 {
-  font-size: 1rem;
-  color: #6b98ad;
-}
-
-h5,
-.h5 {
-  font-size: 0.875rem;
-  color: #6b98ad;
-}
-
-p,
-a {
-  font-family: Degular, sans-serif;
-  font-weight: 300;
-  margin: 0;
-  margin-bottom: 1em;
-}
-p.p1,
-p span.p1, p.p1r,
-a.p1,
-a span.p1,
-a.p1r {
-  font-size: 1.25rem;
-  line-height: 1.25em;
-  margin-bottom: 1em;
-}
-p.p2,
-p span.p2, p.p2r,
-a.p2,
-a span.p2,
-a.p2r {
-  font-size: 1rem;
-  line-height: 1.25em;
-  margin-bottom: 1em;
-}
-p.p1,
-p span.p1, p.p2,
-p span.p2,
-a.p1,
-a span.p1,
-a.p2,
-a span.p2 {
-  font-family: IvyJournal, serif;
-}
-p.light,
-a.light {
-  font-weight: 300;
-}
-p span.italic,
-a span.italic {
-  font-style: italic;
-}
-
-p.p1,
-p.p2,
-.p2 p,
-.p1 p {
-  display: block;
-  font-family: IvyJournal, serif;
-  line-height: 1.4em;
-  margin: 0px;
-  margin-bottom: 1em;
-}
-
-h1.hidden {
-  font-size: 0;
-  width: 1px;
-  height: 1px;
-  display: inline-block;
-  overflow: hidden;
-  position: absolute !important;
-  border: 0 !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  clip: rect(1px, 1px, 1px, 1px);
-}
-
-a.button,
-div.button {
-  display: inline-block;
-  padding: 0.5em 1em;
-  border-radius: 1.25em;
-  box-sizing: border-box;
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: 300;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-a.button.primary,
-div.button.primary {
-  background: #0f3a46;
-  color: white;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
-a.button.primary::after,
-div.button.primary::after {
-  content: url(assets/arrow-right-w.png);
-  margin-left: 0.5rem;
-}
-a.button.primary#cs_read_more::after,
-div.button.primary#cs_read_more::after {
-  content: none;
-}
-a.button.primary:hover,
-div.button.primary:hover {
-  background: #216972;
-  color: white;
-}
-a.button.primary:focus,
-div.button.primary:focus {
-  border: 2px solid white;
-  outline: none;
-}
-a.button.secondary,
-div.button.secondary {
-  border: 1px solid #0f3a46;
-  color: #0f3a46;
-}
-a.button.secondary::after,
-div.button.secondary::after {
-  content: url(assets/arrow-right.png);
-  margin-left: 0.5rem;
-}
-a.button.secondary:hover,
-div.button.secondary:hover {
-  border-color: #216972;
-  background: #216972;
-  color: white;
-}
-a.button.secondary:hover::after,
-div.button.secondary:hover::after {
-  content: url(assets/arrow-right-w.png);
-}
-a.button.secondary:focus,
-div.button.secondary:focus {
-  border: 2px solid #0f3a46;
-  outline: none;
-}
-a.button.inline,
-div.button.inline {
-  padding: 0 0 0.25rem 0;
-  border-radius: 0;
-  color: #0f3a46;
-}
-a.button.inline::after,
-div.button.inline::after {
-  content: url(assets/arrow-right.png);
-  margin-left: 0.5rem;
-}
-a.button.inline:hover,
-div.button.inline:hover {
-  opacity: 0.8;
-}
-a.button.inline:focus,
-div.button.inline:focus {
-  outline: none;
-  text-decoration: underline;
-}
-
-div.button p {
-  display: inline-block;
-}
-
 nav {
-  position: fixed;
+  position: sticky;
+  top: 0px;
   z-index: 10;
   width: 100vw;
+  background-color: hsl(62, 100%, 49%);
 }
 nav a#skip-content {
   position: absolute;
@@ -262,22 +28,28 @@ nav a#skip-content:focus {
   left: 9rem;
   top: 0px;
 }
+nav .nav_bar_flex {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-end;
+}
 nav a#home {
-  margin: 0px;
+  margin: 2px 0 0;
   padding: 0px;
+  display: inline-block;
+  position: sticky;
 }
 nav a#home img#aiopLogo {
-  position: fixed;
-  padding: 1.5rem;
+  padding: 1rem;
   width: 5rem;
   z-index: 11;
 }
 nav a#menuToggleAnchor {
+  margin-bottom: 0;
   width: auto;
   height: auto;
-  position: fixed;
   right: 1rem;
-  top: 0.5rem;
   padding: 1.5rem;
   z-index: 13;
 }
@@ -287,23 +59,13 @@ nav .menuVisible {
 nav .menuFull {
   z-index: 12;
   position: fixed;
-  background: url("assets/menu_paper_MM.jpg");
-  background-size: cover;
-  background-position: 0 0;
-  top: 0px;
-  transform: rotate(-10deg);
   left: 140vw;
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  transition: all 1s;
-  box-shadow: -5px 0px 15px 5px rgba(0, 0, 0, 0.1);
-}
-nav .menuFull p#toc {
-  margin: 8rem 1.5rem 1.5rem 1.5em;
-  font-size: 1rem;
-  font-family: IvyJournal, serif;
+  transition: all 0.66s;
+  background-color: hsl(17, 100%, 48%);
 }
 nav .menuFull a {
   text-decoration: none;
@@ -318,24 +80,25 @@ nav .menuFull ul {
 nav .menuFull ul#menu-full-navigation li {
   display: block;
   list-style: none;
-  margin: 1rem 1.5rem;
-  font-size: 2rem;
+  margin: 0.7rem 1.5rem;
+  font-size: 1.8rem;
 }
 nav .menuFull ul#menu-full-navigation li a {
-  font-family: IvyJournal, serif;
+  font-family: Degular, sans-serif;
   font-weight: 400;
 }
-nav .menuFull ul#menu-sub-navigation li {
+nav .menuFull ul#menu-full-navigation .submenu {
+  font-size: 1.4rem;
   display: block;
   list-style: none;
   margin: 1rem 1.5rem;
-  font-size: 1.5rem;
+}
+nav .menuFull ul#menu-full-navigation .submenu:not(.submenu ~ .submenu) {
+  margin-top: -0.3rem;
 }
 
 main.home {
-  padding-top: 8rem;
   display: block;
-  background: url(assets/paper-artist-L.jpg);
 }
 main.home .header {
   height: 70%;
@@ -425,450 +188,6 @@ main.home #covid p {
   text-align: center;
 }
 
-#about-background {
-  z-index: -10;
-  position: fixed;
-  top: 0px;
-  width: 100vw;
-  height: 100vh;
-  background: url(assets/paper-artist-L.jpg);
-  background-size: cover;
-}
-
-main.about {
-  position: relative;
-  top: -3rem;
-  margin-bottom: -3rem;
-}
-main.about h3,
-main.about .h3,
-main.about h2,
-main.about .h2 {
-  font-family: ivyjournal, sans-serif;
-  font-weight: 500;
-}
-main.about p.p1,
-main.about p.p2,
-main.about p.p2r {
-  font-family: ivyjournal, sans-serif;
-  font-weight: 300;
-}
-main.about img.about-header {
-  width: 100vw;
-}
-main.about img.buffer {
-  width: 100vw;
-}
-main.about section.cs {
-  width: calc(100vw - 3rem);
-  padding: 4rem 1.5rem 4rem 1.5rem;
-}
-main.about section.cs .cs_more_text {
-  max-height: 0px;
-  overflow: hidden;
-  transition: max-height 1s ease-out;
-}
-main.about section.festival {
-  display: flex;
-  flex-direction: column;
-  width: calc(100vw - 3rem);
-  padding: 4rem 1.5rem 4rem 1.5rem;
-  background: #0f3a46;
-  color: white;
-}
-main.about section.festival h3 {
-  margin-bottom: 1rem;
-}
-main.about section.festival .history {
-  margin-bottom: 2rem;
-}
-main.about section.festival .history p,
-main.about section.festival .mission p {
-  font-size: 1.25rem;
-  font-family: IvyJournal, serif;
-}
-main.about section.people {
-  display: flex;
-  flex-direction: column;
-  width: calc(100vw - 3rem);
-  padding: 1.5rem;
-  margin-bottom: 4rem;
-}
-main.about section.people h2 {
-  margin-bottom: 2rem;
-}
-main.about section.people h2.thinkers {
-  margin-top: 4rem;
-}
-main.about section.people div.staff {
-  margin-bottom: 1.5rem;
-}
-main.about section.people div.staff p.staff_name {
-  margin-bottom: 0.25em;
-}
-main.about section.people div.staff p.staff_title {
-  text-transform: uppercase;
-  font-weight: normal;
-  color: #216972;
-  margin-bottom: 0.25em;
-}
-main.about section.people div.staff div.staff_links a {
-  color: #216972;
-  padding-right: 0.5rem;
-}
-main.about section.partners {
-  width: calc(100vw - 3rem);
-  padding: 10rem 1.5rem 4rem 1.5rem;
-  display: flex;
-  flex-direction: column;
-  background: #dfd6c5;
-  margin-top: -3rem;
-}
-main.about section.partners img.partner-logo {
-  width: 50%;
-  margin-bottom: 1rem;
-}
-main.about section.partners .partner.bureau {
-  margin-bottom: 3rem;
-}
-main.about section.partners p {
-  margin-bottom: 1rem;
-}
-main.about section.partners p.partner-text {
-  font-size: 1.25rem;
-  font-family: IvyJournal, serif;
-}
-main.about section.partners p.h3 {
-  font-weight: bold;
-}
-main.about section.support {
-  width: calc(100vw - 3rem);
-  padding: 1.5rem 1.5rem 5rem 1.5rem;
-  background: #0f3a46;
-  color: white;
-}
-main.about section.support h2 {
-  margin: 4rem 0 2rem 0;
-}
-main.about section.support h3 {
-  margin: 2rem 0 1rem 0;
-}
-
-#artists-background {
-  z-index: -10;
-  position: fixed;
-  top: 0px;
-  width: 100vw;
-  height: 100vh;
-  background: url(assets/paper-artist-L.jpg);
-  background-size: cover;
-}
-
-main.artist-listing section.artists {
-  width: calc(100vw - 3rem);
-  margin: 4rem 1.5rem 0 1.5rem;
-}
-main.artist-listing section.artists span.page-title {
-  margin-bottom: 2rem;
-}
-main.artist-listing section.artists span.artist-letter {
-  font-size: 4rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  color: #216972;
-}
-main.artist-listing section.artists .artist-container {
-  border-top: 2px solid #d0c2b0;
-  padding: 1rem 0;
-}
-main.artist-listing section.artists .artist-container span.artist-title {
-  font-family: IvyJournal, serif;
-  font-size: 2rem;
-}
-main.artist-listing section.artists .artist-container .project-title {
-  font-family: Degular, sans-serif;
-  font-size: 1.5rem;
-}
-main.artist-listing section.artists .artist-container .button {
-  margin-top: 0.5rem;
-}
-
-main.artist-single {
-  position: relative;
-  width: calc(100vw - 3rem);
-  padding: 10rem 1.5rem 10rem 1.5rem;
-  background: url(assets/paper-artist-R.jpg);
-  background-size: cover;
-}
-main.artist-single section.left {
-  width: 100%;
-}
-main.artist-single section.left .date,
-main.artist-single section.left .location {
-  margin-top: 3rem;
-}
-main.artist-single section.left .date h5,
-main.artist-single section.left .location h5 {
-  color: #0f3a46;
-}
-main.artist-single section.right {
-  width: 100%;
-}
-main.artist-single section.right img {
-  width: 100%;
-  margin-bottom: 2em;
-}
-main.artist-single section.right .bios p {
-  margin-top: 1rem;
-  margin-bottom: 0.25rem;
-}
-main.artist-single section.right .bios a {
-  color: #216972;
-}
-main.artist-single section.right .bios a::visited {
-  color: #0f3a46;
-}
-
-section.digital {
-  width: 100vw;
-  background: #0f3a46;
-  color: white;
-}
-section.digital h2 {
-  font-family: IvyJournal, serif;
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  padding: 1.5rem;
-}
-section.digital iframe {
-  width: calc(100vw - 3rem);
-  height: 56.25vw;
-  margin-left: 1.5rem;
-}
-section.digital div.gallery {
-  padding-bottom: 1rem;
-}
-section.digital div.gallery img {
-  max-width: calc(100vw - 5rem);
-  border: 1rem solid white;
-  margin: 0rem 1.5rem 1rem 1.5rem;
-}
-
-nav.artist-nav {
-  position: relative;
-  height: 100px;
-  margin-top: -100px;
-}
-nav.artist-nav .arrow {
-  width: 100px;
-  height: 100px;
-  position: absolute;
-}
-nav.artist-nav .arrow.prev {
-  left: 0px;
-}
-nav.artist-nav .arrow.next {
-  right: 0px;
-}
-
-#schedule-background {
-  z-index: -10;
-  position: fixed;
-  top: 0px;
-  width: 100vw;
-  height: 100vh;
-  background: url(assets/paper-artist-L.jpg);
-  background-size: cover;
-}
-
-main.schedule {
-  margin: 6rem 0;
-}
-main.schedule div.day {
-  width: calc(100% - 3rem);
-  margin: 4rem 1.5rem 0 1.5rem;
-}
-main.schedule div.day#saturday, main.schedule div.day#sunday {
-  margin-top: 3rem;
-}
-main.schedule div.day h2 {
-  margin-bottom: 1.5rem;
-  color: #0f3a46;
-  font-family: IvyJournal, serif;
-  font-weight: 500;
-}
-main.schedule div.day .artist-container {
-  border-top: 2px solid #d0c2b0;
-  margin-bottom: 1rem;
-}
-main.schedule div.day .artist-container .artist-time {
-  margin: 0.5rem 0;
-  color: #216972;
-  font-weight: 300;
-}
-main.schedule div.day .artist-container .project span,
-main.schedule div.day .artist-container .project p {
-  margin-bottom: 0.5rem;
-}
-main.schedule div.day .artist-container .project span.artist-title,
-main.schedule div.day .artist-container .project p.artist-title {
-  font-family: IvyJournal, serif;
-  font-weight: 350;
-}
-main.schedule div.day .artist-container .location {
-  font-weight: 300;
-}
-
-main.public-programs {
-  padding-top: 4rem;
-  width: calc(100% - 3rem);
-  margin: 4rem 1.5rem 4rem 1.5rem;
-}
-main.public-programs .program-container {
-  margin-top: 2rem;
-}
-main.public-programs .program-container h2 {
-  font-family: IvyJournal, serif;
-  margin-bottom: 1rem;
-}
-
-main.partners {
-  width: calc(100% - 3rem);
-  margin: 4rem 1.5rem 0 1.5rem;
-}
-main.partners .page-title {
-  color: #ad1f25;
-  width: 100%;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid #ad1f25;
-  margin-bottom: 2rem;
-}
-main.partners .partner_images {
-  margin: 1rem 0;
-}
-main.partners .partner_images img.sreenshot {
-  width: 100%;
-  margin-bottom: -3rem;
-}
-main.partners .partner {
-  margin-bottom: 3rem;
-}
-main.partners .partner img.logo {
-  width: 6rem;
-  margin-bottom: 1rem;
-}
-main.partners .partner p {
-  margin-bottom: 1.5rem;
-}
-
-main.maps {
-  width: calc(100% - 3rem);
-  margin: 4rem 1.5rem 0 1.5rem;
-}
-main.maps img.map {
-  width: 100%;
-  height: auto;
-}
-main.maps img.logo {
-  width: 6rem;
-  margin-bottom: 1rem;
-}
-main.maps p.h2,
-main.maps img.map {
-  margin-bottom: 1rem;
-}
-main.maps div.partner {
-  margin-bottom: 4rem;
-}
-
-main.press section.press-posts {
-  width: calc(100% - 3rem);
-  margin: 4rem 1.5rem 0 1.5rem;
-}
-main.press section.press-posts .press-container {
-  border-top: 1px solid #d0c2b0;
-  margin-bottom: 2rem;
-}
-main.press section.press-posts .press-container span.h3 {
-  font-family: IvyJournal, serif;
-  padding: 1rem 0 0.5rem 0;
-}
-main.press section.press-posts .press-container p.press-date {
-  font-weight: 300;
-  color: #216972;
-  margin-bottom: 0.5rem;
-}
-main.press section.press-posts .press-container a.button {
-  margin-top: 1rem;
-}
-
-main.donate {
-  width: calc(100% - 3rem);
-  margin: 4rem 1.5rem;
-}
-main.donate div.payment-method {
-  margin-top: 2rem;
-}
-main.donate div.payment-method h2 {
-  font-family: IvyJournal, serif;
-}
-main.donate div.payment-method p {
-  margin: 1rem 0;
-}
-
-footer {
-  background: #216972;
-  color: white;
-  padding: 3rem 1.5rem;
-}
-footer p,
-footer p a {
-  margin: 0 0 0.5rem 0;
-  font-weight: 500;
-  font-family: IvyJournal, serif;
-}
-footer p span.light,
-footer p span.light a,
-footer p a span.light,
-footer p a span.light a {
-  font-weight: 200;
-  font-family: Degular, sans-serif;
-}
-footer a {
-  font-weight: 500;
-  color: white;
-}
-footer a svg path {
-  fill: white;
-}
-footer a:hover svg path {
-  fill: #d4f2ff;
-}
-footer a img {
-  width: 8rem;
-}
-footer .footer-col {
-  margin-bottom: 1rem;
-  width: 100%;
-  font-weight: 600;
-  display: inline-block;
-  vertical-align: top;
-}
-footer .footer-col#footer-people p a {
-  text-decoration: none;
-}
-footer .social {
-  margin-top: 0.5rem;
-}
-footer .social .social-icon {
-  display: inline-block;
-  margin: 0 0.5rem 0.5rem 0;
-}
-footer .social .social-icon svg {
-  width: 2rem;
-  height: auto;
-}
-
 @media screen and (min-width: 720px) {
   h1,
   .h1,
@@ -941,6 +260,7 @@ footer .social .social-icon svg {
     align-items: center;
     justify-content: space-between;
     height: auto;
+    background-color: hsl(62, 100%, 49%);
   }
   nav.top {
     top: 2rem;
@@ -981,24 +301,17 @@ footer .social .social-icon svg {
   }
   nav .menuFull .left {
     flex-grow: 6;
-    background: url("assets/menu_paper_LL.jpg");
-    background-size: cover;
-    background-position-x: right;
     background-position-y: top;
     height: 100%;
-  }
-  nav .menuFull .left #aiopLogo {
-    top: 2rem;
   }
   nav .menuFull .right {
     flex-grow: 7;
     margin-left: -1px;
-    background: url("assets/menu_paper_RR.jpg");
-    background-size: cover;
-    background-position-x: -1px;
-    background-position-y: top;
     height: 100%;
     padding-left: 3rem;
+  }
+  nav .menuFull .right #aiopLogo {
+    top: 2rem;
   }
   nav a#menuToggleAnchor {
     position: absolute;
@@ -1695,4 +1008,683 @@ footer .social .social-icon svg {
   main.about section.people div.thinkers_col_2 {
     grid-column: 6/10;
   }
+}
+body {
+  background: #e4dbcc;
+  color: #0f3a46;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 0px;
+}
+
+canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid blue;
+  box-sizing: border-box;
+  z-index: -20;
+  mix-blend-mode: exclusion;
+}
+
+.d1,
+h1,
+.h1 {
+  display: block;
+  font-style: bold;
+  font-family: Degular, sans-serif;
+  line-height: 1em;
+  margin: 0px;
+}
+
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5 {
+  display: block;
+  font-family: Degular, sans-serif;
+  line-height: 1em;
+  margin: 0px;
+}
+
+span.d1 {
+  font-size: 2.5rem;
+}
+
+h1,
+.h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+h2,
+.h2 {
+  font-weight: 300;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+h3,
+.h3 {
+  font-size: 1.5rem;
+}
+
+h4,
+.h4 {
+  font-size: 1rem;
+  color: #6b98ad;
+}
+
+h5,
+.h5 {
+  font-size: 0.875rem;
+  color: #6b98ad;
+}
+
+p,
+a {
+  font-family: Degular, sans-serif;
+  font-weight: 300;
+  margin: 0;
+  margin-bottom: 1em;
+}
+p.p1,
+p span.p1, p.p1r,
+a.p1,
+a span.p1,
+a.p1r {
+  font-size: 1.25rem;
+  line-height: 1.25em;
+  margin-bottom: 1em;
+}
+p.p2,
+p span.p2, p.p2r,
+a.p2,
+a span.p2,
+a.p2r {
+  font-size: 1rem;
+  line-height: 1.25em;
+  margin-bottom: 1em;
+}
+p.p1,
+p span.p1, p.p2,
+p span.p2,
+a.p1,
+a span.p1,
+a.p2,
+a span.p2 {
+  font-family: Degular, sans-serif;
+}
+p.light,
+a.light {
+  font-weight: 300;
+}
+p span.italic,
+a span.italic {
+  font-style: italic;
+}
+
+p.p1,
+p.p2,
+.p2 p,
+.p1 p {
+  display: block;
+  font-family: Degular, sans-serif;
+  line-height: 1.4em;
+  margin: 0px;
+  margin-bottom: 1em;
+}
+
+h1.hidden {
+  font-size: 0;
+  width: 1px;
+  height: 1px;
+  display: inline-block;
+  overflow: hidden;
+  position: absolute !important;
+  border: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+a.button,
+div.button {
+  display: inline-block;
+  padding: 0.5em 1em;
+  border-radius: 1.25em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 300;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+a.button.primary,
+div.button.primary {
+  background: #0f3a46;
+  color: white;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+a.button.primary::after,
+div.button.primary::after {
+  content: url(assets/arrow-right-w.png);
+  margin-left: 0.5rem;
+}
+a.button.primary#cs_read_more::after,
+div.button.primary#cs_read_more::after {
+  content: none;
+}
+a.button.primary:hover,
+div.button.primary:hover {
+  background: #216972;
+  color: white;
+}
+a.button.primary:focus,
+div.button.primary:focus {
+  border: 2px solid white;
+  outline: none;
+}
+a.button.secondary,
+div.button.secondary {
+  border: 1px solid #0f3a46;
+  color: #0f3a46;
+}
+a.button.secondary::after,
+div.button.secondary::after {
+  content: url(assets/arrow-right.png);
+  margin-left: 0.5rem;
+}
+a.button.secondary:hover,
+div.button.secondary:hover {
+  border-color: #216972;
+  background: #216972;
+  color: white;
+}
+a.button.secondary:hover::after,
+div.button.secondary:hover::after {
+  content: url(assets/arrow-right-w.png);
+}
+a.button.secondary:focus,
+div.button.secondary:focus {
+  border: 2px solid #0f3a46;
+  outline: none;
+}
+a.button.inline,
+div.button.inline {
+  padding: 0 0 0.25rem 0;
+  border-radius: 0;
+  color: #0f3a46;
+}
+a.button.inline::after,
+div.button.inline::after {
+  content: url(assets/arrow-right.png);
+  margin-left: 0.5rem;
+}
+a.button.inline:hover,
+div.button.inline:hover {
+  opacity: 0.8;
+}
+a.button.inline:focus,
+div.button.inline:focus {
+  outline: none;
+  text-decoration: underline;
+}
+
+div.button p {
+  display: inline-block;
+}
+
+#about-background {
+  z-index: -10;
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+  background: url(assets/paper-artist-L.jpg);
+  background-size: cover;
+}
+
+main.about {
+  position: relative;
+  top: -3rem;
+  margin-bottom: -3rem;
+}
+main.about h3,
+main.about .h3,
+main.about h2,
+main.about .h2 {
+  font-family: ivyjournal, sans-serif;
+  font-weight: 500;
+}
+main.about p.p1,
+main.about p.p2,
+main.about p.p2r {
+  font-family: ivyjournal, sans-serif;
+  font-weight: 300;
+}
+main.about img.about-header {
+  width: 100vw;
+}
+main.about img.buffer {
+  width: 100vw;
+}
+main.about section.cs {
+  width: calc(100vw - 3rem);
+  padding: 4rem 1.5rem 4rem 1.5rem;
+}
+main.about section.cs .cs_more_text {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 1s ease-out;
+}
+main.about section.festival {
+  display: flex;
+  flex-direction: column;
+  width: calc(100vw - 3rem);
+  padding: 4rem 1.5rem 4rem 1.5rem;
+  background: #0f3a46;
+  color: white;
+}
+main.about section.festival h3 {
+  margin-bottom: 1rem;
+}
+main.about section.festival .history {
+  margin-bottom: 2rem;
+}
+main.about section.festival .history p,
+main.about section.festival .mission p {
+  font-size: 1.25rem;
+  font-family: Degular, sans-serif;
+}
+main.about section.people {
+  display: flex;
+  flex-direction: column;
+  width: calc(100vw - 3rem);
+  padding: 1.5rem;
+  margin-bottom: 4rem;
+}
+main.about section.people h2 {
+  margin-bottom: 2rem;
+}
+main.about section.people h2.thinkers {
+  margin-top: 4rem;
+}
+main.about section.people div.staff {
+  margin-bottom: 1.5rem;
+}
+main.about section.people div.staff p.staff_name {
+  margin-bottom: 0.25em;
+}
+main.about section.people div.staff p.staff_title {
+  text-transform: uppercase;
+  font-weight: normal;
+  color: #216972;
+  margin-bottom: 0.25em;
+}
+main.about section.people div.staff div.staff_links a {
+  color: #216972;
+  padding-right: 0.5rem;
+}
+main.about section.partners {
+  width: calc(100vw - 3rem);
+  padding: 10rem 1.5rem 4rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  background: #dfd6c5;
+  margin-top: -3rem;
+}
+main.about section.partners img.partner-logo {
+  width: 50%;
+  margin-bottom: 1rem;
+}
+main.about section.partners .partner.bureau {
+  margin-bottom: 3rem;
+}
+main.about section.partners p {
+  margin-bottom: 1rem;
+}
+main.about section.partners p.partner-text {
+  font-size: 1.25rem;
+  font-family: Degular, sans-serif;
+}
+main.about section.partners p.h3 {
+  font-weight: bold;
+}
+main.about section.support {
+  width: calc(100vw - 3rem);
+  padding: 1.5rem 1.5rem 5rem 1.5rem;
+  background: #0f3a46;
+  color: white;
+}
+main.about section.support h2 {
+  margin: 4rem 0 2rem 0;
+}
+main.about section.support h3 {
+  margin: 2rem 0 1rem 0;
+}
+
+#artists-background {
+  z-index: -10;
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+  background: url(assets/paper-artist-L.jpg);
+  background-size: cover;
+}
+
+main.artist-listing section.artists {
+  width: calc(100vw - 3rem);
+  margin: 4rem 1.5rem 0 1.5rem;
+}
+main.artist-listing section.artists span.page-title {
+  margin-bottom: 2rem;
+}
+main.artist-listing section.artists span.artist-letter {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #216972;
+}
+main.artist-listing section.artists .artist-container {
+  border-top: 2px solid #d0c2b0;
+  padding: 1rem 0;
+}
+main.artist-listing section.artists .artist-container span.artist-title {
+  font-family: Degular, sans-serif;
+  font-size: 2rem;
+}
+main.artist-listing section.artists .artist-container .project-title {
+  font-family: Degular, sans-serif;
+  font-size: 1.5rem;
+}
+main.artist-listing section.artists .artist-container .button {
+  margin-top: 0.5rem;
+}
+
+main.artist-single {
+  position: relative;
+  width: calc(100vw - 3rem);
+  padding: 10rem 1.5rem 10rem 1.5rem;
+  background: url(assets/paper-artist-R.jpg);
+  background-size: cover;
+}
+main.artist-single section.left {
+  width: 100%;
+}
+main.artist-single section.left .date,
+main.artist-single section.left .location {
+  margin-top: 3rem;
+}
+main.artist-single section.left .date h5,
+main.artist-single section.left .location h5 {
+  color: #0f3a46;
+}
+main.artist-single section.right {
+  width: 100%;
+}
+main.artist-single section.right img {
+  width: 100%;
+  margin-bottom: 2em;
+}
+main.artist-single section.right .bios p {
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+}
+main.artist-single section.right .bios a {
+  color: #216972;
+}
+main.artist-single section.right .bios a::visited {
+  color: #0f3a46;
+}
+
+section.digital {
+  width: 100vw;
+  background: #0f3a46;
+  color: white;
+}
+section.digital h2 {
+  font-family: Degular, sans-serif;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+}
+section.digital iframe {
+  width: calc(100vw - 3rem);
+  height: 56.25vw;
+  margin-left: 1.5rem;
+}
+section.digital div.gallery {
+  padding-bottom: 1rem;
+}
+section.digital div.gallery img {
+  max-width: calc(100vw - 5rem);
+  border: 1rem solid white;
+  margin: 0rem 1.5rem 1rem 1.5rem;
+}
+
+nav.artist-nav {
+  position: relative;
+  height: 100px;
+  margin-top: -100px;
+}
+nav.artist-nav .arrow {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+nav.artist-nav .arrow.prev {
+  left: 0px;
+}
+nav.artist-nav .arrow.next {
+  right: 0px;
+}
+
+#schedule-background {
+  z-index: -10;
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+  background: url(assets/paper-artist-L.jpg);
+  background-size: cover;
+}
+
+main.schedule {
+  margin: 6rem 0;
+}
+main.schedule div.day {
+  width: calc(100% - 3rem);
+  margin: 4rem 1.5rem 0 1.5rem;
+}
+main.schedule div.day#saturday, main.schedule div.day#sunday {
+  margin-top: 3rem;
+}
+main.schedule div.day h2 {
+  margin-bottom: 1.5rem;
+  color: #0f3a46;
+  font-family: Degular, sans-serif;
+  font-weight: 500;
+}
+main.schedule div.day .artist-container {
+  border-top: 2px solid #d0c2b0;
+  margin-bottom: 1rem;
+}
+main.schedule div.day .artist-container .artist-time {
+  margin: 0.5rem 0;
+  color: #216972;
+  font-weight: 300;
+}
+main.schedule div.day .artist-container .project span,
+main.schedule div.day .artist-container .project p {
+  margin-bottom: 0.5rem;
+}
+main.schedule div.day .artist-container .project span.artist-title,
+main.schedule div.day .artist-container .project p.artist-title {
+  font-family: Degular, sans-serif;
+  font-weight: 350;
+}
+main.schedule div.day .artist-container .location {
+  font-weight: 300;
+}
+
+main.public-programs {
+  padding-top: 4rem;
+  width: calc(100% - 3rem);
+  margin: 4rem 1.5rem 4rem 1.5rem;
+}
+main.public-programs .program-container {
+  margin-top: 2rem;
+}
+main.public-programs .program-container h2 {
+  font-family: Degular, sans-serif;
+  margin-bottom: 1rem;
+}
+
+main.partners {
+  width: calc(100% - 3rem);
+  margin: 4rem 1.5rem 0 1.5rem;
+}
+main.partners .page-title {
+  color: #ad1f25;
+  width: 100%;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #ad1f25;
+  margin-bottom: 2rem;
+}
+main.partners .partner_images {
+  margin: 1rem 0;
+}
+main.partners .partner_images img.sreenshot {
+  width: 100%;
+  margin-bottom: -3rem;
+}
+main.partners .partner {
+  margin-bottom: 3rem;
+}
+main.partners .partner img.logo {
+  width: 6rem;
+  margin-bottom: 1rem;
+}
+main.partners .partner p {
+  margin-bottom: 1.5rem;
+}
+
+main.maps {
+  width: calc(100% - 3rem);
+  margin: 4rem 1.5rem 0 1.5rem;
+}
+main.maps img.map {
+  width: 100%;
+  height: auto;
+}
+main.maps img.logo {
+  width: 6rem;
+  margin-bottom: 1rem;
+}
+main.maps p.h2,
+main.maps img.map {
+  margin-bottom: 1rem;
+}
+main.maps div.partner {
+  margin-bottom: 4rem;
+}
+
+main.press section.press-posts {
+  width: calc(100% - 3rem);
+  margin: 4rem 1.5rem 0 1.5rem;
+}
+main.press section.press-posts .press-container {
+  border-top: 1px solid #d0c2b0;
+  margin-bottom: 2rem;
+}
+main.press section.press-posts .press-container span.h3 {
+  font-family: Degular, sans-serif;
+  padding: 1rem 0 0.5rem 0;
+}
+main.press section.press-posts .press-container p.press-date {
+  font-weight: 300;
+  color: #216972;
+  margin-bottom: 0.5rem;
+}
+main.press section.press-posts .press-container a.button {
+  margin-top: 1rem;
+}
+
+main.donate {
+  width: calc(100% - 3rem);
+  margin: 4rem 1.5rem;
+}
+main.donate div.payment-method {
+  margin-top: 2rem;
+}
+main.donate div.payment-method h2 {
+  font-family: Degular, sans-serif;
+}
+main.donate div.payment-method p {
+  margin: 1rem 0;
+}
+
+footer {
+  background: #216972;
+  color: white;
+  padding: 3rem 1.5rem;
+}
+footer p,
+footer p a {
+  margin: 0 0 0.5rem 0;
+  font-weight: 500;
+  font-family: Degular, sans-serif;
+}
+footer p span.light,
+footer p span.light a,
+footer p a span.light,
+footer p a span.light a {
+  font-weight: 200;
+  font-family: Degular, sans-serif;
+}
+footer a {
+  font-weight: 500;
+  color: white;
+}
+footer a svg path {
+  fill: white;
+}
+footer a:hover svg path {
+  fill: #d4f2ff;
+}
+footer a img {
+  width: 8rem;
+}
+footer .footer-col {
+  margin-bottom: 1rem;
+  width: 100%;
+  font-weight: 600;
+  display: inline-block;
+  vertical-align: top;
+}
+footer .footer-col#footer-people p a {
+  text-decoration: none;
+}
+footer .social {
+  margin-top: 0.5rem;
+}
+footer .social .social-icon {
+  display: inline-block;
+  margin: 0 0.5rem 0.5rem 0;
+}
+footer .social .social-icon svg {
+  width: 2rem;
+  height: auto;
 }/*# sourceMappingURL=style.css.map */

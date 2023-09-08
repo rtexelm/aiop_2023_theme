@@ -24,38 +24,39 @@
 	<body>
 		<nav class="top">
 			<a href="#main-content" id="skip-content">Skip to content</a>
-			<a title="home" href="<?php echo get_home_url(); ?>" id="home">
-				<img src="<?php bloginfo('template_url'); ?>/assets/AiOP_Logo_simple.png" id="aiopLogo" alt="AIOP" aria-hidden="true">
-			</a>
-			<div class="menuVisible">
-				<?php 
-				wp_nav_menu( array( 
-					'theme_location' => 'top-navigation', 
-					'container_class' => 'topNav' 
-				) );
-				?>
-			</div>
-			<a title="full menu" href="#menuFull" id="menuToggleAnchor">
-				<img id="menuToggle" src="<?php bloginfo('template_url'); ?>/assets/menu_toggle.png" alt="view menu" aria-hidden="true">
-			</a>
-			<div class="menuFull" id="menuFull">
-				<section class="left">
-					<a href="<?php echo get_home_url(); ?>" id="home">
-						<img src="<?php bloginfo('template_url'); ?>/assets/AiOP_Logo_simple.png" id="aiopLogo" alt="Art in Odd Places">
-					</a>
-				</section>
-				<section class="right">
-					<p id="toc">Table of Contents</p>
+			<section class="nav_bar_flex">
+				<a title="home" href="<?php echo get_home_url(); ?>" id="home">
+					<img src="<?php bloginfo('template_url'); ?>/assets/AiOP_Logo_simple.png" id="aiopLogo" alt="AIOP" aria-hidden="true">
+				</a>
+				<div class="menuVisible">
 					<?php 
 					wp_nav_menu( array( 
-						'theme_location' => 'full-navigation', 
-						'container_class' => 'fullNav' 
-					) );
-					wp_nav_menu( array( 
-						'theme_location' => 'sub-navigation', 
-						'container_class' => 'subNav' 
+						'theme_location' => 'top-navigation', 
+						'container_class' => 'topNav' 
 					) );
 					?>
+				</div>
+				<a title="full menu" href="#menuFull" id="menuToggleAnchor">
+					<img id="menuToggle" src="<?php bloginfo('template_url'); ?>/assets/menu_toggle.png" alt="view menu" aria-hidden="true">
+				</a>
+			</section>
+			<div class="menuFull" id="menuFull">
+				<section class="left">
+				</section>
+				<section class="right">
+					<!-- <a href="<?php echo get_home_url(); ?>" id="home">
+					<img src="<?php bloginfo('template_url'); ?>/assets/AiOP_Logo_simple.png" id="aiopLogo" alt="Art in Odd Places">
+					</a> -->
+					<?php 
+				wp_nav_menu( array( 
+					'theme_location' => 'full-navigation', 
+					'container_class' => 'fullNav' 
+				) );
+				// wp_nav_menu( array( 
+				// 	'theme_location' => 'sub-navigation', 
+				// 	'container_class' => 'subNav' 
+				// ) );
+				?>
 				</section>
 			</div>
 		</nav>
