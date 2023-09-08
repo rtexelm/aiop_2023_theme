@@ -13,8 +13,18 @@ $beige-dark: #d0c2b0;
 $dark: #0f3a46; // #285562;
 $dark-grey: #393d3f;
 $teal: #216972;
-$primary-type: IvyJournal, serif;
+$primary-type: Degular, sans-serif;
 $secondary-type: Degular, sans-serif;
+
+// 2023 Colors
+$primary-orange: #f74500;
+$primary-magenta: #810061;
+$lavender: #c7a1d8;
+$pink: #ff779c;
+$neon-yellow: #f0fa00;
+$dadbod-yellow: #dadb0d;
+$deep-green: #05633e;
+$coal: #2c2c2c;
 
 @mixin twelve-col-grid {
   display: grid;

@@ -10,7 +10,8 @@ Tags: dress, orange
 Text Domain: aiop-dress
 */
 nav {
-  position: fixed;
+  position: sticky;
+  top: 0px;
   z-index: 10;
   width: 100vw;
   background-color: hsl(62, 100%, 49%);
@@ -27,25 +28,28 @@ nav a#skip-content:focus {
   left: 9rem;
   top: 0px;
 }
-nav ul {
-  list-style: none;
+nav .nav_bar_flex {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 nav a#home {
-  margin: 0px;
+  margin: 2px 0 0;
   padding: 0px;
+  display: inline-block;
+  position: sticky;
 }
 nav a#home img#aiopLogo {
-  position: fixed;
-  padding: 1.5rem;
+  padding: 1rem;
   width: 5rem;
   z-index: 11;
 }
 nav a#menuToggleAnchor {
+  margin-bottom: 0;
   width: auto;
   height: auto;
-  position: fixed;
   right: 1rem;
-  top: 0.5rem;
   padding: 1.5rem;
   z-index: 13;
 }
@@ -55,20 +59,13 @@ nav .menuVisible {
 nav .menuFull {
   z-index: 12;
   position: fixed;
-  background-color: hsl(62, 100%, 49%);
-  top: 0px;
   left: 140vw;
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  transition: all 1s;
-  box-shadow: -5px 0px 15px 5px rgba(0, 0, 0, 0.1);
-}
-nav .menuFull p#toc {
-  margin: 8rem 1.5rem 1.5rem 1.5em;
-  font-size: 1rem;
-  font-family: IvyJournal, serif;
+  transition: all 0.66s;
+  background-color: hsl(17, 100%, 48%);
 }
 nav .menuFull a {
   text-decoration: none;
@@ -83,18 +80,112 @@ nav .menuFull ul {
 nav .menuFull ul#menu-full-navigation li {
   display: block;
   list-style: none;
-  margin: 1rem 1.5rem;
-  font-size: 2rem;
+  margin: 0.7rem 1.5rem;
+  font-size: 1.8rem;
 }
 nav .menuFull ul#menu-full-navigation li a {
-  font-family: IvyJournal, serif;
+  font-family: Degular, sans-serif;
   font-weight: 400;
 }
-nav .menuFull ul#menu-sub-navigation li {
+nav .menuFull ul#menu-full-navigation .submenu {
+  font-size: 1.4rem;
   display: block;
   list-style: none;
   margin: 1rem 1.5rem;
-  font-size: 1.5rem;
+}
+nav .menuFull ul#menu-full-navigation .submenu:not(.submenu ~ .submenu) {
+  margin-top: -0.3rem;
+}
+
+main.home {
+  display: block;
+}
+main.home .header {
+  height: 70%;
+  width: 100vw;
+  position: relative;
+}
+main.home .header img {
+  width: 100%;
+}
+main.home #about,
+main.home #schedule,
+main.home #artists {
+  padding: 1.5rem;
+  min-height: 20rem;
+}
+main.home #about h2,
+main.home #schedule h2,
+main.home #artists h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+main.home #about img.number,
+main.home #schedule img.number,
+main.home #artists img.number {
+  height: 5rem;
+}
+main.home #about {
+  padding: 10rem 1.5rem 6rem 1.5rem;
+  color: white;
+  min-height: 0px;
+  background: url(assets/home-texture-01.png);
+  margin-top: -8rem;
+}
+main.home #about a.primary {
+  color: #fff;
+  border: 1px solid white;
+}
+main.home #schedule {
+  color: white;
+  background: url(assets/home-texture-01.png);
+}
+main.home #schedule img#calendar {
+  position: relative;
+  top: 3rem;
+  left: -3rem;
+  width: 60vw;
+  transform: rotate(-7deg);
+}
+main.home #home-buffer {
+  width: 100%;
+}
+main.home #artists {
+  overflow-x: hidden;
+}
+main.home #artists img.index-card {
+  max-width: 60vw;
+}
+main.home #artists img.index-card#index-card-01 {
+  position: relative;
+  top: 2rem;
+  left: 12rem;
+  transform: rotate(3deg);
+}
+main.home #artists img.index-card#index-card-02 {
+  position: relative;
+  top: 1rem;
+  left: 5rem;
+  transform: rotate(1deg);
+}
+main.home #artists img.index-card#index-card-03 {
+  position: relative;
+  top: -3rem;
+  left: -3rem;
+  transform: rotate(-5deg);
+}
+main.home #covid {
+  background: #0f3a46;
+  color: white;
+}
+main.home #covid img {
+  margin-top: -2.5rem;
+  width: 100%;
+}
+main.home #covid p {
+  padding: 3rem 1.5rem 5rem 1.5rem;
+  margin: 0px;
+  text-align: center;
 }
 
 @media screen and (min-width: 720px) {
@@ -942,7 +1033,7 @@ h1,
 .h1 {
   display: block;
   font-style: bold;
-  font-family: IvyJournal, serif;
+  font-family: Degular, sans-serif;
   line-height: 1em;
   margin: 0px;
 }
@@ -1028,7 +1119,7 @@ a.p1,
 a span.p1,
 a.p2,
 a span.p2 {
-  font-family: IvyJournal, serif;
+  font-family: Degular, sans-serif;
 }
 p.light,
 a.light {
@@ -1044,7 +1135,7 @@ p.p2,
 .p2 p,
 .p1 p {
   display: block;
-  font-family: IvyJournal, serif;
+  font-family: Degular, sans-serif;
   line-height: 1.4em;
   margin: 0px;
   margin-bottom: 1em;
@@ -1154,99 +1245,6 @@ div.button p {
   display: inline-block;
 }
 
-main.home {
-  padding-top: 8rem;
-  display: block;
-  background: url(assets/paper-artist-L.jpg);
-}
-main.home .header {
-  height: 70%;
-  width: 100vw;
-  position: relative;
-}
-main.home .header img {
-  width: 100%;
-}
-main.home #about,
-main.home #schedule,
-main.home #artists {
-  padding: 1.5rem;
-  min-height: 20rem;
-}
-main.home #about h2,
-main.home #schedule h2,
-main.home #artists h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-main.home #about img.number,
-main.home #schedule img.number,
-main.home #artists img.number {
-  height: 5rem;
-}
-main.home #about {
-  padding: 10rem 1.5rem 6rem 1.5rem;
-  color: white;
-  min-height: 0px;
-  background: url(assets/home-texture-01.png);
-  margin-top: -8rem;
-}
-main.home #about a.primary {
-  color: #fff;
-  border: 1px solid white;
-}
-main.home #schedule {
-  color: white;
-  background: url(assets/home-texture-01.png);
-}
-main.home #schedule img#calendar {
-  position: relative;
-  top: 3rem;
-  left: -3rem;
-  width: 60vw;
-  transform: rotate(-7deg);
-}
-main.home #home-buffer {
-  width: 100%;
-}
-main.home #artists {
-  overflow-x: hidden;
-}
-main.home #artists img.index-card {
-  max-width: 60vw;
-}
-main.home #artists img.index-card#index-card-01 {
-  position: relative;
-  top: 2rem;
-  left: 12rem;
-  transform: rotate(3deg);
-}
-main.home #artists img.index-card#index-card-02 {
-  position: relative;
-  top: 1rem;
-  left: 5rem;
-  transform: rotate(1deg);
-}
-main.home #artists img.index-card#index-card-03 {
-  position: relative;
-  top: -3rem;
-  left: -3rem;
-  transform: rotate(-5deg);
-}
-main.home #covid {
-  background: #0f3a46;
-  color: white;
-}
-main.home #covid img {
-  margin-top: -2.5rem;
-  width: 100%;
-}
-main.home #covid p {
-  padding: 3rem 1.5rem 5rem 1.5rem;
-  margin: 0px;
-  text-align: center;
-}
-
 #about-background {
   z-index: -10;
   position: fixed;
@@ -1307,7 +1305,7 @@ main.about section.festival .history {
 main.about section.festival .history p,
 main.about section.festival .mission p {
   font-size: 1.25rem;
-  font-family: IvyJournal, serif;
+  font-family: Degular, sans-serif;
 }
 main.about section.people {
   display: flex;
@@ -1358,7 +1356,7 @@ main.about section.partners p {
 }
 main.about section.partners p.partner-text {
   font-size: 1.25rem;
-  font-family: IvyJournal, serif;
+  font-family: Degular, sans-serif;
 }
 main.about section.partners p.h3 {
   font-weight: bold;
@@ -1404,7 +1402,7 @@ main.artist-listing section.artists .artist-container {
   padding: 1rem 0;
 }
 main.artist-listing section.artists .artist-container span.artist-title {
-  font-family: IvyJournal, serif;
+  font-family: Degular, sans-serif;
   font-size: 2rem;
 }
 main.artist-listing section.artists .artist-container .project-title {
@@ -1457,7 +1455,7 @@ section.digital {
   color: white;
 }
 section.digital h2 {
-  font-family: IvyJournal, serif;
+  font-family: Degular, sans-serif;
   font-size: 1rem;
   margin-bottom: 1rem;
   padding: 1.5rem;
@@ -1516,7 +1514,7 @@ main.schedule div.day#saturday, main.schedule div.day#sunday {
 main.schedule div.day h2 {
   margin-bottom: 1.5rem;
   color: #0f3a46;
-  font-family: IvyJournal, serif;
+  font-family: Degular, sans-serif;
   font-weight: 500;
 }
 main.schedule div.day .artist-container {
@@ -1534,7 +1532,7 @@ main.schedule div.day .artist-container .project p {
 }
 main.schedule div.day .artist-container .project span.artist-title,
 main.schedule div.day .artist-container .project p.artist-title {
-  font-family: IvyJournal, serif;
+  font-family: Degular, sans-serif;
   font-weight: 350;
 }
 main.schedule div.day .artist-container .location {
@@ -1550,7 +1548,7 @@ main.public-programs .program-container {
   margin-top: 2rem;
 }
 main.public-programs .program-container h2 {
-  font-family: IvyJournal, serif;
+  font-family: Degular, sans-serif;
   margin-bottom: 1rem;
 }
 
@@ -1612,7 +1610,7 @@ main.press section.press-posts .press-container {
   margin-bottom: 2rem;
 }
 main.press section.press-posts .press-container span.h3 {
-  font-family: IvyJournal, serif;
+  font-family: Degular, sans-serif;
   padding: 1rem 0 0.5rem 0;
 }
 main.press section.press-posts .press-container p.press-date {
@@ -1632,7 +1630,7 @@ main.donate div.payment-method {
   margin-top: 2rem;
 }
 main.donate div.payment-method h2 {
-  font-family: IvyJournal, serif;
+  font-family: Degular, sans-serif;
 }
 main.donate div.payment-method p {
   margin: 1rem 0;
@@ -1647,7 +1645,7 @@ footer p,
 footer p a {
   margin: 0 0 0.5rem 0;
   font-weight: 500;
-  font-family: IvyJournal, serif;
+  font-family: Degular, sans-serif;
 }
 footer p span.light,
 footer p span.light a,
