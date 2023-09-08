@@ -37,7 +37,7 @@ $display-type: Degular, sans-serif;
 }
 
 @mixin title-display {
-  font: normal 400, 2.5rem $display-type;
+  font: normal 400 2.8rem $display-type;
   margin: 0;
-  line-height: 1.5rem;
+  line-height: 0.8em;
 }

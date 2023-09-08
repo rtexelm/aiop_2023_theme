@@ -17,12 +17,15 @@ get_header();
 
 		<main class="home" id="main-content">
 			<section class="header">
-				<figure class="title">
+				<figure id="title">
 					<h1 class="title-left">Art in</h1>
 					<h1 class="title-right">Odd Places</h1>
 					<h1 class="title-right">2023</h1>
 					<h1 class="title-center">DRESS</h1>
 				</figure>
+				<a href="#about" class="page-down">
+					Next
+				</a>
 			</section>
 			<section id="about">
 				<div class="about">

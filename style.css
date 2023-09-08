@@ -32,7 +32,6 @@ canvas {
 h1,
 .h1 {
   display: block;
-  font-style: bold;
   font-family: Degular, sans-serif;
   line-height: 1em;
   margin: 0px;
@@ -337,16 +336,20 @@ main.home {
   display: block;
 }
 main.home .header {
-  height: 70%;
+  height: 100vw;
   width: 100vw;
-  background: no-repeat url(assets/dress/home-header-bg.png);
+  background: url(assets/dress/home-header-bg.png) fixed no-repeat #f74500;
+  background-position-y: 64px;
   background-size: cover;
   position: relative;
 }
-main.home .header .title h1 {
-  font: normal 400, 2.5rem Degular, sans-serif;
+main.home .header #title {
+  padding: 5.5rem 1.4rem 2rem 1.4rem;
+}
+main.home .header #title h1 {
+  font: normal 400 2.8rem Degular, sans-serif;
   margin: 0;
-  line-height: 1.5rem;
+  line-height: 0.8em;
 }
 main.home #about,
 main.home #schedule,

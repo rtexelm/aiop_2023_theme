@@ -1,19 +1,23 @@
 @use "constants" as *;
 
 main.home {
-  //   padding-top: 8rem;
   display: block;
-  //   background: url(assets/paper-artist-L.jpg);
   .header {
-    height: 70%;
+    height: 100vw;
+    // min-height: 70vw;
     width: 100vw;
-    background: no-repeat url(assets/dress/home-header-bg.png);
+    background: url(assets/dress/home-header-bg.png) fixed no-repeat
+      $primary-orange;
+    background-position-y: 64px;
     background-size: cover;
     position: relative;
-    .title {
+    #title {
       h1 {
         @include title-display;
       }
+      padding: 5.5rem 1.4rem 2rem 1.4rem;
+    }
+    .page-down {
     }
   }
   #about,
