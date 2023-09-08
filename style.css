@@ -129,7 +129,6 @@ main.home #about {
   padding: 10rem 1.5rem 6rem 1.5rem;
   color: white;
   min-height: 0px;
-  background: url(assets/home-texture-01.png);
   margin-top: -8rem;
 }
 main.home #about a.primary {
@@ -1010,7 +1009,7 @@ main.home #covid p {
   }
 }
 body {
-  background: #e4dbcc;
+  background: #f74500;
   color: #0f3a46;
   padding: 0;
   margin: 0;

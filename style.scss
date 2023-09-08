@@ -10,14 +10,16 @@ Tags: dress, orange
 Text Domain: aiop-dress
 */
 
-@import "styles/constants";
-@import "styles/nav";
-@import "styles/front-page";
-@import "styles/tablet720";
-@import "styles/desktop1400";
+// @import "styles/constants";
+@use "styles/constants" as *;
+
+@use "styles/nav";
+@use "styles/front-page";
+@use "styles/tablet720";
+@use "styles/desktop1400";
 
 body {
-  background: $beige;
+  background: $primary-orange;
   color: $dark;
   padding: 0;
   margin: 0;
