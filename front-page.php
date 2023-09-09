@@ -17,15 +17,13 @@ get_header();
 
 		<main class="home" id="main-content">
 			<section class="header">
-				<figure id="title">
-					<h1 class="title-left">Art in</h1>
-					<h1 class="title-right">Odd Places</h1>
-					<h1 class="title-right">2023</h1>
-					<h1 class="title-center">DRESS</h1>
-				</figure>
-				<a href="#about" class="page-down">
-					Next
-				</a>
+				<article id="title">
+					<h1 id="title-left">Art in</h1>
+					<h1 id="title-right">Odd Places</h1>
+					<h1 id="title-right">2023</h1>
+					<h1 id="title-center">DRESS</h1>
+				</article>
+				<img src="<?php bloginfo('template_url'); ?>/assets/dress/scroll.png" alt="scroll down" class="page-down">
 			</section>
 			<section id="about">
 				<div class="about">

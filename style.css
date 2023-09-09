@@ -18,16 +18,6 @@ body {
   top: 0px;
 }
 
-canvas {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border: 2px solid blue;
-  box-sizing: border-box;
-  z-index: -20;
-  mix-blend-mode: exclusion;
-}
-
 .d1,
 h1,
 .h1 {
@@ -336,94 +326,122 @@ main.home {
   display: block;
 }
 main.home .header {
-  height: 100vw;
+  min-height: 30vh;
+  height: auto;
   width: 100vw;
   background: url(assets/dress/home-header-bg.png) fixed no-repeat #f74500;
   background-position-y: 64px;
-  background-size: cover;
+  background-size: 100vw auto;
   position: relative;
+  display: grid;
+  place-content: center;
 }
 main.home .header #title {
-  padding: 5.5rem 1.4rem 2rem 1.4rem;
+  margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10vh 0 6vh;
 }
 main.home .header #title h1 {
-  font: normal 400 2.8rem Degular, sans-serif;
+  font: normal 400 3.2rem Degular, sans-serif;
   margin: 0;
-  line-height: 0.8em;
+  line-height: 0.9em;
 }
-main.home #about,
-main.home #schedule,
-main.home #artists {
+main.home .header #title #title-left {
+  align-self: flex-start;
+}
+main.home .header #title #title-right {
+  align-self: flex-end;
+}
+main.home .header #title #title-center {
+  text-align: center;
+}
+main.home .header .page-down {
+  max-width: 100%;
+  min-width: 300px;
+  height: auto;
+}
+
+#about,
+#schedule,
+#artists {
   padding: 1.5rem;
   min-height: 20rem;
 }
-main.home #about h2,
-main.home #schedule h2,
-main.home #artists h2 {
+#about h2,
+#schedule h2,
+#artists h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
-main.home #about img.number,
-main.home #schedule img.number,
-main.home #artists img.number {
+#about img.number,
+#schedule img.number,
+#artists img.number {
   height: 5rem;
 }
-main.home #about {
+
+#about {
   padding: 10rem 1.5rem 6rem 1.5rem;
   color: white;
   min-height: 0px;
 }
-main.home #about a.primary {
+#about a.primary {
   color: #fff;
   border: 1px solid white;
 }
-main.home #schedule {
+
+#schedule {
   color: white;
   background: url(assets/home-texture-01.png);
 }
-main.home #schedule img#calendar {
+#schedule img#calendar {
   position: relative;
   top: 3rem;
   left: -3rem;
   width: 60vw;
   transform: rotate(-7deg);
 }
-main.home #home-buffer {
+
+#home-buffer {
   width: 100%;
 }
-main.home #artists {
+
+#artists {
   overflow-x: hidden;
 }
-main.home #artists img.index-card {
+#artists img.index-card {
   max-width: 60vw;
 }
-main.home #artists img.index-card#index-card-01 {
+#artists img.index-card#index-card-01 {
   position: relative;
   top: 2rem;
   left: 12rem;
   transform: rotate(3deg);
 }
-main.home #artists img.index-card#index-card-02 {
+#artists img.index-card#index-card-02 {
   position: relative;
   top: 1rem;
   left: 5rem;
   transform: rotate(1deg);
 }
-main.home #artists img.index-card#index-card-03 {
+#artists img.index-card#index-card-03 {
   position: relative;
   top: -3rem;
   left: -3rem;
   transform: rotate(-5deg);
 }
-main.home #covid {
+
+#covid {
   background: #0f3a46;
   color: white;
 }
-main.home #covid img {
+#covid img {
   margin-top: -2.5rem;
   width: 100%;
 }
-main.home #covid p {
+#covid p {
   padding: 3rem 1.5rem 5rem 1.5rem;
   margin: 0px;
   text-align: center;
