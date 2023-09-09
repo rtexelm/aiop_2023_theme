@@ -386,8 +386,8 @@ main.home .bg-wrapper {
 main.home .bg-wrapper::before {
   content: "";
   position: absolute;
-  background-image: url(assets/dress/home-texture-01.png);
-  background-size: auto 100vh;
+  background-image: url(assets/dress/home-mobile-bg.png);
+  background-size: cover;
   mix-blend-mode: multiply;
   width: 100%;
   overflow: hidden;
