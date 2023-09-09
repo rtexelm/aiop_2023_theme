@@ -159,16 +159,12 @@ div.button {
 }
 a.button.primary,
 div.button.primary {
-  background: #0f3a46;
-  color: white;
+  background: #f0fa00;
+  border: 2px solid #f0fa00;
+  color: #000;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-}
-a.button.primary::after,
-div.button.primary::after {
-  content: url(assets/arrow-right-w.png);
-  margin-left: 0.5rem;
 }
 a.button.primary#cs_read_more::after,
 div.button.primary#cs_read_more::after {
@@ -176,12 +172,17 @@ div.button.primary#cs_read_more::after {
 }
 a.button.primary:hover,
 div.button.primary:hover {
-  background: #216972;
+  background: #ff779c;
   color: white;
 }
 a.button.primary:focus,
 div.button.primary:focus {
   border: 2px solid white;
+  outline: none;
+}
+a.button.primary:active,
+div.button.primary:active {
+  border: 2px solid #810061;
   outline: none;
 }
 a.button.secondary,
@@ -396,6 +397,7 @@ main.home .bg-wrapper::before {
   bottom: 0px;
   left: 0px;
   opacity: 0.6;
+  z-index: -1;
 }
 main.home #about,
 main.home #dates,

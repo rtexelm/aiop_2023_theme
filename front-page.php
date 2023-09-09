@@ -31,7 +31,7 @@ get_header();
 						<h2 class="d1">October</h2>
 						<h2 class="d1">13&ndash;15<span class="script"> 2023</span>
 						</h2>
-						<a class="button primary" href="<?php bloginfo('template_url'); ?>/schedule">Schedule</a>
+						<a class="button primary" href="<?php bloginfo('template_url'); ?>/schedule">Schedule <img src="<?php bloginfo('template_url'); ?>/assets/dress/arrow-right-dark.svg" alt=""></a>
 						<a class="button secondary" href="<?php bloginfo('template_url'); ?>/public-programs">Public Programs</a>
 					</div>
 				</section>
@@ -46,30 +46,12 @@ get_header();
 						<a class="button primary" href="<?php bloginfo('template_url'); ?>/about">About the festival</a>
 					</div>
 				</section>
-				<!-- <section id="schedule">
-					<div id="home-schedule-dates">
-						<h2 id="dates">September 23-25</h2>
-						<img class="number" src="<?php bloginfo('template_url'); ?>/assets/home-about-2022.png" alt="2022">
-					</div>
-					<img src="<?php bloginfo('template_url'); ?>/assets/home-calendar.png" alt="calendar" id="calendar">
-				</section> -->
-				<!-- <img src="<?php bloginfo('template_url'); ?>/assets/home-buffer.png" alt="" id="home-buffer"> -->
 				<section id="artists">
 					<div class="artists">
 						<h2><span class="script">40</span> Participating </br>artists & groups</h2>
 						<a class="button primary" href="<?php bloginfo('template_url'); ?>/artists">Artists</a>
 						<a class="button secondary" href="<?php bloginfo('template_url'); ?>/public-programs">Schedule</a>
 					</div>
-					<!-- <img src="<?php bloginfo('template_url'); ?>/assets/home-index-01.png" alt="index card" class="index-card" id="index-card-02">
-					<img src="<?php bloginfo('template_url'); ?>/assets/home-index-02.png" alt="index card" class="index-card" id="index-card-03">
-				</section> -->
-				<!-- <section id="covid">
-					<img src="<?php bloginfo('template_url'); ?>/assets/Blob-Social-Distance.png" alt="Two stylized red figures stand with space apart">	
-					<img src="<?php bloginfo('template_url'); ?>/assets/home-covid.png" alt="two hands reach towards each other not touching">
-					<div class="text">
-						<p class="p2">The festival will follow New York City COVID-19 guidelines.</p>
-					</div>
-				</section> -->
 			</div>
 		</main>
 		

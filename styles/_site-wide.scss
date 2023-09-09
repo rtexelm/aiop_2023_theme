@@ -141,25 +141,31 @@ div.button {
   width: fit-content;
   height: fit-content;
   &.primary {
-    background: $dark;
-    color: white;
+    background: $neon-yellow;
+    border: 2px solid $neon-yellow;
+    color: $black;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    &::after {
-      content: url(assets/arrow-right-w.png);
-      margin-left: 0.5rem;
-    }
+    // display: flex;
+    // &::after {
+    //   content: url(assets/dress/arrow-right-dark.svg);
+    //   margin-left: 0.5rem;
+    // }
     &#cs_read_more::after {
       content: none;
     }
     &:hover {
       // opacity: 0.8;
-      background: $teal;
+      background: $pink;
       color: white;
     }
     &:focus {
       border: 2px solid white;
+      outline: none;
+    }
+    &:active {
+      border: 2px solid $primary-magenta;
       outline: none;
     }
   }
