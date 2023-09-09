@@ -236,7 +236,7 @@ div.button p {
 
 nav {
   position: sticky;
-  top: 0px;
+  transition: top 0.3s;
   z-index: 10;
   width: 100vw;
   background-color: hsl(62, 100%, 49%);
@@ -292,6 +292,23 @@ nav .menuFull {
   transition: all 0.66s;
   background-color: hsl(17, 100%, 48%);
 }
+nav .menuFull .bg-wrapper {
+  position: relative;
+}
+nav .menuFull .bg-wrapper::before {
+  content: "";
+  position: absolute;
+  background-image: url(assets/dress/home-texture-01.png);
+  background-size: auto 100vh;
+  mix-blend-mode: multiply;
+  width: 100%;
+  overflow: hidden;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.6;
+}
 nav .menuFull a {
   text-decoration: none;
 }
@@ -327,10 +344,8 @@ main.home {
 }
 main.home .header {
   min-height: 60vh;
-  max-height: 70vh;
   width: 100vw;
   background: url(assets/dress/home-header-bg.png) fixed no-repeat #f74500;
-  background-position-y: 64px;
   background-size: auto 100vh;
   position: relative;
   display: grid;
@@ -1660,7 +1675,7 @@ main.donate div.payment-method p {
 }
 
 footer {
-  background: #216972;
+  background: #05633e;
   color: white;
   padding: 3rem 1.5rem;
 }

@@ -2,7 +2,8 @@
 
 nav {
   position: sticky;
-  top: 0px;
+  transition: top 0.3s;
+  // top: 0px;
   z-index: 10;
   width: 100vw;
   background-color: hsla(62, 100%, 49%, 1);
@@ -67,6 +68,24 @@ nav {
     // -webkit-box-shadow: -5px 0px 15px 5px rgba(0, 0, 0, 0.1);
     // box-shadow: -5px 0px 15px 5px rgba(0, 0, 0, 0.1);
     background-color: hsla(17, 100%, 48%, 1);
+    .bg-wrapper {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        background-image: url(assets/dress/home-texture-01.png);
+        //   background-color: lightgray;
+        background-size: auto 100vh;
+        mix-blend-mode: multiply;
+        width: 100%;
+        overflow: hidden;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        opacity: 0.6;
+      }
+    }
     a {
       text-decoration: none;
       &:visited {

@@ -31,6 +31,8 @@ get_header();
 						<h2 class="d1">October</h2>
 						<h2 class="d1">13&ndash;15<span class="script"> 2023</span>
 						</h2>
+						<a class="button primary" href="<?php bloginfo('template_url'); ?>/schedule">Schedule</a>
+						<a class="button secondary" href="<?php bloginfo('template_url'); ?>/public-programs">Public Programs</a>
 					</div>
 				</section>
 				<section id="about">
