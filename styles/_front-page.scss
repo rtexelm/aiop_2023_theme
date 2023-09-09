@@ -3,13 +3,13 @@
 main.home {
   display: block;
   .header {
-    min-height: 30vh;
-    height: auto;
+    min-height: 60vh;
+    max-height: 70vh;
     width: 100vw;
     background: url(assets/dress/home-header-bg.png) fixed no-repeat
       $primary-orange;
     background-position-y: 64px;
-    background-size: 100vw auto;
+    background-size: auto 100vh;
     position: relative;
     display: grid;
     place-content: center;
@@ -38,89 +38,101 @@ main.home {
       max-width: 100%;
       min-width: 300px;
       height: auto;
+      position: absolute;
+      bottom: 0;
     }
   }
-}
-#about,
-#schedule,
-#artists {
-  // overflow-x: hidden;
-  padding: 1.5rem;
-  min-height: 20rem;
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  img.number {
-    height: 5rem;
-  }
-}
-#about {
-  padding: 10rem 1.5rem 6rem 1.5rem;
-  color: white;
-  min-height: 0px;
-  // background: $dark;
-  a.primary {
-    color: $white;
-    border: 1px solid white;
-    // background: $beige;
-  }
-}
-#schedule {
-  color: white;
-  background: url(assets/home-texture-01.png);
-  img#calendar {
+  .bg-wrapper {
     position: relative;
-    top: 3rem;
-    left: -3rem;
-    width: 60vw;
-    transform: rotate(-7deg);
-  }
-}
-#home-buffer {
-  width: 100%;
-}
-#artists {
-  // background: $beige-02;
-  overflow-x: hidden;
-  img.index-card {
-    max-width: 60vw;
-    &#index-card-01 {
-      position: relative;
-      top: 2rem;
-      left: 12rem;
-      transform: rotate(3deg);
-    }
-    &#index-card-02 {
-      position: relative;
-      top: 1rem;
-      left: 5rem;
-      transform: rotate(1deg);
-    }
-    &#index-card-03 {
-      position: relative;
-      top: -3rem;
-      left: -3rem;
-      transform: rotate(-5deg);
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url(assets/dress/home-texture-01.png);
+      //   background-color: lightgray;
+      background-size: auto 100vh;
+      mix-blend-mode: multiply;
+      width: 100%;
+      overflow: hidden;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.6;
     }
   }
-}
-#covid {
-  background: $dark;
-  // padding: 3rem 0rem;
-  color: white;
-  // height: 10rem;
-  img {
-    margin-top: -2.5rem;
+  #about,
+  #dates,
+  #artists {
+    // overflow-x: hidden;
+    padding: 1.5rem;
+    min-height: 20rem;
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .script {
+    }
+  }
+  #dates {
+    color: white;
+    // background: url(assets/dress/home-texture-01.png) no-repeat;
+    padding: 10rem 1.5rem 6rem 1.5rem;
+  }
+  #about {
+    color: white;
+    min-height: 0px;
+    // background: $dark;
+    a.primary {
+      color: $white;
+      border: 1px solid white;
+      //   background: $beige;
+    }
+  }
+  #artists {
+    // background: $beige-02;
+    overflow-x: hidden;
+    img.index-card {
+      max-width: 60vw;
+      &#index-card-01 {
+        position: relative;
+        top: 2rem;
+        left: 12rem;
+        transform: rotate(3deg);
+      }
+      &#index-card-02 {
+        position: relative;
+        top: 1rem;
+        left: 5rem;
+        transform: rotate(1deg);
+      }
+      &#index-card-03 {
+        position: relative;
+        top: -3rem;
+        left: -3rem;
+        transform: rotate(-5deg);
+      }
+    }
+  }
+  #home-buffer {
     width: 100%;
-    // width: calc(100% - 48px);
-    // margin: -8rem 1.5rem 0 1.5rem;
   }
-  p {
-    padding: 3rem 1.5rem 5rem 1.5rem;
-    margin: 0px;
-    text-align: center;
-    // width: calc(100% - 48px);
-    // margin: 1.5rem;
+  #covid {
+    background: $dark;
+    // padding: 3rem 0rem;
+    color: white;
+    // height: 10rem;
+    img {
+      margin-top: -2.5rem;
+      width: 100%;
+      // width: calc(100% - 48px);
+      // margin: -8rem 1.5rem 0 1.5rem;
+    }
+    p {
+      padding: 3rem 1.5rem 5rem 1.5rem;
+      margin: 0px;
+      text-align: center;
+      // width: calc(100% - 48px);
+      // margin: 1.5rem;
+    }
   }
 }
