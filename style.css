@@ -488,22 +488,6 @@ main.home #artists img.index-card#index-card-03 {
   left: -3rem;
   transform: rotate(-5deg);
 }
-main.home #home-buffer {
-  width: 100%;
-}
-main.home #covid {
-  background: #0f3a46;
-  color: white;
-}
-main.home #covid img {
-  margin-top: -2.5rem;
-  width: 100%;
-}
-main.home #covid p {
-  padding: 3rem 1.5rem 5rem 1.5rem;
-  margin: 0px;
-  text-align: center;
-}
 
 @media screen and (min-width: 720px) {
   h1,
