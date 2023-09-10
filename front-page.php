@@ -17,12 +17,18 @@ get_header();
 
 		<main class="home" id="main-content">
 			<section class="header">
+				<div class="positioner">
+				<img id="pattern-r-top" src="<?php bloginfo('template_url'); ?>/assets/dress/pattern-02-top-m.png" alt="">
+				</div>
 				<article id="title">
 					<h1 id="title-left">Art in</h1>
 					<h1 id="title-right">Odd Places</h1>
 					<h1 id="title-right">2023</h1>
 					<h1 id="title-center">DRESS</h1>
 				</article>
+				<div class="positioner">
+				<img id="pattern-l-top" src="<?php bloginfo('template_url'); ?>/assets/dress/pattern-01-top-m.png" alt="">
+				</div>
 				<img src="<?php bloginfo('template_url'); ?>/assets/dress/scroll.png" alt="scroll down" class="page-down">
 			</section>
 			<div class="bg-wrapper">
@@ -35,6 +41,12 @@ get_header();
 						<a class="button secondary" href="<?php bloginfo('template_url'); ?>/public-programs">Public Programs</a>
 					</div>
 				</section>
+				<div class="positioner">
+					<img id="pattern-r-mid" src="<?php bloginfo('template_url'); ?>/assets/dress/pattern-03-top-m.png" alt="">
+				</div>
+				<div class="positioner">
+					<img id="pattern-l-mid" src="<?php bloginfo('template_url'); ?>/assets/dress/pattern-04-curve-m.png" alt="">
+				</div>
 				<section id="about">
 					<div class="byline">
 						<h2 class="d1">Curated</h2>

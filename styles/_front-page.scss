@@ -3,38 +3,72 @@
 main.home {
   display: block;
   .header {
-    min-height: 60vh;
-    // max-height: 70vh;
-    width: 100vw;
+    z-index: 0;
+    position: relative;
+    // display: grid;
+    min-height: 70vh;
+    // width: 100vw;
     background: url(assets/dress/home-header-bg.png) fixed no-repeat
       $primary-orange;
-    // background-position-y: 64px;
     background-size: auto 100vh;
-    position: relative;
-    display: grid;
-    place-content: center;
+
+    #pattern-r-top {
+      z-index: 10;
+      position: absolute;
+      right: 0;
+      top: 20vh;
+      //   border: 1px solid blue;
+      width: 43vw;
+    }
+
     #title {
+      z-index: 20;
+      position: relative;
       margin: auto;
-      //   width: 300px;
+      max-width: 22.5rem;
+      min-width: 14rem;
       display: flex;
-      flex-flow: column nowrap;
+      flex-flow: column wrap;
       justify-content: center;
-      align-items: center;
+      align-items: stretch;
+      padding: 20vh 0 6vh;
+
       h1 {
         @include title-display;
       }
-      padding: 10vh 0 6vh;
+
       #title-left {
         align-self: flex-start;
+        // flex: 2 2 auto;
+        // width: 100%;
       }
+
       #title-right {
         align-self: flex-end;
+        // width: 100%;
+
+        // flex: 2 2 auto;
       }
+
       #title-center {
-        text-align: center;
+        align-self: center;
+        // width: 100%;
+
+        // flex: 2 2 auto;
       }
     }
+
+    #pattern-l-top {
+      z-index: 10;
+      position: absolute;
+      left: 0;
+      top: -20;
+      //   border: 1px solid blue;
+      width: 48vw;
+    }
+
     .page-down {
+      z-index: 20;
       max-width: 100%;
       min-width: 300px;
       height: auto;
@@ -42,11 +76,13 @@ main.home {
       bottom: 0;
     }
   }
+
   .bg-wrapper {
     position: relative;
     &::before {
       content: "";
       position: absolute;
+      z-index: -100;
       background-image: url(assets/dress/home-mobile-bg.png);
       //   background-color: lightgray;
       background-size: cover;
@@ -58,9 +94,9 @@ main.home {
       bottom: 0px;
       left: 0px;
       opacity: 0.6;
-      z-index: -1;
     }
   }
+
   #about,
   #dates,
   #artists {
@@ -79,6 +115,25 @@ main.home {
     // background: url(assets/dress/home-texture-01.png) no-repeat;
     padding: 10rem 1.5rem 6rem 1.5rem;
   }
+
+  #pattern-r-mid {
+    z-index: -1;
+    position: absolute;
+    right: 0;
+    top: -300;
+    //   border: 1px solid blue;
+    width: 49vw;
+  }
+
+  #pattern-l-mid {
+    z-index: -1;
+    position: absolute;
+    left: 9vw;
+    top: -60;
+    //   border: 1px solid blue;
+    width: 60vw;
+  }
+
   #about {
     color: white;
     min-height: 0px;
@@ -86,7 +141,7 @@ main.home {
     a.primary {
       color: $white;
       border: 1px solid white;
-      //   background: $beige;
+      background: $primary-orange;
     }
   }
   #artists {
