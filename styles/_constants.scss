@@ -23,6 +23,7 @@ $dadbod-yellow: #dadb0d;
 $deep-green: #05633e;
 $coal: #2c2c2c;
 $white: #fff;
+$black: #000;
 
 $primary-type: Degular, sans-serif;
 $secondary-type: Degular, sans-serif;
@@ -37,7 +38,7 @@ $display-type: Degular, sans-serif;
 }
 
 @mixin title-display {
-  font: normal 400 3.2rem $display-type;
+  font: normal 400 3.5rem $display-type;
   margin: 0;
   line-height: 0.9em;
 }

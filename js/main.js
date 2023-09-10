@@ -1,6 +1,7 @@
 jQuery(document).ready(function ($) {
   var menuOpen = false;
   var csShowMore = false;
+  var prevScroll = window.scrollY;
   // $('#menuFull a').each( function(){
   // 	console.log(this);
   // 	$(this).attr("aria-hidden","true");
@@ -9,6 +10,17 @@ jQuery(document).ready(function ($) {
   // $('.fullNav').attr("aria-hidden","true");
   // menuFullAnchors.attr("aria-hidden","true");
   // console.log(menuFullAnchors);
+
+  $(window).on("scroll", function () {
+    let currentScroll = window.scrollY;
+    if (prevScroll > currentScroll) {
+      // console.log("NAV DOWN");
+      $(".top").css("top", "-0");
+    } else {
+      $(".top").css("top", "-65");
+    }
+    prevScroll = currentScroll;
+  });
 
   $("#menuToggleAnchor").on("click", function (event) {
     menuOpen = !menuOpen;

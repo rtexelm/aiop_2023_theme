@@ -24,7 +24,7 @@
 	<body>
 		<nav class="top">
 			<a href="#main-content" id="skip-content">Skip to content</a>
-			<section class="nav_bar_flex">
+			<section class="nav_bar_flex" id="navScroll">
 				<a title="home" href="<?php echo get_home_url(); ?>" id="home">
 					<img src="<?php bloginfo('template_url'); ?>/assets/AiOP_Logo_simple.png" id="aiopLogo" alt="AIOP" aria-hidden="true">
 				</a>
@@ -41,6 +41,7 @@
 				</a>
 			</section>
 			<div class="menuFull" id="menuFull">
+				<div class="bg-wrapper">
 				<section class="left">
 				</section>
 				<section class="right">
@@ -58,5 +59,6 @@
 				// ) );
 				?>
 				</section>
+				</div>
 			</div>
 		</nav>
