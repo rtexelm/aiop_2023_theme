@@ -71,10 +71,12 @@
       display: block;
       margin-right: 1rem;
       ul {
-        list-style: none;
+        margin: 0;
+        padding: 0;
         display: flex;
         flex-direction: row;
         gap: 1.5rem;
+        list-style: none;
         li {
           a {
             @include nav-links;
@@ -82,6 +84,7 @@
             text-decoration: none;
             color: $black;
             &:hover {
+              border-bottom: 1px solid $black;
               border-top: 1px solid $black;
             }
             &:focus {

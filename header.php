@@ -26,7 +26,7 @@
 				<a title="home" href="<?php echo get_home_url(); ?>" id="home">
 					<img src="<?php bloginfo('template_url'); ?>/assets/AiOP_Logo_simple.png" id="aiopLogo" alt="AIOP" aria-hidden="true">
 				</a>
-				<div class="flex-container just-flex-end align-items-base">
+				<div class="flex-container just-flex-end align-items-center">
 					<div class="menuVisible">
 						<?php 
 						wp_nav_menu( array( 
