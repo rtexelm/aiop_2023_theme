@@ -42,23 +42,16 @@
 			</section>
 			<div class="menuFull" id="menuFull">
 				<div class="bg-wrapper">
-				<section class="left">
-				</section>
-				<section class="right">
-					<!-- <a href="<?php echo get_home_url(); ?>" id="home">
-					<img src="<?php bloginfo('template_url'); ?>/assets/AiOP_Logo_simple.png" id="aiopLogo" alt="Art in Odd Places">
-					</a> -->
 					<?php 
-				wp_nav_menu( array( 
-					'theme_location' => 'full-navigation', 
-					'container_class' => 'fullNav' 
-				) );
-				// wp_nav_menu( array( 
-				// 	'theme_location' => 'sub-navigation', 
-				// 	'container_class' => 'subNav' 
-				// ) );
-				?>
-				</section>
+					wp_nav_menu( array( 
+						'theme_location' => 'full-navigation', 
+						'container_class' => 'fullNav' 
+					) );
+					// wp_nav_menu( array( 
+					// 'theme_location' => 'sub-navigation', 
+					// 'container_class' => 'subNav' 
+					// ) );
+					?>
 				</div>
 			</div>
 		</nav>

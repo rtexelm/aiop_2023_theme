@@ -70,6 +70,7 @@
     .menuVisible {
       display: block;
       margin-right: 1rem;
+
       ul {
         margin: 0;
         padding: 0;
@@ -77,6 +78,7 @@
         flex-direction: row;
         gap: 1.5rem;
         list-style: none;
+
         li {
           a {
             @include nav-links;
@@ -96,38 +98,22 @@
     }
 
     .menuFull {
-      min-height: 100vh;
-      left: 120vw;
-      display: flex;
-      flex-direction: row;
-      .left {
-        flex-grow: 6;
-        // background: url("assets/menu_paper_LL.jpg");
-        // background-size: cover;
-        // background-position-x: right;
-        background-position-y: top;
-        height: 100%;
-      }
-      .right {
-        flex-grow: 7;
-        margin-left: -1px;
-        // background: url("assets/menu_paper_RR.jpg");
-        // background-size: cover;
-        // background-position-x: -1px;
-        // background-position-y: top;
-        height: 100%;
-        padding-left: 3rem;
-        .fullNav {
-        }
-        #aiopLogo {
-          top: 2rem;
+      .bg-wrapper {
+        &::before {
+          content: "";
+          position: absolute;
+          background-image: url(assets/dress/home-texture-01.png);
+          background-size: 100% auto;
+          mix-blend-mode: multiply;
+          width: 100%;
+          overflow: hidden;
+          top: 0px;
+          right: 0px;
+          bottom: 0px;
+          left: 0px;
+          opacity: 0.6;
         }
       }
-    }
-    a#menuToggleAnchor {
-      // width: 60px;
-      // height: 60px;
-      // position: absolute;
     }
   }
 

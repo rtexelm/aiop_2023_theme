@@ -325,7 +325,7 @@ nav a#menuToggleAnchor {
   width: auto;
   height: auto;
   right: 1rem;
-  z-index: 13;
+  z-index: 14;
 }
 nav .menuVisible {
   display: none;
@@ -339,16 +339,17 @@ nav .menuFull {
   display: flex;
   flex-direction: column;
   transition: all 0.66s;
-  background-color: hsl(17, 100%, 48%);
+  background-color: #f74500;
 }
 nav .menuFull .bg-wrapper {
   position: relative;
+  height: 100%;
 }
 nav .menuFull .bg-wrapper::before {
   content: "";
   position: absolute;
-  background-image: url(assets/dress/home-texture-01.png);
-  background-size: auto 100vh;
+  background-image: url(assets/dress/home-mobile-bg.png);
+  background-size: 100% auto;
   mix-blend-mode: multiply;
   width: 100%;
   overflow: hidden;
@@ -362,7 +363,7 @@ nav .menuFull a {
   text-decoration: none;
 }
 nav .menuFull a:visited {
-  color: #0f3a46;
+  color: #000;
 }
 nav .menuFull ul {
   margin: 0px;
@@ -582,25 +583,19 @@ main.home #artists .move-right {
   nav .menuVisible ul li a:focus {
     border-top: 1px solid #000;
   }
-  nav .menuFull {
-    min-height: 100vh;
-    left: 120vw;
-    display: flex;
-    flex-direction: row;
-  }
-  nav .menuFull .left {
-    flex-grow: 6;
-    background-position-y: top;
-    height: 100%;
-  }
-  nav .menuFull .right {
-    flex-grow: 7;
-    margin-left: -1px;
-    height: 100%;
-    padding-left: 3rem;
-  }
-  nav .menuFull .right #aiopLogo {
-    top: 2rem;
+  nav .menuFull .bg-wrapper::before {
+    content: "";
+    position: absolute;
+    background-image: url(assets/dress/home-texture-01.png);
+    background-size: 100% auto;
+    mix-blend-mode: multiply;
+    width: 100%;
+    overflow: hidden;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.6;
   }
 }
 @media screen and (min-width: 1400px) {
