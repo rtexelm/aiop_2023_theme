@@ -14,8 +14,6 @@ body {
   color: #fff;
   padding: 0;
   margin: 0;
-  position: absolute;
-  top: 0px;
 }
 
 .d1,
@@ -256,6 +254,18 @@ div.button p {
   display: flex;
 }
 
+.just-flex-end {
+  justify-content: flex-end;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-base {
+  align-items: baseline;
+}
+
 .flex-col-nw {
   flex-flow: column nowrap;
 }
@@ -281,7 +291,7 @@ nav {
   position: sticky;
   transition: top 0.3s;
   z-index: 10;
-  width: 100vw;
+  width: 100%;
   background-color: #f0fa00;
 }
 nav a#skip-content {
@@ -296,29 +306,25 @@ nav a#skip-content:focus {
   left: 9rem;
   top: 0px;
 }
-nav .nav_bar_flex {
+nav .nav-bar-flex {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
 }
 nav a#home {
-  margin: 2px 0 0;
-  padding: 0px;
+  margin: 10px 0 5px 5px;
   display: inline-block;
-  position: sticky;
 }
 nav a#home img#aiopLogo {
-  padding: 1rem;
   width: 5rem;
   z-index: 11;
 }
 nav a#menuToggleAnchor {
-  margin-bottom: 0;
+  margin: 0 10px 0;
   width: auto;
   height: auto;
   right: 1rem;
-  padding: 1.5rem;
   z-index: 13;
 }
 nav .menuVisible {
@@ -486,6 +492,114 @@ main.home #artists .move-right {
   margin-left: auto;
 }
 
+@media screen and (min-width: 720px) {
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5,
+  p.p1 {
+    line-height: 1em;
+  }
+  h1,
+  .h1 {
+    font-size: 3rem;
+  }
+  h2,
+  .h2 {
+    font-size: 3rem;
+  }
+  h3,
+  .h3 {
+    font-size: 2rem;
+  }
+  h4,
+  .h4 {
+    font-size: 1.5rem;
+    color: #6b98ad;
+  }
+  h5,
+  .h5 {
+    font-size: 1.25rem;
+    color: #6b98ad;
+  }
+  p,
+  a {
+    font-weight: 200;
+  }
+  p.p1,
+  p span.p1, p.p1r,
+  a.p1,
+  a span.p1,
+  a.p1r {
+    font-size: 2rem;
+    line-height: 1.25em;
+  }
+  p.p2,
+  p span.p2, p.p2r,
+  a.p2,
+  a span.p2,
+  a.p2r {
+    font-size: 1.5rem;
+    line-height: 1.25em;
+  }
+  p.light,
+  a.light {
+    font-weight: 300;
+  }
+  p.italic,
+  a.italic {
+    font-style: italic;
+  }
+  nav .menuVisible {
+    display: block;
+    margin-right: 1rem;
+  }
+  nav .menuVisible ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+  nav .menuVisible ul li a {
+    font: 1rem "degular-variable", sans-serif;
+    font-variation-settings: "wght" 600, "opsz" 40, "ital" 0;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000;
+  }
+  nav .menuVisible ul li a:hover {
+    border-top: 1px solid #000;
+  }
+  nav .menuVisible ul li a:focus {
+    border-top: 1px solid #000;
+  }
+  nav .menuFull {
+    min-height: 100vh;
+    left: 120vw;
+    display: flex;
+    flex-direction: row;
+  }
+  nav .menuFull .left {
+    flex-grow: 6;
+    background-position-y: top;
+    height: 100%;
+  }
+  nav .menuFull .right {
+    flex-grow: 7;
+    margin-left: -1px;
+    height: 100%;
+    padding-left: 3rem;
+  }
+  nav .menuFull .right #aiopLogo {
+    top: 2rem;
+  }
+}
 @media screen and (min-width: 1400px) {
   body {
     border: 5px olivedrab solid;
@@ -563,7 +677,6 @@ main.home #artists .move-right {
     grid-template-columns: repeat(12, 1fr);
     -moz-column-gap: 1rem;
          column-gap: 1rem;
-    width: calc(100vw - 3rem);
     padding: 1.5rem;
     margin-top: -8rem;
     margin-bottom: 8rem;

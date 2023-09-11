@@ -4,7 +4,7 @@ nav {
   position: sticky;
   transition: top 0.3s;
   z-index: 10;
-  width: 100vw;
+  width: 100%;
   background-color: $neon-yellow;
   a#skip-content {
     position: absolute;
@@ -19,29 +19,27 @@ nav {
     }
   }
 
-  .nav_bar_flex {
+  .nav-bar-flex {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
   }
+
   a#home {
-    margin: 2px 0 0;
-    padding: 0px;
+    margin: 10px 0 5px 5px;
     display: inline-block;
-    position: sticky;
     img#aiopLogo {
-      padding: 1rem;
       width: 5rem;
       z-index: 11;
     }
   }
+
   a#menuToggleAnchor {
-    margin-bottom: 0;
+    margin: 0 10px 0;
     width: auto;
     height: auto;
     right: 1rem;
-    padding: 1.5rem;
     z-index: 13;
   }
   .menuVisible {
