@@ -583,6 +583,9 @@ main.home #artists .move-right {
   nav .menuVisible ul li a:focus {
     border-top: 1px solid #000;
   }
+  nav .menuFull {
+    left: 120vw;
+  }
   nav .menuFull .bg-wrapper::before {
     content: "";
     position: absolute;
