@@ -397,7 +397,7 @@ main.home .header {
   position: relative;
   min-height: 70vh;
   background: url(assets/dress/home-header-bg.png) fixed no-repeat #f74500;
-  background-size: auto 80%;
+  background-size: auto 90%;
 }
 main.home .header #pattern-r-top {
   z-index: 10;
