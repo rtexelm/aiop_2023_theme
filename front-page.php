@@ -21,10 +21,12 @@ get_header();
 				<img id="pattern-r-top" src="<?php bloginfo('template_url'); ?>/assets/dress/pattern-02-top-m.png" alt="">
 				</div>
 				<article id="title">
-					<h1 id="title-left">Art in</h1>
-					<h1 id="title-right">Odd Places</h1>
-					<h1 id="title-right">2023</h1>
-					<h1 id="title-center">DRESS</h1>
+					<h1 class="flex-container flex-col-nw">
+						<span class="flex-col-left">Art in</span>
+						<span class="flex-col-right">Odd Places</span>
+						<span class="flex-col-right">2023</span>
+						<span class="flex-col-center">DRESS</span>
+					</h1>
 				</article>
 				<div class="positioner">
 				<img id="pattern-l-top" src="<?php bloginfo('template_url'); ?>/assets/dress/pattern-01-top-m.png" alt="">
@@ -33,12 +35,15 @@ get_header();
 			</section>
 			<div class="bg-wrapper">
 				<section id="dates">
-					<div class="dates">
-						<h2 class="d1">October</h2>
-						<h2 class="d1">13&ndash;15<span class="script"> 2023</span>
+					<div class="flex-container flex-col-nw">
+
+						<h2 class="flex-container date-text">
+							<span class="flex-col-center">October</span>
+							<span class="flex-col-left">13&ndash;15<span class="script"> 2023</span></span>
 						</h2>
-						<a class="button primary" href="<?php bloginfo('template_url'); ?>/schedule">Schedule <img src="<?php bloginfo('template_url'); ?>/assets/dress/arrow-right-dark.svg" alt=""></a>
-						<a class="button secondary" href="<?php bloginfo('template_url'); ?>/public-programs">Public Programs</a>
+						
+						<a class="button neon-yellow" href="<?php bloginfo('template_url'); ?>/schedule">Schedule</a>
+						<a class="button lavender" href="<?php bloginfo('template_url'); ?>/public-programs">Public Programs</a>
 					</div>
 				</section>
 				<div class="positioner">
@@ -48,21 +53,26 @@ get_header();
 					<img id="pattern-l-mid" src="<?php bloginfo('template_url'); ?>/assets/dress/pattern-04-curve-m.png" alt="">
 				</div>
 				<section id="about">
-					<div class="byline">
-						<h2 class="d1">Curated</h2>
-						<h2 class="d1">by Gretchen</h2>
-						<h2 class="d1">Vitamvas</h2>
-					</div>
+					<h2 class="flex-container flex-col-nw byline">
+						<span class="flex-col-left">Curated</span>
+						<span class="flex-col-right">by Gretchen</span>
+						<span class="flex-col-center">Vitamvas</span>
+					</h2>
 					<div class="about">
 						<p class="p1"><span class="italic">Art in Odd Places 2023: Dress</span> features visual and performance artists on 14th Street from Avenue C to the Hudson River.</p>
-						<a class="button primary" href="<?php bloginfo('template_url'); ?>/about">About the festival</a>
+						<a class="button neon-yellow orange" href="<?php bloginfo('template_url'); ?>/about">About the festival</a>
 					</div>
 				</section>
 				<section id="artists">
 					<div class="artists">
-						<h2><span class="script">40</span> Participating </br>artists & groups</h2>
-						<a class="button primary" href="<?php bloginfo('template_url'); ?>/artists">Artists</a>
-						<a class="button secondary" href="<?php bloginfo('template_url'); ?>/public-programs">Schedule</a>
+						<h2 class="flex-container flex-col-nw move-right">
+							<span class="script flex-col-center" >40</span>
+							<span class="flex-col-right">Participating</span>
+							<span class="flex-col-left"> Artists &</span>
+							<span class="flex-col-center">Groups</span>
+						</h2>
+						<a class="button neon-yellow" href="<?php bloginfo('template_url'); ?>/artists">Artists</a>
+						<a class="button lavender" href="<?php bloginfo('template_url'); ?>/public-programs">Schedule</a>
 					</div>
 			</div>
 		</main>

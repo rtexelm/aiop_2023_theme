@@ -25,9 +25,9 @@ $coal: #2c2c2c;
 $white: #fff;
 $black: #000;
 
-$primary-type: Degular, sans-serif;
-$secondary-type: Degular, sans-serif;
-$display-type: Degular, sans-serif;
+$primary-type: "degular-variable", sans-serif;
+$secondary-type: "degular-variable", sans-serif;
+$display-type: "degular-variable", sans-serif;
 
 @mixin twelve-col-grid {
   display: grid;
@@ -38,7 +38,11 @@ $display-type: Degular, sans-serif;
 }
 
 @mixin title-display {
-  font: normal 400 3.5rem $display-type;
-  margin: 0;
+  font: 4rem $display-type;
+  font-variation-settings: "wght" 700, "opsz" 72, "ital" 0; //display
   line-height: 0.9em;
+}
+
+@mixin script-display {
+  // Enter script mixin here
 }

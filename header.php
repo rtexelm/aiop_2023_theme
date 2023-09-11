@@ -15,7 +15,7 @@
 		<!-- fonts -->
 		<!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
 <!-- 		<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@200;600&family=Roboto:ital,wght@0,100;0,300;0,500;1,100;1,300;1,500&display=swap" rel="stylesheet"> -->
-		<link rel="stylesheet" href="https://use.typekit.net/iom6knw.css">
+		<link rel="stylesheet" href="https://use.typekit.net/hoe1avd.css">
 		<!-- scripts & styles -->
 		<?php wp_head(); ?>
 		<!-- scripts -->
