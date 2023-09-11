@@ -397,7 +397,7 @@ main.home .header {
   position: relative;
   min-height: 70vh;
   background: url(assets/dress/home-header-bg.png) fixed no-repeat #f74500;
-  background-size: auto 100vh;
+  background-size: auto 80%;
 }
 main.home .header #pattern-r-top {
   z-index: 10;
@@ -599,6 +599,36 @@ main.home #artists .move-right {
     bottom: 0px;
     left: 0px;
     opacity: 0.6;
+  }
+  main.home .header {
+    height: 80vh;
+    background: url(assets/dress/tablet/home_header_2160w.jpg) fixed no-repeat #f74500;
+    background-size: auto 100%;
+  }
+  main.home #artists .artists h2 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+    padding: 1.5rem;
+    grid-template-rows: repeat(4, 1fr);
+  }
+  main.home #artists .artists h2 #artists-40 {
+    grid-column: 6/7;
+    grid-row: 2/3;
+    text-align: right;
+  }
+  main.home #artists .artists h2 #artists-part {
+    grid-column: 7/12;
+    grid-row: 2/3;
+  }
+  main.home #artists .artists h2 #artists-art {
+    grid-column: 6/11;
+    grid-row: 3/4;
+  }
+  main.home #artists .artists h2 #artists-groups {
+    grid-column: 7/12;
+    grid-row: 4/5;
   }
 }
 @media screen and (min-width: 1400px) {
