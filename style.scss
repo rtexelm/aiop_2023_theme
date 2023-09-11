@@ -15,14 +15,14 @@ Text Domain: aiop-dress
 @use "styles/site-wide";
 @use "styles/nav";
 @use "styles/front-page";
-@use "styles/tablet720";
+// @use "styles/tablet720";
 @use "styles/desktop1400";
 
 #about-background {
   z-index: -10;
   position: fixed;
   top: 0px;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background: url(assets/paper-artist-L.jpg);
   background-size: cover;
@@ -45,13 +45,13 @@ main.about {
     font-weight: 300;
   }
   img.about-header {
-    width: 100vw;
+    width: 100%;
   }
   img.buffer {
-    width: 100vw;
+    width: 100%;
   }
   section.cs {
-    width: calc(100vw - 3rem);
+    width: calc(100% - 3rem);
     padding: 4rem 1.5rem 4rem 1.5rem;
     .cs_more_text {
       max-height: 0px;
@@ -62,7 +62,7 @@ main.about {
   section.festival {
     display: flex;
     flex-direction: column;
-    width: calc(100vw - 3rem);
+    width: calc(100% - 3rem);
     padding: 4rem 1.5rem 4rem 1.5rem;
     background: $dark;
     color: white;
@@ -81,7 +81,7 @@ main.about {
   section.people {
     display: flex;
     flex-direction: column;
-    width: calc(100vw - 3rem);
+    width: calc(100% - 3rem);
     padding: 1.5rem;
     margin-bottom: 4rem;
     h2 {
@@ -110,7 +110,7 @@ main.about {
     }
   }
   section.partners {
-    width: calc(100vw - 3rem);
+    width: calc(100% - 3rem);
     padding: 10rem 1.5rem 4rem 1.5rem;
     display: flex;
     flex-direction: column;
@@ -137,7 +137,7 @@ main.about {
     }
   }
   section.support {
-    width: calc(100vw - 3rem);
+    width: calc(100% - 3rem);
     padding: 1.5rem 1.5rem 5rem 1.5rem;
     background: $dark;
     color: white;
@@ -154,14 +154,14 @@ main.about {
   z-index: -10;
   position: fixed;
   top: 0px;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background: url(assets/paper-artist-L.jpg);
   background-size: cover;
 }
 main.artist-listing {
   section.artists {
-    width: calc(100vw - 3rem);
+    width: calc(100% - 3rem);
     margin: 4rem 1.5rem 0 1.5rem;
     span.page-title {
       // color: $dark;
@@ -193,7 +193,7 @@ main.artist-listing {
 
 main.artist-single {
   position: relative;
-  width: calc(100vw - 3rem);
+  width: calc(100% - 3rem);
   padding: 10rem 1.5rem 10rem 1.5rem;
   background: url(assets/paper-artist-R.jpg);
   background-size: cover;
@@ -230,7 +230,7 @@ main.artist-single {
   }
 }
 section.digital {
-  width: 100vw;
+  width: 100%;
   background: $dark;
   color: white;
   h2 {
@@ -240,13 +240,13 @@ section.digital {
     padding: 1.5rem;
   }
   iframe {
-    width: calc(100vw - 3rem);
+    width: calc(100% - 3rem);
     height: calc(56.25vw);
     margin-left: 1.5rem;
   }
   div.gallery {
     img {
-      max-width: calc(100vw - 5rem);
+      max-width: calc(100% - 5rem);
       border: 1rem solid white;
       margin: 0rem 1.5rem 1rem 1.5rem;
     }
@@ -274,7 +274,7 @@ nav.artist-nav {
   z-index: -10;
   position: fixed;
   top: 0px;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background: url(assets/paper-artist-L.jpg);
   background-size: cover;

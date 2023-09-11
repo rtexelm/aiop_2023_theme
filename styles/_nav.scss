@@ -3,10 +3,9 @@
 nav {
   position: sticky;
   transition: top 0.3s;
-  // top: 0px;
   z-index: 10;
   width: 100vw;
-  background-color: hsla(62, 100%, 49%, 1);
+  background-color: $neon-yellow;
   a#skip-content {
     position: absolute;
     top: -4rem;
@@ -30,7 +29,6 @@ nav {
     margin: 2px 0 0;
     padding: 0px;
     display: inline-block;
-    // order: 1;
     position: sticky;
     img#aiopLogo {
       padding: 1rem;
@@ -39,17 +37,12 @@ nav {
     }
   }
   a#menuToggleAnchor {
-    // order: 3;
     margin-bottom: 0;
     width: auto;
     height: auto;
-    // position: fixed;
     right: 1rem;
-    // top: 0.4rem;
     padding: 1.5rem;
     z-index: 13;
-    // background: url(assets/Menu-Icon.svg);
-    // background-size: contain;
   }
   .menuVisible {
     display: none;
@@ -60,7 +53,7 @@ nav {
     // background-color: hsla(62, 100%, 49%, 1);
     // top: 78.77px;
     left: 140vw;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
