@@ -287,7 +287,6 @@ div.button p {
   grid-template-columns: repeat(12, 1fr);
   -moz-column-gap: 1rem;
        column-gap: 1rem;
-  width: 90%;
   max-width: 1200px;
 }
 
@@ -630,7 +629,6 @@ main.home #artists .move-right {
     grid-template-columns: repeat(12, 1fr);
     -moz-column-gap: 1rem;
          column-gap: 1rem;
-    width: 90%;
     max-width: 1200px;
     grid-template-rows: repeat(4, 1fr);
   }
@@ -650,12 +648,14 @@ main.home #artists .move-right {
     grid-column: 5/10;
     grid-row: 4/5;
   }
+  main.home .header #pattern-l-top {
+    top: -100px;
+  }
   main.home #artists .artists h2 {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     -moz-column-gap: 1rem;
          column-gap: 1rem;
-    width: 90%;
     max-width: 1200px;
     grid-template-rows: repeat(4, 1fr);
   }
@@ -754,7 +754,6 @@ main.home #artists .move-right {
     grid-template-columns: repeat(12, 1fr);
     -moz-column-gap: 1rem;
          column-gap: 1rem;
-    width: 90%;
     max-width: 1200px;
     margin-top: -8rem;
     margin-bottom: 8rem;

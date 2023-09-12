@@ -150,9 +150,9 @@
         }
       }
 
-      // #pattern-l-top {
-      //   top: -100px;
-      // }
+      #pattern-l-top {
+        top: -100px;
+      }
     }
 
     #artists {
@@ -580,6 +580,7 @@
   //   }
 
   // footer {
+  //   margin: auto;
   //   align-self: flex-end;
   //   @include twelve-col-grid;
   //   p,

@@ -18,14 +18,15 @@ get_header();
 <main class="home" id="main-content">
     <section class="header">
         <div class="positioner">
-            <picture id="pattern-r-top">
+            <picture>
                 <source media="(max-width: 719px)"
                     srcset="<?php bloginfo('template_url'); ?>/assets/dress/pattern-02-top-m.png" />
 
                 <source media="(min-width: 720px)"
                     srcset="<?php bloginfo('template_url'); ?>/assets/dress/tablet/pattern-02-1276w.png" />
 
-                <img src="<?php bloginfo('template_url'); ?>/assets/dress/tablet/pattern-02-1276w.png" alt="" />
+                <img id="pattern-r-top"
+                    src="<?php bloginfo('template_url'); ?>/assets/dress/tablet/pattern-02-1276w.png" alt="" />
             </picture>
         </div>
         <article id="title">
@@ -37,14 +38,15 @@ get_header();
             </h1>
         </article>
         <div class="positioner">
-            <picture id="pattern-l-top">
+            <picture>
                 <source media="(max-width: 719px)"
                     srcset="<?php bloginfo('template_url'); ?>/assets/dress/pattern-01-top-m.png" />
 
                 <source media="(min-width: 720px)"
                     srcset="<?php bloginfo('template_url'); ?>/assets/dress/tablet/pattern-01-1264w.png" />
 
-                <img src="<?php bloginfo('template_url'); ?>/assets/dress/tablet/pattern-01-1264w.png" alt="" />
+                <img id="pattern-l-top"
+                    src="<?php bloginfo('template_url'); ?>/assets/dress/tablet/pattern-01-1264w.png" alt="" />
             </picture>
         </div>
         <picture>
@@ -54,7 +56,7 @@ get_header();
             <source media="(min-width: 720px)"
                 srcset="<?php bloginfo('template_url'); ?>/assets/dress/tablet/scroll-2880w.png" />
 
-            <img src="<?php bloginfo('template_url'); ?>/assets/dress/scroll-780w.png" alt="scroll down"
+            <img src="<?php bloginfo('template_url'); ?>/assets/dress/			scroll-780w.png" alt="scroll down"
                 class="page-down" />
         </picture>
     </section>
@@ -72,10 +74,26 @@ get_header();
             </div>
         </section>
         <div class="positioner">
-            <img id="pattern-r-mid" src="<?php bloginfo('template_url'); ?>/assets/dress/pattern-03-top-m.png" alt="">
+            <picture>
+                <source media="(max-width: 719px)"
+                    srcset="<?php bloginfo('template_url'); ?>/assets/dress/pattern-03-top-m.png" />
+
+                <source media="(min-width: 720px)"
+                    srcset="<?php bloginfo('template_url'); ?>/assets/dress/tablet/pattern-03-1282w.png" />
+                <img id="pattern-r-mid"
+                    src="<?php bloginfo('template_url'); ?>/assets/dress/tablet/pattern-03-1282w.png" alt="">
+            </picture>
         </div>
         <div class="positioner">
-            <img id="pattern-l-mid" src="<?php bloginfo('template_url'); ?>/assets/dress/pattern-04-curve-m.png" alt="">
+            <picture>
+                <source media="(max-width: 719px)"
+                    srcset="<?php bloginfo('template_url'); ?>/assets/dress/pattern-04-curve-m.png" />
+
+                <source media="(min-width: 720px)"
+                    srcset="<?php bloginfo('template_url'); ?>/assets/dress/tablet/pattern-04-1216w.png" />
+                <img id="pattern-l-mid"
+                    src="<?php bloginfo('template_url'); ?>/assets/dress/tablet/pattern-04-1216w.png" alt="">
+            </picture>
         </div>
         <section id="about">
             <h2 class="flex-container flex-col-nw byline">
