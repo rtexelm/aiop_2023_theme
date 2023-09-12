@@ -112,18 +112,20 @@
     }
   }
 
+  // Front Page
+
   main.home {
     .header {
       // border: 5px solid blue;
-      height: 80vh;
+      min-height: 80vh;
       background: url(assets/dress/tablet/home_header_2160w.jpg) fixed no-repeat
         $primary-orange;
       background-size: auto 100%;
 
       #title {
-        display: block;
-        padding: 7vh 0 0 0;
-        margin: 0;
+        display: flex;
+        padding: 8vh 0 3vh 0;
+        margin: 0 1.5rem;
         max-width: 100%;
         h1 {
           padding: 0;
@@ -152,6 +154,10 @@
 
       #pattern-l-top {
         top: -100px;
+      }
+
+      .page-down {
+        margin-top: auto;
       }
     }
 

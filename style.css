@@ -608,20 +608,20 @@ main.home #artists .move-right {
     opacity: 0.6;
   }
   main.home .header {
-    height: 80vh;
+    min-height: 80vh;
     background: url(assets/dress/tablet/home_header_2160w.jpg) fixed no-repeat #f74500;
     background-size: auto 100%;
   }
   main.home .header #title {
-    display: block;
-    padding: 7vh 0 0 0;
-    margin: 0;
+    display: flex;
+    padding: 8vh 0 3vh 0;
+    margin: 0 1.5rem;
     max-width: 100%;
   }
   main.home .header #title h1 {
     padding: 0;
     margin: auto;
-    font: 15vw "degular-variable", sans-serif;
+    font: 14vw "degular-variable", sans-serif;
     font-variation-settings: "wght" 700, "opsz" 72, "ital" 0;
     line-height: 0.9em;
     display: grid;
@@ -649,6 +649,9 @@ main.home #artists .move-right {
   }
   main.home .header #pattern-l-top {
     top: -100px;
+  }
+  main.home .header .page-down {
+    margin-top: auto;
   }
   main.home #artists .artists h2 {
     display: grid;
