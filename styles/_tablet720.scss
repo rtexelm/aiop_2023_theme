@@ -114,11 +114,41 @@
 
   main.home {
     .header {
+      // border: 5px solid blue;
       height: 80vh;
       background: url(assets/dress/tablet/home_header_2160w.jpg) fixed no-repeat
         $primary-orange;
       background-size: auto 100%;
-      // background-size: cover;
+
+      #title {
+        display: block;
+        padding: 0;
+        margin: 0;
+        max-width: 100%;
+        h1 {
+          padding: 0;
+          margin: 0;
+          @include title-display-tablet;
+          @include twelve-col-grid;
+          grid-template-rows: repeat(4, 1fr);
+          #title-1 {
+            grid-column: 2/8;
+            grid-row: 1/2;
+          }
+          #title-2 {
+            grid-column: 3/13;
+            grid-row: 2/3;
+          }
+          #title-3 {
+            grid-column: 7/13;
+            grid-row: 3/4;
+          }
+          #title-4 {
+            grid-column: 5/10;
+            grid-row: 4/5;
+          }
+        }
+      }
     }
 
     #artists {

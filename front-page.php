@@ -18,20 +18,27 @@ get_header();
 <main class="home" id="main-content">
 	<section class="header">
 		<div class="positioner">
-		<img id="pattern-r-top" src="<?php bloginfo('template_url'); ?>/assets/dress/pattern-02-top-m.png" alt="">
+		<picture>
+			<source media="(max-width: 720px)" 
+					srcset="<?php bloginfo('template_url'); ?>/assets/dress/pattern-02-top-m.png" />
+
+			<img 	id="pattern-r-top" 
+					src="<?php bloginfo('template_url'); ?>/assets/dress/pattern-02-top-m.png" 
+					alt="" />
+		</picture>
 		</div>
 		<article id="title">
 			<h1 class="flex-container flex-col-nw">
-				<span class="flex-col-left">Art in</span>
-				<span class="flex-col-right">Odd Places</span>
-				<span class="flex-col-right">2023</span>
-				<span class="flex-col-center">DRESS</span>
+				<span id="title-1" class="flex-col-left">Art in</span>
+				<span id="title-2" class="flex-col-right">Odd Places</span>
+				<span id="title-3" class="flex-col-right">2023</span>
+				<span id="title-4" class="flex-col-center">DRESS</span>
 			</h1>
 		</article>
 		<div class="positioner">
 		<img id="pattern-l-top" src="<?php bloginfo('template_url'); ?>/assets/dress/pattern-01-top-m.png" alt="">
 		</div>
-		<img src="<?php bloginfo('template_url'); ?>/assets/dress/scroll.png" alt="scroll down" class="page-down">
+		<img src="<?php bloginfo('template_url'); ?>/assets/dress/scroll-780w.png, " alt="scroll down" class="page-down">
 	</section>
 	<div class="bg-wrapper">
 		<section id="dates">

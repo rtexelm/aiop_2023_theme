@@ -33,12 +33,19 @@ $display-type: "degular-variable", sans-serif;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   column-gap: 1rem;
+  width: 90%;
+  max-width: 1200px;
   // width: calc(100vw - 3rem);
-  padding: 1.5rem;
+  // padding: 1.5rem;
 }
 
 @mixin title-display {
   font: 4rem $display-type;
+  font-variation-settings: "wght" 700, "opsz" 72, "ital" 0; //display
+  line-height: 0.9em;
+}
+@mixin title-display-tablet {
+  font: 16vw $display-type;
   font-variation-settings: "wght" 700, "opsz" 72, "ital" 0; //display
   line-height: 0.9em;
 }
