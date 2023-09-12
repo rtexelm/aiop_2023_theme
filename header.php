@@ -13,9 +13,7 @@
 		<meta name="author" content="Laurie Waxman">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<!-- fonts -->
-		<!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
-<!-- 		<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@200;600&family=Roboto:ital,wght@0,100;0,300;0,500;1,100;1,300;1,500&display=swap" rel="stylesheet"> -->
-		<link rel="stylesheet" href="https://use.typekit.net/iom6knw.css">
+		<link rel="stylesheet" href="https://use.typekit.net/hoe1avd.css">
 		<!-- scripts & styles -->
 		<?php wp_head(); ?>
 		<!-- scripts -->
@@ -24,41 +22,36 @@
 	<body>
 		<nav class="top">
 			<a href="#main-content" id="skip-content">Skip to content</a>
-			<section class="nav_bar_flex" id="navScroll">
+			<section class="nav-bar-flex" id="navScroll">
 				<a title="home" href="<?php echo get_home_url(); ?>" id="home">
 					<img src="<?php bloginfo('template_url'); ?>/assets/AiOP_Logo_simple.png" id="aiopLogo" alt="AIOP" aria-hidden="true">
 				</a>
-				<div class="menuVisible">
-					<?php 
-					wp_nav_menu( array( 
-						'theme_location' => 'top-navigation', 
-						'container_class' => 'topNav' 
-					) );
-					?>
+				<div class="flex-container just-flex-end align-items-center">
+					<div class="menuVisible">
+						<?php 
+						wp_nav_menu( array( 
+							'theme_location' => 'top-navigation', 
+							'container_class' => 'topNav' 
+						) );
+						?>
+					</div>
+					<a title="full menu" href="#menuFull" id="menuToggleAnchor">
+						<img id="menuToggle" src="<?php bloginfo('template_url'); ?>/assets/dress/hamburger24.svg" alt="view menu" aria-hidden="true">
+					</a>
 				</div>
-				<a title="full menu" href="#menuFull" id="menuToggleAnchor">
-					<img id="menuToggle" src="<?php bloginfo('template_url'); ?>/assets/menu_toggle.png" alt="view menu" aria-hidden="true">
-				</a>
 			</section>
 			<div class="menuFull" id="menuFull">
 				<div class="bg-wrapper">
-				<section class="left">
-				</section>
-				<section class="right">
-					<!-- <a href="<?php echo get_home_url(); ?>" id="home">
-					<img src="<?php bloginfo('template_url'); ?>/assets/AiOP_Logo_simple.png" id="aiopLogo" alt="Art in Odd Places">
-					</a> -->
 					<?php 
-				wp_nav_menu( array( 
-					'theme_location' => 'full-navigation', 
-					'container_class' => 'fullNav' 
-				) );
-				// wp_nav_menu( array( 
-				// 	'theme_location' => 'sub-navigation', 
-				// 	'container_class' => 'subNav' 
-				// ) );
-				?>
-				</section>
+					wp_nav_menu( array( 
+						'theme_location' => 'full-navigation', 
+						'container_class' => 'fullNav' 
+					) );
+					// wp_nav_menu( array( 
+					// 'theme_location' => 'sub-navigation', 
+					// 'container_class' => 'subNav' 
+					// ) );
+					?>
 				</div>
 			</div>
 		</nav>

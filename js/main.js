@@ -36,7 +36,12 @@ jQuery(document).ready(function ($) {
       // $('#menuFull a').each( function(){
       // 	$(this).attr("aria-hidden","false");
       // });
-      $(".menuFull").css("left", "0px");
+      if (window.innerWidth < 720) {
+        $(".menuFull").css("left", "0");
+      } else {
+        $(".menuFull").css("left", "75vw");
+      }
+      // $(".menuFull").css("left", "75vw");
       // $(".menuFull").css("transform", "rotate(0deg)");
     } else {
       console.log("CLOSE MENU");

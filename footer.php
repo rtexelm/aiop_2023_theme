@@ -1,7 +1,7 @@
 		<footer>
 
 			<div class="footer-col" id="footer-festival">
-				<p>September 23-25 2022</p>
+				<p>October 13-15 2023</p>
 				<p><span class="light">New York City</span></p>
 				<p><span class="light">14th Street from Avenue C to the Hudson River</span></p>
 			</div>
@@ -31,7 +31,7 @@
 				</div>
 			</div>
 			<div class="footer-col footer-copyright" id="footer-copyright">
-				<p>© 2022 Art in Odd Places</br>
+				<p>© 2023 Art in Odd Places</br>
 				All rights reserved</p>
 				<p><span class="light">Art in Odd Places is a project of <a href="http://gohproductions.org/">GOH Productions</a>.</span></p>
 			</div>
