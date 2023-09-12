@@ -9,7 +9,7 @@ main.home {
     min-height: 70vh;
     background: url(assets/dress/home-header-bg.png) fixed no-repeat
       $primary-orange;
-    background-size: auto 90%;
+    background-size: auto 100%;
 
     #pattern-r-top {
       z-index: 10;
@@ -22,10 +22,10 @@ main.home {
     #title {
       z-index: 20;
       position: relative;
-      max-width: 22.5rem;
+      // max-width: 22.5rem;
       min-width: 14rem;
       margin: auto;
-      padding: 20vh 0 6vh;
+      padding: 20vh 4vh 6vh;
       display: flex;
       flex-flow: column wrap;
       justify-content: center;
