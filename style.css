@@ -622,7 +622,7 @@ main.home #artists .move-right {
   }
   main.home .header #title h1 {
     padding: 0;
-    margin: 0;
+    margin: auto;
     font: 16vw "degular-variable", sans-serif;
     font-variation-settings: "wght" 700, "opsz" 72, "ital" 0;
     line-height: 0.9em;

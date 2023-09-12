@@ -127,7 +127,7 @@
         max-width: 100%;
         h1 {
           padding: 0;
-          margin: 0;
+          margin: auto;
           @include title-display-tablet;
           @include twelve-col-grid;
           grid-template-rows: repeat(4, 1fr);
@@ -149,6 +149,10 @@
           }
         }
       }
+
+      // #pattern-l-top {
+      //   top: -100px;
+      // }
     }
 
     #artists {
