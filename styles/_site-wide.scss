@@ -198,7 +198,7 @@ div.button {
   &.orange {
     color: $white;
     border: 1px solid white;
-    background: $primary-orange;
+    background: transparent;
     &:hover {
       background: $lavender;
       color: black;
