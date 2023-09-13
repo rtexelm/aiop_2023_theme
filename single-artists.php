@@ -109,8 +109,6 @@ get_header();
         </div>
     </section>
     <section class="right">
-        <img src="<?php echo esc_url($project_image['url']); ?>" class="feature-img"
-            alt="\<?php echo esc_attr($project_image['alt']); ?>" />
         <div class="project p1">
             <?php echo "<p>" . $project_description . "</p>"?>
             <?php 

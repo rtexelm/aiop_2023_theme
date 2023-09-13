@@ -1,9 +1,10 @@
 @use "constants" as *;
 
 footer {
+  box-sizing: border-box;
   background: $deep-green;
   color: white;
-  // padding: 3rem 1.5rem;
+  padding: 3rem 1.5rem;
   p,
   p a {
     margin: 0 0 0.5rem 0;

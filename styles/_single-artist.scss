@@ -1,8 +1,9 @@
 @use "constants" as *;
 
 main.artist-single {
+  box-sizing: border-box;
   position: relative;
-  width: calc(100% - 3rem);
+  width: 100%;
   padding: 10rem 1.5rem 10rem 1.5rem;
   // background: url(assets/paper-artist-R.jpg);
   // background-size: cover;
@@ -45,30 +46,7 @@ main.artist-single {
     }
   }
 }
-section.digital {
-  width: 100%;
-  background: $dark;
-  color: white;
-  h2 {
-    font-family: $primary-type;
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    padding: 1.5rem;
-  }
-  iframe {
-    width: calc(100% - 3rem);
-    height: calc(56.25vw);
-    margin-left: 1.5rem;
-  }
-  div.gallery {
-    img {
-      max-width: calc(100% - 5rem);
-      border: 1rem solid white;
-      margin: 0rem 1.5rem 1rem 1.5rem;
-    }
-    padding-bottom: 1rem;
-  }
-}
+
 nav.artist-nav {
   position: relative;
   height: 100px;

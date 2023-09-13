@@ -677,8 +677,9 @@ main.artist-listing section.artists .artist-container .button {
 }
 
 main.artist-single {
+  box-sizing: border-box;
   position: relative;
-  width: calc(100% - 3rem);
+  width: 100%;
   padding: 10rem 1.5rem 10rem 1.5rem;
 }
 main.artist-single .project-img img {
@@ -712,31 +713,6 @@ main.artist-single section.right .bios a {
 }
 main.artist-single section.right .bios a::visited {
   color: #0f3a46;
-}
-
-section.digital {
-  width: 100%;
-  background: #0f3a46;
-  color: white;
-}
-section.digital h2 {
-  font-family: "degular-variable", sans-serif;
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  padding: 1.5rem;
-}
-section.digital iframe {
-  width: calc(100% - 3rem);
-  height: 56.25vw;
-  margin-left: 1.5rem;
-}
-section.digital div.gallery {
-  padding-bottom: 1rem;
-}
-section.digital div.gallery img {
-  max-width: calc(100% - 5rem);
-  border: 1rem solid white;
-  margin: 0rem 1.5rem 1rem 1.5rem;
 }
 
 nav.artist-nav {
@@ -882,8 +858,10 @@ main.partners .partner p {
 }
 
 footer {
+  box-sizing: border-box;
   background: #05633e;
   color: white;
+  padding: 3rem 1.5rem;
 }
 footer p,
 footer p a {
