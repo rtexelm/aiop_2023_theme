@@ -161,6 +161,25 @@
       }
     }
 
+    .bg-wrapper {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: -100;
+        background-image: url(assets/dress/tablet/home-texture-1380w.png);
+        background-size: auto 100%;
+        mix-blend-mode: multiply;
+        width: 100%;
+        overflow: hidden;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        opacity: 0.6;
+      }
+    }
+
     #artists {
       .artists h2 {
         @include twelve-col-grid;
