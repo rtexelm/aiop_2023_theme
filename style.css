@@ -21,6 +21,7 @@ h1,
 .h1 {
   display: block;
   font-family: "degular-variable", sans-serif;
+  font-weight: normal;
   line-height: 1em;
   margin: 0px;
 }
@@ -35,6 +36,7 @@ h5,
 .h5 {
   display: block;
   font-family: "degular-variable", sans-serif;
+  font-weight: normal;
   line-height: 1em;
   margin: 0px;
 }
@@ -45,16 +47,14 @@ span.d1 {
 
 h1,
 .h1 {
-  font-size: 2.5rem;
-  font-weight: 600;
-  font-variation-settings: "wght" 600;
+  font-size: 3rem;
+  font-variation-settings: "wght" 400;
   margin-bottom: 0.5rem;
 }
 
 h2,
 .h2 {
-  font-size: 3.3rem;
-  font-weight: 200;
+  font-size: 2.5rem;
   font-variation-settings: "wght" 250;
   margin-bottom: 2rem;
 }
@@ -79,7 +79,6 @@ h5,
 p,
 a {
   font-family: "degular-variable", sans-serif;
-  font-weight: 300;
   font-variation-settings: "wght" 300;
   margin: 0;
   margin-bottom: 1em;
@@ -113,7 +112,6 @@ a span.p2 {
 }
 p.light,
 a.light {
-  font-weight: 300;
   font-variation-settings: "wght" 300;
 }
 p span.italic,
@@ -372,6 +370,9 @@ nav .menuFull .bg-wrapper::before {
   left: 0px;
   opacity: 0.6;
 }
+nav .menuFull .bg-wrapper .fullNav {
+  position: relative;
+}
 nav .menuFull a {
   text-decoration: none;
 }
@@ -402,13 +403,11 @@ nav .menuFull ul#menu-full-navigation .submenu:not(.submenu ~ .submenu) {
   margin-top: -0.2rem;
 }
 
-main.home {
-  display: block;
-}
 main.home .header {
   z-index: 0;
   position: relative;
   min-height: 70vh;
+  max-height: 80vh;
   background: url(assets/dress/home-header-bg.png) fixed no-repeat #f74500;
   background-size: auto 100%;
 }
@@ -423,8 +422,9 @@ main.home .header #title {
   z-index: 20;
   position: relative;
   min-width: 14rem;
+  height: auto;
   margin: auto;
-  padding: 20vh 4vh 6vh;
+  padding: calc(20vh - 12vw) 1.5rem;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -439,7 +439,7 @@ main.home .header #pattern-l-top {
   z-index: 10;
   position: absolute;
   left: 0;
-  top: 20;
+  top: -20vh;
   width: 48vw;
 }
 main.home .header .page-down {
@@ -680,8 +680,10 @@ main.artist-single {
   position: relative;
   width: calc(100% - 3rem);
   padding: 10rem 1.5rem 10rem 1.5rem;
-  background: url(assets/paper-artist-R.jpg);
-  background-size: cover;
+}
+main.artist-single .project-img img {
+  width: 100%;
+  margin-bottom: 2em;
 }
 main.artist-single section.left {
   width: 100%;

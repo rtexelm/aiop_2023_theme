@@ -46,8 +46,8 @@ get_header();
 ?>
 
 <?php while($artistQuery->have_posts()): $artistQuery->the_post(); ?>
-    <?php if (function_exists('get_field')): ?>
-		    <?php 
+<?php if (function_exists('get_field')): ?>
+<?php 
 			global $thisID;
 
 			$is_group				= get_field('is_group', $thisID);
@@ -80,45 +80,47 @@ get_header();
 			$sortable_name = $last_name ?: $group_name;
 			$displayName = artistNameFormat($first_name, $sortable_name, $additional_names);
 
-		    ?> 
-		    <main class="artist-single">	
-				<div class="artist-textures">
-					<div id="left-page"></div><div id="right-page"></div>
-				</div>
-			    <h1 class="hidden"><?php echo $displayName ?></h1>
-			   
-			    <section class="left">
-			    	<!-- <p class="chapter">No. 12</p> -->
-					<h2 class="h1 project-artists"><?php echo $project_title ?></h2>
-					<h3 class="h2 project-title"><?php echo $displayName ?></h3>
-					<div class="location">
-				    	<h5>Friday</h5>
-						<p class="p1"><?php echo $friday_start . "-" . $friday_end ?></p>
-						<p class="p1"><?php echo $friday_location ?></p>
-					</div>
-					<div class="location">
-						<h5>Saturday</h5>
-						<p class="p1"><?php echo $saturday_start . "-" . $saturday_end ?></p>
-						<p class="p1"><?php echo $saturday_location ?></p>
-					</div>
-					<div class="location">
-						<h5>Sunday</h5>
-						<p class="p1"><?php echo $sunday_start . "-" . $sunday_end ?></p>
-						<p class="p1"><?php echo $sunday_location ?></p>
-					</div>
-				</section>
-				<section class="right">
-					<img src="<?php echo esc_url($project_image['url']); ?>" class="feature-img" alt="\<?php echo esc_attr($project_image['alt']); ?>" />
-					<div class="project p1">
-						<?php echo "<p>" . $project_description . "</p>"?>
-						<?php 
+		    ?>
+<main class="artist-single">
+    <h1 class="hidden"><?php echo $displayName ?></h1>
+
+    <section class="project-img">
+        <img src="<?php echo esc_url($project_image['url']); ?>" class="feature-img"
+            alt="\<?php echo esc_attr($project_image['alt']); ?>" />
+    </section>
+    <section class="left">
+        <!-- <p class="chapter">No. 12</p> -->
+        <h2 class="h1 project-title"><?php echo $project_title ?></h2>
+        <h3 class="h2 project-artists"><?php echo $displayName ?></h3>
+        <div class="location">
+            <h5>Friday</h5>
+            <p class="p1"><?php echo $friday_start . "-" . $friday_end ?></p>
+            <p class="p1"><?php echo $friday_location ?></p>
+        </div>
+        <div class="location">
+            <h5>Saturday</h5>
+            <p class="p1"><?php echo $saturday_start . "-" . $saturday_end ?></p>
+            <p class="p1"><?php echo $saturday_location ?></p>
+        </div>
+        <div class="location">
+            <h5>Sunday</h5>
+            <p class="p1"><?php echo $sunday_start . "-" . $sunday_end ?></p>
+            <p class="p1"><?php echo $sunday_location ?></p>
+        </div>
+    </section>
+    <section class="right">
+        <img src="<?php echo esc_url($project_image['url']); ?>" class="feature-img"
+            alt="\<?php echo esc_attr($project_image['alt']); ?>" />
+        <div class="project p1">
+            <?php echo "<p>" . $project_description . "</p>"?>
+            <?php 
 							if($project_link){
 								echo "<a class='button primary' target='blank' href='" . esc_url($project_link['url']) . "'>" . esc_attr( $project_link['title'] ) . "</a>";
 							}
 						?>
-					</div>
-					<section class="bios">
-						<?php 
+        </div>
+        <section class="bios">
+            <?php 
 							
 							if($artist_1_bio){
 								echo "<p>" . $artist_1_bio . "</p>";
@@ -139,93 +141,108 @@ get_header();
 								echo "<a target='blank' class='test' href='" . esc_url($artist_3_link['url']) . "'>" . esc_attr( $artist_3_link['title'] ) . "</a>";
 							}
 						?>
-					</section>
-			    </section>
-		    </main>
-		    <nav class="artist-nav">
-			    <div class="arrow prev">
-			    	<?php if($prevID): ?>
-		    	        <a href="<?= get_the_permalink($prevID) ?>" rel="prev">
-		    	        	<svg id="prev-artist" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.19 87.19">
-								<defs>
-									<style>
-										.cls-prev-1{
-											stroke:#285561;
-											stroke-miterlimit:10;
-										}
-										.cls-prev-1,.cls-prev-2{
-											fill:none;
-											stroke-linecap:round;
-											stroke-width:2px;
-										}
-										.cls-prev-2{
-											stroke:#285562;
-										}
-									</style>
-								</defs>
-								<g id="prev-page-arrow">
-									<line class="cls-prev-1" x1="48.3" y1="58.78" x2="19.68" y2="58.78"/>
-									<polyline class="cls-prev-1" points="26.2 52.26 19.68 58.78 26.23 65.33"/>
-								</g>
-							</svg>
-		    	        </a>
-			    	<?php endif; ?>
-			    </div>
-	    		<div class="arrow next">
-			    	<?php if($nextID): ?>
-					    <a href="<?= get_the_permalink($nextID) ?>" rel="next">
-					    	<svg id="next-artist" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 87.19 87.19">
-					    		<defs>
-					    			<style>
-					    			.cls-next-1{
-					    				fill:url(#linear-gradient);
-					    			}
-						    		.cls-next-2{
-						    			fill:#d5c5bd;
-						    		}
-							    	.cls-next-3{
-							    		stroke:#285561;
-							    		stroke-miterlimit:10;
-							    	}
-							    	.cls-next-3,.cls-next-4{
-							    		fill:none;
-							    		stroke-linecap:round;
-							    		stroke-miterlimit:10;
-							    		stroke-width:2px;
-							    	}
-									.cls-next-4{
-										stroke:#285562;									
-									}
-								</style>
-									<linearGradient id="linear-gradient" x1="23.87" y1="23.87" x2="51.38" y2="51.38" gradientUnits="userSpaceOnUse">
-										<stop offset="0" stop-color="#ffffff"/>
-										<!-- <stop offset=".19" stop-color="#f1ead8"/> -->
-										<!-- <stop offset=".46" stop-color="#e6d8c6"/> -->
-										<!-- <stop offset=".77" stop-color="#d2bba9"/> -->
-										<stop offset="1" stop-color="#c1a18e"/>
-									</linearGradient>
-								</defs>
-								<g id="next-page-base">
-									<polygon class="cls-next-2" points="41.17 40.95 87.19 0 87.19 87.19 0 87.19 41.17 40.95"/>
-								</g>
-								<g id="next-page-arrow">
-									<line class="cls-next-3" x1="38.89" y1="58.78" x2="67.51" y2="58.78"/>
-									<polyline class="cls-next-3" points="60.99 52.26 67.51 58.78 60.96 65.33"/>
-								</g>
-								<g id="next-page-flip">
-									<path class="cls-next-1" d="M0,87.19L26.69,13.69,87.19,0s-17.39,33.14-37.21,52.18C29.83,71.67,0,87.19,0,87.19Z">
-										<animate begin="mouseover" attributeName="d" to="M0,87.19L12.55,10.35,87.19,0s-20.48,28.18-40.29,47.23C26.75,66.72,0,87.19,0,87.19Z" dur="0.3s" fill="freeze"/>
-										<animate begin="mouseout" attributeName="d" to="M0,87.19L26.69,13.69,87.19,0s-17.39,33.14-37.21,52.18C29.83,71.67,0,87.19,0,87.19Z" dur="0.3s" fill="freeze"/>
-									</path>
-								</g>
-							</svg>
-							<!-- <img src="<?php bloginfo('template_url'); ?>/assets/artists-next-page-A.svg"> -->
-						</a>
-			    	<?php endif; ?>
-    	    	</div>
-		    </nav>
+        </section>
+    </section>
+</main>
+<nav class="artist-nav">
+    <div class="arrow prev">
+        <?php if($prevID): ?>
+        <a href="<?= get_the_permalink($prevID) ?>" rel="prev">
+            <svg id="prev-artist" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.19 87.19">
+                <defs>
+                    <style>
+                    .cls-prev-1 {
+                        stroke: #285561;
+                        stroke-miterlimit: 10;
+                    }
 
-	<?php endif ?>
+                    .cls-prev-1,
+                    .cls-prev-2 {
+                        fill: none;
+                        stroke-linecap: round;
+                        stroke-width: 2px;
+                    }
+
+                    .cls-prev-2 {
+                        stroke: #285562;
+                    }
+                    </style>
+                </defs>
+                <g id="prev-page-arrow">
+                    <line class="cls-prev-1" x1="48.3" y1="58.78" x2="19.68" y2="58.78" />
+                    <polyline class="cls-prev-1" points="26.2 52.26 19.68 58.78 26.23 65.33" />
+                </g>
+            </svg>
+        </a>
+        <?php endif; ?>
+    </div>
+    <div class="arrow next">
+        <?php if($nextID): ?>
+        <a href="<?= get_the_permalink($nextID) ?>" rel="next">
+            <svg id="next-artist" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 87.19 87.19">
+                <defs>
+                    <style>
+                    .cls-next-1 {
+                        fill: url(#linear-gradient);
+                    }
+
+                    .cls-next-2 {
+                        fill: #d5c5bd;
+                    }
+
+                    .cls-next-3 {
+                        stroke: #285561;
+                        stroke-miterlimit: 10;
+                    }
+
+                    .cls-next-3,
+                    .cls-next-4 {
+                        fill: none;
+                        stroke-linecap: round;
+                        stroke-miterlimit: 10;
+                        stroke-width: 2px;
+                    }
+
+                    .cls-next-4 {
+                        stroke: #285562;
+                    }
+                    </style>
+                    <linearGradient id="linear-gradient" x1="23.87" y1="23.87" x2="51.38" y2="51.38"
+                        gradientUnits="userSpaceOnUse">
+                        <stop offset="0" stop-color="#ffffff" />
+                        <!-- <stop offset=".19" stop-color="#f1ead8"/> -->
+                        <!-- <stop offset=".46" stop-color="#e6d8c6"/> -->
+                        <!-- <stop offset=".77" stop-color="#d2bba9"/> -->
+                        <stop offset="1" stop-color="#c1a18e" />
+                    </linearGradient>
+                </defs>
+                <g id="next-page-base">
+                    <polygon class="cls-next-2" points="41.17 40.95 87.19 0 87.19 87.19 0 87.19 41.17 40.95" />
+                </g>
+                <g id="next-page-arrow">
+                    <line class="cls-next-3" x1="38.89" y1="58.78" x2="67.51" y2="58.78" />
+                    <polyline class="cls-next-3" points="60.99 52.26 67.51 58.78 60.96 65.33" />
+                </g>
+                <g id="next-page-flip">
+                    <path class="cls-next-1"
+                        d="M0,87.19L26.69,13.69,87.19,0s-17.39,33.14-37.21,52.18C29.83,71.67,0,87.19,0,87.19Z">
+                        <animate begin="mouseover" attributeName="d"
+                            to="M0,87.19L12.55,10.35,87.19,0s-20.48,28.18-40.29,47.23C26.75,66.72,0,87.19,0,87.19Z"
+                            dur="0.3s" fill="freeze" />
+                        <animate begin="mouseout" attributeName="d"
+                            to="M0,87.19L26.69,13.69,87.19,0s-17.39,33.14-37.21,52.18C29.83,71.67,0,87.19,0,87.19Z"
+                            dur="0.3s" fill="freeze" />
+                    </path>
+                </g>
+            </svg>
+            <!-- <img src="<?php bloginfo('template_url'); ?>/assets/artists-next-page-A.svg"> -->
+        </a>
+        <?php endif; ?>
+    </div>
+</nav>
+
+<?php endif ?>
 <?php endwhile ?>
 
 

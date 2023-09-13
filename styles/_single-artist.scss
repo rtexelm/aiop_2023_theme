@@ -4,8 +4,15 @@ main.artist-single {
   position: relative;
   width: calc(100% - 3rem);
   padding: 10rem 1.5rem 10rem 1.5rem;
-  background: url(assets/paper-artist-R.jpg);
-  background-size: cover;
+  // background: url(assets/paper-artist-R.jpg);
+  // background-size: cover;
+
+  .project-img {
+    img {
+      width: 100%;
+      margin-bottom: 2em;
+    }
+  }
 
   section.left {
     width: 100%;
