@@ -1,0 +1,80 @@
+@use "constants" as *;
+
+main.artist-single {
+  position: relative;
+  width: calc(100% - 3rem);
+  padding: 10rem 1.5rem 10rem 1.5rem;
+  background: url(assets/paper-artist-R.jpg);
+  background-size: cover;
+
+  section.left {
+    width: 100%;
+    .date,
+    .location {
+      margin-top: 3rem;
+      h5 {
+        color: $dark;
+      }
+    }
+  }
+  section.right {
+    width: 100%;
+    img {
+      width: 100%;
+      margin-bottom: 2em;
+    }
+    .bios {
+      p {
+        margin-top: 1rem;
+        margin-bottom: 0.25rem;
+      }
+      a {
+        // margin-bottom: 1
+        color: $teal;
+        &::visited {
+          color: $dark;
+        }
+      }
+    }
+  }
+}
+section.digital {
+  width: 100%;
+  background: $dark;
+  color: white;
+  h2 {
+    font-family: $primary-type;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+  }
+  iframe {
+    width: calc(100% - 3rem);
+    height: calc(56.25vw);
+    margin-left: 1.5rem;
+  }
+  div.gallery {
+    img {
+      max-width: calc(100% - 5rem);
+      border: 1rem solid white;
+      margin: 0rem 1.5rem 1rem 1.5rem;
+    }
+    padding-bottom: 1rem;
+  }
+}
+nav.artist-nav {
+  position: relative;
+  height: 100px;
+  margin-top: -100px;
+  .arrow {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    &.prev {
+      left: 0px;
+    }
+    &.next {
+      right: 0px;
+    }
+  }
+}

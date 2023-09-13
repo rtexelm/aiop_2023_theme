@@ -1,0 +1,28 @@
+@use "constants" as *;
+
+main.press {
+  section.press-posts {
+    width: calc(100% - 3rem);
+    margin: 4rem 1.5rem 0 1.5rem;
+    h1 {
+      // grid-column: 1/4;
+    }
+    .press-container {
+      // grid-column: 5/13;
+      border-top: 1px solid $beige-dark;
+      margin-bottom: 2rem;
+      span.h3 {
+        font-family: $primary-type;
+        padding: 1rem 0 0.5rem 0;
+      }
+      p.press-date {
+        font-weight: 300;
+        color: $teal;
+        margin-bottom: 0.5rem;
+      }
+      a.button {
+        margin-top: 1rem;
+      }
+    }
+  }
+}

@@ -47,13 +47,15 @@ h1,
 .h1 {
   font-size: 2.5rem;
   font-weight: 600;
+  font-variation-settings: "wght" 600;
   margin-bottom: 0.5rem;
 }
 
 h2,
 .h2 {
   font-size: 3.3rem;
-  font-weight: 300;
+  font-weight: 200;
+  font-variation-settings: "wght" 250;
   margin-bottom: 2rem;
 }
 
@@ -78,6 +80,7 @@ p,
 a {
   font-family: "degular-variable", sans-serif;
   font-weight: 300;
+  font-variation-settings: "wght" 300;
   margin: 0;
   margin-bottom: 1em;
 }
@@ -111,6 +114,7 @@ a span.p2 {
 p.light,
 a.light {
   font-weight: 300;
+  font-variation-settings: "wght" 300;
 }
 p span.italic,
 a span.italic {
@@ -154,6 +158,7 @@ div.button {
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: 400;
+  font-variation-settings: "wght" 400;
   line-height: 1.125rem;
   width: -moz-fit-content;
   width: fit-content;
@@ -287,7 +292,7 @@ div.button p {
   grid-template-columns: repeat(12, 1fr);
   -moz-column-gap: 1rem;
        column-gap: 1rem;
-  width: 100%;
+  max-width: 100%;
 }
 
 .positioner {
@@ -478,6 +483,9 @@ main.home #dates .date-text {
   margin-right: auto;
   margin-bottom: 2rem;
 }
+main.home #dates .date-text .days {
+  margin-bottom: 1rem;
+}
 main.home #pattern-r-mid {
   z-index: -1;
   position: absolute;
@@ -500,322 +508,6 @@ main.home #artists .move-right {
   margin-left: auto;
 }
 
-@media screen and (min-width: 720px) {
-  h1,
-  .h1,
-  h2,
-  .h2,
-  h3,
-  .h3,
-  h4,
-  .h4,
-  h5,
-  .h5,
-  p.p1 {
-    line-height: 1em;
-  }
-  h1,
-  .h1 {
-    font-size: 3rem;
-  }
-  h2,
-  .h2 {
-    font-size: 3rem;
-  }
-  h3,
-  .h3 {
-    font-size: 2rem;
-  }
-  h4,
-  .h4 {
-    font-size: 1.5rem;
-    color: #6b98ad;
-  }
-  h5,
-  .h5 {
-    font-size: 1.25rem;
-    color: #6b98ad;
-  }
-  p,
-  a {
-    font-weight: 200;
-  }
-  p.p1,
-  p span.p1, p.p1r,
-  a.p1,
-  a span.p1,
-  a.p1r {
-    font-size: 2rem;
-    line-height: 1.25em;
-  }
-  p.p2,
-  p span.p2, p.p2r,
-  a.p2,
-  a span.p2,
-  a.p2r {
-    font-size: 1.5rem;
-    line-height: 1.25em;
-  }
-  p.light,
-  a.light {
-    font-weight: 300;
-  }
-  p.italic,
-  a.italic {
-    font-style: italic;
-  }
-  nav .menuVisible {
-    display: block;
-    margin-right: 1rem;
-  }
-  nav .menuVisible ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    gap: 1.5rem;
-    list-style: none;
-  }
-  nav .menuVisible ul li a {
-    font: 1rem "degular-variable", sans-serif;
-    font-variation-settings: "wght" 600, "opsz" 40, "ital" 0;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #000;
-  }
-  nav .menuVisible ul li a:hover {
-    border-bottom: 1px solid #000;
-    border-top: 1px solid #000;
-  }
-  nav .menuVisible ul li a:focus {
-    border-top: 1px solid #000;
-  }
-  nav .menuFull {
-    left: 120vw;
-  }
-  nav .menuFull .bg-wrapper::before {
-    content: "";
-    position: absolute;
-    background-image: url(assets/dress/home-texture-01.png);
-    background-size: 100% auto;
-    mix-blend-mode: multiply;
-    width: 100%;
-    overflow: hidden;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    opacity: 0.6;
-  }
-  main.home .header {
-    min-height: 80vh;
-    background: url(assets/dress/tablet/home_header_2160w.jpg) fixed no-repeat #f74500;
-    background-size: auto 100%;
-  }
-  main.home .header #title {
-    display: flex;
-    padding: 8vh 0 3vh 0;
-    margin: 0 1.5rem;
-    max-width: 100%;
-  }
-  main.home .header #title h1 {
-    padding: 0;
-    margin: auto;
-    font: 14vw "degular-variable", sans-serif;
-    font-variation-settings: "wght" 700, "opsz" 72, "ital" 0;
-    line-height: 0.9em;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    -moz-column-gap: 1rem;
-         column-gap: 1rem;
-    width: 100%;
-    grid-template-rows: repeat(4, 1fr);
-  }
-  main.home .header #title h1 #title-1 {
-    grid-column: 2/8;
-    grid-row: 1/2;
-  }
-  main.home .header #title h1 #title-2 {
-    grid-column: 3/13;
-    grid-row: 2/3;
-  }
-  main.home .header #title h1 #title-3 {
-    grid-column: 7/13;
-    grid-row: 3/4;
-  }
-  main.home .header #title h1 #title-4 {
-    grid-column: 5/10;
-    grid-row: 4/5;
-  }
-  main.home .header #pattern-l-top {
-    top: -100px;
-  }
-  main.home .header .page-down {
-    margin-top: auto;
-  }
-  main.home .bg-wrapper {
-    position: relative;
-  }
-  main.home .bg-wrapper::before {
-    content: "";
-    position: absolute;
-    z-index: -100;
-    background-image: url(assets/dress/tablet/home-texture-1380w.png);
-    background-size: auto 100%;
-    mix-blend-mode: multiply;
-    width: 100%;
-    overflow: hidden;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    opacity: 0.6;
-  }
-  main.home #artists .artists h2 {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    -moz-column-gap: 1rem;
-         column-gap: 1rem;
-    width: 100%;
-    grid-template-rows: repeat(4, 1fr);
-  }
-  main.home #artists .artists h2 #artists-40 {
-    grid-column: 6/7;
-    grid-row: 2/3;
-    text-align: right;
-  }
-  main.home #artists .artists h2 #artists-part {
-    grid-column: 7/12;
-    grid-row: 2/3;
-  }
-  main.home #artists .artists h2 #artists-art {
-    grid-column: 6/11;
-    grid-row: 3/4;
-  }
-  main.home #artists .artists h2 #artists-groups {
-    grid-column: 7/12;
-    grid-row: 4/5;
-  }
-}
-@media screen and (min-width: 1400px) {
-  body {
-    border: 5px olivedrab solid;
-  }
-  h1,
-  span.h1,
-  h2,
-  span.h2,
-  h3,
-  span.h3,
-  h4,
-  span.h4,
-  h5,
-  span.h5,
-  p.p1 {
-    line-height: 1em;
-  }
-  h1,
-  span.h1 {
-    font-size: 4rem;
-  }
-  h2,
-  span.h2 {
-    font-size: 4rem;
-  }
-  h3,
-  span.h3 {
-    font-size: 2.5rem;
-  }
-  h4,
-  span.h4 {
-    font-size: 1.5rem;
-    color: #6b98ad;
-  }
-  h5,
-  span.h5 {
-    font-size: 1.125rem;
-    color: #6b98ad;
-  }
-  p,
-  a {
-    font-size: 1.5rem;
-    font-weight: 200;
-  }
-  p.p1,
-  p span.p1, p.p1r,
-  a.p1,
-  a span.p1,
-  a.p1r {
-    font-size: 2rem;
-    line-height: 1.25em;
-  }
-  p.p2,
-  p span.p2, p.p2r,
-  a.p2,
-  a span.p2,
-  a.p2r {
-    font-size: 1.5rem;
-    line-height: 1.25em;
-  }
-  nav .menuFull ul#menu-full-navigation li a {
-    font-size: 2.5rem;
-  }
-  main.home section#artists img.number {
-    height: 8rem;
-  }
-  main.home section#schedule img.number {
-    height: 8rem;
-  }
-  main.about section.festival {
-    padding: 10rem 1.5rem;
-  }
-  main.about section.people {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    -moz-column-gap: 1rem;
-         column-gap: 1rem;
-    width: 100%;
-    margin-top: -8rem;
-    margin-bottom: 8rem;
-    grid-template-rows: 4rem 4rem 8rem 12rem auto auto auto;
-  }
-  main.about section.people img.blob-person-1 {
-    grid-column: 7/10;
-    grid-row: 1/4;
-    width: 85%;
-    align-self: flex-start;
-  }
-  main.about section.people img.blob-person-2 {
-    display: block;
-    grid-column: 10/12;
-    grid-row: 2/5;
-    height: 100%;
-  }
-  main.about section.people h2.staff {
-    grid-column: 2/6;
-    margin-bottom: 4rem;
-  }
-  main.about section.people div.staff.curator {
-    grid-column: 2/6;
-  }
-  main.about section.people div.staff_col_1 {
-    grid-column: 2/6;
-  }
-  main.about section.people div.staff_col_2 {
-    grid-column: 6/10;
-  }
-  main.about section.people h2.thinkers {
-    grid-column: 2/10;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
-  }
-  main.about section.people div.thinkers_col_1 {
-    grid-column: 2/7;
-  }
-  main.about section.people div.thinkers_col_2 {
-    grid-column: 6/10;
-  }
-}
 #about-background {
   z-index: -10;
   position: fixed;
@@ -1123,55 +815,6 @@ main.public-programs .program-container h2 {
   margin-bottom: 1rem;
 }
 
-main.partners {
-  width: calc(100% - 3rem);
-  margin: 4rem 1.5rem 0 1.5rem;
-}
-main.partners .page-title {
-  color: #ad1f25;
-  width: 100%;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid #ad1f25;
-  margin-bottom: 2rem;
-}
-main.partners .partner_images {
-  margin: 1rem 0;
-}
-main.partners .partner_images img.sreenshot {
-  width: 100%;
-  margin-bottom: -3rem;
-}
-main.partners .partner {
-  margin-bottom: 3rem;
-}
-main.partners .partner img.logo {
-  width: 6rem;
-  margin-bottom: 1rem;
-}
-main.partners .partner p {
-  margin-bottom: 1.5rem;
-}
-
-main.maps {
-  width: calc(100% - 3rem);
-  margin: 4rem 1.5rem 0 1.5rem;
-}
-main.maps img.map {
-  width: 100%;
-  height: auto;
-}
-main.maps img.logo {
-  width: 6rem;
-  margin-bottom: 1rem;
-}
-main.maps p.h2,
-main.maps img.map {
-  margin-bottom: 1rem;
-}
-main.maps div.partner {
-  margin-bottom: 4rem;
-}
-
 main.press section.press-posts {
   width: calc(100% - 3rem);
   margin: 4rem 1.5rem 0 1.5rem;
@@ -1207,10 +850,38 @@ main.donate div.payment-method p {
   margin: 1rem 0;
 }
 
+main.partners {
+  width: calc(100% - 3rem);
+  margin: 4rem 1.5rem 0 1.5rem;
+}
+main.partners .page-title {
+  color: #ad1f25;
+  width: 100%;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #ad1f25;
+  margin-bottom: 2rem;
+}
+main.partners .partner_images {
+  margin: 1rem 0;
+}
+main.partners .partner_images img.sreenshot {
+  width: 100%;
+  margin-bottom: -3rem;
+}
+main.partners .partner {
+  margin-bottom: 3rem;
+}
+main.partners .partner img.logo {
+  width: 6rem;
+  margin-bottom: 1rem;
+}
+main.partners .partner p {
+  margin-bottom: 1.5rem;
+}
+
 footer {
   background: #05633e;
   color: white;
-  padding: 3rem 1.5rem;
 }
 footer p,
 footer p a {
@@ -1258,4 +929,458 @@ footer .social .social-icon {
 footer .social .social-icon svg {
   width: 2rem;
   height: auto;
+}
+
+@media screen and (min-width: 720px) {
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5,
+  p.p1 {
+    line-height: 1em;
+  }
+  h1,
+  .h1 {
+    font-size: 4.5rem;
+  }
+  h2,
+  .h2 {
+    font-size: 4.5rem;
+  }
+  h3,
+  .h3 {
+    font-size: 2rem;
+  }
+  h4,
+  .h4 {
+    font-size: 1.5rem;
+    color: #6b98ad;
+  }
+  h5,
+  .h5 {
+    font-size: 1.25rem;
+    color: #6b98ad;
+  }
+  p,
+  a {
+    font-weight: 200;
+  }
+  p.p1,
+  p span.p1, p.p1r,
+  a.p1,
+  a span.p1,
+  a.p1r {
+    font-size: 2rem;
+    line-height: 1.25em;
+  }
+  p.p2,
+  p span.p2, p.p2r,
+  a.p2,
+  a span.p2,
+  a.p2r {
+    font-size: 1.5rem;
+    line-height: 1.25em;
+  }
+  p.light,
+  a.light {
+    font-weight: 300;
+  }
+  p.italic,
+  a.italic {
+    font-style: italic;
+  }
+  nav .menuVisible {
+    display: block;
+    margin-right: 1rem;
+  }
+  nav .menuVisible ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    list-style: none;
+  }
+  nav .menuVisible ul li a {
+    font: 1rem "degular-variable", sans-serif;
+    font-variation-settings: "wght" 600, "opsz" 40, "ital" 0;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000;
+  }
+  nav .menuVisible ul li a:hover {
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
+  }
+  nav .menuVisible ul li a:focus {
+    border-top: 1px solid #000;
+  }
+  nav .menuFull {
+    left: 120vw;
+  }
+  nav .menuFull .bg-wrapper::before {
+    content: "";
+    position: absolute;
+    background-image: url(assets/dress/home-texture-01.png);
+    background-size: 100% auto;
+    mix-blend-mode: multiply;
+    width: 100%;
+    overflow: hidden;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.6;
+  }
+  main.home .header {
+    min-height: 80vh;
+    background: url(assets/dress/tablet/home_header_2160w.jpg) fixed no-repeat #f74500;
+    background-size: auto 100%;
+  }
+  main.home .header #title {
+    display: flex;
+    padding: 8vh 0 3vh 0;
+    margin: 0 3rem;
+    max-width: 100%;
+  }
+  main.home .header #title h1 {
+    padding: 0;
+    margin: auto;
+    font: 14vw "degular-variable", sans-serif;
+    font-variation-settings: "wght" 700, "opsz" 72, "ital" 0;
+    line-height: 0.9em;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+    max-width: 100%;
+    grid-template-rows: repeat(4, 1fr);
+  }
+  main.home .header #title h1 #title-1 {
+    grid-column: 2/8;
+    grid-row: 1/2;
+  }
+  main.home .header #title h1 #title-2 {
+    grid-column: 3/13;
+    grid-row: 2/3;
+  }
+  main.home .header #title h1 #title-3 {
+    grid-column: 8/13;
+    grid-row: 3/4;
+  }
+  main.home .header #title h1 #title-4 {
+    grid-column: 6/10;
+    grid-row: 4/5;
+  }
+  main.home .header #pattern-l-top {
+    top: -200px;
+  }
+  main.home .header .page-down {
+    margin-top: auto;
+  }
+  main.home .bg-wrapper {
+    position: relative;
+  }
+  main.home .bg-wrapper::before {
+    content: "";
+    position: absolute;
+    z-index: -100;
+    background-image: url(assets/dress/tablet/home-texture-1380w.png);
+    background-size: auto 100%;
+    mix-blend-mode: multiply;
+    width: 100%;
+    overflow: hidden;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.6;
+  }
+  main.home #dates,
+  main.home #about,
+  main.home #artists {
+    margin: 0 3rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  main.home #dates {
+    padding-bottom: 0;
+  }
+  main.home #dates div.flex-container {
+    display: block;
+  }
+  main.home #dates .date-text {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+    max-width: 100%;
+    grid-template-rows: repeat(3, 1fr);
+    line-height: 0.9em;
+  }
+  main.home #dates .date-text .month {
+    grid-column: 3/8;
+    grid-row: 1/2;
+  }
+  main.home #dates .date-text .days {
+    grid-column: 2/8;
+    grid-row: 2/3;
+    margin-bottom: 0;
+    align-self: start;
+  }
+  main.home #dates .date-text .button.neon-yellow {
+    grid-column: 8/11;
+    grid-row: 2/3;
+    margin: 0;
+  }
+  main.home #dates .date-text .button.lavender {
+    grid-column: 8/13;
+    grid-row: 3/4;
+    margin: 0;
+  }
+  main.home #pattern-r-mid {
+    top: -100;
+  }
+  main.home #pattern-l-mid {
+    top: 240;
+  }
+  main.home #about .byline {
+    padding-bottom: 5rem;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+    max-width: 100%;
+    grid-template-rows: repeat(3, 1fr);
+    line-height: 0.85em;
+  }
+  main.home #about .byline #byline-1 {
+    grid-column: 4/7;
+    grid-row: 1/2;
+  }
+  main.home #about .byline #byline-2 {
+    grid-column: 6/13;
+    grid-row: 2/3;
+  }
+  main.home #about .byline #byline-3 {
+    grid-column: 5/8;
+    grid-row: 3/4;
+  }
+  main.home #about .about {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+    max-width: 100%;
+    grid-template-rows: 1fr;
+  }
+  main.home #about .about .p1 {
+    font-size: 1.9rem;
+    grid-column: 3/11;
+    grid-row: 1/2;
+  }
+  main.home #about .about .button.orange {
+    grid-column: 3/10;
+    grid-row: 2/3;
+  }
+  main.home #artists .artists h2 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+    max-width: 100%;
+    grid-template-rows: repeat(4, 1fr);
+  }
+  main.home #artists .artists h2 #artists-40 {
+    grid-column: 6/7;
+    grid-row: 2/3;
+    text-align: right;
+  }
+  main.home #artists .artists h2 #artists-part {
+    grid-column: 7/12;
+    grid-row: 2/3;
+  }
+  main.home #artists .artists h2 #artists-art {
+    grid-column: 6/11;
+    grid-row: 3/4;
+  }
+  main.home #artists .artists h2 #artists-groups {
+    grid-column: 7/12;
+    grid-row: 4/5;
+  }
+  footer {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+    max-width: 100%;
+    padding: 3rem;
+  }
+  footer p,
+  footer a {
+    font-size: 1rem;
+  }
+  footer #footer-festival {
+    grid-column: 1/3;
+  }
+  footer #footer-people {
+    grid-column: 5/7;
+  }
+  footer #footer-contact {
+    grid-column: 7/9;
+  }
+  footer #footer-social {
+    grid-column: 10/11;
+  }
+  footer #footer-social .social-icon svg {
+    width: 1.75rem;
+    display: inline-block;
+  }
+  footer #footer-copyright {
+    grid-column: 11/13;
+  }
+}
+@media screen and (min-width: 1400px) {
+  body {
+    border: 5px olivedrab solid;
+  }
+  h1,
+  span.h1,
+  h2,
+  span.h2,
+  h3,
+  span.h3,
+  h4,
+  span.h4,
+  h5,
+  span.h5,
+  p.p1 {
+    line-height: 1em;
+  }
+  h1,
+  span.h1 {
+    font-size: 4rem;
+  }
+  h2,
+  span.h2 {
+    font-size: 4rem;
+  }
+  h3,
+  span.h3 {
+    font-size: 2.5rem;
+  }
+  h4,
+  span.h4 {
+    font-size: 1.5rem;
+    color: #6b98ad;
+  }
+  h5,
+  span.h5 {
+    font-size: 1.125rem;
+    color: #6b98ad;
+  }
+  p,
+  a {
+    font-size: 1.5rem;
+    font-weight: 200;
+  }
+  p.p1,
+  p span.p1, p.p1r,
+  a.p1,
+  a span.p1,
+  a.p1r {
+    font-size: 2rem;
+    line-height: 1.25em;
+  }
+  p.p2,
+  p span.p2, p.p2r,
+  a.p2,
+  a span.p2,
+  a.p2r {
+    font-size: 1.5rem;
+    line-height: 1.25em;
+  }
+  nav .menuFull ul#menu-full-navigation li a {
+    font-size: 2.5rem;
+  }
+  main.home section#artists img.number {
+    height: 8rem;
+  }
+  main.home section#schedule img.number {
+    height: 8rem;
+  }
+  main.about section.festival {
+    padding: 10rem 1.5rem;
+  }
+  main.about section.people {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+    max-width: 100%;
+    margin-top: -8rem;
+    margin-bottom: 8rem;
+    grid-template-rows: 4rem 4rem 8rem 12rem auto auto auto;
+  }
+  main.about section.people img.blob-person-1 {
+    grid-column: 7/10;
+    grid-row: 1/4;
+    width: 85%;
+    align-self: flex-start;
+  }
+  main.about section.people img.blob-person-2 {
+    display: block;
+    grid-column: 10/12;
+    grid-row: 2/5;
+    height: 100%;
+  }
+  main.about section.people h2.staff {
+    grid-column: 2/6;
+    margin-bottom: 4rem;
+  }
+  main.about section.people div.staff.curator {
+    grid-column: 2/6;
+  }
+  main.about section.people div.staff_col_1 {
+    grid-column: 2/6;
+  }
+  main.about section.people div.staff_col_2 {
+    grid-column: 6/10;
+  }
+  main.about section.people h2.thinkers {
+    grid-column: 2/10;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+  main.about section.people div.thinkers_col_1 {
+    grid-column: 2/7;
+  }
+  main.about section.people div.thinkers_col_2 {
+    grid-column: 6/10;
+  }
+}
+main.maps {
+  width: calc(100% - 3rem);
+  margin: 4rem 1.5rem 0 1.5rem;
+}
+main.maps img.map {
+  width: 100%;
+  height: auto;
+}
+main.maps img.logo {
+  width: 6rem;
+  margin-bottom: 1rem;
+}
+main.maps p.h2,
+main.maps img.map {
+  margin-bottom: 1rem;
+}
+main.maps div.partner {
+  margin-bottom: 4rem;
 }/*# sourceMappingURL=style.css.map */
