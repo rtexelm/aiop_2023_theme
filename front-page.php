@@ -65,12 +65,13 @@ get_header();
             <div class="flex-container flex-col-nw">
 
                 <h2 class="flex-container date-text">
-                    <span class="flex-col-center">October</span>
-                    <span class="flex-col-left">13&ndash;15<span class="script"> 2023</span></span>
+                    <span class="flex-col-center month">October</span>
+                    <span class="flex-col-left days">13&ndash;15<span class="script"> 2023</span></span>
+                    <a class="button neon-yellow" href="<?php bloginfo('template_url'); ?>/schedule">Schedule</a>
+                    <a class="button lavender" href="<?php bloginfo('template_url'); ?>/public-programs">Public
+                        Programs</a>
                 </h2>
 
-                <a class="button neon-yellow" href="<?php bloginfo('template_url'); ?>/schedule">Schedule</a>
-                <a class="button lavender" href="<?php bloginfo('template_url'); ?>/public-programs">Public Programs</a>
             </div>
         </section>
         <div class="positioner">
@@ -97,13 +98,13 @@ get_header();
         </div>
         <section id="about">
             <h2 class="flex-container flex-col-nw byline">
-                <span class="flex-col-left">Curated</span>
-                <span class="flex-col-right">by Gretchen</span>
-                <span class="flex-col-center">Vitamvas</span>
+                <span id="byline-1" class="flex-col-left">Curated</span>
+                <span id="byline-2" class="flex-col-right">by Gretchen</span>
+                <span id="byline-3" class="flex-col-center">Vitamvas</span>
             </h2>
             <div class="about">
-                <p class="p1"><span class="italic">Art in Odd Places 2023: Dress</span> features visual and performance
-                    artists on 14th Street from Avenue C to the Hudson River.</p>
+                <p class="p1"><span class="italic">Art in Odd Places 2023: DRESS</span> features visual and performance
+                    artists on 14th Street from Avenue C to the Hudson River, October 13-15, 2023.</p>
                 <a class="button neon-yellow orange" href="<?php bloginfo('template_url'); ?>/about">About the
                     festival</a>
             </div>

@@ -1,0 +1,57 @@
+@use "constants" as *;
+
+footer {
+  box-sizing: border-box;
+  background: $deep-green;
+  color: white;
+  padding: 3rem 1.5rem;
+  p,
+  p a {
+    margin: 0 0 0.5rem 0;
+    font-weight: 500;
+    font-family: $primary-type;
+    span.light,
+    span.light a {
+      font-weight: 200;
+      font-family: $secondary-type;
+    }
+  }
+  a {
+    font-weight: 500;
+    color: white;
+    svg path {
+      fill: white;
+    }
+    &:hover {
+      svg path {
+        fill: $pale-blue;
+      }
+    }
+    img {
+      width: 8rem;
+    }
+  }
+
+  .footer-col {
+    margin-bottom: 1rem;
+    width: 100%;
+    font-weight: 600;
+    display: inline-block;
+    vertical-align: top;
+    &#footer-people p a {
+      text-decoration: none;
+    }
+  }
+
+  .social {
+    margin-top: 0.5rem;
+    .social-icon {
+      display: inline-block;
+      margin: 0 0.5rem 0.5rem 0;
+      svg {
+        width: 2rem;
+        height: auto;
+      }
+    }
+  }
+}

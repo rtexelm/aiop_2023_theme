@@ -1,0 +1,15 @@
+@use "constants" as *;
+
+main.donate {
+  width: calc(100% - 3rem);
+  margin: 4rem 1.5rem;
+  div.payment-method {
+    h2 {
+      font-family: $primary-type;
+    }
+    margin-top: 2rem;
+    p {
+      margin: 1rem 0;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@use "constants" as *;
+
+main.public-programs {
+  padding-top: 4rem;
+  width: calc(100% - 3rem);
+  margin: 4rem 1.5rem 4rem 1.5rem;
+  .program-container {
+    margin-top: 2rem;
+    h2 {
+      font-family: $primary-type;
+      margin-bottom: 1rem;
+    }
+  }
+}

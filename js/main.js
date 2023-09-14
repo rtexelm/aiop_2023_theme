@@ -2,14 +2,34 @@ jQuery(document).ready(function ($) {
   var menuOpen = false;
   var csShowMore = false;
   var prevScroll = window.scrollY;
-  // $('#menuFull a').each( function(){
-  // 	console.log(this);
-  // 	$(this).attr("aria-hidden","true");
-  // });
 
-  // $('.fullNav').attr("aria-hidden","true");
-  // menuFullAnchors.attr("aria-hidden","true");
-  // console.log(menuFullAnchors);
+  // function updateMarginSingleArtist() {
+  //   const viewportWidth = $(window).width();
+  //   // const singleArtistInfoArea = $(".info-area");
+  //   const imgPlaceholder = $(".info-area");
+  //   const heightToChange = singleArtistInfoArea.css("margin-top");
+  //   // const gridClass = $(".artist-single");
+  //   // const gridFirstRow = `${singleArtistImageH}px`;
+  //   // const gridMoreRows = " repeat(auto-fill, 1fr)";
+
+  //   if (viewportWidth <= 720 && marginToChange === 0) return;
+
+  //   const singleArtistImage = $(".artist-single > .project-img");
+  //   const singleArtistImageH = singleArtistImage.height();
+
+  //   if (viewportWidth > 704) {
+  //     singleArtistInfoArea.css("margin-top", singleArtistImageH + "px");
+  //   } else {
+  //     singleArtistInfoArea.css("margin-top", "0");
+  //   }
+  // }
+
+  // // Call update margin function at start and at resize
+
+  // updateMarginSingleArtist();
+  // $(window).resize(() => updateMarginSingleArtist());
+
+  // Hide nav on scroll
 
   $(window).on("scroll", function () {
     let currentScroll = window.scrollY;
@@ -78,3 +98,12 @@ jQuery(document).ready(function ($) {
     $(".cs_more_text").css("max-height", "1920px");
   }
 });
+
+// $('#menuFull a').each( function(){
+// 	console.log(this);
+// 	$(this).attr("aria-hidden","true");
+// });
+
+// $('.fullNav').attr("aria-hidden","true");
+// menuFullAnchors.attr("aria-hidden","true");
+// console.log(menuFullAnchors);

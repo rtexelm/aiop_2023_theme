@@ -1,0 +1,133 @@
+@use "constants" as *;
+
+#about-background {
+  z-index: -10;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 100vh;
+  background: url(assets/paper-artist-L.jpg);
+  background-size: cover;
+}
+main.about {
+  position: relative;
+  top: -3rem;
+  margin-bottom: -3rem;
+  h3,
+  .h3,
+  h2,
+  .h2 {
+    font-family: ivyjournal, sans-serif;
+    font-weight: 500;
+  }
+  p.p1,
+  p.p2,
+  p.p2r {
+    font-family: ivyjournal, sans-serif;
+    font-weight: 300;
+  }
+  img.about-header {
+    width: 100%;
+  }
+  img.buffer {
+    width: 100%;
+  }
+  section.cs {
+    width: calc(100% - 3rem);
+    padding: 4rem 1.5rem 4rem 1.5rem;
+    .cs_more_text {
+      max-height: 0px;
+      overflow: hidden;
+      transition: max-height 1s ease-out;
+    }
+  }
+  section.festival {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 3rem);
+    padding: 4rem 1.5rem 4rem 1.5rem;
+    background: $dark;
+    color: white;
+    h3 {
+      margin-bottom: 1rem;
+    }
+    .history {
+      margin-bottom: 2rem;
+    }
+    .history p,
+    .mission p {
+      font-size: 1.25rem;
+      font-family: $primary-type;
+    }
+  }
+  section.people {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 3rem);
+    padding: 1.5rem;
+    margin-bottom: 4rem;
+    h2 {
+      margin-bottom: 2rem;
+      &.thinkers {
+        margin-top: 4rem;
+      }
+    }
+
+    div.staff {
+      margin-bottom: 1.5rem;
+      p.staff_name {
+        margin-bottom: 0.25em;
+        // font-weight: 600;
+      }
+      p.staff_title {
+        text-transform: uppercase;
+        font-weight: normal;
+        color: $teal;
+        margin-bottom: 0.25em;
+      }
+      div.staff_links a {
+        color: $teal;
+        padding-right: 0.5rem;
+      }
+    }
+  }
+  section.partners {
+    width: calc(100% - 3rem);
+    padding: 10rem 1.5rem 4rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    background: $beige-02;
+    // padding-top: 10rem;
+    margin-top: -3rem;
+    img.partner-logo {
+      width: 50%;
+      // width: auto;
+      margin-bottom: 1rem;
+    }
+    .partner.bureau {
+      margin-bottom: 3rem;
+    }
+    p {
+      margin-bottom: 1rem;
+      &.partner-text {
+        font-size: 1.25rem;
+        font-family: $primary-type;
+      }
+      &.h3 {
+        font-weight: bold;
+      }
+    }
+  }
+  section.support {
+    width: calc(100% - 3rem);
+    padding: 1.5rem 1.5rem 5rem 1.5rem;
+    background: $dark;
+    color: white;
+    h2 {
+      margin: 4rem 0 2rem 0;
+    }
+    h3 {
+      margin: 2rem 0 1rem 0;
+    }
+  }
+}

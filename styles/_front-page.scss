@@ -1,12 +1,13 @@
 @use "constants" as *;
 
 main.home {
-  display: block;
+  // display: block;
   // position: relative;
   .header {
     z-index: 0;
     position: relative;
     min-height: 70vh;
+    max-height: 80vh;
     background: url(assets/dress/home-header-bg.png) fixed no-repeat
       $primary-orange;
     background-size: auto 100%;
@@ -24,8 +25,9 @@ main.home {
       position: relative;
       // max-width: 22.5rem;
       min-width: 14rem;
+      height: auto;
       margin: auto;
-      padding: 20vh 4vh 6vh;
+      padding: calc(20vh - 12vw) 1.5rem;
       display: flex;
       flex-flow: column wrap;
       justify-content: center;
@@ -40,7 +42,7 @@ main.home {
       z-index: 10;
       position: absolute;
       left: 0;
-      top: 20;
+      top: -20vh;
       width: 48vw;
     }
 
@@ -81,13 +83,17 @@ main.home {
 
   #dates {
     color: $white;
-    padding: 8rem 01.5rem 4rem 1.5rem;
+    padding: 8rem 1.5rem 4rem 1.5rem;
 
     .date-text {
       flex-flow: column nowrap;
       align-items: stretch;
       margin-right: auto;
       margin-bottom: 2rem;
+
+      .days {
+        margin-bottom: 1rem;
+      }
     }
   }
 
