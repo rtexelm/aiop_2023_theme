@@ -366,6 +366,14 @@
     }
 
     section.left {
+      grid-row: 2;
+      grid-column: 1/5;
+      padding-top: 0;
+
+      &::before {
+        display: none;
+      }
+
       h2.project-title {
         display: none;
       }
@@ -373,12 +381,11 @@
         display: none;
       }
 
-      &::before {
-        left: -2.75rem;
-        width: calc(100% + 5.5rem);
+      .location {
+        &:not(.location ~ .location) {
+          margin-top: 0;
+        }
       }
-      grid-row: 2;
-      grid-column: 1/5;
     }
 
     section.right {

@@ -1280,6 +1280,10 @@ footer .social .social-icon svg {
   main.artist-single section.left {
     grid-row: 2;
     grid-column: 1/5;
+    padding-top: 0;
+  }
+  main.artist-single section.left::before {
+    display: none;
   }
   main.artist-single section.left h2.project-title {
     display: none;
@@ -1287,9 +1291,8 @@ footer .social .social-icon svg {
   main.artist-single section.left h3.project-artists {
     display: none;
   }
-  main.artist-single section.left::before {
-    left: -2.75rem;
-    width: calc(100% + 5.5rem);
+  main.artist-single section.left .location:not(.location ~ .location) {
+    margin-top: 0;
   }
   main.artist-single section.right {
     grid-row: 2;
