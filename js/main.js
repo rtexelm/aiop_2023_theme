@@ -70,7 +70,10 @@ jQuery(document).ready(function ($) {
   $(window).on("scroll", function () {
     let currentScroll = window.scrollY;
 
-    if (prevScroll !== currentScroll) {
+    if (menuOpen) return $(".top").css("top", "0");
+
+    if (prevScroll > currentScroll) {
+      // console.log("NAV DOWN");
       $(".top").css("top", "0");
     } else {
       $(".top").css("top", "-65");
