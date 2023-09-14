@@ -31,17 +31,6 @@ jQuery(document).ready(function ($) {
 
   // Hide nav on scroll
 
-  $(window).on("scroll", function () {
-    let currentScroll = window.scrollY;
-    if (prevScroll > currentScroll) {
-      // console.log("NAV DOWN");
-      $(".top").css("top", "-0");
-    } else {
-      $(".top").css("top", "-65");
-    }
-    prevScroll = currentScroll;
-  });
-
   $("#menuToggleAnchor").on("click", function (event) {
     menuOpen = !menuOpen;
     console.log("MENU ANCHOR");
@@ -76,6 +65,17 @@ jQuery(document).ready(function ($) {
         $(".menuFull").css("left", "120vw");
       }
     }
+  });
+
+  $(window).on("scroll", function () {
+    let currentScroll = window.scrollY;
+
+    if (prevScroll !== currentScroll) {
+      $(".top").css("top", "0");
+    } else {
+      $(".top").css("top", "-65");
+    }
+    prevScroll = currentScroll;
   });
 
   $("#cs_read_more").on("click", function (event) {
