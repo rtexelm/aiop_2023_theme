@@ -767,7 +767,8 @@ nav.artist-nav .arrow.next {
   top: 0px;
   width: 100%;
   height: 100vh;
-  background: url(assets/paper-artist-L.jpg);
+  background: url(assets/dress/home-mobile-bg.png);
+  mix-blend-mode: multiply;
   background-size: cover;
 }
 
@@ -783,7 +784,7 @@ main.schedule div.day#saturday, main.schedule div.day#sunday {
 }
 main.schedule div.day h2 {
   margin-bottom: 1.5rem;
-  color: #0f3a46;
+  color: #fff;
   font-family: "degular-variable", sans-serif;
   font-weight: 500;
 }
@@ -793,7 +794,7 @@ main.schedule div.day .artist-container {
 }
 main.schedule div.day .artist-container .artist-time {
   margin: 0.5rem 0;
-  color: #216972;
+  color: #fff;
   font-weight: 300;
 }
 main.schedule div.day .artist-container .project span,

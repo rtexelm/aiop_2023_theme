@@ -49,7 +49,7 @@ get_header();
 
 ?>
 <div id="schedule-background"></div>
-<main class="site-content schedule" id="main-content">
+<main class="schedule">
     <h1 class="hidden">ARTISTS</h1>
 
     <section class="artists">
@@ -89,7 +89,7 @@ get_header();
                     <p class="artist-title"><?php echo $project_title ?></p>
                 </div>
                 <p class="location"><?php echo $friday_location ?></p>
-                <a class="button secondary" title="view <?php echo $displayName ?>"
+                <a class="button orange" title="view <?php echo $displayName ?>"
                     href="<?php echo the_permalink(); ?>">View project</a>
             </div>
             <?php endif ?>
@@ -135,7 +135,7 @@ get_header();
                     <p class="artist-title"><?php echo $project_title ?></p>
                 </div>
                 <p class="location"><?php echo $saturday_location ?></p>
-                <a class="button secondary" title="view <?php echo $displayName ?>"
+                <a class="button orange" title="view <?php echo $displayName ?>"
                     href="<?php echo the_permalink(); ?>">View project</a>
             </div>
             <?php endif ?>
@@ -181,7 +181,7 @@ get_header();
                     <p class="artist-title"><?php echo $project_title ?></p>
                 </div>
                 <p class="location"><?php echo $sunday_location ?></p>
-                <a class="button secondary" title="view <?php echo $displayName ?>"
+                <a class="button orange" title="view <?php echo $displayName ?>"
                     href="<?php echo the_permalink(); ?>">View project</a>
             </div>
             <?php endif ?>
