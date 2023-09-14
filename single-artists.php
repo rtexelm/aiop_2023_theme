@@ -80,6 +80,10 @@ get_header();
 			$sortable_name = $last_name ?: $group_name;
 			$displayName = artistNameFormat($first_name, $sortable_name, $additional_names);
 
+            $fri_final = scheduleFormat($friday_start, $friday_end);
+            $sat_final = scheduleFormat($saturday_start, $saturday_end);
+            $sun_final = scheduleFormat($sunday_start, $sunday_end);
+
 		    ?>
 
 <main class="artist-single">
@@ -109,19 +113,19 @@ get_header();
 
             <div class="location">
                 <h5>Friday</h5>
-                <p class="p1"><?php echo $friday_start . "-" . $friday_end ?></p>
+                <p class="p1"><?php echo $fri_final ?></p>
                 <p class="p1"><?php echo $friday_location ?></p>
             </div>
 
             <div class="location">
                 <h5>Saturday</h5>
-                <p class="p1"><?php echo $saturday_start . "-" . $saturday_end ?></p>
+                <p class="p1"><?php echo $sat_final ?></p>
                 <p class="p1"><?php echo $saturday_location ?></p>
             </div>
 
             <div class="location">
                 <h5>Sunday</h5>
-                <p class="p1"><?php echo $sunday_start . "-" . $sunday_end ?></p>
+                <p class="p1"><?php echo $sun_final ?></p>
                 <p class="p1"><?php echo $sunday_location ?></p>
             </div>
 
