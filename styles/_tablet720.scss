@@ -427,6 +427,22 @@
         margin-top: 0;
       }
     }
+
+    .pp-time,
+    .artist-time {
+      width: 5vw;
+    }
+
+    .pp-container {
+      display: flex;
+      gap: 1vw;
+    }
+
+    .artist-container {
+      display: flex;
+      gap: 1vw;
+      margin-bottom: 0;
+    }
   }
 
   //   main.about {

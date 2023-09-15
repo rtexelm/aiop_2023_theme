@@ -1341,6 +1341,19 @@ footer .social .social-icon svg {
   main.schedule div.day#saturday, main.schedule div.day#sunday {
     margin-top: 0;
   }
+  main.schedule .pp-time,
+  main.schedule .artist-time {
+    width: 5vw;
+  }
+  main.schedule .pp-container {
+    display: flex;
+    gap: 1vw;
+  }
+  main.schedule .artist-container {
+    display: flex;
+    gap: 1vw;
+    margin-bottom: 0;
+  }
   footer {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
