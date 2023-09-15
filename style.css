@@ -45,6 +45,10 @@ span.d1 {
   font-size: 2.5rem;
 }
 
+.f-weight-700 {
+  font-variation-settings: "wght" 700;
+}
+
 h1,
 .h1 {
   font-size: 3rem;
@@ -56,7 +60,6 @@ h2,
 .h2 {
   font-size: 2.2rem;
   font-variation-settings: "wght" 250;
-  margin-bottom: 2rem;
 }
 
 h3,
@@ -69,14 +72,12 @@ h4,
 .h4 {
   font-size: 1rem;
   font-variation-settings: "wght" 200;
-  color: #000;
 }
 
 h5,
 .h5 {
   font-size: 0.875rem;
   font-variation-settings: "wght" 200;
-  color: #000;
 }
 
 p,
@@ -224,11 +225,11 @@ a.button.inline,
 div.button.inline {
   padding: 0 0 0.25rem 0;
   border-radius: 0;
-  color: #000;
+  color: #fff;
 }
 a.button.inline::after,
 div.button.inline::after {
-  content: url(assets/arrow-right.png);
+  content: url(assets/dress/arrow-right-light.svg);
   margin-left: 0.5rem;
 }
 a.button.inline:hover,
@@ -288,6 +289,10 @@ div.button p {
 .positioner {
   position: relative;
   width: 100%;
+}
+
+.stopScrollMenu {
+  overflow: hidden;
 }
 
 nav.top {
@@ -783,19 +788,34 @@ main.schedule div.day#saturday, main.schedule div.day#sunday {
   margin-top: 3rem;
 }
 main.schedule div.day h2 {
+  margin-bottom: 0;
+}
+main.schedule div.day .geo-area {
   margin-bottom: 1.5rem;
-  color: #fff;
-  font-family: "degular-variable", sans-serif;
-  font-weight: 500;
+}
+main.schedule div.day .pp-container {
+  border-top: 1px solid #ff779c;
+  padding-top: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 main.schedule div.day .artist-container {
-  border-top: 2px solid #d0c2b0;
+  border-top: 1px solid #ff779c;
   margin-bottom: 1rem;
+  background-image: linear-gradient(to left, transparent, transparent 50%, hsla(344, 100%, 73%, 0.75) 50%, hsla(344, 100%, 73%, 0.75));
+  background-position: 100% 0;
+  background-size: 200% 100%;
+  transition: background-position 1s ease, border-color 1s ease;
+}
+main.schedule div.day .artist-container:hover {
+  background-position: 0 0;
+  border-color: #f0fa00;
 }
 main.schedule div.day .artist-container .artist-time {
   margin: 0.5rem 0;
   color: #fff;
-  font-weight: 300;
 }
 main.schedule div.day .artist-container .project span,
 main.schedule div.day .artist-container .project p {
@@ -804,10 +824,9 @@ main.schedule div.day .artist-container .project p {
 main.schedule div.day .artist-container .project span.artist-title,
 main.schedule div.day .artist-container .project p.artist-title {
   font-family: "degular-variable", sans-serif;
-  font-weight: 350;
 }
 main.schedule div.day .artist-container .location {
-  font-weight: 300;
+  display: none;
 }
 
 main.public-programs {

@@ -53,6 +53,10 @@ span.script {
   // Enter script mixin here when available
 }
 
+.f-weight-700 {
+  font-variation-settings: "wght" 700;
+}
+
 h1,
 .h1 {
   font-size: 3rem;
@@ -63,7 +67,7 @@ h2,
 .h2 {
   font-size: 2.2rem;
   font-variation-settings: "wght" 250;
-  margin-bottom: 2rem;
+  // margin-bottom: 2rem;
 }
 h3,
 .h3 {
@@ -74,13 +78,13 @@ h4,
 .h4 {
   font-size: 1rem;
   font-variation-settings: "wght" 200;
-  color: $black;
+  // color: $black;
 }
 h5,
 .h5 {
   font-size: 0.875rem;
   font-variation-settings: "wght" 200;
-  color: $black;
+  // color: $black;
 }
 
 p,
@@ -219,9 +223,9 @@ div.button {
   &.inline {
     padding: 0 0 0.25rem 0;
     border-radius: 0;
-    color: $black;
+    color: $white;
     &::after {
-      content: url(assets/arrow-right.png);
+      content: url(assets/dress/arrow-right-light.svg);
       margin-left: 0.5rem;
     }
     &:hover {
@@ -278,7 +282,18 @@ div.button p {
 }
 
 // For positioning children absolute
+
 .positioner {
   position: relative;
   width: 100%;
 }
+
+// Stop mobile scrolling on menu view
+.stopScrollMenu {
+  overflow: hidden;
+}
+
+// Continue scroll
+// .resumeScroll {
+//   overflow: auto;
+// }

@@ -1,5 +1,7 @@
 @use "constants" as *;
 
+// Styles
+
 #schedule-background {
   z-index: -10;
   position: fixed;
@@ -20,32 +22,62 @@ main.schedule {
       margin-top: 3rem;
     }
     h2 {
-      margin-bottom: 1.5rem;
-      color: $white;
-      font-family: $primary-type;
-      font-weight: 500;
+      margin-bottom: 0;
     }
-    .artist-container {
-      border-top: 2px solid $beige-dark;
+    .geo-area {
+      margin-bottom: 1.5rem;
+    }
+
+    .pp-container {
+      border-top: 1px solid #ff779c;
+      padding-top: 1rem;
+      display: flex;
+      flex-flow: column nowrap;
+      gap: 0.5rem;
       margin-bottom: 1rem;
+    }
+
+    .fest-header {
+      // margin-bottom: 1rem;
+    }
+
+    .artist-container {
+      border-top: 1px solid $pink;
+      margin-bottom: 1rem;
+
+      background-image: linear-gradient(
+        to left,
+        transparent,
+        transparent 50%,
+        hsla(344, 100%, 73%, 75%) 50%,
+        hsla(344, 100%, 73%, 75%)
+      );
+      background-position: 100% 0;
+      background-size: 200% 100%;
+
+      transition: background-position 1s ease, border-color 1s ease;
+      &:hover {
+        background-position: 0 0;
+        border-color: $neon-yellow;
+      }
+
       .artist-time {
         margin: 0.5rem 0;
         color: $white;
-        font-weight: 300;
       }
+
       .project {
         span,
         p {
           margin-bottom: 0.5rem;
           &.artist-title {
             font-family: $primary-type;
-            font-weight: 350;
           }
         }
       }
+
       .location {
-        // color: $teal;//#8e9fb1;
-        font-weight: 300;
+        display: none;
       }
     }
   }

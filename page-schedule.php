@@ -53,8 +53,28 @@ get_header();
     <h1 class="hidden">ARTISTS</h1>
 
     <section class="artists">
+
+        <!-- Friday -->
+
         <div class="day" id="friday">
-            <h2>Friday</h2>
+
+            <article class="day-header">
+                <h2 class="h1">Friday</h2>
+                <h3 class="f-weight-700 geo-area">[Section], 14th St</h3>
+            </article>
+
+            <article class="public-program">
+                <h3 class="f-weight-700">Public Programming</h3>
+                <div class="pp-container">
+                    <p class="h4 pp-time">
+                        6-7:30pm
+                    </p>
+                    <span class="h3 pp-title">Walk & Talk</span>
+                    <p class="p1 pp-title">BGSQD Bookstore</p>
+                </div>
+            </article>
+
+            <h3 class="f-weight-700 fest-header">Festival</h3>
 
             <?php if($fridayQuery->have_posts()): ?>
             <?php while($fridayQuery->have_posts()): 
@@ -85,11 +105,11 @@ get_header();
                     <?php echo $fri_final ?>
                 </p>
                 <div class="project">
-                    <span class="h3 artist-title"><?php echo $displayName ?></span>
-                    <p class="artist-title"><?php echo $project_title ?></p>
+                    <span class="h3 artist-title"><?php echo  $project_title ?></span>
+                    <p class="p1 artist-title"><?php echo $displayName ?></p>
                 </div>
                 <p class="location"><?php echo $friday_location ?></p>
-                <a class="button orange" title="view <?php echo $displayName ?>"
+                <a class="button inline" title="view <?php echo $displayName ?>"
                     href="<?php echo the_permalink(); ?>">View project</a>
             </div>
             <?php endif ?>
@@ -99,8 +119,28 @@ get_header();
 
         </div>
 
+        <!-- Saturday -->
+
         <div class="day" id="saturday">
-            <h2>Saturday</h2>
+
+            <article class="day-header">
+                <h2 class="h1">Saturday</h2>
+                <h3 class="f-weight-700 geo-area">[Section], 14th St</h3>
+            </article>
+
+            <article class="public-program">
+                <h3 class="f-weight-700">Public Programming</h3>
+                <div class="pp-container">
+                    <p class="h4 artist-time">
+                        7-10pm
+                    </p>
+                    <span class="h3 artist-title">Paper Dress Ball</span>
+                    <p class="p1 artist-title">BGSQD Bookstore</p>
+                </div>
+            </article>
+
+            <h3 class="f-weight-700 fest-header">Festival</h3>
+
             <?php if($saturdayQuery->have_posts()): ?>
             <?php while($saturdayQuery->have_posts()): 
 					$saturdayQuery->the_post() ?>
@@ -135,7 +175,7 @@ get_header();
                     <p class="artist-title"><?php echo $project_title ?></p>
                 </div>
                 <p class="location"><?php echo $saturday_location ?></p>
-                <a class="button orange" title="view <?php echo $displayName ?>"
+                <a class="button inline" title="view <?php echo $displayName ?>"
                     href="<?php echo the_permalink(); ?>">View project</a>
             </div>
             <?php endif ?>
@@ -144,8 +184,28 @@ get_header();
             <?php endif ?>
         </div>
 
+        <!-- Sunday -->
+
         <div class="day" id="sunday">
-            <h2>Sunday</h2>
+
+            <article class="day-header">
+                <h2 class="h1">Sunday</h2>
+                <h3 class="f-weight-700 geo-area">[Section], 14th St</h3>
+            </article>
+
+            <article class="public-program">
+                <h3 class="f-weight-700">Public Programming</h3>
+                <div class="pp-container">
+                    <p class="h4 artist-time">
+                        1-2pm
+                    </p>
+                    <span class="h3 artist-title">Runway</span>
+                    <p class="p1 artist-title">14th Street</p>
+                </div>
+            </article>
+
+            <h3 class="f-weight-700 fest-header">Festival</h3>
+
             <?php if($sundayQuery->have_posts()): ?>
             <?php while($sundayQuery->have_posts()): 
 					$sundayQuery->the_post() ?>
@@ -181,7 +241,7 @@ get_header();
                     <p class="artist-title"><?php echo $project_title ?></p>
                 </div>
                 <p class="location"><?php echo $sunday_location ?></p>
-                <a class="button orange" title="view <?php echo $displayName ?>"
+                <a class="button inline" title="view <?php echo $displayName ?>"
                     href="<?php echo the_permalink(); ?>">View project</a>
             </div>
             <?php endif ?>
