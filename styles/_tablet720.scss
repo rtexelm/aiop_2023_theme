@@ -404,7 +404,6 @@
       margin: 0;
       padding: 0 2.75rem;
       @include twelve-col-grid;
-      grid-template-rows: 1fr;
     }
     .button.inline {
       display: none;
@@ -426,22 +425,30 @@
       &#sunday {
         margin-top: 0;
       }
+
+      .pp-time,
+      .artist-time {
+        margin: 0;
+        width: 6vw;
+        flex-shrink: 0;
+        font-size: 1vw;
+      }
+
+      .artist-container {
+        display: flex;
+        gap: 1vw;
+        margin-bottom: 0;
+        padding-top: 0.5rem;
+      }
     }
 
-    .pp-time,
-    .artist-time {
-      width: 5vw;
+    .fest-header {
+      margin-bottom: 1rem;
     }
 
     .pp-container {
       display: flex;
       gap: 1vw;
-    }
-
-    .artist-container {
-      display: flex;
-      gap: 1vw;
-      margin-bottom: 0;
     }
   }
 

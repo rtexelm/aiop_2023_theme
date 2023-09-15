@@ -22,9 +22,9 @@ function scheduleFormat($start, $end) {
 
     $start_final;
     if($start_m == "00"){
-        $start_final = $start_h.$start_ap;
+        $start_final = $start_h;
     }else{
-        $start_final = $start_h.':'.$start_m.$start_ap;
+        $start_final = $start_h.':'.$start_m;
     }
 
     $end_final;
