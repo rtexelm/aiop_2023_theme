@@ -64,13 +64,15 @@ get_header();
             </article>
 
             <article class="public-program">
-                <h3 class="f-weight-700">Public Programming</h3>
+                <h3 class="f-weight-700 pp-head">Public Programming</h3>
                 <div class="pp-container">
-                    <p class="h4 pp-time">
+                    <p class="pp-time">
                         6-7:30pm
                     </p>
-                    <span class="h3 pp-title">Walk & Talk</span>
-                    <p class="p1 pp-title">BGSQD Bookstore</p>
+                    <div class="pp-title">
+                        <span class="h3">Walk & Talk</span>
+                        <p class="p1">BGSQD Bookstore</p>
+                    </div>
                 </div>
             </article>
 
@@ -131,11 +133,13 @@ get_header();
             <article class="public-program">
                 <h3 class="f-weight-700">Public Programming</h3>
                 <div class="pp-container">
-                    <p class="h4 artist-time">
+                    <p class="pp-time">
                         7-10pm
                     </p>
-                    <span class="h3 artist-title">Paper Dress Ball</span>
-                    <p class="p1 artist-title">BGSQD Bookstore</p>
+                    <div class="pp-title">
+                        <span class="h3 artist-title">Paper Dress Ball</span>
+                        <p class="p1 artist-title">BGSQD Bookstore</p>
+                    </div>
                 </div>
             </article>
 
@@ -171,8 +175,8 @@ get_header();
                     <?php echo $sat_final ?>
                 </p>
                 <div class="project">
-                    <span class="h3 artist-title"><?php echo $displayName ?></span>
-                    <p class="artist-title"><?php echo $project_title ?></p>
+                    <span class="h3 artist-title"><?php echo $project_title ?></span>
+                    <p class="artist-title"><?php echo $displayName ?></p>
                 </div>
                 <p class="location"><?php echo $saturday_location ?></p>
                 <a class="button inline" title="view <?php echo $displayName ?>"
@@ -196,11 +200,13 @@ get_header();
             <article class="public-program">
                 <h3 class="f-weight-700">Public Programming</h3>
                 <div class="pp-container">
-                    <p class="h4 artist-time">
+                    <p class="pp-time">
                         1-2pm
                     </p>
-                    <span class="h3 artist-title">Runway</span>
-                    <p class="p1 artist-title">14th Street</p>
+                    <div class="pp-title">
+                        <span class="h3">Runway</span>
+                        <p class="p1">14th Street</p>
+                    </div>
                 </div>
             </article>
 
@@ -237,8 +243,8 @@ get_header();
                     <?php echo $sun_final ?>
                 </p>
                 <div class="project">
-                    <span class="h3 artist-title"><?php echo $displayName ?></span>
-                    <p class="artist-title"><?php echo $project_title ?></p>
+                    <span class="h3 artist-title"><?php echo $project_title ?></span>
+                    <p class="artist-title"><?php echo $displayName ?></p>
                 </div>
                 <p class="location"><?php echo $sunday_location ?></p>
                 <a class="button inline" title="view <?php echo $displayName ?>"

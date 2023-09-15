@@ -20,21 +20,18 @@
   h2,
   .h2 {
     font-size: 2.5rem;
-    // line-height: 0.9em;
   }
   h3,
   .h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   h4,
   .h4 {
-    font-size: 1.5rem;
-    color: $black;
+    font-size: 1rem;
   }
   h5,
   .h5 {
-    font-size: 1.25rem;
-    color: $black;
+    font-size: 0.875rem;
   }
   p,
   a {
@@ -53,14 +50,14 @@
   span.p1,
   .p1r,
   .p1 p {
-    font-size: 1.5rem;
+    font-size: 1rem;
     line-height: 1.25em;
   }
 
   .p2,
   span.p2,
   .p2r {
-    font-size: 1.5rem;
+    font-size: 1rem;
     line-height: 1em;
   }
 
@@ -398,7 +395,38 @@
 
   // Schedule Page
 
+  #schedule-background {
+    background: url(assets/dress/tablet/home-texture-1380w.png);
+    background-size: auto 100%;
+  }
   main.schedule {
+    .artists {
+      margin: 0;
+      padding: 0 2.75rem;
+      @include twelve-col-grid;
+      grid-template-rows: 1fr;
+    }
+    .button.inline {
+      display: none;
+    }
+    #friday {
+      grid-column: 1/5;
+    }
+    #saturday {
+      grid-column: 5/9;
+    }
+    #sunday {
+      grid-column: 9/13;
+    }
+
+    div.day {
+      margin: 0;
+      width: 100%;
+      &#saturday,
+      &#sunday {
+        margin-top: 0;
+      }
+    }
   }
 
   //   main.about {

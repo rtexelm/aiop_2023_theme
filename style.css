@@ -778,7 +778,7 @@ nav.artist-nav .arrow.next {
 }
 
 main.schedule {
-  margin: 6rem 0;
+  margin: 4rem 0;
 }
 main.schedule div.day {
   width: calc(100% - 3rem);
@@ -795,10 +795,7 @@ main.schedule div.day .geo-area {
 }
 main.schedule div.day .pp-container {
   border-top: 1px solid #ff779c;
-  padding-top: 1rem;
-  display: flex;
-  flex-flow: column nowrap;
-  gap: 0.5rem;
+  padding-top: 0.5rem;
   margin-bottom: 1rem;
 }
 main.schedule div.day .artist-container {
@@ -815,11 +812,6 @@ main.schedule div.day .artist-container:hover {
 }
 main.schedule div.day .artist-container .artist-time {
   margin: 0.5rem 0;
-  color: #fff;
-}
-main.schedule div.day .artist-container .project span,
-main.schedule div.day .artist-container .project p {
-  margin-bottom: 0.5rem;
 }
 main.schedule div.day .artist-container .project span.artist-title,
 main.schedule div.day .artist-container .project p.artist-title {
@@ -983,17 +975,15 @@ footer .social .social-icon svg {
   }
   h3,
   .h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   h4,
   .h4 {
-    font-size: 1.5rem;
-    color: #000;
+    font-size: 1rem;
   }
   h5,
   .h5 {
-    font-size: 1.25rem;
-    color: #000;
+    font-size: 0.875rem;
   }
   p,
   a {
@@ -1011,13 +1001,13 @@ footer .social .social-icon svg {
   span.p1,
   .p1r,
   .p1 p {
-    font-size: 1.5rem;
+    font-size: 1rem;
     line-height: 1.25em;
   }
   .p2,
   span.p2,
   .p2r {
-    font-size: 1.5rem;
+    font-size: 1rem;
     line-height: 1em;
   }
   nav .menuVisible {
@@ -1317,6 +1307,39 @@ footer .social .social-icon svg {
   main.artist-single section.right {
     grid-row: 2;
     grid-column: 6/13;
+  }
+  #schedule-background {
+    background: url(assets/dress/tablet/home-texture-1380w.png);
+    background-size: auto 100%;
+  }
+  main.schedule .artists {
+    margin: 0;
+    padding: 0 2.75rem;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+    max-width: 100%;
+    grid-template-rows: 1fr;
+  }
+  main.schedule .button.inline {
+    display: none;
+  }
+  main.schedule #friday {
+    grid-column: 1/5;
+  }
+  main.schedule #saturday {
+    grid-column: 5/9;
+  }
+  main.schedule #sunday {
+    grid-column: 9/13;
+  }
+  main.schedule div.day {
+    margin: 0;
+    width: 100%;
+  }
+  main.schedule div.day#saturday, main.schedule div.day#sunday {
+    margin-top: 0;
   }
   footer {
     display: grid;

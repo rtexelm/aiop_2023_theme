@@ -13,7 +13,7 @@
   background-size: cover;
 }
 main.schedule {
-  margin: 6rem 0;
+  margin: 4rem 0;
   div.day {
     width: calc(100% - 3rem);
     margin: 4rem 1.5rem 0 1.5rem;
@@ -30,15 +30,8 @@ main.schedule {
 
     .pp-container {
       border-top: 1px solid #ff779c;
-      padding-top: 1rem;
-      display: flex;
-      flex-flow: column nowrap;
-      gap: 0.5rem;
+      padding-top: 0.5rem;
       margin-bottom: 1rem;
-    }
-
-    .fest-header {
-      // margin-bottom: 1rem;
     }
 
     .artist-container {
@@ -63,13 +56,11 @@ main.schedule {
 
       .artist-time {
         margin: 0.5rem 0;
-        color: $white;
       }
 
       .project {
         span,
         p {
-          margin-bottom: 0.5rem;
           &.artist-title {
             font-family: $primary-type;
           }
