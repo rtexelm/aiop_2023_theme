@@ -20,14 +20,14 @@ function scheduleFormat($start, $end) {
     $end_m = substr($end_temp,0,2);
     $end_ap = substr($end_temp, -2);
 
-    $start_final;
+    $start_final = null;
     if($start_m == "00"){
         $start_final = $start_h;
     }else{
         $start_final = $start_h.':'.$start_m;
     }
 
-    $end_final;
+    $end_final = null;
     if($end_m == "00"){
         $end_final = $end_h.$end_ap;
     }else{
