@@ -1411,6 +1411,7 @@ footer .social .social-icon svg {
     padding-left: 1rem;
   }
   main.artist-listing section.artists .artist-container .artist-copy {
+    position: relative;
     grid-column: 3/11;
     border-top: 1px solid #f0fa00;
     padding-top: 0.5rem;

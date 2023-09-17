@@ -481,6 +481,7 @@
         }
 
         .artist-copy {
+          position: relative;
           grid-column: 3/11;
           border-top: 1px solid $neon-yellow;
           padding-top: 0.5rem;
