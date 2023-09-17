@@ -5,32 +5,11 @@ body {
   color: $white;
   padding: 0;
   margin: 0;
-  // position: absolute;
-  // top: 0px;
-  // left: 0;
-  // right: 0;
-  // width: 100%;
 }
-
-// canvas {
-//   position: absolute;
-//   width: 100%;
-//   height: 100%;
-//   border: 2px solid blue;
-//   box-sizing: border-box;
-//   z-index: -20;
-//   mix-blend-mode: exclusion;
-// }
 
 .d1,
 h1,
-.h1 {
-  display: block;
-  font-family: $primary-type;
-  font-weight: normal;
-  line-height: 1em;
-  margin: 0px;
-}
+.h1,
 h2,
 .h2,
 h3,
@@ -40,11 +19,12 @@ h4,
 h5,
 .h5 {
   display: block;
-  font-family: $secondary-type;
+  font-family: $primary-type;
   font-weight: normal;
   line-height: 1em;
   margin: 0px;
 }
+
 span.d1 {
   font-size: 2.5rem;
 }
@@ -53,48 +33,44 @@ span.script {
   // Enter script mixin here when available
 }
 
+.f-weight-700 {
+  font-variation-settings: "wght" 700;
+}
+
 h1,
 .h1 {
   font-size: 3rem;
-  font-variation-settings: "wght" 400;
+  font-variation-settings: "wght" 400, "opsz" 72;
+
   margin-bottom: 0.5rem;
 }
 h2,
 .h2 {
   font-size: 2.2rem;
-  font-variation-settings: "wght" 250;
-  margin-bottom: 2rem;
+  font-variation-settings: "wght" 250, "opsz" 72;
 }
 h3,
 .h3 {
   font-size: 1.5rem;
-  font-variation-settings: "wght" 200;
+  font-variation-settings: "wght" 300, "opsz" 40;
+  line-height: 1.5rem;
 }
 h4,
 .h4 {
   font-size: 1rem;
-  font-variation-settings: "wght" 200;
-  color: $black;
-}
-h5,
-.h5 {
-  font-size: 0.875rem;
-  font-variation-settings: "wght" 200;
-  color: $black;
+  font-variation-settings: "wght" 400, "opsz" 20;
+  line-height: normal;
 }
 
 p,
 a {
   font-family: $primary-type;
-  font-variation-settings: "wght" 300;
+  font-variation-settings: "wght" 300, "opsz" 6;
   margin: 0;
-  margin-bottom: 1em;
+  margin-bottom: 0.25em;
 
-  .light {
-    font-variation-settings: "wght" 200;
-  }
-
-  span.italic {
+  span.italic,
+  .italic {
     font-variation-settings: "ital" 1;
   }
 }
@@ -102,27 +78,9 @@ a {
 .p1,
 span.p1,
 .p1r {
-  font-size: 1.25rem;
-  line-height: 1.25em;
-  margin-bottom: 1em;
-}
-.p2,
-span.p2,
-.p2r {
-  font-size: 1rem;
-  line-height: 1.25em;
-  margin-bottom: 1em;
-}
-
-p.p3,
-p.p3,
-.p3 p,
-.p3 p {
-  display: block;
-  font-family: $primary-type;
-  line-height: 1.4em;
-  margin: 0px;
-  margin-bottom: 1em;
+  font-size: 1.2rem;
+  line-height: 1.1em;
+  font-variation-settings: "opsz" 12;
 }
 
 h1.hidden {
@@ -140,7 +98,6 @@ h1.hidden {
 
 a.button,
 div.button {
-  // display: inline-block;
   display: flex;
   align-items: center;
   gap: 0.2rem;
@@ -156,8 +113,8 @@ div.button {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-size: 1.2rem;
+  font-weight: normal;
   font-variation-settings: "wght" 400;
   line-height: 1.125rem;
   width: fit-content;
@@ -197,6 +154,21 @@ div.button {
       outline: none;
     }
   }
+  &.pink {
+    border: 1px solid $pink;
+    background: $pink;
+    color: $black;
+
+    &:hover {
+      border-color: $lavender;
+      background: $lavender;
+      color: white;
+    }
+    &:focus {
+      border-color: $coal;
+      outline: none;
+    }
+  }
 
   &.orange {
     color: $white;
@@ -219,9 +191,9 @@ div.button {
   &.inline {
     padding: 0 0 0.25rem 0;
     border-radius: 0;
-    color: $black;
+    color: $white;
     &::after {
-      content: url(assets/arrow-right.png);
+      content: url(assets/dress/arrow-right-light.svg);
       margin-left: 0.5rem;
     }
     &:hover {
@@ -278,7 +250,13 @@ div.button p {
 }
 
 // For positioning children absolute
+
 .positioner {
   position: relative;
   width: 100%;
+}
+
+// Stop mobile scrolling on menu view
+.stopScrollMenu {
+  overflow: hidden;
 }

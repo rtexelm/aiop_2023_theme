@@ -2,51 +2,26 @@
 
 @media screen and (min-width: 720px) {
   h1,
-  .h1,
-  h2,
-  .h2,
-  h3,
-  .h3,
-  h4,
-  .h4,
-  h5,
-  .h5 {
-    line-height: 1em;
-  }
-  h1,
   .h1 {
     font-size: 3rem;
   }
   h2,
   .h2 {
     font-size: 2.5rem;
-    // line-height: 0.9em;
   }
   h3,
   .h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   h4,
   .h4 {
-    font-size: 1.5rem;
-    color: $black;
+    font-size: 1rem;
   }
   h5,
   .h5 {
-    font-size: 1.25rem;
-    color: $black;
+    font-size: 0.875rem;
   }
-  p,
   a {
-    font-variation-settings: "wght" 200;
-
-    .light {
-      font-variation-settings: "wght" 300;
-    }
-
-    .italic {
-      font-variation-settings: "ital" 1;
-    }
   }
 
   .p1,
@@ -54,15 +29,19 @@
   .p1r,
   .p1 p {
     font-size: 1.5rem;
-    line-height: 1.25em;
   }
 
   .p2,
   span.p2,
   .p2r {
-    font-size: 1.5rem;
-    line-height: 1em;
+    font-size: 1rem;
   }
+
+  a.button {
+    font-size: 1.5rem;
+  }
+
+  // Nav header
 
   nav {
     .menuVisible {
@@ -121,7 +100,6 @@
 
   main.home {
     .header {
-      // border: 5px solid blue;
       min-height: 80vh;
       background: url(assets/dress/tablet/home_header_2160w.jpg) fixed no-repeat
         $primary-orange;
@@ -216,12 +194,10 @@
         .button.neon-yellow {
           grid-column: 8/11;
           grid-row: 2/3;
-          margin: 0;
         }
         .button.lavender {
           grid-column: 8/13;
           grid-row: 3/4;
-          margin: 0;
         }
       }
     }
@@ -258,7 +234,6 @@
         @include twelve-col-grid;
         grid-template-rows: 1fr;
         .p1 {
-          font-size: 1.9rem;
           grid-column: 3/11;
           grid-row: 1/2;
         }
@@ -338,7 +313,7 @@
       position: relative;
       width: 100%;
       @include twelve-col-grid;
-      grid-template-rows: 10rem 1fr;
+      grid-template-rows: 8rem 1fr;
       grid-auto-rows: auto;
 
       &::before {
@@ -361,7 +336,7 @@
         display: block;
         grid-row: 1;
         grid-column: 1/13;
-        margin-top: 2rem;
+        margin-top: 1rem;
       }
     }
 
@@ -391,6 +366,81 @@
     section.right {
       grid-row: 2;
       grid-column: 6/13;
+    }
+  }
+
+  // Schedule Page
+
+  #schedule-background {
+    background: url(assets/dress/tablet/home-texture-1380w.png);
+    background-size: auto 100%;
+  }
+  main.schedule {
+    .artists {
+      margin: 0;
+      padding: 0 2.75rem;
+      @include twelve-col-grid;
+    }
+    .button {
+      display: none;
+    }
+    #friday {
+      grid-column: 1/5;
+    }
+    #saturday {
+      grid-column: 5/9;
+    }
+    #sunday {
+      grid-column: 9/13;
+    }
+
+    div.day {
+      margin: 0;
+      width: 100%;
+      &#saturday,
+      &#sunday {
+        margin-top: 0;
+      }
+
+      .pp-time,
+      .artist-time {
+        margin: 0;
+        width: 6vw;
+        flex-shrink: 0;
+      }
+
+      .artist-container {
+        display: flex;
+        gap: 1rem;
+      }
+    }
+
+    .pp-container {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+
+  main.public-programs {
+    .program-container {
+      @include twelve-col-grid;
+      h3 {
+        grid-column: 1/3;
+      }
+      p {
+        grid-column: 3/6;
+      }
+      .date-time {
+        grid-column: 6/10;
+      }
+      a {
+        grid-column: 10/13;
+        justify-self: right;
+      }
+      div.date {
+        border: none;
+        padding-top: 0;
+      }
     }
   }
 
@@ -635,64 +685,7 @@
   //   }
   //
 
-  //   main.schedule {
-  //     div.day {
-  //       // @include twelve-col-grid;
-  //       margin: 0rem 1.5rem;
-  //       width: calc(100% - 3rem);
-  //       .artist-container {
-  //         grid-column: 2/12;
-  //         display: grid;
-  //         grid-template-columns: repeat(10, 1fr);
-  //         column-gap: 1rem;
-  //         padding: 1rem 0;
-  //         margin: 0;
-  //         .artist-time {
-  //           grid-column: 1/3;
-  //           margin: 0;
-  //         }
-  //         .project {
-  //           grid-column: 3/9;
-  //         }
-  //         .location {
-  //           grid-column: 9/11;
-  //         }
-  //         .button {
-  //           grid-column: 11/13;
-  //         }
-  //       }
-  //     }
-  //   }
-
-  //   main.public-programs {
-  //     @include twelve-col-grid;
-  //     // margin-bottom: 8rem;
-  //     margin: 6rem 0 8rem 0;
-  //     h1 {
-  //       // margin: 1.5rem;
-  //       grid-column: 1/4;
-  //     }
-  //     .programs {
-  //       grid-column: 5/12;
-  //       // grid-template-rows: auto auto auto auto;
-  //       .program-container {
-  //         margin: 0 0 3rem 0;
-  //         // &#program-01{
-  //         // 	grid-column: 1/7;
-  //         // 	// grid-row: 2/3;
-  //         // }
-  //         // &#program-02{
-  //         // 	grid-column: 5/12;
-  //         // 	margin-bottom: 3rem;
-  //         // 	// grid-row: 3/4;
-  //         // }
-  //         // &#program-03{
-  //         // 	grid-column: 3/10;
-  //         // 	// grid-row: 4/5;
-  //         // }
-  //       }
-  //     }
-  //   }
+  //
 
   //   main.partners {
   //     @include twelve-col-grid;

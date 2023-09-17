@@ -18,14 +18,7 @@ body {
 
 .d1,
 h1,
-.h1 {
-  display: block;
-  font-family: "degular-variable", sans-serif;
-  font-weight: normal;
-  line-height: 1em;
-  margin: 0px;
-}
-
+.h1,
 h2,
 .h2,
 h3,
@@ -45,81 +38,57 @@ span.d1 {
   font-size: 2.5rem;
 }
 
+.f-weight-700 {
+  font-variation-settings: "wght" 700;
+}
+
 h1,
 .h1 {
   font-size: 3rem;
-  font-variation-settings: "wght" 400;
+  font-variation-settings: "wght" 400, "opsz" 72;
   margin-bottom: 0.5rem;
 }
 
 h2,
 .h2 {
   font-size: 2.2rem;
-  font-variation-settings: "wght" 250;
-  margin-bottom: 2rem;
+  font-variation-settings: "wght" 250, "opsz" 72;
 }
 
 h3,
 .h3 {
   font-size: 1.5rem;
-  font-variation-settings: "wght" 200;
+  font-variation-settings: "wght" 300, "opsz" 40;
+  line-height: 1.5rem;
 }
 
 h4,
 .h4 {
   font-size: 1rem;
-  font-variation-settings: "wght" 200;
-  color: #000;
-}
-
-h5,
-.h5 {
-  font-size: 0.875rem;
-  font-variation-settings: "wght" 200;
-  color: #000;
+  font-variation-settings: "wght" 400, "opsz" 20;
+  line-height: normal;
 }
 
 p,
 a {
   font-family: "degular-variable", sans-serif;
-  font-variation-settings: "wght" 300;
+  font-variation-settings: "wght" 300, "opsz" 6;
   margin: 0;
-  margin-bottom: 1em;
-}
-p .light,
-a .light {
-  font-variation-settings: "wght" 200;
+  margin-bottom: 0.25em;
 }
 p span.italic,
-a span.italic {
+p .italic,
+a span.italic,
+a .italic {
   font-variation-settings: "ital" 1;
 }
 
 .p1,
 span.p1,
 .p1r {
-  font-size: 1.25rem;
-  line-height: 1.25em;
-  margin-bottom: 1em;
-}
-
-.p2,
-span.p2,
-.p2r {
-  font-size: 1rem;
-  line-height: 1.25em;
-  margin-bottom: 1em;
-}
-
-p.p3,
-p.p3,
-.p3 p,
-.p3 p {
-  display: block;
-  font-family: "degular-variable", sans-serif;
-  line-height: 1.4em;
-  margin: 0px;
-  margin-bottom: 1em;
+  font-size: 1.2rem;
+  line-height: 1.1em;
+  font-variation-settings: "opsz" 12;
 }
 
 h1.hidden {
@@ -146,8 +115,8 @@ div.button {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-size: 1.2rem;
+  font-weight: normal;
   font-variation-settings: "wght" 400;
   line-height: 1.125rem;
   width: -moz-fit-content;
@@ -199,6 +168,23 @@ div.button.lavender:focus {
   border-color: #2c2c2c;
   outline: none;
 }
+a.button.pink,
+div.button.pink {
+  border: 1px solid #ff779c;
+  background: #ff779c;
+  color: #000;
+}
+a.button.pink:hover,
+div.button.pink:hover {
+  border-color: #c7a1d8;
+  background: #c7a1d8;
+  color: white;
+}
+a.button.pink:focus,
+div.button.pink:focus {
+  border-color: #2c2c2c;
+  outline: none;
+}
 a.button.orange,
 div.button.orange {
   color: #fff;
@@ -224,11 +210,11 @@ a.button.inline,
 div.button.inline {
   padding: 0 0 0.25rem 0;
   border-radius: 0;
-  color: #000;
+  color: #fff;
 }
 a.button.inline::after,
 div.button.inline::after {
-  content: url(assets/arrow-right.png);
+  content: url(assets/dress/arrow-right-light.svg);
   margin-left: 0.5rem;
 }
 a.button.inline:hover,
@@ -288,6 +274,10 @@ div.button p {
 .positioner {
   position: relative;
   width: 100%;
+}
+
+.stopScrollMenu {
+  overflow: hidden;
 }
 
 nav.top {
@@ -388,6 +378,7 @@ nav.top .menuFull ul#menu-full-navigation li {
   font-size: 1.8rem;
 }
 nav.top .menuFull ul#menu-full-navigation li a {
+  font-variation-settings: "opsz" 40;
   font-family: "degular-variable", sans-serif;
   font-weight: 400;
 }
@@ -431,7 +422,6 @@ main.home .header #title {
 main.home .header #title h1 {
   font: 16vw "degular-variable", sans-serif;
   font-variation-settings: "wght" 700, "opsz" 72, "ital" 0;
-  line-height: 0.9em;
 }
 main.home .header #pattern-l-top {
   z-index: 10;
@@ -641,7 +631,8 @@ main.about section.support h3 {
   top: 0px;
   width: 100%;
   height: 100vh;
-  background: url(assets/paper-artist-L.jpg);
+  background: url(assets/dress/tablet/desktop-bg-texture.png);
+  mix-blend-mode: multiply;
   background-size: cover;
 }
 
@@ -653,22 +644,17 @@ main.artist-listing section.artists span.page-title {
   margin-bottom: 2rem;
 }
 main.artist-listing section.artists span.artist-letter {
-  font-size: 4rem;
-  font-weight: bold;
   margin-bottom: 1rem;
-  color: #216972;
 }
 main.artist-listing section.artists .artist-container {
-  border-top: 2px solid #d0c2b0;
+  border-top: 1px solid #2c2c2c;
   padding: 1rem 0;
 }
 main.artist-listing section.artists .artist-container span.artist-title {
   font-family: "degular-variable", sans-serif;
-  font-size: 2rem;
 }
 main.artist-listing section.artists .artist-container .project-title {
   font-family: "degular-variable", sans-serif;
-  font-size: 1.5rem;
 }
 main.artist-listing section.artists .artist-container .button {
   margin-top: 0.5rem;
@@ -724,10 +710,9 @@ main.artist-single section.left h3.project-artists {
 main.artist-single section.left .location {
   margin-top: 1.5rem;
 }
-main.artist-single section.left .location h5 {
-  color: #000;
+main.artist-single section.left .location h4 {
   padding-top: 8px;
-  border-top: 1px solid #000;
+  border-top: 1px solid #2c2c2c;
   margin-bottom: 0.25rem;
 }
 main.artist-single section.left .location p.p1 {
@@ -767,12 +752,13 @@ nav.artist-nav .arrow.next {
   top: 0px;
   width: 100%;
   height: 100vh;
-  background: url(assets/paper-artist-L.jpg);
+  background: url(assets/dress/home-mobile-bg.png);
+  mix-blend-mode: multiply;
   background-size: cover;
 }
 
 main.schedule {
-  margin: 6rem 0;
+  margin: 4rem 0;
 }
 main.schedule div.day {
   width: calc(100% - 3rem);
@@ -782,44 +768,83 @@ main.schedule div.day#saturday, main.schedule div.day#sunday {
   margin-top: 3rem;
 }
 main.schedule div.day h2 {
+  margin-bottom: 0;
+}
+main.schedule div.day .geo-area {
   margin-bottom: 1.5rem;
-  color: #0f3a46;
-  font-family: "degular-variable", sans-serif;
-  font-weight: 500;
+}
+main.schedule div.day .pp-container {
+  border-top: 1px solid #ff779c;
+  padding-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+main.schedule div.day .pp-container .button {
+  margin-top: 0.5rem;
 }
 main.schedule div.day .artist-container {
-  border-top: 2px solid #d0c2b0;
+  border-top: 1px solid #ff779c;
   margin-bottom: 1rem;
+  padding: 0.5rem 0;
+  background-image: linear-gradient(to left, transparent, transparent 50%, hsla(344, 100%, 73%, 0.75) 50%, hsla(344, 100%, 73%, 0.75));
+  background-position: 100% 0;
+  background-size: 200% 100%;
+  transition: background-position 0.5s ease-in-out, border-color 1s ease;
 }
-main.schedule div.day .artist-container .artist-time {
-  margin: 0.5rem 0;
-  color: #216972;
-  font-weight: 300;
-}
-main.schedule div.day .artist-container .project span,
-main.schedule div.day .artist-container .project p {
-  margin-bottom: 0.5rem;
-}
-main.schedule div.day .artist-container .project span.artist-title,
-main.schedule div.day .artist-container .project p.artist-title {
-  font-family: "degular-variable", sans-serif;
-  font-weight: 350;
+main.schedule div.day .artist-container:hover {
+  background-position: 0 0;
+  border-color: #f0fa00;
 }
 main.schedule div.day .artist-container .location {
-  font-weight: 300;
+  display: none;
+}
+main.schedule div.day .artist-container .button {
+  margin-top: 0.5rem;
+}
+
+#program-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #810061;
+  z-index: -10;
+}
+#program-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(assets/dress/tablet/desktop-bg-texture.png) 50%/cover no-repeat;
+  mix-blend-mode: multiply;
+  opacity: 0.6;
 }
 
 main.public-programs {
-  padding-top: 4rem;
+  padding-top: 1rem;
   width: calc(100% - 3rem);
   margin: 4rem 1.5rem 4rem 1.5rem;
 }
 main.public-programs .program-container {
   margin-top: 2rem;
+  border-top: 1px solid #f74500;
+  padding-top: 1rem;
 }
-main.public-programs .program-container h2 {
-  font-family: "degular-variable", sans-serif;
-  margin-bottom: 1rem;
+main.public-programs .program-container h3 {
+  margin-bottom: 0.75rem;
+}
+main.public-programs .program-container .date,
+main.public-programs .program-container .location,
+main.public-programs .program-container .time {
+  padding: 0.5rem 0;
+  border-top: 1px dashed #f74500;
+}
+main.public-programs .program-container .date h4,
+main.public-programs .program-container .location h4,
+main.public-programs .program-container .time h4 {
+  display: none;
 }
 
 main.press section.press-posts {
@@ -942,18 +967,6 @@ footer .social .social-icon svg {
 
 @media screen and (min-width: 720px) {
   h1,
-  .h1,
-  h2,
-  .h2,
-  h3,
-  .h3,
-  h4,
-  .h4,
-  h5,
-  .h5 {
-    line-height: 1em;
-  }
-  h1,
   .h1 {
     font-size: 3rem;
   }
@@ -963,42 +976,29 @@ footer .social .social-icon svg {
   }
   h3,
   .h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   h4,
   .h4 {
-    font-size: 1.5rem;
-    color: #000;
+    font-size: 1rem;
   }
   h5,
   .h5 {
-    font-size: 1.25rem;
-    color: #000;
-  }
-  p,
-  a {
-    font-variation-settings: "wght" 200;
-  }
-  p .light,
-  a .light {
-    font-variation-settings: "wght" 300;
-  }
-  p .italic,
-  a .italic {
-    font-variation-settings: "ital" 1;
+    font-size: 0.875rem;
   }
   .p1,
   span.p1,
   .p1r,
   .p1 p {
     font-size: 1.5rem;
-    line-height: 1.25em;
   }
   .p2,
   span.p2,
   .p2r {
+    font-size: 1rem;
+  }
+  a.button {
     font-size: 1.5rem;
-    line-height: 1em;
   }
   nav .menuVisible {
     display: block;
@@ -1059,7 +1059,6 @@ footer .social .social-icon svg {
     margin: auto;
     font: 14vw "degular-variable", sans-serif;
     font-variation-settings: "wght" 700, "opsz" 72, "ital" 0;
-    line-height: 0.9em;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     -moz-column-gap: 1rem;
@@ -1142,12 +1141,10 @@ footer .social .social-icon svg {
   main.home #dates .date-text .button.neon-yellow {
     grid-column: 8/11;
     grid-row: 2/3;
-    margin: 0;
   }
   main.home #dates .date-text .button.lavender {
     grid-column: 8/13;
     grid-row: 3/4;
-    margin: 0;
   }
   main.home #pattern-r-mid {
     top: -100;
@@ -1186,7 +1183,6 @@ footer .social .social-icon svg {
     grid-template-rows: 1fr;
   }
   main.home #about .about .p1 {
-    font-size: 1.9rem;
     grid-column: 3/11;
     grid-row: 1/2;
   }
@@ -1257,7 +1253,7 @@ footer .social .social-icon svg {
     -moz-column-gap: 1rem;
          column-gap: 1rem;
     max-width: 100%;
-    grid-template-rows: 10rem 1fr;
+    grid-template-rows: 8rem 1fr;
     grid-auto-rows: auto;
   }
   main.artist-single .project-info-grid::before {
@@ -1275,7 +1271,7 @@ footer .social .social-icon svg {
     display: block;
     grid-row: 1;
     grid-column: 1/13;
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
   main.artist-single section.left {
     grid-row: 2;
@@ -1297,6 +1293,76 @@ footer .social .social-icon svg {
   main.artist-single section.right {
     grid-row: 2;
     grid-column: 6/13;
+  }
+  #schedule-background {
+    background: url(assets/dress/tablet/home-texture-1380w.png);
+    background-size: auto 100%;
+  }
+  main.schedule .artists {
+    margin: 0;
+    padding: 0 2.75rem;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+    max-width: 100%;
+  }
+  main.schedule .button {
+    display: none;
+  }
+  main.schedule #friday {
+    grid-column: 1/5;
+  }
+  main.schedule #saturday {
+    grid-column: 5/9;
+  }
+  main.schedule #sunday {
+    grid-column: 9/13;
+  }
+  main.schedule div.day {
+    margin: 0;
+    width: 100%;
+  }
+  main.schedule div.day#saturday, main.schedule div.day#sunday {
+    margin-top: 0;
+  }
+  main.schedule div.day .pp-time,
+  main.schedule div.day .artist-time {
+    margin: 0;
+    width: 6vw;
+    flex-shrink: 0;
+  }
+  main.schedule div.day .artist-container {
+    display: flex;
+    gap: 1rem;
+  }
+  main.schedule .pp-container {
+    display: flex;
+    gap: 1rem;
+  }
+  main.public-programs .program-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+    max-width: 100%;
+  }
+  main.public-programs .program-container h3 {
+    grid-column: 1/3;
+  }
+  main.public-programs .program-container p {
+    grid-column: 3/6;
+  }
+  main.public-programs .program-container .date-time {
+    grid-column: 6/10;
+  }
+  main.public-programs .program-container a {
+    grid-column: 10/13;
+    justify-self: right;
+  }
+  main.public-programs .program-container div.date {
+    border: none;
+    padding-top: 0;
   }
   footer {
     display: grid;

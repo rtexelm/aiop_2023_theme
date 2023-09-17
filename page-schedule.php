@@ -49,26 +49,49 @@ get_header();
 
 ?>
 <div id="schedule-background"></div>
-<main class="site-content schedule" id="main-content">
-	<h1 class="hidden">ARTISTS</h1>
+<main class="schedule">
+    <h1 class="hidden">ARTISTS</h1>
 
-	    <section class="artists">
-			<div class="day" id="friday">
-				<h2>Friday</h2>
+    <section class="artists">
 
-				<?php if($fridayQuery->have_posts()): ?>
-				<?php while($fridayQuery->have_posts()): 
+        <!-- Friday -->
+
+        <div class="day" id="friday">
+
+            <article class="day-header">
+                <h2 class="h1">Friday</h2>
+                <h3 class="f-weight-700 geo-area">[Section], 14th St</h3>
+            </article>
+
+            <article class="public-program">
+                <h3 class="f-weight-700 pp-head">Public Programming</h3>
+                <div class="pp-container">
+                    <h4 class="pp-time">
+                        6-7:30pm
+                    </h4>
+                    <div class="pp-title">
+                        <h3 class="h3">Walk & Talk</h3>
+                        <h4 class="">BGSQD Bookstore</h4>
+                    </div>
+                    <a class="button neon-yellow" title="Walk & Talk" href=#>RSVP</a>
+                </div>
+            </article>
+
+            <h3 class="f-weight-700 fest-header">Festival</h3>
+
+            <?php if($fridayQuery->have_posts()): ?>
+            <?php while($fridayQuery->have_posts()): 
 					$fridayQuery->the_post() ?>
-				<?php if (function_exists('get_field')): ?>
-				<?php 
+            <?php if (function_exists('get_field')): ?>
+            <?php 
 				$first_name			 = get_field('first_name');
 				$last_name 			= get_field('last_name');
 				$group_name 		= get_field('group_name');
 				$additional_artists = get_field('group_artists');
 				$project_title		= get_field('project_title');
 				$friday_location 	= get_field('friday_location');
-				$f_start 			= get_field('friday_start') ?: '12:00pm';
-				$f_end 				= get_field('friday_end') ?: '7:00pm';
+				$f_start 			= get_field('friday_start');
+				$f_end 				= get_field('friday_end');
 
 				$sortable_name = $last_name ?: $group_name;
 
@@ -78,42 +101,66 @@ get_header();
 
 				endif
 				?>
-				<?php if($friday_location): ?>
+            <?php if($friday_location): ?>
 
-				<div class="artist-container">
-					<p class="h4 artist-time">
-						<?php echo $fri_final ?>	
-					</p>
-					<div class="project">
-						<span class="h3 artist-title"><?php echo $displayName ?></span>
-						<p class="artist-title"><?php echo $project_title ?></p>
-					</div>
-					<p class="location"><?php echo $friday_location ?></p>
-					<a class="button secondary" title="view <?php echo $displayName ?>" href="<?php echo the_permalink(); ?>">View project</a>
-				</div>
-				<?php endif ?>
-				
-				<?php endwhile ?>
-				<?php endif ?>
-								
-			</div>
+            <div class="artist-container">
+                <h4 class="artist-time">
+                    <?php echo $fri_final ?>
+                </h4>
+                <div class="project">
+                    <h3 class="artist-title"><?php echo  $project_title ?></h3>
+                    <h4 class="artist-title"><?php echo $displayName ?></h4>
+                </div>
+                <p class="location"><?php echo $friday_location ?></p>
+                <a class="button pink" title="view <?php echo $displayName ?>"
+                    href="<?php echo the_permalink(); ?>">View project</a>
+            </div>
+            <?php endif ?>
 
-			<div class="day" id="saturday">
-				<h2>Saturday</h2>
-				<?php if($saturdayQuery->have_posts()): ?>
-				<?php while($saturdayQuery->have_posts()): 
+            <?php endwhile ?>
+            <?php endif ?>
+
+        </div>
+
+        <!-- Saturday -->
+
+        <div class="day" id="saturday">
+
+            <article class="day-header">
+                <h2 class="h1">Saturday</h2>
+                <h3 class="f-weight-700 geo-area">[Section], 14th St</h3>
+            </article>
+
+            <article class="public-program">
+                <h3 class="f-weight-700">Public Programming</h3>
+                <div class="pp-container">
+                    <h4 class="pp-time">
+                        7-10pm
+                    </h4>
+                    <div class="pp-title">
+                        <h3 class=" artist-title">Paper Dress Ball</h3>
+                        <h4 class="artist-title">BGSQD Bookstore</h4>
+                    </div>
+                    <a class="button neon-yellow" title="Paper Dress Ball" href=#>Tickets</a>
+                </div>
+            </article>
+
+            <h3 class="f-weight-700 fest-header">Festival</h3>
+
+            <?php if($saturdayQuery->have_posts()): ?>
+            <?php while($saturdayQuery->have_posts()): 
 					$saturdayQuery->the_post() ?>
-				<?php if (function_exists('get_field')): ?>
+            <?php if (function_exists('get_field')): ?>
 
-				<?php 
+            <?php 
 				$first_name			 = get_field('first_name');
 				$last_name 			= get_field('last_name');
 				$group_name 		= get_field('group_name');
 				$additional_artists = get_field('group_artists');
 				$project_title		= get_field('project_title');
 				$saturday_location 	= get_field('saturday_location');
-				$sat_start 			= get_field('saturday_start') ?: '12:00pm';
-				$sat_end 			= get_field('saturday_end') ?: '7:00pm';
+				$sat_start 			= get_field('saturday_start');
+				$sat_end 			= get_field('saturday_end');
 
 				$sortable_name = $last_name ?: $group_name;
 
@@ -124,40 +171,64 @@ get_header();
 				endif
 				?>
 
-				<?php if($saturday_location): ?>
-				<div class="artist-container">
-					<p class="h4 artist-time">
-						<?php echo $sat_final ?>	
-					</p>
-					<div class="project">
-						<span class="h3 artist-title"><?php echo $displayName ?></span>
-						<p class="artist-title"><?php echo $project_title ?></p>
-					</div>
-					<p class="location"><?php echo $saturday_location ?></p>
-					<a class="button secondary" title="view <?php echo $displayName ?>" href="<?php echo the_permalink(); ?>">View project</a>
-				</div>
-				<?php endif ?>
+            <?php if($saturday_location): ?>
+            <div class="artist-container">
+                <h4 class="artist-time">
+                    <?php echo $sat_final ?>
+                </h4>
+                <div class="project">
+                    <h3 class="artist-title"><?php echo  $project_title ?></h3>
+                    <h4 class="artist-title"><?php echo $displayName ?></h4>
+                </div>
+                <p class="location"><?php echo $saturday_location ?></p>
+                <a class="button pink" title="view <?php echo $displayName ?>"
+                    href="<?php echo the_permalink(); ?>">View project</a>
+            </div>
+            <?php endif ?>
 
-				<?php endwhile ?>
-				<?php endif ?>
-			</div>
+            <?php endwhile ?>
+            <?php endif ?>
+        </div>
 
-			<div class="day" id="sunday">
-				<h2>Sunday</h2>
-				<?php if($sundayQuery->have_posts()): ?>
-				<?php while($sundayQuery->have_posts()): 
+        <!-- Sunday -->
+
+        <div class="day" id="sunday">
+
+            <article class="day-header">
+                <h2 class="h1">Sunday</h2>
+                <h3 class="f-weight-700 geo-area">[Section], 14th St</h3>
+            </article>
+
+            <article class="public-program">
+                <h3 class="f-weight-700">Public Programming</h3>
+                <div class="pp-container">
+                    <h4 class="pp-time">
+                        1-2pm
+                    </h4>
+                    <div class="pp-title">
+                        <h3 class="">Runway</h3>
+                        <h4 class="">14th Street</h4>
+                    </div>
+                    <a class="button neon-yellow" title="Runway" href=#>RSVP</a>
+                </div>
+            </article>
+
+            <h3 class="f-weight-700 fest-header">Festival</h3>
+
+            <?php if($sundayQuery->have_posts()): ?>
+            <?php while($sundayQuery->have_posts()): 
 					$sundayQuery->the_post() ?>
-				<?php if (function_exists('get_field')): ?>
+            <?php if (function_exists('get_field')): ?>
 
-				<?php 
+            <?php 
 				$first_name			 = get_field('first_name');
 				$last_name 			= get_field('last_name');
 				$group_name 		= get_field('group_name');
 				$additional_artists = get_field('group_artists');
 				$project_title		= get_field('project_title');
 				$sunday_location 	= get_field('sunday_location');
-				$sun_start			= get_field('sunday_start') ?: '12:00pm';
-				$sun_end 			= get_field('sunday_end') ?: '7:00pm';
+				$sun_start			= get_field('sunday_start');
+				$sun_end 			= get_field('sunday_end');
 
 				$sortable_name = $last_name ?: $group_name;
 
@@ -168,25 +239,26 @@ get_header();
 				endif
 				?>
 
-				<?php if($sunday_location): ?>
+            <?php if($sunday_location): ?>
 
-				<div class="artist-container">
-					<p class="h4 artist-time">
-						<?php echo $sun_final ?>
-					</p>
-					<div class="project">
-						<span class="h3 artist-title"><?php echo $displayName ?></span>
-						<p class="artist-title"><?php echo $project_title ?></p>
-					</div>
-					<p class="location"><?php echo $sunday_location ?></p>
-					<a class="button secondary" title="view <?php echo $displayName ?>" href="<?php echo the_permalink(); ?>">View project</a>
-				</div>
-				<?php endif ?>
-				<?php endwhile ?>
-				<?php endif ?>
-			</div>		
-			
-	    </section>
+            <div class="artist-container">
+                <h4 class="artist-time">
+                    <?php echo $sun_final ?>
+                </h4>
+                <div class="project">
+                    <h3 class="artist-title"><?php echo  $project_title ?></h3>
+                    <h4 class="artist-title"><?php echo $displayName ?></h4>
+                </div>
+                <p class="location"><?php echo $sunday_location ?></p>
+                <a class="button pink" title="view <?php echo $displayName ?>"
+                    href="<?php echo the_permalink(); ?>">View project</a>
+            </div>
+            <?php endif ?>
+            <?php endwhile ?>
+            <?php endif ?>
+        </div>
+
+    </section>
 </main><!-- #primary -->
 
 <?php get_footer(); ?>

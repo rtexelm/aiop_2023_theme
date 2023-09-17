@@ -26,8 +26,8 @@ $white: #fff;
 $black: #000;
 
 $primary-type: "degular-variable", sans-serif;
-$secondary-type: "degular-variable", sans-serif;
 $display-type: "degular-variable", sans-serif;
+$text-type: "degular-text", sans-serif;
 
 @mixin twelve-col-grid {
   display: grid;
@@ -42,12 +42,16 @@ $display-type: "degular-variable", sans-serif;
 @mixin title-display {
   font: 16vw $display-type;
   font-variation-settings: "wght" 700, "opsz" 72, "ital" 0; //display
-  line-height: 0.9em;
 }
 @mixin title-display-tablet {
   font: 14vw $display-type;
   font-variation-settings: "wght" 700, "opsz" 72, "ital" 0; //display
-  line-height: 0.9em;
+}
+
+@mixin p-deg-text {
+  font: 1rem $text-type;
+  font-variation-settings: "wght" 400, "opsz" 6, "ital" 0; //text
+  line-height: 1.125rem;
 }
 
 @mixin nav-links {
