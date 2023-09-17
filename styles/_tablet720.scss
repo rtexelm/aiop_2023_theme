@@ -492,17 +492,17 @@
           display: block;
           grid-column: 10/13;
           position: absolute;
-          z-index: 1;
+          z-index: -1;
           opacity: 0;
           right: 0;
           top: -45;
-          transition: all ease-in-out 0.4s;
+          transition: all ease-out 0.3s;
         }
 
         &:hover {
           .list-thumb {
-            right: 50;
-            opacity: 0.6;
+            right: 100;
+            opacity: 0.3;
           }
         }
       }

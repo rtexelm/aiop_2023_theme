@@ -6,21 +6,23 @@
 		        <p>14th Street from Avenue C to the Hudson River</p>
 		    </div>
 		    <div class="footer-col" id="footer-people">
-		        <p>Gretchen Vitamvas
+		        <p>Gretchen Vitamvas,
 		            </br>
-		            <span class="footer-credits">Curator</span>
+		            Curator
 		        </p>
-		        <p>Ed Woodham</br>
-		            <span class="footer-credits">Founder $ Director</span>
+		        <p>Ed Woodham,</br>
+		            Founder $ Director
 		        </p>
-		        <p><a href="https://lauriewaxman.com" target="_blank">Laurie Waxman</a></br>
-		            <span class="footer-credits">Website & Design</span>
+		        <p><a href="https://lauriewaxman.com" target="_blank">Laurie Waxman,</a></br>
+		            Design
+		        </p>
+		        <p><a href="https://rossmabbett.com" target="_blank">Ross Mabbett,</a></br>
+		            Web Developer
 		        </p>
 		    </div>
 		    <div class="footer-col" id="footer-contact">
 		        <p>Contact</br>
-		            <span class="footer-credits"><a href="mailto:aiopnyc@gmail.com"
-		                    target="_blank">aiopnyc@gmail.com</a></span>
+		            <a href="mailto:aiopnyc@gmail.com" target="_blank">aiopnyc@gmail.com</a>
 		        </p>
 		    </div>
 		    <div class="footer-col" id="footer-social">
@@ -42,8 +44,8 @@
 		    <div class="footer-col footer-copyright" id="footer-copyright">
 		        <p>© 2023 Art in Odd Places</br>
 		            All rights reserved</p>
-		        <p><span class="footer-credits">Art in Odd Places is a project of <a href="http://gohproductions.org/">GOH
-		                    Productions</a>.</span></p>
+		        <p>Art in Odd Places is a project of <a href="http://gohproductions.org/">GOH
+		                Productions</a>.</p>
 		    </div>
 
 		</footer>

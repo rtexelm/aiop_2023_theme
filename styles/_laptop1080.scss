@@ -42,4 +42,12 @@
       margin: 4rem 3rem 0 3rem;
     }
   }
+
+  // Footer ##################################################################
+
+  footer {
+    #footer-social {
+      grid-column: 9/11;
+    }
+  }
 }

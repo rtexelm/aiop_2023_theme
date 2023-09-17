@@ -944,13 +944,6 @@ footer p a {
   font-weight: 500;
   font-family: "degular-variable", sans-serif;
 }
-footer p span.footer-credits,
-footer p span.footer-credits a,
-footer p a span.footer-credits,
-footer p a span.footer-credits a {
-  font-weight: 200;
-  font-family: "degular-variable", sans-serif;
-}
 footer a {
   font-weight: 500;
   color: white;
@@ -970,9 +963,6 @@ footer .footer-col {
   font-weight: 600;
   display: inline-block;
   vertical-align: top;
-}
-footer .footer-col#footer-people p a {
-  text-decoration: none;
 }
 footer .social {
   margin-top: 0.5rem;
@@ -1432,15 +1422,15 @@ footer .social .social-icon svg {
     display: block;
     grid-column: 10/13;
     position: absolute;
-    z-index: 1;
+    z-index: -1;
     opacity: 0;
     right: 0;
     top: -45;
-    transition: all ease-in-out 0.4s;
+    transition: all ease-out 0.3s;
   }
   main.artist-listing section.artists .artist-container:hover .list-thumb {
-    right: 50;
-    opacity: 0.6;
+    right: 100;
+    opacity: 0.3;
   }
   main.artist-listing section.artists .container-link {
     display: block;
@@ -1517,6 +1507,9 @@ footer .social .social-icon svg {
   main.artist-listing section.artists {
     width: calc(100% - 6rem);
     margin: 4rem 3rem 0 3rem;
+  }
+  footer #footer-social {
+    grid-column: 9/11;
   }
 }
 @media screen and (min-width: 1400px) {
