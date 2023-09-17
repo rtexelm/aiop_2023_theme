@@ -6,7 +6,7 @@
  *
  * @package WordPress
  * @subpackage AiOP_2023
- * @copyright  AiOP, Laurie Waxman
+ * @copyright  AiOP, Laurie Waxman, Ross Mabbett
  * @since 1.0.0
  * @version 1.0.0
  */
