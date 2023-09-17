@@ -112,19 +112,19 @@ get_header();
             <h3 class="h2 project-artists"><?php echo $displayName ?></h3>
 
             <div class="location">
-                <h5>Friday</h5>
+                <h4>Friday</h4>
                 <p class="p1"><?php echo $fri_final ?></p>
                 <p class="p1"><?php echo $friday_location ?></p>
             </div>
 
             <div class="location">
-                <h5>Saturday</h5>
+                <h4>Saturday</h4>
                 <p class="p1"><?php echo $sat_final ?></p>
                 <p class="p1"><?php echo $saturday_location ?></p>
             </div>
 
             <div class="location">
-                <h5>Sunday</h5>
+                <h4>Sunday</h4>
                 <p class="p1"><?php echo $sun_final ?></p>
                 <p class="p1"><?php echo $sunday_location ?></p>
             </div>
@@ -133,9 +133,9 @@ get_header();
 
         <section class="right info-area">
 
-            <div class="p1 project">
+            <div class="project">
 
-                <?php echo "<h3>" . $project_description . "</h3>"?>
+                <?php echo "<p class='p1'>" . $project_description . "</p>"?>
                 <?php 
 				if($project_link){
 					echo "<a class='button primary' target='blank' href='" . esc_url($project_link['url']) . "'>" . esc_attr( $project_link['title'] ) . "</a>";

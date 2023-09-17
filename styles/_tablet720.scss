@@ -11,7 +11,7 @@
   .h4,
   h5,
   .h5 {
-    line-height: 1em;
+    // line-height: 1em;
   }
   h1,
   .h1 {
@@ -33,32 +33,24 @@
   .h5 {
     font-size: 0.875rem;
   }
-  p,
   a {
-    font-variation-settings: "wght" 200;
-
-    .light {
-      font-variation-settings: "wght" 300;
-    }
-
-    .italic {
-      font-variation-settings: "ital" 1;
-    }
   }
 
   .p1,
   span.p1,
   .p1r,
   .p1 p {
-    font-size: 1rem;
-    line-height: 1.25em;
+    font-size: 1.5rem;
   }
 
   .p2,
   span.p2,
   .p2r {
     font-size: 1rem;
-    line-height: 1em;
+  }
+
+  a.button {
+    font-size: 1.5rem;
   }
 
   // Nav header
@@ -215,12 +207,10 @@
         .button.neon-yellow {
           grid-column: 8/11;
           grid-row: 2/3;
-          margin: 0;
         }
         .button.lavender {
           grid-column: 8/13;
           grid-row: 3/4;
-          margin: 0;
         }
       }
     }
@@ -257,7 +247,7 @@
         @include twelve-col-grid;
         grid-template-rows: 1fr;
         .p1 {
-          font-size: 1.9rem;
+          // font-size: 1.9rem;
           grid-column: 3/11;
           grid-row: 1/2;
         }
@@ -337,7 +327,7 @@
       position: relative;
       width: 100%;
       @include twelve-col-grid;
-      grid-template-rows: 10rem 1fr;
+      grid-template-rows: 8rem 1fr;
       grid-auto-rows: auto;
 
       &::before {
@@ -360,7 +350,7 @@
         display: block;
         grid-row: 1;
         grid-column: 1/13;
-        margin-top: 2rem;
+        margin-top: 1rem;
       }
     }
 
@@ -405,7 +395,7 @@
       padding: 0 2.75rem;
       @include twelve-col-grid;
     }
-    .button.inline {
+    .button {
       display: none;
     }
     #friday {
@@ -431,24 +421,18 @@
         margin: 0;
         width: 6vw;
         flex-shrink: 0;
-        font-size: 1vw;
+        // font-size: 1vw;
       }
 
       .artist-container {
         display: flex;
-        gap: 1vw;
-        margin-bottom: 0;
-        padding-top: 0.5rem;
+        gap: 1rem;
       }
-    }
-
-    .fest-header {
-      margin-bottom: 1rem;
     }
 
     .pp-container {
       display: flex;
-      gap: 1vw;
+      gap: 1rem;
     }
   }
 

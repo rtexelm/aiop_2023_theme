@@ -66,13 +66,14 @@ get_header();
             <article class="public-program">
                 <h3 class="f-weight-700 pp-head">Public Programming</h3>
                 <div class="pp-container">
-                    <p class="pp-time">
+                    <h4 class="pp-time">
                         6-7:30pm
-                    </p>
+                    </h4>
                     <div class="pp-title">
-                        <span class="h3">Walk & Talk</span>
-                        <p class="p1">BGSQD Bookstore</p>
+                        <h3 class="h3">Walk & Talk</h3>
+                        <h4 class="">BGSQD Bookstore</h4>
                     </div>
+                    <a class="button neon-yellow" title="Walk & Talk" href=#>RSVP</a>
                 </div>
             </article>
 
@@ -103,15 +104,15 @@ get_header();
             <?php if($friday_location): ?>
 
             <div class="artist-container">
-                <p class="h4 artist-time">
+                <h4 class="artist-time">
                     <?php echo $fri_final ?>
-                </p>
+                </h4>
                 <div class="project">
-                    <span class="h3 artist-title"><?php echo  $project_title ?></span>
-                    <p class="p1 artist-title"><?php echo $displayName ?></p>
+                    <h3 class="artist-title"><?php echo  $project_title ?></h3>
+                    <h4 class="artist-title"><?php echo $displayName ?></h4>
                 </div>
                 <p class="location"><?php echo $friday_location ?></p>
-                <a class="button inline" title="view <?php echo $displayName ?>"
+                <a class="button pink" title="view <?php echo $displayName ?>"
                     href="<?php echo the_permalink(); ?>">View project</a>
             </div>
             <?php endif ?>
@@ -133,13 +134,14 @@ get_header();
             <article class="public-program">
                 <h3 class="f-weight-700">Public Programming</h3>
                 <div class="pp-container">
-                    <p class="pp-time">
+                    <h4 class="pp-time">
                         7-10pm
-                    </p>
+                    </h4>
                     <div class="pp-title">
-                        <span class="h3 artist-title">Paper Dress Ball</span>
-                        <p class="p1 artist-title">BGSQD Bookstore</p>
+                        <h3 class=" artist-title">Paper Dress Ball</h3>
+                        <h4 class="artist-title">BGSQD Bookstore</h4>
                     </div>
+                    <a class="button neon-yellow" title="Paper Dress Ball" href=#>Tickets</a>
                 </div>
             </article>
 
@@ -171,15 +173,15 @@ get_header();
 
             <?php if($saturday_location): ?>
             <div class="artist-container">
-                <p class="h4 artist-time">
+                <h4 class="artist-time">
                     <?php echo $sat_final ?>
-                </p>
+                </h4>
                 <div class="project">
-                    <span class="h3 artist-title"><?php echo $project_title ?></span>
-                    <p class="artist-title"><?php echo $displayName ?></p>
+                    <h3 class="artist-title"><?php echo  $project_title ?></h3>
+                    <h4 class="artist-title"><?php echo $displayName ?></h4>
                 </div>
                 <p class="location"><?php echo $saturday_location ?></p>
-                <a class="button inline" title="view <?php echo $displayName ?>"
+                <a class="button pink" title="view <?php echo $displayName ?>"
                     href="<?php echo the_permalink(); ?>">View project</a>
             </div>
             <?php endif ?>
@@ -200,13 +202,14 @@ get_header();
             <article class="public-program">
                 <h3 class="f-weight-700">Public Programming</h3>
                 <div class="pp-container">
-                    <p class="pp-time">
+                    <h4 class="pp-time">
                         1-2pm
-                    </p>
+                    </h4>
                     <div class="pp-title">
-                        <span class="h3">Runway</span>
-                        <p class="p1">14th Street</p>
+                        <h3 class="">Runway</h3>
+                        <h4 class="">14th Street</h4>
                     </div>
+                    <a class="button neon-yellow" title="Runway" href=#>RSVP</a>
                 </div>
             </article>
 
@@ -239,15 +242,15 @@ get_header();
             <?php if($sunday_location): ?>
 
             <div class="artist-container">
-                <p class="h4 artist-time">
+                <h4 class="artist-time">
                     <?php echo $sun_final ?>
-                </p>
+                </h4>
                 <div class="project">
-                    <span class="h3 artist-title"><?php echo $project_title ?></span>
-                    <p class="artist-title"><?php echo $displayName ?></p>
+                    <h3 class="artist-title"><?php echo  $project_title ?></h3>
+                    <h4 class="artist-title"><?php echo $displayName ?></h4>
                 </div>
                 <p class="location"><?php echo $sunday_location ?></p>
-                <a class="button inline" title="view <?php echo $displayName ?>"
+                <a class="button pink" title="view <?php echo $displayName ?>"
                     href="<?php echo the_permalink(); ?>">View project</a>
             </div>
             <?php endif ?>

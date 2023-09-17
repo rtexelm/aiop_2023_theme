@@ -17,16 +17,18 @@ get_header();
 
 <div id="program-background"></div>
 <main class="site-content public-programs" id="main-content">
-    <h1 class="h3">Public Programs</h1>
+    <h1 class="h1">Public Programs</h1>
     <section class="programs">
         <div class="program-container" id="program-01">
-            <h2>Video & Virtual Evening</h2>
-            <p class="p2">Thursday, September 22, 2022, 7-8:30pm</p>
-            <p class="p3">Featuring video screening of Gina Peyran Tan, Feixue Mei, and Balitrónica Gomez & Guillermo
-                Gomez-Peña. With photos by Iren Yu. A panel discussion led by <i>STORY</i> curator Jessica Elaine
-                Blinkhorn and Executive Director Furusho von Puttkammer to follow the presentation</p>
+            <h3>Runway & Panel Discussion</h3>
+            <p class="p3 date">Friday, October 13th, 2023</p>
+            <p class="p2 location">Bureau of General Services, Queer Division at the LGBGQ Center on 13th Street.</p>
+            <p class="p2 time">7-8:30pm</p>
+            <p class="p4">Join us for a runway/panel presentation of some kind at the Bureau of General Services, Queer
+                Division at the LGBGQ Center on 13th Street.
+            </p>
             <a href="https://www.eventbrite.com/e/art-in-odd-places-2022story-video-virtual-evening-tickets-407219312927"
-                class="button primary">RSVP here</a>
+                class="button inline">RSVP here</a>
         </div>
         <div class="program-container" id="program-02">
             <h2>What&rsquo;s Your STORY?</h2>
@@ -37,7 +39,7 @@ get_header();
                 Juan Hernadez with Mai Tran, Vivek Sebastian, Heather Sincavage, and Yu-Ching Wang. Hosted by Jessica
                 Elaine Blinkhorn.</p>
             <a href="https://www.eventbrite.com/e/art-in-odd-places-2022-story-presents-whats-your-story-tickets-408967050457"
-                class="button primary">RSVP here</a>
+                class="button inline">RSVP here</a>
         </div>
         <div class="program-container" id="program-03">
             <h2>Critical Mass</h2>
