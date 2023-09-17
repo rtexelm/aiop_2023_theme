@@ -10,12 +10,8 @@ footer {
     margin: 0 0 0.5rem 0;
     font-weight: 500;
     font-family: $primary-type;
-    span.light,
-    span.light a {
-      font-weight: 200;
-      font-family: $primary-type;
-    }
   }
+
   a {
     font-weight: 500;
     color: white;
@@ -38,9 +34,6 @@ footer {
     font-weight: 600;
     display: inline-block;
     vertical-align: top;
-    &#footer-people p a {
-      text-decoration: none;
-    }
   }
 
   .social {

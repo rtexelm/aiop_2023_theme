@@ -8,11 +8,6 @@ nav.top {
   background-color: $neon-yellow;
   padding: 0 1.5rem;
 
-  @media screen and (min-width: 720px) {
-    width: calc(100% - 5.5rem);
-    padding: 0 2.75rem;
-  }
-
   a#skip-content {
     position: absolute;
     top: -4rem;
