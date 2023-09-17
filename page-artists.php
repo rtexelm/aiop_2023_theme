@@ -52,6 +52,8 @@ get_header();
 						$group_name			= get_field('group_name');
 						$additional_names 	= get_field('group_artists');
 						$project_title		= get_field('project_title');
+                        
+
 
 						$sortable_name = $last_name ?: $group_name;
 						$displayName = artistNameFormat($first_name, $sortable_name, $additional_names);
@@ -65,6 +67,8 @@ get_header();
 							$last_letter = $sortable_name[0]; 
 							?>
             <div class="artist-copy">
+                <a class="container-link" title="view <?php echo $displayName ?>"
+                    href="<?php echo the_permalink(); ?>"></a>
                 <h3 class="artist-title">
                     <?php echo $displayName ?>
                 </h3>
@@ -74,6 +78,9 @@ get_header();
             </div>
             <a class="button pink" title="view <?php echo $displayName ?>" href="<?php echo the_permalink(); ?>">View
                 project</a>
+
+            <?php the_post_thumbnail('listings-thumb', array('class' => 'list-thumb')); ?>
+
         </div>
         <?php endif ?>
         <?php endwhile ?>

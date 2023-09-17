@@ -1,10 +1,14 @@
 @use "constants" as *;
 
 @media screen and (min-width: 1080px) {
+  //   Nav ##############################################################
+
   nav.top {
     width: calc(100% - 6rem);
     padding: 0 3rem;
   }
+
+  //   Public Programs page ################################################
 
   main.public-programs {
     width: calc(100% - 6rem);
@@ -27,6 +31,15 @@
           width: 6vw;
         }
       }
+    }
+  }
+
+  //   Artists listing page ################################################
+
+  main.artist-listing {
+    section.artists {
+      width: calc(100% - 6rem);
+      margin: 4rem 3rem 0 3rem;
     }
   }
 }

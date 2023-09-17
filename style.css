@@ -35,7 +35,8 @@ h5,
 }
 
 span.d1 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
+  font-variation-settings: "wght" 700, "opsz" 72, "ital" 0;
 }
 
 .f-weight-700 {
@@ -654,12 +655,15 @@ main.about section.support h3 {
   position: fixed;
   top: 0px;
   width: 100%;
-  height: 100vh;
-  background: url(assets/dress/tablet/desktop-bg-texture.png);
-  mix-blend-mode: multiply;
+  height: 100%;
+  background: url(assets/dress/tablet/desktop-bg-texture.png), #c7a1d8;
+  background-blend-mode: multiply;
   background-size: cover;
 }
 
+main.artist-listing {
+  margin-bottom: 4rem;
+}
 main.artist-listing section.artists {
   width: calc(100% - 3rem);
   margin: 4rem 1.5rem 0 1.5rem;
@@ -671,17 +675,20 @@ main.artist-listing section.artists span.artist-letter {
   margin-bottom: 1rem;
 }
 main.artist-listing section.artists .artist-container {
-  border-top: 1px solid #2c2c2c;
+  border-top: 1px solid #f0fa00;
   padding: 1rem 0;
-}
-main.artist-listing section.artists .artist-container span.artist-title {
-  font-family: "degular-variable", sans-serif;
-}
-main.artist-listing section.artists .artist-container .project-title {
-  font-family: "degular-variable", sans-serif;
 }
 main.artist-listing section.artists .artist-container .button {
   margin-top: 0.5rem;
+}
+main.artist-listing section.artists .artist-container .list-thumb {
+  display: none;
+}
+main.artist-listing section.artists .container-link {
+  display: none;
+}
+main.artist-listing section.artists .artist-copy {
+  color: #000;
 }
 
 main.artist-single {
@@ -1381,6 +1388,66 @@ footer .social .social-icon svg {
     border: none;
     padding-top: 0;
   }
+  main.artist-listing {
+    margin: 6rem 0;
+  }
+  main.artist-listing section.artists {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+    max-width: 100%;
+  }
+  main.artist-listing section.artists span.page-title {
+    grid-column: 1/13;
+    margin-bottom: 1rem;
+  }
+  main.artist-listing section.artists .artist-container {
+    border-top: 0;
+    position: relative;
+    grid-column: 1/13;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+    padding: 0 0 1rem;
+    margin: 0;
+  }
+  main.artist-listing section.artists .artist-container span.artist-letter {
+    position: absolute;
+    top: -0.8rem;
+    grid-column: 1/3;
+    font-size: 6rem;
+    padding-left: 1rem;
+  }
+  main.artist-listing section.artists .artist-container .artist-copy {
+    grid-column: 3/11;
+    border-top: 1px solid #f0fa00;
+    padding-top: 0.5rem;
+  }
+  main.artist-listing section.artists .artist-container a.button {
+    display: none;
+  }
+  main.artist-listing section.artists .artist-container .list-thumb {
+    display: block;
+    grid-column: 10/13;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    right: 0;
+    top: -45;
+    transition: all ease-in-out 0.4s;
+  }
+  main.artist-listing section.artists .artist-container:hover .list-thumb {
+    right: 50;
+    opacity: 0.6;
+  }
+  main.artist-listing section.artists .container-link {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
   footer {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -1446,6 +1513,10 @@ footer .social .social-icon svg {
   main.public-programs .program-container .location h4 {
     display: block;
     width: 6vw;
+  }
+  main.artist-listing section.artists {
+    width: calc(100% - 6rem);
+    margin: 4rem 3rem 0 3rem;
   }
 }
 @media screen and (min-width: 1400px) {
