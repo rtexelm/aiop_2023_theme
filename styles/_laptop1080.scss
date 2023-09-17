@@ -1,0 +1,32 @@
+@use "constants" as *;
+
+@media screen and (min-width: 1080px) {
+  nav.top {
+    width: calc(100% - 6rem);
+    padding: 0 3rem;
+  }
+
+  main.public-programs {
+    width: calc(100% - 6rem);
+    margin: 4rem 3rem 4rem 3rem;
+    .program-container {
+      .date-time {
+        grid-column: 6/11;
+      }
+      a {
+        grid-column: 11/13;
+      }
+      .date,
+      .time,
+      .location {
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 1.5rem;
+        h4 {
+          display: block;
+          width: 6vw;
+        }
+      }
+    }
+  }
+}

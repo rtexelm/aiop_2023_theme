@@ -104,6 +104,11 @@ h1.hidden {
   clip: rect(1px, 1px, 1px, 1px);
 }
 
+.footer-credits {
+  font-size: 0.75rem;
+  color: #f0fa00;
+}
+
 a.button,
 div.button {
   display: flex;
@@ -141,6 +146,11 @@ div.button.neon-yellow:hover {
   border-color: #ff779c;
   color: white;
 }
+a.button.neon-yellow:hover::after,
+div.button.neon-yellow:hover::after {
+  content: url(assets/dress/arrow-right-light.svg);
+  margin-left: 0.5rem;
+}
 a.button.neon-yellow:focus,
 div.button.neon-yellow:focus {
   border-color: #fff;
@@ -163,6 +173,11 @@ div.button.lavender:hover {
   background: #ff779c;
   color: white;
 }
+a.button.lavender:hover::after,
+div.button.lavender:hover::after {
+  content: url(assets/dress/arrow-right-light.svg);
+  margin-left: 0.5rem;
+}
 a.button.lavender:focus,
 div.button.lavender:focus {
   border-color: #2c2c2c;
@@ -180,6 +195,11 @@ div.button.pink:hover {
   background: #c7a1d8;
   color: white;
 }
+a.button.pink:hover::after,
+div.button.pink:hover::after {
+  content: url(assets/dress/arrow-right-light.svg);
+  margin-left: 0.5rem;
+}
 a.button.pink:focus,
 div.button.pink:focus {
   border-color: #2c2c2c;
@@ -191,10 +211,20 @@ div.button.orange {
   border: 1px solid white;
   background: transparent;
 }
+a.button.orange::after,
+div.button.orange::after {
+  content: url(assets/dress/arrow-right-light.svg);
+  margin-left: 0.5rem;
+}
 a.button.orange:hover,
 div.button.orange:hover {
   background: #c7a1d8;
   color: black;
+}
+a.button.orange:hover::after,
+div.button.orange:hover::after {
+  content: url(assets/dress/arrow-right-dark.svg);
+  margin-left: 0.5rem;
 }
 a.button.orange:focus,
 div.button.orange:focus {
@@ -287,12 +317,6 @@ nav.top {
   width: calc(100% - 3rem);
   background-color: #f0fa00;
   padding: 0 1.5rem;
-}
-@media screen and (min-width: 720px) {
-  nav.top {
-    width: calc(100% - 5.5rem);
-    padding: 0 2.75rem;
-  }
 }
 nav.top a#skip-content {
   position: absolute;
@@ -807,19 +831,9 @@ main.schedule div.day .artist-container .button {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #810061;
+  background: url(assets/dress/home-mobile-bg.png) 50%/cover no-repeat, #810061;
+  background-blend-mode: multiply;
   z-index: -10;
-}
-#program-background::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url(assets/dress/tablet/desktop-bg-texture.png) 50%/cover no-repeat;
-  mix-blend-mode: multiply;
-  opacity: 0.6;
 }
 
 main.public-programs {
@@ -923,10 +937,10 @@ footer p a {
   font-weight: 500;
   font-family: "degular-variable", sans-serif;
 }
-footer p span.light,
-footer p span.light a,
-footer p a span.light,
-footer p a span.light a {
+footer p span.footer-credits,
+footer p span.footer-credits a,
+footer p a span.footer-credits,
+footer p a span.footer-credits a {
   font-weight: 200;
   font-family: "degular-variable", sans-serif;
 }
@@ -1340,6 +1354,9 @@ footer .social .social-icon svg {
     display: flex;
     gap: 1rem;
   }
+  #program-background {
+    background: url(assets/dress/tablet/desktop-bg-texture.png) 50%/cover no-repeat, #810061;
+  }
   main.public-programs .program-container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -1388,12 +1405,47 @@ footer .social .social-icon svg {
   footer #footer-social {
     grid-column: 10/11;
   }
+  footer #footer-social .social {
+    margin-top: 0;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+  }
   footer #footer-social .social-icon svg {
     width: 1.75rem;
     display: inline-block;
   }
   footer #footer-copyright {
     grid-column: 11/13;
+  }
+}
+@media screen and (min-width: 1080px) {
+  nav.top {
+    width: calc(100% - 6rem);
+    padding: 0 3rem;
+  }
+  main.public-programs {
+    width: calc(100% - 6rem);
+    margin: 4rem 3rem 4rem 3rem;
+  }
+  main.public-programs .program-container .date-time {
+    grid-column: 6/11;
+  }
+  main.public-programs .program-container a {
+    grid-column: 11/13;
+  }
+  main.public-programs .program-container .date,
+  main.public-programs .program-container .time,
+  main.public-programs .program-container .location {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1.5rem;
+  }
+  main.public-programs .program-container .date h4,
+  main.public-programs .program-container .time h4,
+  main.public-programs .program-container .location h4 {
+    display: block;
+    width: 6vw;
   }
 }
 @media screen and (min-width: 1400px) {
@@ -1428,12 +1480,10 @@ footer .social .social-icon svg {
   h4,
   span.h4 {
     font-size: 1.5rem;
-    color: #6b98ad;
   }
   h5,
   span.h5 {
     font-size: 1.125rem;
-    color: #6b98ad;
   }
   p,
   a {
@@ -1446,14 +1496,6 @@ footer .social .social-icon svg {
   a span.p1,
   a.p1r {
     font-size: 2rem;
-    line-height: 1.25em;
-  }
-  p.p2,
-  p span.p2, p.p2r,
-  a.p2,
-  a span.p2,
-  a.p2r {
-    font-size: 1.5rem;
     line-height: 1.25em;
   }
   nav .menuFull ul#menu-full-navigation li a {

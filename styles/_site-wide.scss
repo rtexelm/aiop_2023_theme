@@ -96,6 +96,11 @@ h1.hidden {
   clip: rect(1px, 1px, 1px, 1px);
 }
 
+.footer-credits {
+  font-size: 0.75rem;
+  color: $neon-yellow;
+}
+
 a.button,
 div.button {
   display: flex;
@@ -125,6 +130,10 @@ div.button {
     border: 1px solid $neon-yellow;
     color: $black;
     &:hover {
+      &::after {
+        content: url(assets/dress/arrow-right-light.svg);
+        margin-left: 0.5rem;
+      }
       background: $pink;
       border-color: $pink;
       color: white;
@@ -145,6 +154,10 @@ div.button {
     color: $black;
 
     &:hover {
+      &::after {
+        content: url(assets/dress/arrow-right-light.svg);
+        margin-left: 0.5rem;
+      }
       border-color: $pink;
       background: $pink;
       color: white;
@@ -160,6 +173,10 @@ div.button {
     color: $black;
 
     &:hover {
+      &::after {
+        content: url(assets/dress/arrow-right-light.svg);
+        margin-left: 0.5rem;
+      }
       border-color: $lavender;
       background: $lavender;
       color: white;
@@ -174,7 +191,15 @@ div.button {
     color: $white;
     border: 1px solid white;
     background: transparent;
+    &::after {
+      content: url(assets/dress/arrow-right-light.svg);
+      margin-left: 0.5rem;
+    }
     &:hover {
+      &::after {
+        content: url(assets/dress/arrow-right-dark.svg);
+        margin-left: 0.5rem;
+      }
       background: $lavender;
       color: black;
     }

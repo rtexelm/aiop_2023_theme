@@ -74,11 +74,11 @@ get_header();
                 </div>
                 <div class="location">
                     <h4>Location</h4>
-                    <p>Bureau of General Services, Queer Division at the LGBGQ Center on 13th Street.</p>
+                    <p>14th Street between Avenues X and Y.</p>
                 </div>
                 <div class="time">
                     <h4>Time</h4>
-                    <p>7-8:30pm</p>
+                    <p>3-5pm</p>
                 </div>
             </div>
             <a href="https://www.eventbrite.com/e/art-in-odd-places-2022-story-presents-whats-your-story-tickets-408967050457"

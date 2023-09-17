@@ -41,7 +41,7 @@
     font-size: 1.5rem;
   }
 
-  // Nav header
+  // Nav header ############################################
 
   nav {
     .menuVisible {
@@ -96,7 +96,7 @@
     }
   }
 
-  // Front Page
+  // Front Page #########################################
 
   main.home {
     .header {
@@ -269,7 +269,7 @@
     }
   }
 
-  // Single Artist page
+  // Single Artist page #######################################
 
   main.artist-single {
     margin: 0;
@@ -369,7 +369,7 @@
     }
   }
 
-  // Schedule Page
+  // Schedule Page ##########################################
 
   #schedule-background {
     background: url(assets/dress/tablet/home-texture-1380w.png);
@@ -421,6 +421,13 @@
     }
   }
 
+  // Public Programs page ###########################################
+
+  #program-background {
+    background: url(assets/dress/tablet/desktop-bg-texture.png) 50% / cover
+        no-repeat,
+      $primary-magenta;
+  }
   main.public-programs {
     .program-container {
       @include twelve-col-grid;
@@ -775,6 +782,12 @@
     }
     #footer-social {
       grid-column: 10/11;
+      .social {
+        margin-top: 0;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-start;
+      }
       .social-icon svg {
         width: 1.75rem;
         display: inline-block;
