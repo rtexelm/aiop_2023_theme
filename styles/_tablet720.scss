@@ -43,7 +43,7 @@
 
   // Nav header ############################################
 
-  nav {
+  nav.top {
     .menuVisible {
       display: block;
       margin-right: 1rem;
@@ -99,6 +99,7 @@
   // Front Page #########################################
 
   main.home {
+    overflow-y: clip;
     .header {
       min-height: 80vh;
       background: url(assets/dress/tablet/home_header_2160w.jpg) fixed no-repeat
@@ -517,6 +518,25 @@
     }
   }
 
+  main.donate {
+    @include twelve-col-grid;
+    min-height: 50%;
+    .page-title {
+      grid-column: 2/12;
+      grid-row: 1/2;
+    }
+    div.payment-method {
+      grid-row: 2/3;
+      &.paypal {
+        grid-column: 2/7;
+        padding-right: 2rem;
+      }
+      &.mail {
+        grid-column: 7/12;
+      }
+    }
+  }
+
   //   main.about {
   //     top: -6rem;
   //     margin-top: 0;
@@ -774,25 +794,6 @@
   //         grid-column: 2/7;
   //       }
   //       &.pollinate {
-  //         grid-column: 7/12;
-  //       }
-  //     }
-  //   }
-
-  //   main.donate {
-  //     @include twelve-col-grid;
-  //     margin: 6rem 0 6rem 0;
-  //     .page-title {
-  //       grid-column: 2/12;
-  //       grid-row: 1/2;
-  //     }
-  //     div.payment-method {
-  //       grid-row: 2/3;
-  //       &.paypal {
-  //         grid-column: 2/7;
-  //         padding-right: 2rem;
-  //       }
-  //       &.mail {
   //         grid-column: 7/12;
   //       }
   //     }

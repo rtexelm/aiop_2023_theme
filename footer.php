@@ -17,7 +17,7 @@
 		            Design
 		        </p>
 		        <p><a href="https://rossmabbett.com" target="_blank">Ross Mabbett,</a></br>
-		            Web Developer
+		            Developer
 		        </p>
 		    </div>
 		    <div class="footer-col" id="footer-contact">

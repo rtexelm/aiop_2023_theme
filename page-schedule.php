@@ -70,8 +70,8 @@ get_header();
                         6-7:30pm
                     </h4>
                     <div class="pp-title">
-                        <h3 class="h3">Walk & Talk</h3>
-                        <h4 class="">BGSQD Bookstore</h4>
+                        <h3>Walk & Talk</h3>
+                        <h4>BGSQD Bookstore</h4>
                     </div>
                     <a class="button neon-yellow" title="Walk & Talk" href=#>RSVP</a>
                 </div>
@@ -138,8 +138,8 @@ get_header();
                         7-10pm
                     </h4>
                     <div class="pp-title">
-                        <h3 class=" artist-title">Paper Dress Ball</h3>
-                        <h4 class="artist-title">BGSQD Bookstore</h4>
+                        <h3>Paper Dress Ball</h3>
+                        <h4>BGSQD Bookstore</h4>
                     </div>
                     <a class="button neon-yellow" title="Paper Dress Ball" href=#>Tickets</a>
                 </div>
@@ -206,8 +206,8 @@ get_header();
                         1-2pm
                     </h4>
                     <div class="pp-title">
-                        <h3 class="">Runway</h3>
-                        <h4 class="">14th Street</h4>
+                        <h3>Runway</h3>
+                        <h4>14th Street</h4>
                     </div>
                     <a class="button neon-yellow" title="Runway" href=#>RSVP</a>
                 </div>
