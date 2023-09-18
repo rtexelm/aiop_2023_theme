@@ -537,6 +537,44 @@
     }
   }
 
+  // Press page ###########################################################
+
+  main.press {
+    margin-top: 6rem;
+    min-height: calc(100vh - 20rem);
+    section.press-posts {
+      .press-container {
+        margin: 1rem 0;
+        @include twelve-col-grid;
+        .press-publication {
+          grid-column: 1/6;
+          grid-row: 1/2;
+        }
+        .press-title {
+          grid-column: 1/8;
+          grid-row: 2/3;
+        }
+        p.press-date {
+          margin-top: 1rem;
+          border-top: 0;
+          padding-top: 0;
+          grid-column: 7/10;
+          grid-row: 1/2;
+        }
+        .button {
+          grid-column: 10/13;
+          grid-row: 1/2;
+        }
+      }
+      //   .press-topline {
+      //     display: flex;
+      //     justify-content: space-between;
+      //     align-items: center;
+      //   }
+      // }
+    }
+  }
+
   //   main.about {
   //     top: -6rem;
   //     margin-top: 0;
@@ -698,26 +736,6 @@
   //     }
   //   }
 
-  //   main.press {
-  //     margin-top: 6rem;
-  //     min-height: calc(100vh - 20rem);
-  //     section.press-posts {
-  //       margin: 0;
-  //       @include twelve-col-grid;
-  //       h1 {
-  //         grid-row: 1/2;
-  //       }
-  //       .press-container {
-  //         grid-column: 3/12;
-  //         .press-topline {
-  //           display: flex;
-  //           justify-content: space-between;
-  //           align-items: center;
-  //         }
-  //       }
-  //     }
-  //   }
-
   //   div.artist-textures {
   //     z-index: -10;
   //     position: absolute;
@@ -800,8 +818,6 @@
   //   }
 
   footer {
-    // margin: auto;
-    // align-self: flex-end;
     @include twelve-col-grid;
     padding: 3rem;
     p,
