@@ -521,133 +521,53 @@ main.home #artists .move-right {
   margin-left: auto;
 }
 
-#about-background {
-  z-index: -10;
-  position: fixed;
-  top: 0px;
-  width: 100%;
-  height: 100vh;
-  background: url(assets/paper-artist-L.jpg);
-  background-size: cover;
-}
-
 main.about {
   position: relative;
-  top: -3rem;
-  margin-bottom: -3rem;
-}
-main.about h3,
-main.about .h3,
-main.about h2,
-main.about .h2 {
-  font-family: ivyjournal, sans-serif;
-  font-weight: 500;
-}
-main.about p.p1,
-main.about p.p2,
-main.about p.p2r {
-  font-family: ivyjournal, sans-serif;
-  font-weight: 300;
-}
-main.about img.about-header {
-  width: 100%;
-}
-main.about img.buffer {
-  width: 100%;
-}
-main.about section.cs {
+  padding: 0 1.5rem;
   width: calc(100% - 3rem);
-  padding: 4rem 1.5rem 4rem 1.5rem;
 }
-main.about section.cs .cs_more_text {
-  max-height: 0px;
-  overflow: hidden;
-  transition: max-height 1s ease-out;
+main.about .dress-mission {
+  margin: 0 -1.5rem;
+  padding: 4rem 1.5rem 0 1.5rem;
+  background-size: auto 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%) fixed no-repeat, linear-gradient(64deg, #05633e 20.09%, rgba(199, 161, 216, 0.9) 46.64%, rgba(182, 121, 186, 0.9) 50.57%, #810061 71.04%) fixed no-repeat, url(assets/dress/about-header-1080w.jpg) fixed no-repeat;
+  background-blend-mode: normal, overlay, normal;
+  background-size: cover;
+  background-position-x: 50%;
 }
-main.about section.festival {
-  display: flex;
-  flex-direction: column;
-  width: calc(100% - 3rem);
-  padding: 4rem 1.5rem 4rem 1.5rem;
-  background: #0f3a46;
-  color: white;
-}
-main.about section.festival h3 {
+main.about .dress-mission .dress h2 {
+  text-align: center;
   margin-bottom: 1rem;
 }
-main.about section.festival .history {
-  margin-bottom: 2rem;
+main.about .dress-mission .mission {
+  padding-top: 3rem;
 }
-main.about section.festival .history p,
-main.about section.festival .mission p {
-  font-size: 1.25rem;
-  font-family: "degular-variable", sans-serif;
+main.about .dress-mission .mission h2 {
+  margin-bottom: 0.5rem;
 }
-main.about section.people {
-  display: flex;
-  flex-direction: column;
-  width: calc(100% - 3rem);
-  padding: 1.5rem;
-  margin-bottom: 4rem;
+main.about .history {
+  background: #810061;
+  margin: -1.1vh -1.5rem 0 -1.5rem;
+  padding: 3rem 1.5rem;
 }
-main.about section.people h2 {
-  margin-bottom: 2rem;
+main.about .history h2 {
+  text-align: right;
+  margin-bottom: 0.5rem;
 }
-main.about section.people h2.thinkers {
-  margin-top: 4rem;
+main.about .people {
+  background: #ff779c;
+  margin: 0 -1.5rem;
+  padding: 2rem 1.5rem;
+  color: #000;
 }
-main.about section.people div.staff {
-  margin-bottom: 1.5rem;
-}
-main.about section.people div.staff p.staff_name {
-  margin-bottom: 0.25em;
-}
-main.about section.people div.staff p.staff_title {
-  text-transform: uppercase;
-  font-weight: normal;
-  color: #216972;
-  margin-bottom: 0.25em;
-}
-main.about section.people div.staff div.staff_links a {
-  color: #216972;
-  padding-right: 0.5rem;
-}
-main.about section.partners {
-  width: calc(100% - 3rem);
-  padding: 10rem 1.5rem 4rem 1.5rem;
-  display: flex;
-  flex-direction: column;
-  background: #dfd6c5;
-  margin-top: -3rem;
-}
-main.about section.partners img.partner-logo {
-  width: 50%;
+main.about .people h2 {
+  color: #fff;
   margin-bottom: 1rem;
 }
-main.about section.partners .partner.bureau {
-  margin-bottom: 3rem;
-}
-main.about section.partners p {
+main.about .people .staff {
   margin-bottom: 1rem;
-}
-main.about section.partners p.partner-text {
-  font-size: 1.25rem;
-  font-family: "degular-variable", sans-serif;
-}
-main.about section.partners p.h3 {
-  font-weight: bold;
-}
-main.about section.support {
-  width: calc(100% - 3rem);
-  padding: 1.5rem 1.5rem 5rem 1.5rem;
-  background: #0f3a46;
-  color: white;
-}
-main.about section.support h2 {
-  margin: 4rem 0 2rem 0;
-}
-main.about section.support h3 {
-  margin: 2rem 0 1rem 0;
+  border-top: 1px dashed #dadb0d;
+  padding-top: 0.5rem;
 }
 
 #artists-background {

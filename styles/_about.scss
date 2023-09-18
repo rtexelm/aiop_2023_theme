@@ -1,133 +1,72 @@
 @use "constants" as *;
 
-#about-background {
-  z-index: -10;
-  position: fixed;
-  top: 0px;
-  width: 100%;
-  height: 100vh;
-  background: url(assets/paper-artist-L.jpg);
-  background-size: cover;
-}
 main.about {
   position: relative;
-  top: -3rem;
-  margin-bottom: -3rem;
-  h3,
-  .h3,
-  h2,
-  .h2 {
-    font-family: ivyjournal, sans-serif;
-    font-weight: 500;
-  }
-  p.p1,
-  p.p2,
-  p.p2r {
-    font-family: ivyjournal, sans-serif;
-    font-weight: 300;
-  }
-  img.about-header {
-    width: 100%;
-  }
-  img.buffer {
-    width: 100%;
-  }
-  section.cs {
-    width: calc(100% - 3rem);
-    padding: 4rem 1.5rem 4rem 1.5rem;
-    .cs_more_text {
-      max-height: 0px;
-      overflow: hidden;
-      transition: max-height 1s ease-out;
-    }
-  }
-  section.festival {
-    display: flex;
-    flex-direction: column;
-    width: calc(100% - 3rem);
-    padding: 4rem 1.5rem 4rem 1.5rem;
-    background: $dark;
-    color: white;
-    h3 {
-      margin-bottom: 1rem;
-    }
-    .history {
-      margin-bottom: 2rem;
-    }
-    .history p,
-    .mission p {
-      font-size: 1.25rem;
-      font-family: $primary-type;
-    }
-  }
-  section.people {
-    display: flex;
-    flex-direction: column;
-    width: calc(100% - 3rem);
-    padding: 1.5rem;
-    margin-bottom: 4rem;
-    h2 {
-      margin-bottom: 2rem;
-      &.thinkers {
-        margin-top: 4rem;
+  padding: 0 1.5rem;
+  width: calc(100% - 3rem);
+  .dress-mission {
+    margin: 0 -1.5rem;
+    padding: 4rem 1.5rem 0 1.5rem;
+
+    background-size: auto 100%;
+    background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.4) 0%,
+          rgba(0, 0, 0, 0.4) 100%
+        )
+        fixed no-repeat,
+      linear-gradient(
+          64deg,
+          #05633e 20.09%,
+          rgba(199, 161, 216, 0.9) 46.64%,
+          rgba(182, 121, 186, 0.9) 50.57%,
+          #810061 71.04%
+        )
+        fixed no-repeat,
+      url(assets/dress/about-header-1080w.jpg) fixed no-repeat;
+    background-blend-mode: normal, overlay, normal;
+    background-size: cover;
+    background-position-x: 50%;
+
+    .dress {
+      h2 {
+        text-align: center;
+        margin-bottom: 1rem;
       }
     }
 
-    div.staff {
-      margin-bottom: 1.5rem;
-      p.staff_name {
-        margin-bottom: 0.25em;
-        // font-weight: 600;
-      }
-      p.staff_title {
-        text-transform: uppercase;
-        font-weight: normal;
-        color: $teal;
-        margin-bottom: 0.25em;
-      }
-      div.staff_links a {
-        color: $teal;
-        padding-right: 0.5rem;
+    .mission {
+      padding-top: 3rem;
+      h2 {
+        margin-bottom: 0.5rem;
       }
     }
   }
-  section.partners {
-    width: calc(100% - 3rem);
-    padding: 10rem 1.5rem 4rem 1.5rem;
-    display: flex;
-    flex-direction: column;
-    background: $beige-02;
-    // padding-top: 10rem;
-    margin-top: -3rem;
-    img.partner-logo {
-      width: 50%;
-      // width: auto;
-      margin-bottom: 1rem;
-    }
-    .partner.bureau {
-      margin-bottom: 3rem;
-    }
-    p {
-      margin-bottom: 1rem;
-      &.partner-text {
-        font-size: 1.25rem;
-        font-family: $primary-type;
-      }
-      &.h3 {
-        font-weight: bold;
-      }
-    }
-  }
-  section.support {
-    width: calc(100% - 3rem);
-    padding: 1.5rem 1.5rem 5rem 1.5rem;
-    background: $dark;
-    color: white;
+  .history {
     h2 {
-      margin: 4rem 0 2rem 0;
+      text-align: right;
+      margin-bottom: 0.5rem;
     }
-    h3 {
-      margin: 2rem 0 1rem 0;
+    background: $primary-magenta;
+    margin: -1.1vh -1.5rem 0 -1.5rem;
+    padding: 3rem 1.5rem;
+  }
+
+  .people {
+    background: $pink;
+    margin: 0 -1.5rem;
+    padding: 2rem 1.5rem;
+    h2 {
+      color: $white;
+      margin-bottom: 1rem;
+    }
+
+    color: $black;
+
+    .staff {
+      margin-bottom: 1rem;
+      border-top: 1px dashed $dadbod-yellow;
+      padding-top: 0.5rem;
     }
   }
 }
