@@ -60,7 +60,7 @@ get_header();
 
             <article class="day-header">
                 <h2 class="h1">Friday</h2>
-                <h3 class="f-weight-700 geo-area">[Section], 14th St</h3>
+                <h3 class="f-weight-700 geo-area">Avenue A to 3rd Avenue</h3>
             </article>
 
             <article class="public-program">
@@ -128,7 +128,7 @@ get_header();
 
             <article class="day-header">
                 <h2 class="h1">Saturday</h2>
-                <h3 class="f-weight-700 geo-area">[Section], 14th St</h3>
+                <h3 class="f-weight-700 geo-area">University Place to 7th Avenue</h3>
             </article>
 
             <article class="public-program">
@@ -196,7 +196,7 @@ get_header();
 
             <article class="day-header">
                 <h2 class="h1">Sunday</h2>
-                <h3 class="f-weight-700 geo-area">[Section], 14th St</h3>
+                <h3 class="f-weight-700 geo-area">7th Avenue to the Hudson River</h3>
             </article>
 
             <article class="public-program">

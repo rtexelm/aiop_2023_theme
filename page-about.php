@@ -51,7 +51,7 @@ get_header();
     <section class="people">
         <h2>People</h2>
         <div class="staff curator">
-            <h4 class="p1 staff_name">Gretchen Vitamvas</h4>
+            <h3 class="staff_name">Gretchen Vitamvas</h3>
             <p class="staff_title">Curator</p>
             <div class="staff_links">
                 <a target="_blank" href="#">Personal Site</a>
@@ -60,7 +60,7 @@ get_header();
         </div>
         <div class="staff_col_1">
             <div class="staff">
-                <h4 class="p1 staff_name">Ed Woodham</h4>
+                <h3 class="staff_name">Ed Woodham</h3>
                 <p class="staff_title">Founder & Director</p>
                 <div class="staff_links">
                     <a target="_blank" href="https://edwoodham.com/bio/">edwoodham.com</a>
@@ -68,81 +68,33 @@ get_header();
                 </div>
             </div>
             <div class="staff">
-                <p class="p1 staff_name">Abbie Argo</p>
+                <h3 class="staff_name">Tasha Douge</h3>
                 <p class="staff_title">Curatorial Assistant</p>
                 <div class="staff_links">
-                    <a target="_blank" href="https://sedangogh.com">sedangogh.com</a>
-                    <a target="_blank" href="https://instagram.com/sedangogh">@sedangogh</a>
+                    <div class="staff_links">
+                        <a target="_blank" href="#">Personal Site</a>
+                        <a target="_blank" href="#">Instagram</a>
+                    </div>
                 </div>
             </div>
             <div class="staff">
-                <p class="p1 staff_name">Clara Grusq</p>
-                <p class="staff_title">Curatorial Assistant</p>
-                <div class="staff_links">
-                    <a target="_blank" href="https://www.claragrusq.com/">claragrusq.com</a>
-                    <a target="_blank" href="https://instagram.com/claragrusq">@claragrusq</a>
-                </div>
-            </div>
-            <div class="staff">
-                <p class="p1 staff_name">Gretchen Vitamvas</p>
-                <p class="staff_title">Curatorial Assistant</p>
-                <div class="staff_links">
-                    <a target="_blank" href="http://gretchenvitamvas.com/">gretchenvitamvas.com</a>
-                    <a target="_blank" href="https://instagram.com/gvitamvas">@gvitamvas</a>
-                </div>
-            </div>
-            <div class="staff">
-                <p class="p1 staff_name">Furusho von Puttkammer</p>
-                <p class="staff_title">Executive Director</p>
-                <div class="staff_links">
-                    <a target="_blank" href="http://www.anchovyart.com">anchovyart.com</a>
-                    <a target="_blank" href="https://instagram.com/anchovyart">@anchovyart</a>
-                </div>
-            </div>
-        </div>
-        <div class="staff_col_2">
-            <div class="staff">
-                <p class="p1 staff_name">Pierson Brown</p>
-                <p class="staff_title">Volunteer Coordinator</p>
-                <div class="staff_links">
-                    <a target="_blank" href="https://piersonbrownmpb.com/">piersonbrownmpb.com</a>
-                    <a target="_blank" href="https://www.instagram.com/piersonbrown/">@piersonbrown</a>
-                </div>
-            </div>
-            <div class="staff">
-                <p class="p1 staff_name">Camila Olander Echavarria</p>
-                <p class="staff_title">Access Manager</p>
-                <div class="staff_links">
-                    <!-- <a target="_blank" href="https://piersonbrownmpb.com/">piersonbrownmpb.com</a>
-							<a target="_blank" href="https://www.instagram.com/piersonbrown/">@piersonbrown</a> -->
-                </div>
-            </div>
-            <div class="staff">
-                <p class="p1 staff_name">Natalie J. Ortiz</p>
-                <p class="staff_title">Executive Assistant</p>
-                <div class="staff_links">
-                    <a target="_blank" href="https://cargocollective.com/njo">cargocollective.com/njo</a>
-                    <a target="_blank" href="https://www.instagram.com/natalie.njo/">@natalie.njo</a>
-                </div>
-            </div>
-            <div class="staff">
-                <p class="p1 staff_name">Lorelle Pais</p>
-                <p class="staff_title">Photography & Video Manager</p>
-                <div class="staff_links">
-                    <a target="_blank" href="http://lorellepais.com">lorellepais.com</a>
-                    <a target="_blank" href="https://www.instagram.com/chunyamo/">@chunyamo</a>
-                </div>
-            </div>
-            <div class="staff">
-                <p class="p1 staff_name">William Schweigert</p>
+                <h3 class="staff_name">Sarah Starpoli</h3>
                 <p class="staff_title">Curatorial Manager</p>
                 <div class="staff_links">
-                    <a target="_blank" href="http://williamschweigert.com/">williamschweigert.com</a>
-                    <a target="_blank" href="https://www.instagram.com/william__tiger/">@william__tiger</a>
+                    <a target="_blank" href="#">Personal Site</a>
+                    <a target="_blank" href="#">Instagram</a>
                 </div>
             </div>
             <div class="staff">
-                <p class="p1 staff_name">Laurie Waxman</p>
+                <h3 class="staff_name">Flora Lin</h3>
+                <p class="staff_title">Social Media Manager</p>
+                <div class="staff_links">
+                    <a target="_blank" href="#">Personal Site</a>
+                    <a target="_blank" href="#">Instagram</a>
+                </div>
+            </div>
+            <div class="staff">
+                <h3 class="staff_name">Laurie Waxman</h3>
                 <p class="staff_title">Graphic & Web Designer</p>
                 <div class="staff_links">
                     <a target="_blank" href="http://lauriewaxman.com/">lauriewaxman.com</a>
@@ -150,78 +102,77 @@ get_header();
                 </div>
             </div>
             <div class="staff">
-                <p class="p1 staff_name">Amanda Wu</p>
-                <p class="staff_title">PR & Social Media Manager</p>
+                <h3 class="staff_name">Ross Mabbett</h3>
+                <p class="staff_title">Software Developer</p>
                 <div class="staff_links">
-                    <a target="_blank" href="http://www.awuart.com/">awuart.com</a>
-                    <a target="_blank"
-                        href="https://www.instagram.com/everythingamandapanda/">@everythingamandapanda</a>
+                    <a target="_blank" href="https://rossmabbett.com">rossmabbett.com</a>
+                    <a target="_blank" href="https://github.com/rtexelm">@rtexelm</a>
                 </div>
             </div>
             <div class="staff">
-                <p class="p1 staff_name">Linnea Hult</p>
-                <p class="staff_title">Intern</p>
+                <h3 class="staff_name">Aga Sablinksa</h3>
+                <p class="staff_title">Communications Consultant</p>
                 <div class="staff_links">
-                    <a target="_blank" href="https://www.instagram.com/linnea.hlt/">@linnea.hlt</a>
+                    <a target="_blank" href="#">Personal Site</a>
+                    <a target="_blank" href="#">Instagram</a>
                 </div>
             </div>
         </div>
         <h2 class="thinkers">Thinkers in Residence</h2>
         <div class="thinkers_col_1">
             <div class="staff">
-                <p class="p1 staff_name">Roberta Degnore</p>
+                <h3 class="staff_name">Roberta Degnore</h3>
             </div>
             <div class="staff">
-                <p class="p1 staff_name">Rich Garr</p>
+                <h3 class="staff_name">Rich Garr</h3>
             </div>
             <div class="staff">
-                <p class="p1 staff_name">Katya Grokhovsky</p>
+                <h3 class="staff_name">Katya Grokhovsky</h3>
             </div>
             <div class="staff">
-                <p class="p1 staff_name">LuLu LoLo</p>
+                <h3 class="staff_name">LuLu LoLo</h3>
             </div>
         </div>
         <div class="thinkers_col_2">
             <div class="staff">
-                <p class="p1 staff_name">Matthew López-Jensen</p>
+                <h3 class="staff_name">Matthew López-Jensen</h3>
             </div>
             <div class="staff">
-                <p class="p1 staff_name">Eliza Luce</p>
+                <h3 class="staff_name">Eliza Luce</h3>
             </div>
             <div class="staff">
-                <p class="p1 staff_name">Harley J. Spiller</p>
+                <h3 class="staff_name">Harley J. Spiller</h3>
             </div>
             <div class="staff">
-                <p class="p1 staff_name">Max Williams</p>
+                <h3 class="staff_name">Max Williams</h3>
             </div>
             <div class="staff">
-                <p class="p1 staff_name">Martha Wilson</p>
+                <h3 class="staff_name">Martha Wilson</h3>
             </div>
         </div>
     </section>
-    <img src="<?php bloginfo('template_url'); ?>/assets/about-buffer-image.png" alt="" class="image-buffer buffer">
-    <section class="partners">
 
-        <!-- <div class="partner_text"> -->
-        <h2>Partners</h2>
-        <img src="<?php bloginfo('template_url'); ?>/assets/about-partners-bureau-logo.png"
-            alt="Bureau of General Services – Queer Division" class="partner-logo" id="partner-logo-bureau">
-        <div class="partner bureau">
-            <!-- <p class="h3">Bureau of General Services — Queer Division</p> -->
-            <p class="partner-text"><?php the_field('about_bureau'); ?></p>
-            <a target="_blank" href="https://bookshop.org/shop/bgsqd" class="button secondary">BGSQD website</a>
-        </div>
-        <img src="<?php bloginfo('template_url'); ?>/assets/about-partners-pollinate-logo.svg" alt="Pollinate "
-            class="partner-logo" id="partner-logo-pollinate">
-        <div class="partner pollinate">
-            <!-- <p class="h3">Pollinate</p> -->
-            <p class="partner-text"><?php the_field('about_pollinate'); ?></p>
-            <a target="_blank" href="https://www.pollinate.co/" class="button secondary">Pollinate website</a>
-        </div>
-        <!-- <div class="read-more">
+    <h2>Partners</h2>
+
+    <img src="<?php bloginfo('template_url'); ?>/assets/dress/BGSQD-168w.png"
+        alt="Bureau of General Services – Queer Division" class="partner-logo" id="partner-logo-bureau" />
+
+    <div class="partner bureau">
+        <!-- <p class="h3">Bureau of General Services — Queer Division</p> -->
+        <p class="partner-text"><?php the_field('about_bureau'); ?></p>
+        <a target="_blank" href="https://bookshop.org/shop/bgsqd" class="button secondary">BGSQD website</a>
+    </div>
+    <img src="<?php bloginfo('template_url'); ?>/assets/about-partners-pollinate-logo.svg" alt="Pollinate "
+        class="partner-logo" id="partner-logo-pollinate">
+    <div class="partner pollinate">
+        <!-- <p class="h3">Pollinate</p> -->
+        <p class="partner-text"><?php the_field('about_pollinate'); ?></p>
+        <a target="_blank" href="https://www.pollinate.co/" class="button secondary">Pollinate website</a>
+    </div>
+    <!-- <div class="read-more">
 						<a href="<?php echo get_home_url().'/partners'; ?>" class="button primary">Read more</a>
 			    	</div> -->
-        <!-- </div> -->
+    <!-- </div> -->
     </section>
 
     <section class="support">

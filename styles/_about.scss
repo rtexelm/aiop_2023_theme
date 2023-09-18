@@ -36,7 +36,7 @@ main.about {
     }
 
     .mission {
-      padding-top: 3rem;
+      padding-top: 14vh;
       h2 {
         margin-bottom: 0.5rem;
       }
@@ -49,7 +49,7 @@ main.about {
     }
     background: $primary-magenta;
     margin: -1.1vh -1.5rem 0 -1.5rem;
-    padding: 3rem 1.5rem;
+    padding: 5rem 1.5rem;
   }
 
   .people {
@@ -59,6 +59,10 @@ main.about {
     h2 {
       color: $white;
       margin-bottom: 1rem;
+    }
+    .thinkers {
+      margin-top: 0.5rem;
+      text-align: right;
     }
 
     color: $black;
