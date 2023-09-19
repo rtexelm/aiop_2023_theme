@@ -16,6 +16,7 @@
   //   Public Programs page ################################################
 
   main.public-programs {
+    min-height: 60%;
     width: calc(100% - 6rem);
     margin: 4rem 3rem 4rem 3rem;
     .program-container {
@@ -32,8 +33,9 @@
         flex-flow: row nowrap;
         gap: 1.5rem;
         h4 {
-          display: block;
           width: 6vw;
+          display: block;
+          flex-shrink: 0;
         }
       }
     }
@@ -58,6 +60,7 @@
   // Press ##################################################################
 
   main.press {
+    min-height: 60%;
     section.press-posts {
       width: calc(100% - 6rem);
       margin: 4rem 3rem;

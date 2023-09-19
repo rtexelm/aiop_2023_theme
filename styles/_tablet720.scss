@@ -528,7 +528,7 @@
     div.payment-method {
       grid-row: 2/3;
       &.paypal {
-        grid-column: 2/7;
+        grid-column: 1/6;
         padding-right: 2rem;
       }
       &.mail {
@@ -539,6 +539,11 @@
 
   // Press page ###########################################################
 
+  #press-bg {
+    background: url(assets/dress/tablet/desktop-bg-texture.png) 50% / cover
+        no-repeat,
+      $primary-magenta;
+  }
   main.press {
     margin-top: 6rem;
     min-height: calc(100vh - 20rem);

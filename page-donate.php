@@ -20,7 +20,7 @@ get_header();
 
 ?>
 
-<div id="artists-background"></div>
+<div id="donate-bg"></div>
 <main class="site-content donate">
 
     <h1 class="hidden">Donate</h1>
@@ -29,16 +29,16 @@ get_header();
 
     <div class="payment-method paypal">
         <h2>PayPal</h2>
-        <p class="p2">Donations are made through our fiscal sponsor GOH/Seven Loaves Productions. Be sure to select the
+        <p class="p1">Donations are made through our fiscal sponsor GOH/Seven Loaves Productions. Be sure to select the
             amount and the program: Art in Odd Places.</p>
-        <a href="https://www.paypal.com/us/fundraiser/charity/1474262" class="button transparent">Donate now</a>
+        <a href="https://www.paypal.com/us/fundraiser/charity/1474262" class="button pink">Donate now</a>
     </div>
 
     <div class="payment-method mail">
         <h2>Mail us a check</h2>
-        <p class="p2">Make checks payable to GOH Productions (our 5013c fiscal sponsor) with Art in Odd Places in the
+        <p class="p1">Make checks payable to GOH Productions (our 5013c fiscal sponsor) with Art in Odd Places in the
             note & send to:</p>
-        <p class="p2r">
+        <p>
             GOH Productions</br>
             309 East 4th Street, Suite 3-B</br>
             New York, NY 10009-6911</br>

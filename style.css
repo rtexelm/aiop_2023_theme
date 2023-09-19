@@ -326,7 +326,7 @@ nav.top a#skip-content {
 nav.top a#skip-content:focus {
   padding: 1.5rem;
   text-align: center;
-  background: #216972;
+  background: #2c2c2c;
   color: white;
   left: 9rem;
   top: 0px;
@@ -826,9 +826,21 @@ main.press section.press-posts .press-container a.button {
   margin-top: 1rem;
 }
 
+div#donate-bg {
+  z-index: -10;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: url(assets/dress/tablet/desktop-bg-texture.png), #f4d4a0;
+  background-blend-mode: multiply;
+  background-size: cover;
+}
+
 main.donate {
   width: calc(100% - 3rem);
   margin: 4rem 1.5rem;
+  color: #000;
 }
 main.donate div.payment-method {
   margin-top: 2rem;
@@ -842,10 +854,10 @@ main.partners {
   margin: 4rem 1.5rem 0 1.5rem;
 }
 main.partners .page-title {
-  color: #ad1f25;
+  color: #2c2c2c;
   width: 100%;
   padding-bottom: 0.5rem;
-  border-bottom: 1px solid #ad1f25;
+  border-bottom: 1px solid #2c2c2c;
   margin-bottom: 2rem;
 }
 main.partners .partner_images {
@@ -886,7 +898,7 @@ footer a svg path {
   fill: white;
 }
 footer a:hover svg path {
-  fill: #d4f2ff;
+  fill: #f0fa00;
 }
 footer a img {
   width: 8rem;
@@ -1392,11 +1404,14 @@ footer .social .social-icon svg {
     grid-row: 2/3;
   }
   main.donate div.payment-method.paypal {
-    grid-column: 2/7;
+    grid-column: 1/6;
     padding-right: 2rem;
   }
   main.donate div.payment-method.mail {
     grid-column: 7/12;
+  }
+  #press-bg {
+    background: url(assets/dress/tablet/desktop-bg-texture.png) 50%/cover no-repeat, #810061;
   }
   main.press {
     margin-top: 6rem;
@@ -1473,6 +1488,7 @@ footer .social .social-icon svg {
     padding: 0 3rem;
   }
   main.public-programs {
+    min-height: 60%;
     width: calc(100% - 6rem);
     margin: 4rem 3rem 4rem 3rem;
   }
@@ -1492,8 +1508,9 @@ footer .social .social-icon svg {
   main.public-programs .program-container .date h4,
   main.public-programs .program-container .time h4,
   main.public-programs .program-container .location h4 {
-    display: block;
     width: 6vw;
+    display: block;
+    flex-shrink: 0;
   }
   main.artist-listing section.artists {
     width: calc(100% - 6rem);
@@ -1502,6 +1519,9 @@ footer .social .social-icon svg {
   main.donate {
     width: calc(100% - 6rem);
     margin: 4rem 3rem;
+  }
+  main.press {
+    min-height: 60%;
   }
   main.press section.press-posts {
     width: calc(100% - 6rem);
@@ -1582,6 +1602,9 @@ footer .social .social-icon svg {
   }
   main.about section.people div.thinkers_col_2 {
     grid-column: 6/10;
+  }
+  main.donate {
+    min-height: 60%;
   }
 }
 main.maps {
