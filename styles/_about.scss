@@ -64,7 +64,7 @@ main.about {
 
     color: $black;
 
-    .staff {
+    .staff-item {
       margin-bottom: 1rem;
       border-top: 1px dashed $dadbod-yellow;
       padding-top: 0.5rem;
@@ -72,7 +72,7 @@ main.about {
   }
 
   .partners {
-    background: $primary-magenta;
+    background: $primary-orange;
     margin: 0 -1.5rem;
     padding: 4rem 1.5rem;
     h2 {

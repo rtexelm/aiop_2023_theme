@@ -52,7 +52,10 @@ get_header();
             </p>
         </div>
     </section>
+
+
     <section class="people">
+
         <h2>People</h2>
 
         <?php
@@ -68,7 +71,7 @@ get_header();
 
             $staffQuery = new WP_Query($peopleArgs);
         
-        ?>
+            ?>
         <?php if($staffQuery->have_posts()): ?>
         <?php while($staffQuery->have_posts()): $staffQuery->the_post(); ?>
         <?php if (function_exists('get_field')): 
@@ -82,10 +85,13 @@ get_header();
                     $comma1 = $link2 ? "," : "";
                     $comma2 = $link3 ? "," : "";
                 ?>
-        <div class="staff">
-            <h3 class="staff_name"><?php echo $full_name ?></h3>
-            <p class="staff_title"><?php echo $title ?></p>
-            <div class="staff_links">
+        <div class="staff-item">
+
+            <h3 class="staff-name"><?php echo $full_name ?></h3>
+
+            <p class="staff-title"><?php echo $title ?></p>
+
+            <div class="staff-links">
                 <?php 
 				if($link1){
 					echo "<a target='blank' href='" . esc_url($link1['url']) . "'>" . esc_attr( $link1['title'] ) . "</a>" . $comma1;
@@ -105,25 +111,30 @@ get_header();
         </div>
         <?php endif ?>
         <?php endwhile ?>
+        <?php wp_reset_postdata(); ?>
         <?php endif ?>
-        <div class="staff_col_1">
-            <div class="staff">
-                <h3 class="staff_name">Laurie Waxman</h3>
-                <p class="staff_title">Graphic & Web Designer</p>
-                <div class="staff_links">
-                    <a target="_blank" href="http://lauriewaxman.com/">lauriewaxman.com</a>
-                    <a target="_blank" href="https://www.instagram.com/waxles/">@waxles</a>
-                </div>
+
+        <div class="staff-item">
+            <h3 class="staff-name">Laurie Waxman</h3>
+            <p class="staff-title">Graphic & Web Designer</p>
+            <div class="staff-links">
+                <a target="_blank" href="https://lauriewaxman.com/">Website</a>
+                <a target="_blank" href="https://www.instagram.com/waxles/">Instagram</a>
             </div>
-            <div class="staff">
-                <h3 class="staff_name">Ross Mabbett</h3>
-                <p class="staff_title">Software Developer</p>
-                <div class="staff_links">
-                    <a target="_blank" href="https://rossmabbett.com">rossmabbett.com</a>
-                    <a target="_blank" href="https://github.com/rtexelm">@rtexelm</a>
-                </div>
+        </div>
+
+        <div class="staff-item">
+            <h3 class="staff-name">Ross Mabbett</h3>
+            <p class="staff-title">Software Developer</p>
+            <div class="staff-links">
+                <a target="_blank" href="https://rossmabbett.com">Website</a>
+                <a target="_blank" href="https://github.com/rtexelm">GitHub</a>
             </div>
+        </div>
+
     </section>
+
+
     <section class="partners">
 
         <h2>Partners</h2>
@@ -133,21 +144,25 @@ get_header();
 
         <div class="partner bureau">
             <p class="partner-text"><?php echo $bureau; ?></p>
-            <a target="_blank" href="https://bookshop.org/shop/bgsqd" class="button orange">BGSQD website</a>
+            <a target="_blank" href="https://bookshop.org/shop/bgsqd" class="button neon-yellow">bgsqd.com</a>
         </div>
+
         <img src="<?php bloginfo('template_url'); ?>/assets/dress/The Center_White.PNG" alt="The Center"
-            class="partner-logo" id="partner-logo-center">
+            class="partner-logo" id="partner-logo-center" />
+
         <div class="partner the-center">
             <p class="partner-text"><?php echo $center; ?></p>
-            <a target="_blank" href="https://gaycenter.org/" class="button orange">The Center website</a>
+            <a target="_blank" href="https://gaycenter.org/" class="button neon-yellow">gaycenter.org</a>
         </div>
-        <img src="<?php bloginfo('template_url'); ?>/assets/dress/pollinate252w.jpg" alt="Pollinate"
-            class="partner-logo" id="partner-logo-pollinate">
+
+        <img src="<?php bloginfo('template_url'); ?>/assets/dress/pollinate252w.png" alt="Pollinate"
+            class="partner-logo" id="partner-logo-pollinate" />
+
         <div class="partner pollinate">
-            <!-- <p class="h3">Pollinate</p> -->
             <p class="partner-text"><?php echo $pollinate; ?></p>
-            <a target="_blank" href="https://www.pollinate.co/" class="button orange">Pollinate website</a>
+            <a target="_blank" href="https://www.pollinate.co/" class="button neon-yellow">pollinate.co</a>
         </div>
+
     </section>
 
     <section class="support">
