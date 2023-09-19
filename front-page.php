@@ -105,7 +105,7 @@ get_header();
             <div class="about">
                 <p class="p1"><span class="italic">Art in Odd Places 2023: DRESS</span> features visual and performance
                     artists on 14th Street from Avenue C to the Hudson River, October 13-15, 2023.</p>
-                <a class="button neon-yellow orange" href="<?php bloginfo('template_url'); ?>/about">About the
+                <a class="button neon-yellow" href="<?php bloginfo('template_url'); ?>/about">About the
                     festival</a>
             </div>
         </section>

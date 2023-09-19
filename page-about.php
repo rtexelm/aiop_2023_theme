@@ -139,28 +139,37 @@ get_header();
 
         <h2>Partners</h2>
 
-        <img src="<?php bloginfo('template_url'); ?>/assets/dress/BGSQD-168w.png"
-            alt="Bureau of General Services – Queer Division" class="partner-logo" id="partner-logo-bureau" />
+        <div class="partner-container">
 
-        <div class="partner bureau">
-            <p class="partner-text"><?php echo $bureau; ?></p>
-            <a target="_blank" href="https://bookshop.org/shop/bgsqd" class="button neon-yellow">bgsqd.com</a>
+            <img src="<?php bloginfo('template_url'); ?>/assets/dress/BGSQD-168w.png"
+                alt="Bureau of General Services – Queer Division" class="partner-logo" id="partner-logo-bureau" />
+
+            <div class="partner bureau">
+                <p class="partner-text"><?php echo $bureau; ?></p>
+                <a target="_blank" href="https://bookshop.org/shop/bgsqd" class="button neon-yellow">bgsqd.com</a>
+            </div>
         </div>
 
-        <img src="<?php bloginfo('template_url'); ?>/assets/dress/The Center_White.PNG" alt="The Center"
-            class="partner-logo" id="partner-logo-center" />
+        <div class="partner-container">
 
-        <div class="partner the-center">
-            <p class="partner-text"><?php echo $center; ?></p>
-            <a target="_blank" href="https://gaycenter.org/" class="button neon-yellow">gaycenter.org</a>
+            <img src="<?php bloginfo('template_url'); ?>/assets/dress/The Center_White.PNG" alt="The Center"
+                class="partner-logo" id="partner-logo-center" />
+
+            <div class="partner the-center">
+                <p class="partner-text"><?php echo $center; ?></p>
+                <a target="_blank" href="https://gaycenter.org/" class="button neon-yellow">gaycenter.org</a>
+            </div>
         </div>
 
-        <img src="<?php bloginfo('template_url'); ?>/assets/dress/pollinate252w.png" alt="Pollinate"
-            class="partner-logo" id="partner-logo-pollinate" />
+        <div class="partner-container">
 
-        <div class="partner pollinate">
-            <p class="partner-text"><?php echo $pollinate; ?></p>
-            <a target="_blank" href="https://www.pollinate.co/" class="button neon-yellow">pollinate.co</a>
+            <img src="<?php bloginfo('template_url'); ?>/assets/dress/pollinate252w.png" alt="Pollinate"
+                class="partner-logo" id="partner-logo-pollinate" />
+
+            <div class="partner pollinate">
+                <p class="partner-text"><?php echo $pollinate; ?></p>
+                <a target="_blank" href="https://www.pollinate.co/" class="button neon-yellow">pollinate.co</a>
+            </div>
         </div>
 
     </section>

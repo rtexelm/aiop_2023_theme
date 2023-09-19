@@ -78,23 +78,24 @@ main.about {
     h2 {
       margin-bottom: 2rem;
     }
-    .partner-logo {
-      margin-bottom: 1rem;
-    }
-    .button {
-      margin-top: 1rem;
-    }
-    .partner {
+    .partner-container {
+      border-top: 1px solid $neon-yellow;
       margin-bottom: 3rem;
       &:last-child {
         // Set no margin on the last partner container
         margin-bottom: 0;
       }
     }
+    .partner-logo {
+      margin-bottom: 1.5rem;
+    }
+    .button {
+      margin-top: 1rem;
+    }
   }
 
   .support {
-    background: $lavender;
+    background: $beige;
     margin: 0 -1.5rem;
     padding: 4rem 1.5rem;
     color: $black;
