@@ -23,9 +23,23 @@
 		
 	// Add Artists posts type
 	function register_artists(){
+
+		$labels = array(
+			'name'				=> _x('Artists', 'Post type general name', 'textdomain'),
+			'singular_name'		=> _x('Artist', 'Post type singular name', 'textdomain'),
+			'menu_name'			=> _x('Artists', 'Admin Menu text', 'textdomain'),
+			'name_admin_bar'	=> _x( 'Artist', 'Add New on Toolbar', 'textdomain' ),
+			'add_new_item'		=> __( 'Add New Artist', 'textdomain' ),
+			'new_item'    		=> __( 'New Artist', 'textdomain' ),
+			'edit_item'   		=> __( 'Edit Artist', 'textdomain' ),
+			'view_item'   		=> __( 'View Artist', 'textdomain' ),
+			'all_items'   		=> __( 'All Artists', 'textdomain' ),
+			'search_items'		=> __( 'Search Artists', 'textdomain' ),
+			'not_found' 		=> __( 'No artist found' ),
+			'not_found_in_trash'=> __( 'No artist found in Trash' ),
+		);
 	    $args = array(
-	        'label' => __('Artists'),
-	       	'singular_label' => __('Artist'),
+	        'labels' => $labels,
 	       	'public' => true,
 	       	'show_ui' => true,
 	       	'capability_type' => 'post',
@@ -33,16 +47,6 @@
 	       	'hierarchical' => true,
 			'rewrite' => array("slug" => "artists",'with_front' => true), // Permalinks format
 			'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail'),
-			'add_new' => __( 'Add New Artist' ),
-			'add_new_item' => __( 'Add New Artist' ),
-			'edit' => __( 'Edit Artist' ),
-			'edit_item' => __( 'Edit Artist' ),
-			'new_item' => __( 'New Artist' ),
-			'view' => __( 'View Artist' ),
-			'view_item' => __( 'View Artist' ),
-			'search_items' => __( 'Search Artists' ),
-			'not_found' => __( 'No artist found' ),
-			'not_found_in_trash' => __( 'No artist found in Trash' ),
 			'parent' => __( 'Parent Info' ),
 			'menu_position' =>__( 20 ),
 	       );
