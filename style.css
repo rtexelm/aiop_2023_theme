@@ -237,6 +237,28 @@ div.button.transparent:active {
   border-color: #fff;
   outline: none;
 }
+a.button.orange,
+div.button.orange {
+  border: 1px solid #f74500;
+  background: #f74500;
+  color: #000;
+}
+a.button.orange:hover,
+div.button.orange:hover {
+  border-color: #05633e;
+  background: #05633e;
+  color: white;
+}
+a.button.orange:hover::after,
+div.button.orange:hover::after {
+  content: url(assets/dress/arrow-right-light.svg);
+  margin-left: 0.5rem;
+}
+a.button.orange:focus,
+div.button.orange:focus {
+  border-color: #2c2c2c;
+  outline: none;
+}
 a.button.inline,
 div.button.inline {
   padding: 0 0 0.25rem 0;
@@ -526,52 +548,91 @@ main.about {
   padding: 0 1.5rem;
   width: calc(100% - 3rem);
 }
-main.about .dress-mission {
+main.about .dress {
   margin: 0 -1.5rem;
-  padding: 4rem 1.5rem 0 1.5rem;
+  padding: 4rem 1.5rem 4rem 1.5rem;
+  min-height: 60%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
   background-size: auto 100%;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%) fixed no-repeat, linear-gradient(64deg, #05633e 20.09%, rgba(199, 161, 216, 0.9) 46.64%, rgba(182, 121, 186, 0.9) 50.57%, #810061 71.04%) fixed no-repeat, url(assets/dress/about-header-1080w.jpg) fixed no-repeat;
   background-blend-mode: normal, overlay, normal;
   background-size: cover;
   background-position-x: 50%;
 }
-main.about .dress-mission .dress h2 {
-  text-align: center;
+main.about .dress .c-statement h2 {
   margin-bottom: 1rem;
 }
-main.about .dress-mission .mission {
-  padding-top: 14vh;
-}
-main.about .dress-mission .mission h2 {
-  margin-bottom: 0.5rem;
-}
-main.about .history {
+main.about .festival {
   background: #810061;
   margin: -1.1vh -1.5rem 0 -1.5rem;
-  padding: 5rem 1.5rem;
+  padding: 4rem 1.5rem;
 }
-main.about .history h2 {
-  text-align: right;
+main.about .festival .mission h2 {
+  margin-bottom: 0.5rem;
+}
+main.about .festival .history {
+  margin-top: 2rem;
+}
+main.about .festival .history h2 {
   margin-bottom: 0.5rem;
 }
 main.about .people {
   background: #ff779c;
   margin: 0 -1.5rem;
-  padding: 2rem 1.5rem;
+  padding: 4rem 1.5rem;
   color: #000;
+}
+main.about .people a {
+  color: #000;
+}
+main.about .people a:visited {
+  color: #434343;
 }
 main.about .people h2 {
   color: #fff;
   margin-bottom: 1rem;
 }
 main.about .people .thinkers {
-  margin-top: 0.5rem;
-  text-align: right;
+  margin-top: 3rem;
 }
 main.about .people .staff {
   margin-bottom: 1rem;
   border-top: 1px dashed #dadb0d;
   padding-top: 0.5rem;
+}
+main.about .partners {
+  background: #810061;
+  margin: 0 -1.5rem;
+  padding: 4rem 1.5rem;
+}
+main.about .partners h2 {
+  margin-bottom: 2rem;
+}
+main.about .partners .partner-logo {
+  margin-bottom: 1rem;
+}
+main.about .partners .button {
+  margin-top: 1rem;
+}
+main.about .partners .bureau {
+  margin-bottom: 3rem;
+}
+main.about .support {
+  background: #c7a1d8;
+  margin: 0 -1.5rem;
+  padding: 4rem 1.5rem;
+  color: #000;
+}
+main.about .support h2 {
+  margin-bottom: 2rem;
+}
+main.about .support h3 {
+  margin-bottom: 1rem;
+}
+main.about .support .dedication {
+  margin-bottom: 2rem;
 }
 
 #artists-background {

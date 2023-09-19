@@ -214,6 +214,26 @@ div.button {
     }
   }
 
+  &.orange {
+    border: 1px solid $primary-orange;
+    background: $primary-orange;
+    color: $black;
+
+    &:hover {
+      &::after {
+        content: url(assets/dress/arrow-right-light.svg);
+        margin-left: 0.5rem;
+      }
+      border-color: $deep-green;
+      background: $deep-green;
+      color: white;
+    }
+    &:focus {
+      border-color: $coal;
+      outline: none;
+    }
+  }
+
   &.inline {
     padding: 0 0 0.25rem 0;
     border-radius: 0;

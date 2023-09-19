@@ -4,9 +4,14 @@ main.about {
   position: relative;
   padding: 0 1.5rem;
   width: calc(100% - 3rem);
-  .dress-mission {
+
+  .dress {
     margin: 0 -1.5rem;
-    padding: 4rem 1.5rem 0 1.5rem;
+    padding: 4rem 1.5rem 4rem 1.5rem;
+    min-height: 60%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
 
     background-size: auto 100%;
     background: linear-gradient(
@@ -28,41 +33,47 @@ main.about {
     background-size: cover;
     background-position-x: 50%;
 
-    .dress {
+    .c-statement {
       h2 {
-        text-align: center;
         margin-bottom: 1rem;
       }
     }
+  }
+
+  .festival {
+    background: $primary-magenta;
+    margin: -1.1vh -1.5rem 0 -1.5rem;
+    padding: 4rem 1.5rem;
 
     .mission {
-      padding-top: 14vh;
+      h2 {
+        margin-bottom: 0.5rem;
+      }
+    }
+    .history {
+      margin-top: 2rem;
       h2 {
         margin-bottom: 0.5rem;
       }
     }
   }
-  .history {
-    h2 {
-      text-align: right;
-      margin-bottom: 0.5rem;
-    }
-    background: $primary-magenta;
-    margin: -1.1vh -1.5rem 0 -1.5rem;
-    padding: 5rem 1.5rem;
-  }
 
   .people {
     background: $pink;
     margin: 0 -1.5rem;
-    padding: 2rem 1.5rem;
+    padding: 4rem 1.5rem;
+    a {
+      color: $black;
+      &:visited {
+        color: #434343;
+      }
+    }
     h2 {
       color: $white;
       margin-bottom: 1rem;
     }
     .thinkers {
-      margin-top: 0.5rem;
-      text-align: right;
+      margin-top: 3rem;
     }
 
     color: $black;
@@ -71,6 +82,40 @@ main.about {
       margin-bottom: 1rem;
       border-top: 1px dashed $dadbod-yellow;
       padding-top: 0.5rem;
+    }
+  }
+
+  .partners {
+    background: $primary-magenta;
+    margin: 0 -1.5rem;
+    padding: 4rem 1.5rem;
+    h2 {
+      margin-bottom: 2rem;
+    }
+    .partner-logo {
+      margin-bottom: 1rem;
+    }
+    .button {
+      margin-top: 1rem;
+    }
+    .bureau {
+      margin-bottom: 3rem;
+    }
+  }
+
+  .support {
+    background: $lavender;
+    margin: 0 -1.5rem;
+    padding: 4rem 1.5rem;
+    color: $black;
+    h2 {
+      margin-bottom: 2rem;
+    }
+    h3 {
+      margin-bottom: 1rem;
+    }
+    .dedication {
+      margin-bottom: 2rem;
     }
   }
 }

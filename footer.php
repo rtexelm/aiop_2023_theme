@@ -10,7 +10,7 @@
 		            </br>
 		            Curator
 		        </p>
-		        <p>Ed Woodham,</br>
+		        <p><a href="https://edwoodham.com/bio/">Ed Woodham,</a></br>
 		            Founder $ Director
 		        </p>
 		        <p><a href="https://lauriewaxman.com" target="_blank">Laurie Waxman,</a></br>
