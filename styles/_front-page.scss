@@ -1,16 +1,17 @@
 @use "constants" as *;
 
 main.home {
-  // display: block;
-  // position: relative;
   .header {
     z-index: 0;
     position: relative;
-    min-height: 70vh;
-    max-height: 80vh;
-    background: url(assets/dress/home-header-bg.png) fixed no-repeat
-      $primary-orange;
-    background-size: auto 100%;
+    min-height: 65%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+
+    background: url(assets/dress/home-header-bg.png) fixed no-repeat;
+    background-size: cover;
+    background-position-x: 50%;
 
     #pattern-r-top {
       z-index: 10;
@@ -21,20 +22,28 @@ main.home {
     }
 
     #title {
+      padding: 3rem 1.5rem;
       z-index: 20;
       position: relative;
-      // max-width: 22.5rem;
-      min-width: 14rem;
-      height: auto;
-      margin: auto;
-      padding: calc(20vh - 12vw) 1.5rem;
-      display: flex;
-      flex-flow: column wrap;
-      justify-content: center;
-      align-items: stretch;
-
       h1 {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto;
         @include title-display;
+      }
+      #title-1 {
+        grid-area: 1/2/2/6;
+      }
+      #title-2 {
+        grid-area: 2/3/3/11;
+      }
+      #title-3 {
+        grid-area: 3/9/4/12;
+        justify-self: end;
+      }
+      #title-4 {
+        grid-area: 4/6/5/11;
+        justify-self: end;
       }
     }
 

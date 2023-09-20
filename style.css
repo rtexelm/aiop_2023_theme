@@ -441,10 +441,13 @@ nav.top .menuFull ul#menu-full-navigation .submenu:not(.submenu ~ .submenu) {
 main.home .header {
   z-index: 0;
   position: relative;
-  min-height: 70vh;
-  max-height: 80vh;
-  background: url(assets/dress/home-header-bg.png) fixed no-repeat #f74500;
-  background-size: auto 100%;
+  min-height: 65%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  background: url(assets/dress/home-header-bg.png) fixed no-repeat;
+  background-size: cover;
+  background-position-x: 50%;
 }
 main.home .header #pattern-r-top {
   z-index: 10;
@@ -454,20 +457,30 @@ main.home .header #pattern-r-top {
   width: 43vw;
 }
 main.home .header #title {
+  padding: 3rem 1.5rem;
   z-index: 20;
   position: relative;
-  min-width: 14rem;
-  height: auto;
-  margin: auto;
-  padding: calc(20vh - 12vw) 1.5rem;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: stretch;
 }
 main.home .header #title h1 {
-  font: 16vw "degular-variable", sans-serif;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+  font: 5rem "degular-variable", sans-serif;
   font-variation-settings: "wght" 700, "opsz" 72, "ital" 0;
+}
+main.home .header #title #title-1 {
+  grid-area: 1/2/2/6;
+}
+main.home .header #title #title-2 {
+  grid-area: 2/3/3/11;
+}
+main.home .header #title #title-3 {
+  grid-area: 3/9/4/12;
+  justify-self: end;
+}
+main.home .header #title #title-4 {
+  grid-area: 4/6/5/11;
+  justify-self: end;
 }
 main.home .header #pattern-l-top {
   z-index: 10;
