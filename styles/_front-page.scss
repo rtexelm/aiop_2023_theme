@@ -17,7 +17,7 @@ main.home {
       z-index: 10;
       position: absolute;
       right: 0;
-      top: 20vh;
+      top: 13vh;
       width: 43vw;
     }
 
@@ -52,7 +52,7 @@ main.home {
       z-index: 10;
       position: absolute;
       left: 0;
-      top: -20vh;
+      top: -1vh;
       width: 48vw;
     }
 
@@ -88,34 +88,26 @@ main.home {
   #dates,
   #artists {
     padding: 1.5rem;
-    min-height: 15rem;
   }
 
   #dates {
     padding-top: 6rem;
-    padding-bottom: 4rem;
+
+    @include twelve-col-grid;
+    column-gap: 0;
+    row-gap: 1rem;
 
     .date-text {
-      margin-bottom: 2rem;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: auto;
-
-      .month {
-        grid-area: 1/1/2/3;
-        justify-self: center;
-      }
-
-      .days {
-        grid-area: 2/1/3/2;
-        justify-self: end;
-        margin-top: -7px;
-      }
-
-      .year {
-        grid-area: 2/2/3/4;
-        margin-left: 5px;
-      }
+      grid-area: 1/2/2 / end;
+      line-height: 0.8em;
+      max-width: fit-content;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+    }
+    .date-buttons {
+      grid-area: 2/1/3 / 11;
+      justify-self: end;
     }
   }
 
@@ -123,7 +115,7 @@ main.home {
     z-index: -1;
     position: absolute;
     right: 0;
-    top: -200;
+    top: -5vh;
     width: 49vw;
   }
 
@@ -131,20 +123,67 @@ main.home {
     z-index: -1;
     position: absolute;
     left: 9vw;
-    top: 0;
+    top: 12vh;
     width: 60vw;
   }
 
   #about {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
     .byline {
-      align-items: stretch;
-      margin: 0 auto 2rem auto;
+      margin: 0 auto 4rem auto;
+      max-width: max-content;
+
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+
+      #byline-1 {
+        grid-area: 1/2/2 / end;
+      }
+      #byline-2 {
+        grid-area: 2/5/3 / end;
+      }
+      #byline-3 {
+        grid-area: 3/3/4 / end;
+      }
+    }
+
+    .about-text {
+      max-width: 500px;
+      align-self: center;
     }
   }
 
   #artists {
-    .move-right {
-      margin-left: auto;
+    @include twelve-col-grid;
+    column-gap: 0;
+    row-gap: 1rem;
+
+    .artists-heading {
+      grid-area: 1/2/2 / end;
+      justify-self: end;
+      margin-right: 0.5rem;
+
+      h2 {
+        max-width: max-content;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+
+        #artists-part {
+          grid-area: 1/2/2 / 12;
+          justify-self: end;
+        }
+        #artists-art {
+          grid-area: 2/1/3 / end;
+        }
+        #artists-groups {
+          grid-area: 3/3/4 / end;
+        }
+      }
+    }
+    .artists-buttons {
+      grid-area: 2/3/3 / end;
     }
   }
 }

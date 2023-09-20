@@ -76,18 +76,22 @@ get_header();
 
         <section id="dates">
 
-            <h2 class="d1 f-weight-400 date-text">
+            <h2 class="date-text">
 
                 <span class="month">October</span>
-                <span class="days">13&ndash;15</span><span class="year highlight"> 2023</span>
+                <span class="days">13&ndash;15<span class="year"> 2023</span></span>
+
 
             </h2>
 
-            <a class="button neon-yellow" href="<?php bloginfo('template_url'); ?>/schedule">Schedule</a>
-            <a class="button lavender" href="<?php bloginfo('template_url'); ?>/public-programs">Public
-                Programs</a>
+            <div class="date-buttons">
+                <a class="button neon-yellow" href="<?php bloginfo('template_url'); ?>/schedule">Schedule</a>
+                <a class="button lavender" href="<?php bloginfo('template_url'); ?>/public-programs">Public
+                    Programs</a>
+            </div>
         </section>
 
+        <!-- Pattern right lower -->
         <div class="positioner">
 
             <picture>
@@ -101,6 +105,7 @@ get_header();
             </picture>
         </div>
 
+        <!-- Pattern left lower -->
         <div class="positioner">
 
             <picture>
@@ -116,30 +121,33 @@ get_header();
 
         <section id="about">
 
-            <h2 class="flex-container flex-col-nw byline">
-                <span id="byline-1" class="flex-col-left">Curated</span>
-                <span id="byline-2" class="flex-col-right">by Gretchen</span>
-                <span id="byline-3" class="flex-col-center">Vitamvas</span>
+            <h2 class="byline lh-8em">
+                <span id="byline-1">Curated</span>
+                <span id="byline-2">by Gretchen</span>
+                <span id="byline-3">Vitamvas</span>
             </h2>
 
-            <div class="about">
+            <div class="about-text">
                 <p class="p1"><span class="italic">Art in Odd Places 2023: DRESS</span> features visual and performance
                     artists on 14th Street from Avenue C to the Hudson River, October 13-15, 2023.</p>
-                <a class="button neon-yellow" href="<?php bloginfo('template_url'); ?>/about">About the
+                <a class="button pink" href="<?php bloginfo('template_url'); ?>/about">About the
                     festival</a>
             </div>
         </section>
 
         <section id="artists">
 
-            <div class="artists">
+            <div class="artists-heading">
 
-                <h2 class="flex-container flex-col-nw move-right">
-                    <span id="artists-40" class="script flex-col-center">40</span>
-                    <span id="artists-part" class="flex-col-right">Participating</span>
-                    <span id="artists-art" class="flex-col-left"> Artists &</span>
-                    <span id="artists-groups" class="flex-col-center">Groups</span>
+                <h2 class="lh-8em">
+                    <span id="artists-part">40 Participating</span>
+                    <span id="artists-art"> Artists &</span>
+                    <span id="artists-groups">Groups</span>
                 </h2>
+            </div>
+
+            <div class="artists-buttons">
+
 
                 <a class="button neon-yellow" href="<?php bloginfo('template_url'); ?>/artists">Artists</a>
                 <a class="button lavender" href="<?php bloginfo('template_url'); ?>/public-programs">Schedule</a>
