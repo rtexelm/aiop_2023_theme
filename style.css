@@ -1310,9 +1310,11 @@ footer .social .social-icon svg {
     background: url(assets/dress/tablet/home-texture-1380w.png);
     background-size: auto 100%;
   }
+  main.schedule {
+    padding: 0 1.5rem;
+  }
   main.schedule .artists {
     margin: 0;
-    padding: 0 2.75rem;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     -moz-column-gap: 1rem;
@@ -1625,7 +1627,6 @@ footer .social .social-icon svg {
     -moz-column-gap: 1rem;
          column-gap: 1rem;
     max-width: 100%;
-    padding: 3rem;
   }
   footer p,
   footer a {
@@ -1659,13 +1660,7 @@ footer .social .social-icon svg {
 }
 @media screen and (min-width: 1080px) {
   nav.top {
-    padding-left: 3rem;
-    padding-right: 3rem;
-    width: calc(100% - 6rem);
-  }
-  main.home {
-    width: calc(100% - 6rem);
-    margin: 0 3rem;
+    padding: 0 3rem;
   }
   main.about .dress {
     padding-left: 3rem;
@@ -1691,6 +1686,9 @@ footer .social .social-icon svg {
     padding-left: 3rem;
     padding-right: 3rem;
     width: calc(100% - 6rem);
+  }
+  main.schedule {
+    padding: 0 3rem;
   }
   main.public-programs {
     min-height: 60%;
@@ -1731,6 +1729,9 @@ footer .social .social-icon svg {
   main.press section.press-posts {
     width: calc(100% - 6rem);
     margin: 4rem 3rem;
+  }
+  footer {
+    padding: 3rem;
   }
   footer #footer-social {
     grid-column: 9/11;
