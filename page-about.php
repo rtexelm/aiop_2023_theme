@@ -114,24 +114,6 @@ get_header();
         <?php wp_reset_postdata(); ?>
         <?php endif ?>
 
-        <div class="staff-item">
-            <h3 class="staff-name">Laurie Waxman</h3>
-            <p class="staff-title">Graphic & Web Designer</p>
-            <div class="staff-links">
-                <a target="_blank" href="https://lauriewaxman.com/">Website</a>
-                <a target="_blank" href="https://www.instagram.com/waxles/">Instagram</a>
-            </div>
-        </div>
-
-        <div class="staff-item">
-            <h3 class="staff-name">Ross Mabbett</h3>
-            <p class="staff-title">Software Developer</p>
-            <div class="staff-links">
-                <a target="_blank" href="https://rossmabbett.com">Website</a>
-                <a target="_blank" href="https://github.com/rtexelm">GitHub</a>
-            </div>
-        </div>
-
     </section>
 
 
@@ -181,7 +163,7 @@ get_header();
         </div>
         <div class="thanks">
             <h3>Thanks</h3>
-            <p><?php echo $thanks; ?></p>
+            <p class="p2r"><?php echo $thanks; ?></p>
         </div>
     </section>
 

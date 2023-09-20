@@ -2,20 +2,22 @@
 
 main.about {
   position: relative;
-  padding: 0 1.5rem;
-  width: calc(100% - 3rem);
 
   .dress {
-    margin: 0 -1.5rem;
-    padding: 4rem 1.5rem 4rem 1.5rem;
+    padding: 4rem 1.5rem;
     min-height: 60%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
 
-    background-size: auto 100%;
-    background: url(assets/dress/about-header-1080w.jpg) fixed no-repeat;
-    background-blend-mode: normal;
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.4) 0%,
+        rgba(0, 0, 0, 0.4) 100%
+      ),
+      url(assets/dress/about-header-1080w.jpg) fixed no-repeat;
+
+    background-blend-mode: overlay;
     background-size: cover;
     background-position-x: 50%;
 
@@ -28,7 +30,7 @@ main.about {
 
   .festival {
     background: $primary-magenta;
-    margin: -1.1vh -1.5rem 0 -1.5rem;
+    margin: -1.1vh 0 0;
     padding: 4rem 1.5rem;
 
     .mission {
@@ -46,12 +48,11 @@ main.about {
 
   .people {
     background: $pink;
-    margin: 0 -1.5rem;
     padding: 4rem 1.5rem;
     a {
       color: $black;
       &:visited {
-        color: #434343;
+        color: #443f43;
       }
     }
     h2 {
@@ -72,8 +73,6 @@ main.about {
   }
 
   .partners {
-    background: $primary-orange;
-    margin: 0 -1.5rem;
     padding: 4rem 1.5rem;
     h2 {
       margin-bottom: 2rem;
@@ -81,13 +80,16 @@ main.about {
     .partner-container {
       border-top: 1px solid $neon-yellow;
       margin-bottom: 3rem;
-      &:last-child {
-        // Set no margin on the last partner container
-        margin-bottom: 0;
+      .partner {
+        &:last-child {
+          // Set no margin on the last partner area
+          margin-bottom: 0;
+        }
       }
     }
     .partner-logo {
       margin-bottom: 1.5rem;
+      max-width: 100%;
     }
     .button {
       margin-top: 1rem;
@@ -96,7 +98,6 @@ main.about {
 
   .support {
     background: $beige;
-    margin: 0 -1.5rem;
     padding: 4rem 1.5rem;
     color: $black;
     h2 {
