@@ -16,19 +16,19 @@
 
   main.about {
     .dress {
-      @include padding3rem;
+      @include padding-calc-3rem;
     }
     .festival {
-      @include padding3rem;
+      @include padding-calc-3rem;
     }
     .people {
-      @include padding3rem;
+      @include padding-calc-3rem;
     }
     .partners {
-      @include padding3rem;
+      @include padding-calc-3rem;
     }
     .support {
-      @include padding3rem;
+      @include padding-calc-3rem;
     }
   }
 
@@ -42,8 +42,7 @@
 
   main.public-programs {
     min-height: 60%;
-    width: calc(100% - 6rem);
-    margin: 4rem 3rem 4rem 3rem;
+    @include padding-3rem;
     .program-container {
       .date-time {
         grid-column: 6/11;
@@ -69,26 +68,20 @@
   //   Artists listing page ################################################
 
   main.artist-listing {
-    section.artists {
-      width: calc(100% - 6rem);
-      margin: 4rem 3rem 0 3rem;
-    }
+    @include padding-3rem;
   }
 
   // Donate ##################################################################
 
   main.donate {
-    width: calc(100% - 6rem);
-    margin: 4rem 3rem;
+    @include padding-3rem;
   }
 
   // Press ##################################################################
 
   main.press {
-    min-height: 60%;
     section.press-posts {
-      width: calc(100% - 6rem);
-      margin: 4rem 3rem;
+      @include padding-3rem;
     }
   }
 

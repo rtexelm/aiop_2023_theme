@@ -449,9 +449,7 @@
   // Artist listing page ####################################################
 
   main.artist-listing {
-    margin: 6rem 0;
     section.artists {
-      // margin: 0;
       @include twelve-col-grid;
       span.page-title {
         grid-column: 1/13;
@@ -539,7 +537,6 @@
       $primary-magenta;
   }
   main.press {
-    margin-top: 6rem;
     min-height: calc(100vh - 20rem);
     section.press-posts {
       .press-container {
@@ -677,38 +674,6 @@
       }
     }
   }
-
-  //   div.artist-textures {
-  //     z-index: -10;
-  //     position: absolute;
-  //     display: flex;
-  //     top: -11rem;
-  //     width: 100%;
-  //     height: calc(100% + 24rem);
-  //     div#left-page {
-  //       display: inline-block;
-  //       background: url("assets/artist_paper_LL.jpg");
-  //       background-position-x: right;
-  //       background-position-y: top;
-  //       background-size: cover;
-  //       background-repeat: no-repeat;
-  //       flex-grow: 4.5;
-  //       height: 100%;
-  //     }
-  //     div#right-page {
-  //       display: inline-block;
-  //       background: url("assets/menu_paper_RR.jpg");
-  //       background-position: -2px;
-  //       background-position-y: top;
-  //       background-size: cover;
-  //       background-repeat: no-repeat;
-  //       flex-grow: 6;
-  //       height: 100%;
-  //     }
-  //   }
-  //
-
-  //
 
   //   main.partners {
   //     @include twelve-col-grid;

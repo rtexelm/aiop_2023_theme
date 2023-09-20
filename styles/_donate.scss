@@ -11,8 +11,7 @@ div#donate-bg {
   background-size: cover;
 }
 main.donate {
-  width: calc(100% - 3rem);
-  margin: 4rem 1.5rem;
+  padding: 4rem 1.5rem;
   color: $black;
 
   div.payment-method {

@@ -15,16 +15,26 @@ $primary-type: "degular-variable", sans-serif;
 $display-type: "degular-variable", sans-serif;
 $text-type: "degular-text", sans-serif;
 
-@mixin padding-mobile {
+@mixin padding-calc-mobile {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   width: calc(100% - 3rem);
 }
 
-@mixin padding3rem {
+@mixin padding-calc-3rem {
   padding-left: 3rem;
   padding-right: 3rem;
   width: calc(100% - 6rem);
+}
+
+@mixin padding-mobile {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@mixin padding-3rem {
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 @mixin twelve-col-grid {
@@ -38,22 +48,13 @@ $text-type: "degular-text", sans-serif;
   font: 16vw $display-type;
   font-variation-settings: "wght" 700, "opsz" 72, "ital" 0; //display
 }
+
 @mixin title-display-tablet {
   font: 14vw $display-type;
   font-variation-settings: "wght" 700, "opsz" 72, "ital" 0; //display
 }
 
-@mixin p-deg-text {
-  font: 1rem $text-type;
-  font-variation-settings: "wght" 400, "opsz" 6, "ital" 0; //text
-  line-height: 1.125rem;
-}
-
 @mixin nav-links {
   font: 1rem $display-type;
   font-variation-settings: "wght" 600, "opsz" 40, "ital" 0;
-}
-
-@mixin script-display {
-  // Enter script mixin here
 }

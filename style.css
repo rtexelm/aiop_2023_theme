@@ -643,11 +643,7 @@ main.about .support .dedication {
 }
 
 main.artist-listing {
-  margin-bottom: 4rem;
-}
-main.artist-listing section.artists {
-  width: calc(100% - 3rem);
-  margin: 4rem 1.5rem 0 1.5rem;
+  padding: 4rem 1.5rem;
 }
 main.artist-listing section.artists span.page-title {
   margin-bottom: 2rem;
@@ -825,9 +821,7 @@ main.schedule div.day .artist-container .button {
 }
 
 main.public-programs {
-  padding-top: 1rem;
-  width: calc(100% - 3rem);
-  margin: 4rem 1.5rem 4rem 1.5rem;
+  padding: 5rem 1.5rem 4rem 1.5rem;
 }
 main.public-programs .program-container {
   margin-top: 2rem;
@@ -861,8 +855,7 @@ main.public-programs .program-container .time h4 {
 }
 
 main.press section.press-posts {
-  width: calc(100% - 3rem);
-  margin: 4rem 1.5rem;
+  padding: 4rem 1.5rem;
 }
 main.press section.press-posts .press-container {
   border-top: 1px dashed #f74500;
@@ -895,8 +888,7 @@ div#donate-bg {
 }
 
 main.donate {
-  width: calc(100% - 3rem);
-  margin: 4rem 1.5rem;
+  padding: 4rem 1.5rem;
   color: #000;
 }
 main.donate div.payment-method {
@@ -1381,9 +1373,6 @@ footer .social .social-icon svg {
     border: none;
     padding-top: 0;
   }
-  main.artist-listing {
-    margin: 6rem 0;
-  }
   main.artist-listing section.artists {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -1468,7 +1457,6 @@ footer .social .social-icon svg {
     background: url(assets/dress/tablet/desktop-bg-texture.png) 50%/cover no-repeat, #810061;
   }
   main.press {
-    margin-top: 6rem;
     min-height: calc(100vh - 20rem);
   }
   main.press section.press-posts .press-container {
@@ -1692,8 +1680,8 @@ footer .social .social-icon svg {
   }
   main.public-programs {
     min-height: 60%;
-    width: calc(100% - 6rem);
-    margin: 4rem 3rem 4rem 3rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
   main.public-programs .program-container .date-time {
     grid-column: 6/11;
@@ -1715,20 +1703,17 @@ footer .social .social-icon svg {
     display: block;
     flex-shrink: 0;
   }
-  main.artist-listing section.artists {
-    width: calc(100% - 6rem);
-    margin: 4rem 3rem 0 3rem;
+  main.artist-listing {
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
   main.donate {
-    width: calc(100% - 6rem);
-    margin: 4rem 3rem;
-  }
-  main.press {
-    min-height: 60%;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
   main.press section.press-posts {
-    width: calc(100% - 6rem);
-    margin: 4rem 3rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
   footer {
     padding: 3rem;
