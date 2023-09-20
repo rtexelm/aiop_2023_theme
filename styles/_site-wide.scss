@@ -25,17 +25,9 @@ h5,
   margin: 0px;
 }
 
-span.d1 {
+.d1 {
   font-size: 3.5rem;
   font-variation-settings: "wght" 700, "opsz" 72, "ital" 0; //display
-}
-
-span.script {
-  // Enter script mixin here when available
-}
-
-.f-weight-700 {
-  font-variation-settings: "wght" 700;
 }
 
 h1,
@@ -84,6 +76,18 @@ span.p1,
   font-variation-settings: "opsz" 12;
 }
 
+span.highlight {
+  font-size: 5rem;
+}
+
+.f-weight-700 {
+  font-variation-settings: "wght" 700;
+}
+
+.f-weight-400 {
+  font-variation-settings: "wght" 400;
+}
+
 h1.hidden {
   font-size: 0;
   width: 1px;
@@ -95,11 +99,6 @@ h1.hidden {
   padding: 0 !important;
   margin: 0 !important;
   clip: rect(1px, 1px, 1px, 1px);
-}
-
-.footer-credits {
-  font-size: 0.75rem;
-  color: $neon-yellow;
 }
 
 a.button,

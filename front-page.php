@@ -76,18 +76,16 @@ get_header();
 
         <section id="dates">
 
-            <div class="flex-container flex-col-nw">
+            <h2 class="d1 f-weight-400 date-text">
 
-                <h2 class="flex-container date-text">
+                <span class="month">October</span>
+                <span class="days">13&ndash;15</span><span class="year highlight"> 2023</span>
 
-                    <span class="flex-col-center month">October</span>
-                    <span class="flex-col-left days">13&ndash;15<span class="script"> 2023</span></span>
-                    <a class="button neon-yellow" href="<?php bloginfo('template_url'); ?>/schedule">Schedule</a>
-                    <a class="button lavender" href="<?php bloginfo('template_url'); ?>/public-programs">Public
-                        Programs</a>
-                </h2>
+            </h2>
 
-            </div>
+            <a class="button neon-yellow" href="<?php bloginfo('template_url'); ?>/schedule">Schedule</a>
+            <a class="button lavender" href="<?php bloginfo('template_url'); ?>/public-programs">Public
+                Programs</a>
         </section>
 
         <div class="positioner">

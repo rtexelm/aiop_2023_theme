@@ -34,13 +34,9 @@ h5,
   margin: 0px;
 }
 
-span.d1 {
+.d1 {
   font-size: 3.5rem;
   font-variation-settings: "wght" 700, "opsz" 72, "ital" 0;
-}
-
-.f-weight-700 {
-  font-variation-settings: "wght" 700;
 }
 
 h1,
@@ -92,6 +88,18 @@ span.p1,
   font-variation-settings: "opsz" 12;
 }
 
+span.highlight {
+  font-size: 5rem;
+}
+
+.f-weight-700 {
+  font-variation-settings: "wght" 700;
+}
+
+.f-weight-400 {
+  font-variation-settings: "wght" 400;
+}
+
 h1.hidden {
   font-size: 0;
   width: 1px;
@@ -103,11 +111,6 @@ h1.hidden {
   padding: 0 !important;
   margin: 0 !important;
   clip: rect(1px, 1px, 1px, 1px);
-}
-
-.footer-credits {
-  font-size: 0.75rem;
-  color: #f0fa00;
 }
 
 a.button,
@@ -465,14 +468,14 @@ main.home .header #title h1 {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto;
-  font: 5rem "degular-variable", sans-serif;
+  font: 14vw "degular-variable", sans-serif;
   font-variation-settings: "wght" 700, "opsz" 72, "ital" 0;
 }
 main.home .header #title #title-1 {
-  grid-area: 1/2/2/6;
+  grid-area: 1/2/2/12;
 }
 main.home .header #title #title-2 {
-  grid-area: 2/3/3/11;
+  grid-area: 2/3/3/13;
 }
 main.home .header #title #title-3 {
   grid-area: 3/9/4/12;
@@ -521,17 +524,27 @@ main.home #artists {
   min-height: 15rem;
 }
 main.home #dates {
-  color: #fff;
-  padding: 8rem 1.5rem 4rem 1.5rem;
+  padding-top: 6rem;
+  padding-bottom: 4rem;
 }
 main.home #dates .date-text {
-  flex-flow: column nowrap;
-  align-items: stretch;
-  margin-right: auto;
   margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+}
+main.home #dates .date-text .month {
+  grid-area: 1/1/2/3;
+  justify-self: center;
 }
 main.home #dates .date-text .days {
-  margin-bottom: 1rem;
+  grid-area: 2/1/3/2;
+  justify-self: end;
+  margin-top: -7px;
+}
+main.home #dates .date-text .year {
+  grid-area: 2/2/3/4;
+  margin-left: 5px;
 }
 main.home #pattern-r-mid {
   z-index: -1;

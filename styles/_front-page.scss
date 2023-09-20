@@ -25,6 +25,7 @@ main.home {
       padding: 3rem 1.5rem;
       z-index: 20;
       position: relative;
+
       h1 {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
@@ -32,10 +33,10 @@ main.home {
         @include title-display;
       }
       #title-1 {
-        grid-area: 1/2/2/6;
+        grid-area: 1/2/2/12;
       }
       #title-2 {
-        grid-area: 2/3/3/11;
+        grid-area: 2/3/3/13;
       }
       #title-3 {
         grid-area: 3/9/4/12;
@@ -91,17 +92,29 @@ main.home {
   }
 
   #dates {
-    color: $white;
-    padding: 8rem 1.5rem 4rem 1.5rem;
+    padding-top: 6rem;
+    padding-bottom: 4rem;
 
     .date-text {
-      flex-flow: column nowrap;
-      align-items: stretch;
-      margin-right: auto;
       margin-bottom: 2rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto;
+
+      .month {
+        grid-area: 1/1/2/3;
+        justify-self: center;
+      }
 
       .days {
-        margin-bottom: 1rem;
+        grid-area: 2/1/3/2;
+        justify-self: end;
+        margin-top: -7px;
+      }
+
+      .year {
+        grid-area: 2/2/3/4;
+        margin-left: 5px;
       }
     }
   }
