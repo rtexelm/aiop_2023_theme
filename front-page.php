@@ -150,7 +150,7 @@ get_header();
 
 
                 <a class="button neon-yellow" href="<?php bloginfo('template_url'); ?>/artists">Artists</a>
-                <a class="button lavender" href="<?php bloginfo('template_url'); ?>/public-programs">Schedule</a>
+                <a class="button lavender" href="<?php bloginfo('template_url'); ?>/schedule">Schedule</a>
 
             </div>
         </section>

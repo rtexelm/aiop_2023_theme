@@ -50,10 +50,10 @@ $text-type: "degular-text", sans-serif;
   line-height: 0.8em;
 }
 
-@mixin title-display-tablet {
-  font: 14vw $display-type;
-  font-variation-settings: "wght" 700, "opsz" 72, "ital" 0; //display
-}
+// @mixin title-display-tablet {
+//   font: 14vw $display-type;
+//   font-variation-settings: "wght" 700, "opsz" 72, "ital" 0; //display
+// }
 
 @mixin nav-links {
   font: 1rem $display-type;
