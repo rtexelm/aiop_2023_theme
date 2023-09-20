@@ -113,7 +113,7 @@ div.button {
     margin-left: 0.5rem;
   }
 
-  padding: 0.375rem 1.25rem 0.375rem 1.5rem;
+  padding: 0.2rem 0.5rem 0.13rem 0.88rem;
   border-radius: 1.875rem;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -188,7 +188,7 @@ div.button {
     }
   }
 
-  &.orange {
+  &.transparent {
     color: $white;
     border: 1px solid white;
     background: transparent;
@@ -210,6 +210,26 @@ div.button {
     }
     &:active {
       border-color: $white;
+      outline: none;
+    }
+  }
+
+  &.orange {
+    border: 1px solid $primary-orange;
+    background: $primary-orange;
+    color: $black;
+
+    &:hover {
+      &::after {
+        content: url(assets/dress/arrow-right-light.svg);
+        margin-left: 0.5rem;
+      }
+      border-color: $deep-green;
+      background: $deep-green;
+      color: white;
+    }
+    &:focus {
+      border-color: $coal;
       outline: none;
     }
   }

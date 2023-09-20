@@ -10,14 +10,14 @@
 		            </br>
 		            Curator
 		        </p>
-		        <p>Ed Woodham,</br>
+		        <p><a href="https://edwoodham.com/bio/">Ed Woodham,</a></br>
 		            Founder $ Director
 		        </p>
 		        <p><a href="https://lauriewaxman.com" target="_blank">Laurie Waxman,</a></br>
 		            Design
 		        </p>
 		        <p><a href="https://rossmabbett.com" target="_blank">Ross Mabbett,</a></br>
-		            Web Developer
+		            Developer
 		        </p>
 		    </div>
 		    <div class="footer-col" id="footer-contact">

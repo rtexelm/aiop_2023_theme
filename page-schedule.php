@@ -5,8 +5,8 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-artist
  *
  * @package WordPress
- * @subpackage AiOP_2022
- * @copyright  AiOP, Laurie Waxman
+ * @subpackage AiOP_2023
+ * @copyright  AiOP, Laurie Waxman, Ross Mabbett
  * @since 1.0.0
  * @version 1.0.0
  */
@@ -60,7 +60,7 @@ get_header();
 
             <article class="day-header">
                 <h2 class="h1">Friday</h2>
-                <h3 class="f-weight-700 geo-area">[Section], 14th St</h3>
+                <h3 class="f-weight-700 geo-area">Avenue A to 3rd Avenue</h3>
             </article>
 
             <article class="public-program">
@@ -70,8 +70,8 @@ get_header();
                         6-7:30pm
                     </h4>
                     <div class="pp-title">
-                        <h3 class="h3">Walk & Talk</h3>
-                        <h4 class="">BGSQD Bookstore</h4>
+                        <h3>Walk & Talk</h3>
+                        <h4>BGSQD Bookstore</h4>
                     </div>
                     <a class="button neon-yellow" title="Walk & Talk" href=#>RSVP</a>
                 </div>
@@ -128,7 +128,7 @@ get_header();
 
             <article class="day-header">
                 <h2 class="h1">Saturday</h2>
-                <h3 class="f-weight-700 geo-area">[Section], 14th St</h3>
+                <h3 class="f-weight-700 geo-area">University Place to 7th Avenue</h3>
             </article>
 
             <article class="public-program">
@@ -138,8 +138,8 @@ get_header();
                         7-10pm
                     </h4>
                     <div class="pp-title">
-                        <h3 class=" artist-title">Paper Dress Ball</h3>
-                        <h4 class="artist-title">BGSQD Bookstore</h4>
+                        <h3>Paper Dress Ball</h3>
+                        <h4>BGSQD Bookstore</h4>
                     </div>
                     <a class="button neon-yellow" title="Paper Dress Ball" href=#>Tickets</a>
                 </div>
@@ -196,7 +196,7 @@ get_header();
 
             <article class="day-header">
                 <h2 class="h1">Sunday</h2>
-                <h3 class="f-weight-700 geo-area">[Section], 14th St</h3>
+                <h3 class="f-weight-700 geo-area">7th Avenue to the Hudson River</h3>
             </article>
 
             <article class="public-program">
@@ -206,8 +206,8 @@ get_header();
                         1-2pm
                     </h4>
                     <div class="pp-title">
-                        <h3 class="">Runway</h3>
-                        <h4 class="">14th Street</h4>
+                        <h3>Runway</h3>
+                        <h4>14th Street</h4>
                     </div>
                     <a class="button neon-yellow" title="Runway" href=#>RSVP</a>
                 </div>

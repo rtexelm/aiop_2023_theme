@@ -1,8 +1,8 @@
 /*
 Theme Name: AiOP 2023 DRESS
-Theme URI: http://lauriewaxman.com
-Author: Laurie Waxman
-Author URI: http://lauriewaxman.com
+Theme URI: https://lauriewaxman.com
+Author: Laurie Waxman & Ross Mabbett
+Author URI: https://rossmabbett.com
 Description: The 2023 theme for Art in Odd Places
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -115,7 +115,7 @@ div.button {
   display: flex;
   align-items: center;
   gap: 0.2rem;
-  padding: 0.375rem 1.25rem 0.375rem 1.5rem;
+  padding: 0.2rem 0.5rem 0.13rem 0.88rem;
   border-radius: 1.875rem;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -206,35 +206,57 @@ div.button.pink:focus {
   border-color: #2c2c2c;
   outline: none;
 }
-a.button.orange,
-div.button.orange {
+a.button.transparent,
+div.button.transparent {
   color: #fff;
   border: 1px solid white;
   background: transparent;
 }
-a.button.orange::after,
-div.button.orange::after {
+a.button.transparent::after,
+div.button.transparent::after {
   content: url(assets/dress/arrow-right-light.svg);
   margin-left: 0.5rem;
 }
-a.button.orange:hover,
-div.button.orange:hover {
+a.button.transparent:hover,
+div.button.transparent:hover {
   background: #c7a1d8;
   color: black;
 }
+a.button.transparent:hover::after,
+div.button.transparent:hover::after {
+  content: url(assets/dress/arrow-right-dark.svg);
+  margin-left: 0.5rem;
+}
+a.button.transparent:focus,
+div.button.transparent:focus {
+  border-color: #fff;
+  outline: none;
+}
+a.button.transparent:active,
+div.button.transparent:active {
+  border-color: #fff;
+  outline: none;
+}
+a.button.orange,
+div.button.orange {
+  border: 1px solid #f74500;
+  background: #f74500;
+  color: #000;
+}
+a.button.orange:hover,
+div.button.orange:hover {
+  border-color: #05633e;
+  background: #05633e;
+  color: white;
+}
 a.button.orange:hover::after,
 div.button.orange:hover::after {
-  content: url(assets/dress/arrow-right-dark.svg);
+  content: url(assets/dress/arrow-right-light.svg);
   margin-left: 0.5rem;
 }
 a.button.orange:focus,
 div.button.orange:focus {
-  border-color: #fff;
-  outline: none;
-}
-a.button.orange:active,
-div.button.orange:active {
-  border-color: #fff;
+  border-color: #2c2c2c;
   outline: none;
 }
 a.button.inline,
@@ -315,7 +337,6 @@ nav.top {
   position: sticky;
   transition: top 0.3s;
   z-index: 10;
-  width: calc(100% - 3rem);
   background-color: #f0fa00;
   padding: 0 1.5rem;
 }
@@ -326,7 +347,7 @@ nav.top a#skip-content {
 nav.top a#skip-content:focus {
   padding: 1.5rem;
   text-align: center;
-  background: #216972;
+  background: #2c2c2c;
   color: white;
   left: 9rem;
   top: 0px;
@@ -521,133 +542,93 @@ main.home #artists .move-right {
   margin-left: auto;
 }
 
-#about-background {
-  z-index: -10;
-  position: fixed;
-  top: 0px;
-  width: 100%;
-  height: 100vh;
-  background: url(assets/paper-artist-L.jpg);
-  background-size: cover;
-}
-
 main.about {
   position: relative;
-  top: -3rem;
-  margin-bottom: -3rem;
 }
-main.about h3,
-main.about .h3,
-main.about h2,
-main.about .h2 {
-  font-family: ivyjournal, sans-serif;
-  font-weight: 500;
-}
-main.about p.p1,
-main.about p.p2,
-main.about p.p2r {
-  font-family: ivyjournal, sans-serif;
-  font-weight: 300;
-}
-main.about img.about-header {
-  width: 100%;
-}
-main.about img.buffer {
-  width: 100%;
-}
-main.about section.cs {
-  width: calc(100% - 3rem);
-  padding: 4rem 1.5rem 4rem 1.5rem;
-}
-main.about section.cs .cs_more_text {
-  max-height: 0px;
-  overflow: hidden;
-  transition: max-height 1s ease-out;
-}
-main.about section.festival {
+main.about .dress {
+  padding: 4rem 1.5rem;
+  min-height: 60%;
   display: flex;
-  flex-direction: column;
-  width: calc(100% - 3rem);
-  padding: 4rem 1.5rem 4rem 1.5rem;
-  background: #0f3a46;
-  color: white;
+  flex-flow: column nowrap;
+  justify-content: center;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url(assets/dress/about-header-1080w.jpg) fixed no-repeat;
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-position-x: 50%;
 }
-main.about section.festival h3 {
+main.about .dress .c-statement h2 {
   margin-bottom: 1rem;
 }
-main.about section.festival .history {
-  margin-bottom: 2rem;
+main.about .festival {
+  background: #810061;
+  margin: -1.1vh 0 0;
+  padding: 4rem 1.5rem;
 }
-main.about section.festival .history p,
-main.about section.festival .mission p {
-  font-size: 1.25rem;
-  font-family: "degular-variable", sans-serif;
+main.about .festival .mission h2 {
+  margin-bottom: 0.5rem;
 }
-main.about section.people {
-  display: flex;
-  flex-direction: column;
-  width: calc(100% - 3rem);
-  padding: 1.5rem;
-  margin-bottom: 4rem;
+main.about .festival .history {
+  margin-top: 2rem;
 }
-main.about section.people h2 {
-  margin-bottom: 2rem;
+main.about .festival .history h2 {
+  margin-bottom: 0.5rem;
 }
-main.about section.people h2.thinkers {
-  margin-top: 4rem;
+main.about .people {
+  background: #ff779c;
+  padding: 4rem 1.5rem;
+  color: #000;
 }
-main.about section.people div.staff {
-  margin-bottom: 1.5rem;
+main.about .people a {
+  color: #000;
 }
-main.about section.people div.staff p.staff_name {
-  margin-bottom: 0.25em;
+main.about .people a:visited {
+  color: #443f43;
 }
-main.about section.people div.staff p.staff_title {
-  text-transform: uppercase;
-  font-weight: normal;
-  color: #216972;
-  margin-bottom: 0.25em;
-}
-main.about section.people div.staff div.staff_links a {
-  color: #216972;
-  padding-right: 0.5rem;
-}
-main.about section.partners {
-  width: calc(100% - 3rem);
-  padding: 10rem 1.5rem 4rem 1.5rem;
-  display: flex;
-  flex-direction: column;
-  background: #dfd6c5;
-  margin-top: -3rem;
-}
-main.about section.partners img.partner-logo {
-  width: 50%;
+main.about .people h2 {
+  color: #fff;
   margin-bottom: 1rem;
 }
-main.about section.partners .partner.bureau {
+main.about .people .thinkers {
+  margin-top: 3rem;
+}
+main.about .people .staff-item {
+  margin-bottom: 1rem;
+  border-top: 1px dashed #dadb0d;
+  padding-top: 0.5rem;
+}
+main.about .partners {
+  padding: 4rem 1.5rem;
+}
+main.about .partners h2 {
+  margin-bottom: 2rem;
+}
+main.about .partners .partner-container {
+  border-top: 1px solid #f0fa00;
   margin-bottom: 3rem;
 }
-main.about section.partners p {
+main.about .partners .partner-container .partner:last-child {
+  margin-bottom: 0;
+}
+main.about .partners .partner-logo {
+  margin-bottom: 1.5rem;
+  max-width: 100%;
+}
+main.about .partners .button {
+  margin-top: 1rem;
+}
+main.about .support {
+  background: #f4d4a0;
+  padding: 4rem 1.5rem;
+  color: #000;
+}
+main.about .support h2 {
+  margin-bottom: 2rem;
+}
+main.about .support h3 {
   margin-bottom: 1rem;
 }
-main.about section.partners p.partner-text {
-  font-size: 1.25rem;
-  font-family: "degular-variable", sans-serif;
-}
-main.about section.partners p.h3 {
-  font-weight: bold;
-}
-main.about section.support {
-  width: calc(100% - 3rem);
-  padding: 1.5rem 1.5rem 5rem 1.5rem;
-  background: #0f3a46;
-  color: white;
-}
-main.about section.support h2 {
-  margin: 4rem 0 2rem 0;
-}
-main.about section.support h3 {
-  margin: 2rem 0 1rem 0;
+main.about .support .dedication {
+  margin-bottom: 2rem;
 }
 
 #artists-background {
@@ -868,36 +849,58 @@ main.public-programs .program-container .time h4 {
   display: none;
 }
 
+#press-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(assets/dress/home-mobile-bg.png) 50%/cover no-repeat, #810061;
+  background-blend-mode: multiply;
+  z-index: -10;
+}
+
 main.press section.press-posts {
   width: calc(100% - 3rem);
-  margin: 4rem 1.5rem 0 1.5rem;
+  margin: 4rem 1.5rem;
 }
 main.press section.press-posts .press-container {
-  border-top: 1px solid #d0c2b0;
-  margin-bottom: 2rem;
+  border-top: 1px dashed #f74500;
+  margin: 2rem 0;
 }
-main.press section.press-posts .press-container span.h3 {
-  font-family: "degular-variable", sans-serif;
+main.press section.press-posts .press-container .press-publication {
   padding: 1rem 0 0.5rem 0;
 }
+main.press section.press-posts .press-container p.press-title {
+  padding: 0.5rem 0;
+}
 main.press section.press-posts .press-container p.press-date {
-  font-weight: 300;
-  color: #216972;
+  padding: 0.5rem 0;
+  border-top: 1px dashed #f74500;
   margin-bottom: 0.5rem;
 }
 main.press section.press-posts .press-container a.button {
   margin-top: 1rem;
 }
 
+div#donate-bg {
+  z-index: -10;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: url(assets/dress/tablet/desktop-bg-texture.png), #f4d4a0;
+  background-blend-mode: multiply;
+  background-size: cover;
+}
+
 main.donate {
   width: calc(100% - 3rem);
   margin: 4rem 1.5rem;
+  color: #000;
 }
 main.donate div.payment-method {
   margin-top: 2rem;
-}
-main.donate div.payment-method h2 {
-  font-family: "degular-variable", sans-serif;
 }
 main.donate div.payment-method p {
   margin: 1rem 0;
@@ -908,10 +911,10 @@ main.partners {
   margin: 4rem 1.5rem 0 1.5rem;
 }
 main.partners .page-title {
-  color: #ad1f25;
+  color: #2c2c2c;
   width: 100%;
   padding-bottom: 0.5rem;
-  border-bottom: 1px solid #ad1f25;
+  border-bottom: 1px solid #2c2c2c;
   margin-bottom: 2rem;
 }
 main.partners .partner_images {
@@ -952,7 +955,7 @@ footer a svg path {
   fill: white;
 }
 footer a:hover svg path {
-  fill: #d4f2ff;
+  fill: #f0fa00;
 }
 footer a img {
   width: 8rem;
@@ -1003,19 +1006,14 @@ footer .social .social-icon svg {
   .p1 p {
     font-size: 1.5rem;
   }
-  .p2,
-  span.p2,
-  .p2r {
-    font-size: 1rem;
-  }
   a.button {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
-  nav .menuVisible {
+  nav.top .menuVisible {
     display: block;
     margin-right: 1rem;
   }
-  nav .menuVisible ul {
+  nav.top .menuVisible ul {
     margin: 0;
     padding: 0;
     display: flex;
@@ -1023,24 +1021,24 @@ footer .social .social-icon svg {
     gap: 1.5rem;
     list-style: none;
   }
-  nav .menuVisible ul li a {
+  nav.top .menuVisible ul li a {
     font: 1rem "degular-variable", sans-serif;
     font-variation-settings: "wght" 600, "opsz" 40, "ital" 0;
     text-transform: uppercase;
     text-decoration: none;
     color: #000;
   }
-  nav .menuVisible ul li a:hover {
+  nav.top .menuVisible ul li a:hover {
     border-bottom: 1px solid #000;
     border-top: 1px solid #000;
   }
-  nav .menuVisible ul li a:focus {
+  nav.top .menuVisible ul li a:focus {
     border-top: 1px solid #000;
   }
-  nav .menuFull {
+  nav.top .menuFull {
     left: 120vw;
   }
-  nav .menuFull .bg-wrapper::before {
+  nav.top .menuFull .bg-wrapper::before {
     content: "";
     position: absolute;
     background-image: url(assets/dress/home-texture-01.png);
@@ -1053,6 +1051,9 @@ footer .social .social-icon svg {
     bottom: 0px;
     left: 0px;
     opacity: 0.6;
+  }
+  main.home {
+    overflow-y: clip;
   }
   main.home .header {
     min-height: 80vh;
@@ -1309,9 +1310,11 @@ footer .social .social-icon svg {
     background: url(assets/dress/tablet/home-texture-1380w.png);
     background-size: auto 100%;
   }
+  main.schedule {
+    padding: 0 1.5rem;
+  }
   main.schedule .artists {
     margin: 0;
-    padding: 0 2.75rem;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     -moz-column-gap: 1rem;
@@ -1411,6 +1414,7 @@ footer .social .social-icon svg {
     padding-left: 1rem;
   }
   main.artist-listing section.artists .artist-container .artist-copy {
+    position: relative;
     grid-column: 3/11;
     border-top: 1px solid #f0fa00;
     padding-top: 0.5rem;
@@ -1438,13 +1442,191 @@ footer .social .social-icon svg {
     width: 100%;
     height: 100%;
   }
+  main.donate {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+    max-width: 100%;
+    min-height: 50%;
+  }
+  main.donate .page-title {
+    grid-column: 2/12;
+    grid-row: 1/2;
+  }
+  main.donate div.payment-method {
+    grid-row: 2/3;
+  }
+  main.donate div.payment-method.paypal {
+    grid-column: 1/6;
+    padding-right: 2rem;
+  }
+  main.donate div.payment-method.mail {
+    grid-column: 7/12;
+  }
+  #press-bg {
+    background: url(assets/dress/tablet/desktop-bg-texture.png) 50%/cover no-repeat, #810061;
+  }
+  main.press {
+    margin-top: 6rem;
+    min-height: calc(100vh - 20rem);
+  }
+  main.press section.press-posts .press-container {
+    margin: 1rem 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+    max-width: 100%;
+  }
+  main.press section.press-posts .press-container .press-publication {
+    grid-column: 1/6;
+    grid-row: 1/2;
+  }
+  main.press section.press-posts .press-container .press-title {
+    grid-column: 1/8;
+    grid-row: 2/3;
+  }
+  main.press section.press-posts .press-container p.press-date {
+    margin-top: 1rem;
+    border-top: 0;
+    padding-top: 0;
+    grid-column: 7/10;
+    grid-row: 1/2;
+  }
+  main.press section.press-posts .press-container .button {
+    grid-column: 10/13;
+    grid-row: 1/2;
+  }
+  main.about .dress {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+    max-width: 100%;
+    align-items: center;
+  }
+  main.about .dress .c-statement {
+    grid-column: 3/11;
+  }
+  main.about .dress .c-statement p {
+    margin-bottom: 1rem;
+  }
+  main.about .festival {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+    max-width: 100%;
+    grid-row-gap: 3rem;
+  }
+  main.about .festival .mission {
+    margin-right: 2rem;
+    grid-column: 2/9;
+    grid-row: 1/2;
+  }
+  main.about .festival .history {
+    grid-column: 5/12;
+    grid-row: 2/3;
+    margin: 0;
+  }
+  main.about .people {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+    max-width: 100%;
+  }
+  main.about .people h2 {
+    grid-area: 1/2/2/13;
+  }
+  main.about .people .staff-item {
+    margin-bottom: 0.2rem;
+    grid-column: 2/12;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+    align-items: baseline;
+  }
+  main.about .people .staff-item .staff-title {
+    grid-column: 1/4;
+    grid-row: 1/2;
+  }
+  main.about .people .staff-item .staff-name {
+    grid-column: 4/7;
+    grid-row: 1/2;
+  }
+  main.about .people .staff-item .staff-links {
+    grid-column: 7/11;
+    grid-row: 1/2;
+  }
+  main.about .partners {
+    padding-top: 4rem;
+  }
+  main.about .partners h2 {
+    grid-column: 1/13;
+    grid-row: 1;
+  }
+  main.about .partners .partner-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+    max-width: 100%;
+    padding-top: 1.5rem;
+    margin-bottom: 0;
+  }
+  main.about .partners .partner-container img.partner-logo {
+    grid-column: 1/3;
+    width: 80%;
+  }
+  main.about .partners .partner-container .partner {
+    grid-column: 3/13;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    gap: 5rem;
+    margin-bottom: 3rem;
+  }
+  main.about .partners .partner-container .partner .button {
+    margin-top: 0;
+  }
+  main.about .support {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+    max-width: 100%;
+    row-gap: 2rem;
+    padding-bottom: 6rem;
+  }
+  main.about .support h2 {
+    grid-column: 2/12;
+    grid-row: 1/2;
+  }
+  main.about .support div.dedication {
+    grid-column: 2/9;
+    grid-row: 2/3;
+  }
+  main.about .support div.consultation {
+    margin-right: 2rem;
+    grid-column: 2/5;
+    grid-row: 3/4;
+  }
+  main.about .support div.thanks {
+    grid-column: 5/12;
+    grid-row: 3/4;
+  }
+  main.about .support .thanks > p {
+    font-size: 1.25rem;
+  }
   footer {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     -moz-column-gap: 1rem;
          column-gap: 1rem;
     max-width: 100%;
-    padding: 3rem;
   }
   footer p,
   footer a {
@@ -1478,10 +1660,38 @@ footer .social .social-icon svg {
 }
 @media screen and (min-width: 1080px) {
   nav.top {
+    padding: 0 3rem;
+  }
+  main.about .dress {
+    padding-left: 3rem;
+    padding-right: 3rem;
     width: calc(100% - 6rem);
+  }
+  main.about .festival {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    width: calc(100% - 6rem);
+  }
+  main.about .people {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    width: calc(100% - 6rem);
+  }
+  main.about .partners {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    width: calc(100% - 6rem);
+  }
+  main.about .support {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    width: calc(100% - 6rem);
+  }
+  main.schedule {
     padding: 0 3rem;
   }
   main.public-programs {
+    min-height: 60%;
     width: calc(100% - 6rem);
     margin: 4rem 3rem 4rem 3rem;
   }
@@ -1501,21 +1711,33 @@ footer .social .social-icon svg {
   main.public-programs .program-container .date h4,
   main.public-programs .program-container .time h4,
   main.public-programs .program-container .location h4 {
-    display: block;
     width: 6vw;
+    display: block;
+    flex-shrink: 0;
   }
   main.artist-listing section.artists {
     width: calc(100% - 6rem);
     margin: 4rem 3rem 0 3rem;
+  }
+  main.donate {
+    width: calc(100% - 6rem);
+    margin: 4rem 3rem;
+  }
+  main.press {
+    min-height: 60%;
+  }
+  main.press section.press-posts {
+    width: calc(100% - 6rem);
+    margin: 4rem 3rem;
+  }
+  footer {
+    padding: 3rem;
   }
   footer #footer-social {
     grid-column: 9/11;
   }
 }
 @media screen and (min-width: 1400px) {
-  body {
-    border: 5px olivedrab solid;
-  }
   h1,
   span.h1,
   h2,
@@ -1528,39 +1750,6 @@ footer .social .social-icon svg {
   span.h5,
   p.p1 {
     line-height: 1em;
-  }
-  h1,
-  span.h1 {
-    font-size: 4rem;
-  }
-  h2,
-  span.h2 {
-    font-size: 4rem;
-  }
-  h3,
-  span.h3 {
-    font-size: 2.5rem;
-  }
-  h4,
-  span.h4 {
-    font-size: 1.5rem;
-  }
-  h5,
-  span.h5 {
-    font-size: 1.125rem;
-  }
-  p,
-  a {
-    font-size: 1.5rem;
-    font-weight: 200;
-  }
-  p.p1,
-  p span.p1, p.p1r,
-  a.p1,
-  a span.p1,
-  a.p1r {
-    font-size: 2rem;
-    line-height: 1.25em;
   }
   nav .menuFull ul#menu-full-navigation li a {
     font-size: 2.5rem;
@@ -1619,6 +1808,9 @@ footer .social .social-icon svg {
   }
   main.about section.people div.thinkers_col_2 {
     grid-column: 6/10;
+  }
+  main.donate {
+    min-height: 60%;
   }
 }
 main.maps {

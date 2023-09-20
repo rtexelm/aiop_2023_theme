@@ -4,7 +4,6 @@ nav.top {
   position: sticky;
   transition: top 0.3s;
   z-index: 10;
-  width: calc(100% - 3rem);
   background-color: $neon-yellow;
   padding: 0 1.5rem;
 
@@ -14,7 +13,7 @@ nav.top {
     &:focus {
       padding: 1.5rem;
       text-align: center;
-      background: $teal;
+      background: $coal;
       color: white;
       left: 9rem;
       top: 0px;
@@ -26,7 +25,6 @@ nav.top {
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    // padding: 0 1.5rem;
   }
 
   a#home {
