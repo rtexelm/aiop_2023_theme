@@ -57,10 +57,39 @@
 
   // About ###################################################################
 
+  #schedule-background {
+    background-size: 25%;
+  }
   // main.about {
   // }
 
+  // Aritsts Listing #################################################
+
+  #artists-background {
+    &::before {
+      background-size: 30%;
+    }
+  }
+
   // Donate #################################################################
   // main.donate {
+  // }
+
+  // Public Programs ########################################################
+
+  #program-background {
+    &::before {
+      background-size: 9%;
+    }
+  }
+  // Press #################################################################
+
+  #press-bg {
+    &::before {
+      background-size: 20%;
+    }
+  }
+
+  // main.press {
   // }
 }

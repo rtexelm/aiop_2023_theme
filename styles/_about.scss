@@ -32,8 +32,8 @@ main.about {
     position: relative;
     margin: -1.1vh 0 0;
     padding: 4rem 1.5rem;
-    background: $primary-magenta;
 
+    background: $primary-magenta;
     &::before {
       content: "";
       position: absolute;
@@ -51,6 +51,15 @@ main.about {
     & > * {
       z-index: 10;
     }
+
+    // .stitches-y-top {
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   right: 0;
+    //   width: 100%;
+    //   height: auto;
+    // }
 
     .mission {
       h2 {

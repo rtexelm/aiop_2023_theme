@@ -8,9 +8,10 @@
   top: 0px;
   width: 100%;
   height: 100vh;
-  background: url(assets/dress/home-mobile-bg.png);
+  background: url(assets/dress/textures/fabric-texture_terry.jpg);
   mix-blend-mode: multiply;
-  background-size: cover;
+  background-size: 35%;
+  opacity: 0.2;
 }
 main.schedule {
   margin: 4rem 0;

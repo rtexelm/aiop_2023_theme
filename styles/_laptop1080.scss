@@ -107,6 +107,12 @@
 
   // Donate ##################################################################
 
+  div#donate-bg {
+    &::before {
+      background-size: 40%;
+    }
+  }
+
   main.donate {
     @include padding-3rem;
     min-height: 60%;

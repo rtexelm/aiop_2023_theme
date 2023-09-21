@@ -293,6 +293,24 @@ div.button p {
   display: inline-block;
 }
 
+.stitches-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+}
+
+.stitches-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+}
+
 .flex-container {
   display: flex;
 }
@@ -796,9 +814,20 @@ main.about .support .dedication {
   top: 0px;
   width: 100%;
   height: 100%;
-  background: url(assets/dress/tablet/desktop-bg-texture.png), #c7a1d8;
-  background-blend-mode: multiply;
-  background-size: cover;
+  background: #c7a1d8;
+}
+#artists-background::before {
+  content: "";
+  position: absolute;
+  background: url(assets/dress/textures/fabric-texture_fine-woven.jpg);
+  mix-blend-mode: multiply;
+  background-size: 40%;
+  opacity: 0.3;
+  width: 100%;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
 }
 
 main.artist-listing {
@@ -919,9 +948,10 @@ nav.artist-nav .arrow.next {
   top: 0px;
   width: 100%;
   height: 100vh;
-  background: url(assets/dress/home-mobile-bg.png);
+  background: url(assets/dress/textures/fabric-texture_terry.jpg);
   mix-blend-mode: multiply;
-  background-size: cover;
+  background-size: 35%;
+  opacity: 0.2;
 }
 
 main.schedule {
@@ -975,9 +1005,21 @@ main.schedule div.day .artist-container .button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url(assets/dress/home-mobile-bg.png) 50%/cover no-repeat, #810061;
-  background-blend-mode: multiply;
+  background: #810061;
   z-index: -10;
+}
+#program-background::before {
+  content: "";
+  position: absolute;
+  background: url(assets/dress/textures/fabric-texture_woven-01.jpg);
+  mix-blend-mode: multiply;
+  background-size: 15%;
+  opacity: 0.3;
+  width: 100%;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
 }
 
 main.public-programs {
@@ -1006,14 +1048,28 @@ main.public-programs .program-container .time h4 {
 #press-bg {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  background: url(assets/dress/home-mobile-bg.png) 50%/cover no-repeat, #810061;
-  background-blend-mode: multiply;
+  background: #ff779c;
   z-index: -10;
 }
+#press-bg::before {
+  content: "";
+  position: absolute;
+  background: url(assets/dress/textures/fabric-texture_fine-knit.jpg);
+  mix-blend-mode: multiply;
+  background-size: 35%;
+  opacity: 0.3;
+  width: 100%;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
 
+main.press {
+  color: #000;
+}
 main.press section.press-posts {
   padding: 4rem 1.5rem;
 }
@@ -1034,6 +1090,7 @@ main.press section.press-posts .press-container p.press-date {
 }
 main.press section.press-posts .press-container a.button {
   margin-top: 1rem;
+  color: #000;
 }
 
 div#donate-bg {
@@ -1054,9 +1111,9 @@ div#donate-bg::before {
   right: 0;
   bottom: 0;
   background: url(assets/dress/textures/fabric-texture_fine-knit.jpg);
-  background-blend-mode: multiply;
-  background-size: 17.5%;
-  opacity: 0.4;
+  mix-blend-mode: multiply;
+  background-size: 60%;
+  opacity: 0.3;
 }
 
 main.donate {
@@ -1435,8 +1492,7 @@ footer .social .social-icon svg {
     grid-column: 6/13;
   }
   #schedule-background {
-    background: url(assets/dress/tablet/home-texture-1380w.png);
-    background-size: auto 100%;
+    background-size: 35%;
   }
   main.schedule {
     padding: 0 1.5rem;
@@ -1509,9 +1565,6 @@ footer .social .social-icon svg {
   main.schedule div.day .pp-container:hover {
     background-position: 0 0;
     border-color: #f0fa00;
-  }
-  #program-background {
-    background: url(assets/dress/tablet/desktop-bg-texture.png) 50%/cover no-repeat, #810061;
   }
   main.public-programs .program-container {
     display: grid;
@@ -1617,9 +1670,6 @@ footer .social .social-icon svg {
   }
   main.donate div.payment-method.mail {
     grid-column: 7/12;
-  }
-  #press-bg {
-    background: url(assets/dress/tablet/desktop-bg-texture.png) 50%/cover no-repeat, #810061;
   }
   main.press {
     min-height: calc(100vh - 20rem);
@@ -1899,6 +1949,9 @@ footer .social .social-icon svg {
     display: block;
     flex-shrink: 0;
   }
+  div#donate-bg::before {
+    background-size: 40%;
+  }
   main.donate {
     padding-left: 3rem;
     padding-right: 3rem;
@@ -1913,6 +1966,20 @@ footer .social .social-icon svg {
   }
   footer #footer-social {
     grid-column: 9/11;
+  }
+}
+@media screen and (min-width: 1400px) {
+  #schedule-background {
+    background-size: 25%;
+  }
+  #artists-background::before {
+    background-size: 30%;
+  }
+  #program-background::before {
+    background-size: 9%;
+  }
+  #press-bg::before {
+    background-size: 20%;
   }
 }
 main.maps {

@@ -17,9 +17,9 @@ div#donate-bg {
     right: 0;
     bottom: 0;
     background: url(assets/dress/textures/fabric-texture_fine-knit.jpg);
-    background-blend-mode: multiply;
-    background-size: 17.5%;
-    opacity: 0.4;
+    mix-blend-mode: multiply;
+    background-size: 60%;
+    opacity: 0.3;
   }
 }
 main.donate {

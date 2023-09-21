@@ -39,6 +39,10 @@ get_header();
         </div>
     </section>
     <section class="festival">
+        <!-- Stiches -->
+        <img class="stitches-top"
+            src="<?php bloginfo('template_url'); ?>/assets/dress/textures/stitches-yellow1440w.png" alt="" />
+
         <div class="mission">
             <h2>Mission</h2>
             <p>
@@ -114,10 +118,18 @@ get_header();
         <?php wp_reset_postdata(); ?>
         <?php endif ?>
 
+        <!-- Stitches -->
+        <img src="<?php bloginfo('template_url'); ?>/assets/dress/textures/stitches-magenta-bottom.png" alt=""
+            class="stitches-bottom" />
+
     </section>
 
 
     <section class="partners">
+
+        <!-- Stitches -->
+        <img src="<?php bloginfo('template_url'); ?>/assets/dress/textures/stitches-magenta-top.png" alt=""
+            class="stitches-top" />
 
         <h2>Partners</h2>
 

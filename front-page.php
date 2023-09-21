@@ -76,6 +76,10 @@ get_header();
 
         <section id="dates">
 
+            <!-- Stitches -->
+            <img class="stitches-top"
+                src="<?php bloginfo('template_url'); ?>/assets/dress/textures/stitches-yellow1440w.png" alt="" />
+
             <h2 class="date-text h1">
 
                 <span class="month">October</span>

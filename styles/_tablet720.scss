@@ -333,8 +333,7 @@
   // Schedule Page ##################################################
 
   #schedule-background {
-    background: url(assets/dress/tablet/home-texture-1380w.png);
-    background-size: auto 100%;
+    background-size: 35%;
   }
   main.schedule {
     padding: 0 1.5rem;
@@ -402,11 +401,6 @@
 
   // Public Programs page ###########################################
 
-  #program-background {
-    background: url(assets/dress/tablet/desktop-bg-texture.png) 50% / cover
-        no-repeat,
-      $primary-magenta;
-  }
   main.public-programs {
     .program-container {
       @include twelve-col-grid;
@@ -518,11 +512,6 @@
 
   // Press page ###########################################################
 
-  #press-bg {
-    background: url(assets/dress/tablet/desktop-bg-texture.png) 50% / cover
-        no-repeat,
-      $primary-magenta;
-  }
   main.press {
     min-height: calc(100vh - 20rem);
     section.press-posts {

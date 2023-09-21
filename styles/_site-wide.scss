@@ -260,6 +260,25 @@ div.button p {
   display: inline-block;
 }
 
+// Stitches positions
+.stitches-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+}
+
+.stitches-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+}
+
 // Flex classes
 .flex-container {
   display: flex;
