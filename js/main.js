@@ -1,6 +1,5 @@
 jQuery(document).ready(function ($) {
   var menuOpen = false;
-  var csShowMore = false;
   var prevScroll = window.scrollY;
 
   // Menu toggle

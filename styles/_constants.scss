@@ -45,7 +45,7 @@ $text-type: "degular-text", sans-serif;
 }
 
 @mixin title-display {
-  font: 14vw $display-type;
+  font: 15vw $display-type;
   font-variation-settings: "wght" 700, "opsz" 72, "ital" 0; //display
   line-height: 0.8em;
 }

@@ -76,7 +76,7 @@ get_header();
 
         <section id="dates">
 
-            <h2 class="date-text">
+            <h2 class="date-text h1">
 
                 <span class="month">October</span>
                 <span class="days">13&ndash;15<span class="year"> 2023</span></span>
@@ -121,7 +121,7 @@ get_header();
 
         <section id="about">
 
-            <h2 class="byline lh-8em">
+            <h2 class="byline lh-8em h1">
                 <span id="byline-1">Curated</span>
                 <span id="byline-2">by Gretchen</span>
                 <span id="byline-3">Vitamvas</span>
@@ -139,7 +139,7 @@ get_header();
 
             <div class="artists-heading">
 
-                <h2 class="lh-8em">
+                <h2 class="lh-8em h1">
                     <span id="artists-part">40 Participating</span>
                     <span id="artists-art"> Artists &</span>
                     <span id="artists-groups">Groups</span>
