@@ -1870,6 +1870,16 @@ footer .social .social-icon svg {
   }
 }
 @media screen and (min-width: 1080px) {
+  h1,
+  .h1 {
+    font-size: 4rem;
+  }
+  .p1,
+  span.p1,
+  .p1r,
+  .p1 p {
+    font-size: 1.5rem;
+  }
   nav.top {
     padding: 0 3rem;
   }
@@ -1879,6 +1889,22 @@ footer .social .social-icon svg {
   }
   main.home .header #title h1 {
     font-size: 10.2rem;
+  }
+  main.home #dates,
+  main.home #about,
+  main.home #artists {
+    padding-bottom: 9rem;
+  }
+  main.home #dates a.button,
+  main.home #about a.button,
+  main.home #artists a.button {
+    margin-top: 1rem;
+  }
+  main.home #dates {
+    padding-top: 8rem;
+  }
+  main.home #about .byline {
+    padding-bottom: 12rem;
   }
   main.about .dress {
     padding-left: 3rem;
