@@ -243,11 +243,8 @@
 
   main.artist-single {
     margin: 0;
-    padding: 0 2.75rem;
 
     .project-img {
-      margin: auto -2.75rem;
-
       img {
         margin: 0;
       }
@@ -258,8 +255,8 @@
         position: absolute;
         bottom: -0.6rem;
         left: 0;
-        width: calc(100% - 2.75rem);
-        padding-left: 2.75rem;
+        width: calc(100% - 1.5rem);
+        padding-left: 1.5rem;
         margin-bottom: 0;
 
         .overlay-gradient {
@@ -290,8 +287,8 @@
         content: "";
         position: absolute;
         top: 0;
-        left: -2.75rem;
-        width: calc(100% + 5.5rem);
+        left: -1.5rem;
+        width: calc(100% + 3rem);
         height: 100%;
         z-index: -1;
         opacity: 0.3;

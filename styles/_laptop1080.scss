@@ -9,8 +9,8 @@
 
   // Front Page ##########################################################
 
-  main.home {
-  }
+  // main.home {
+  // }
 
   // About Page ############################################################
 
@@ -29,6 +29,35 @@
     }
     .support {
       @include padding-calc-3rem;
+    }
+  }
+
+  //   Artists listing page ################################################
+
+  main.artist-listing {
+    @include padding-3rem;
+    min-height: 60%;
+  }
+
+  // Single Artist page ####################################################
+
+  main.artist-single {
+    padding: 0 3rem;
+
+    .project-img {
+      margin: 0 -3rem;
+
+      h2.project-title {
+        width: calc(100% - 3rem);
+        padding-left: 3rem;
+      }
+    }
+
+    .project-info-grid {
+      &::before {
+        left: -3rem;
+        width: calc(100% + 6rem);
+      }
     }
   }
 
@@ -63,13 +92,6 @@
         }
       }
     }
-  }
-
-  //   Artists listing page ################################################
-
-  main.artist-listing {
-    @include padding-3rem;
-    min-height: 60%;
   }
 
   // Donate ##################################################################

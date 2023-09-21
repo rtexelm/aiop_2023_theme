@@ -21,7 +21,7 @@ get_header();
 
     <h1 class="hidden">Donate</h1>
 
-    <h2 class="page-title f-weight-700">Donate</h2>
+    <h2 class="page-title h1">Donate</h2>
 
     <div class="payment-method paypal">
         <h2>PayPal</h2>

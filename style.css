@@ -1287,10 +1287,6 @@ footer .social .social-icon svg {
   }
   main.artist-single {
     margin: 0;
-    padding: 0 2.75rem;
-  }
-  main.artist-single .project-img {
-    margin: auto -2.75rem;
   }
   main.artist-single .project-img img {
     margin: 0;
@@ -1301,8 +1297,8 @@ footer .social .social-icon svg {
     position: absolute;
     bottom: -0.6rem;
     left: 0;
-    width: calc(100% - 2.75rem);
-    padding-left: 2.75rem;
+    width: calc(100% - 1.5rem);
+    padding-left: 1.5rem;
     margin-bottom: 0;
   }
   main.artist-single .project-img h2.project-title .overlay-gradient {
@@ -1330,8 +1326,8 @@ footer .social .social-icon svg {
     content: "";
     position: absolute;
     top: 0;
-    left: -2.75rem;
-    width: calc(100% + 5.5rem);
+    left: -1.5rem;
+    width: calc(100% + 3rem);
     height: 100%;
     z-index: -1;
     opacity: 0.3;
@@ -1742,6 +1738,25 @@ footer .social .social-icon svg {
     padding-right: 3rem;
     width: calc(100% - 6rem);
   }
+  main.artist-listing {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    min-height: 60%;
+  }
+  main.artist-single {
+    padding: 0 3rem;
+  }
+  main.artist-single .project-img {
+    margin: 0 -3rem;
+  }
+  main.artist-single .project-img h2.project-title {
+    width: calc(100% - 3rem);
+    padding-left: 3rem;
+  }
+  main.artist-single .project-info-grid::before {
+    left: -3rem;
+    width: calc(100% + 6rem);
+  }
   main.schedule {
     padding: 0 3rem;
   }
@@ -1769,11 +1784,6 @@ footer .social .social-icon svg {
     width: 6vw;
     display: block;
     flex-shrink: 0;
-  }
-  main.artist-listing {
-    padding-left: 3rem;
-    padding-right: 3rem;
-    min-height: 60%;
   }
   main.donate {
     padding-left: 3rem;
