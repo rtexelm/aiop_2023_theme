@@ -201,8 +201,8 @@ div.button.pink {
 }
 a.button.pink:hover,
 div.button.pink:hover {
-  border-color: #c7a1d8;
-  background: #c7a1d8;
+  border-color: #810061;
+  background: #810061;
   color: white;
 }
 a.button.pink:hover::after,
@@ -423,7 +423,10 @@ nav.top .menuFull a {
   text-decoration: none;
 }
 nav.top .menuFull a:visited {
-  color: #000;
+  color: #2c2c2c;
+}
+nav.top .menuFull a:hover {
+  color: #dadb0d;
 }
 nav.top .menuFull ul {
   margin: 0px;
@@ -453,7 +456,7 @@ nav.top .menuFull ul#menu-full-navigation .submenu:not(.submenu ~ .submenu) {
 main.home .header {
   z-index: 0;
   position: relative;
-  min-height: 65%;
+  min-height: 65vh;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -871,25 +874,25 @@ main.schedule div.day .geo-area {
   min-height: 3.5rem;
 }
 main.schedule div.day .pp-container {
+  position: relative;
   border-top: 1px solid #ff779c;
   padding-top: 0.5rem;
   margin-bottom: 2rem;
+}
+main.schedule div.day .pp-container a.program-link {
+  display: none;
 }
 main.schedule div.day .pp-container .button {
   margin-top: 0.5rem;
 }
 main.schedule div.day .artist-container {
+  position: relative;
   border-top: 1px solid #ff779c;
   margin-bottom: 1rem;
   padding: 0.5rem 0;
-  background-image: linear-gradient(to left, transparent, transparent 50%, hsla(344, 100%, 73%, 0.75) 50%, hsla(344, 100%, 73%, 0.75));
-  background-position: 100% 0;
-  background-size: 200% 100%;
-  transition: background-position 0.5s ease-in-out, border-color 1s ease;
 }
-main.schedule div.day .artist-container:hover {
-  background-position: 0 0;
-  border-color: #f0fa00;
+main.schedule div.day .artist-container a.schedule-link {
+  display: none;
 }
 main.schedule div.day .artist-container .location {
   display: none;
@@ -1290,6 +1293,9 @@ footer .social .social-icon svg {
   }
   main.artist-single .project-img img {
     margin: 0;
+    max-height: 90vh;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   main.artist-single .project-img h2.project-title {
     z-index: 0;
@@ -1401,12 +1407,40 @@ footer .social .social-icon svg {
     flex-shrink: 0;
   }
   main.schedule div.day .artist-container {
+    background-image: linear-gradient(to left, transparent, transparent 50%, hsla(344, 100%, 73%, 0.75) 50%, hsla(344, 100%, 73%, 0.75));
+    background-position: 100% 0;
+    background-size: 201% 100%;
+    transition: background-position 0.5s ease-in-out, border-color 1s ease;
     display: flex;
     gap: 1rem;
   }
-  main.schedule .pp-container {
+  main.schedule div.day .artist-container a.schedule-link {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  main.schedule div.day .artist-container:hover {
+    background-position: 0 0;
+    border-color: #f0fa00;
+  }
+  main.schedule div.day .pp-container {
+    background-image: linear-gradient(to left, transparent, transparent 50%, hsla(344, 100%, 73%, 0.75) 50%, hsla(344, 100%, 73%, 0.75));
+    background-position: 100% 0;
+    background-size: 201% 100%;
+    transition: background-position 0.5s ease-in-out, border-color 1s ease;
     display: flex;
     gap: 1rem;
+  }
+  main.schedule div.day .pp-container a.program-link {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  main.schedule div.day .pp-container:hover {
+    background-position: 0 0;
+    border-color: #f0fa00;
   }
   #program-background {
     background: url(assets/dress/tablet/desktop-bg-texture.png) 50%/cover no-repeat, #810061;
@@ -1713,6 +1747,18 @@ footer .social .social-icon svg {
   nav.top {
     padding: 0 3rem;
   }
+  main.home .header #title {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  main.home .header #title h1 {
+    font-size: 10.2rem;
+  }
+  main.home #dates,
+  main.home #about,
+  main.home #artists {
+    padding: 3rem;
+  }
   main.about .dress {
     padding-left: 3rem;
     padding-right: 3rem;
@@ -1799,24 +1845,6 @@ footer .social .social-icon svg {
   }
   footer #footer-social {
     grid-column: 9/11;
-  }
-}
-@media screen and (min-width: 1400px) {
-  h1,
-  span.h1,
-  h2,
-  span.h2,
-  h3,
-  span.h3,
-  h4,
-  span.h4,
-  h5,
-  span.h5,
-  p.p1 {
-    line-height: 1em;
-  }
-  nav .menuFull ul#menu-full-navigation li a {
-    font-size: 2.5rem;
   }
 }
 main.maps {

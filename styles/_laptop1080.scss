@@ -9,8 +9,19 @@
 
   // Front Page ##########################################################
 
-  // main.home {
-  // }
+  main.home {
+    .header #title {
+      @include padding-3rem;
+      h1 {
+        font-size: 10.2rem;
+      }
+    }
+    #dates,
+    #about,
+    #artists {
+      padding: 3rem;
+    }
+  }
 
   // About Page ############################################################
 

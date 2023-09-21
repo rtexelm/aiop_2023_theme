@@ -1,6 +1,7 @@
 jQuery(document).ready(function ($) {
   var menuOpen = false;
   var prevScroll = window.scrollY;
+  var menuArea = $(".menuFull");
 
   // Menu toggle
 
@@ -20,6 +21,25 @@ jQuery(document).ready(function ($) {
       }
     } else {
       console.log("CLOSE MENU");
+      if (window.innerWidth < 720) {
+        $(".menuFull").css("left", "140vw");
+      } else {
+        $(".menuFull").css("left", "120vw");
+      }
+    }
+  });
+
+  // Menu close on outside click
+
+  $(document).on("click", (e) => {
+    const toggle = $("#menuToggleAnchor");
+    if (
+      !!menuOpen &&
+      !$(e.target).closest(menuArea).length &&
+      !$(e.target).closest(toggle).length
+    ) {
+      console.log("CLOSE MENU from outside");
+      menuOpen = !menuOpen;
       if (window.innerWidth < 720) {
         $(".menuFull").css("left", "140vw");
       } else {

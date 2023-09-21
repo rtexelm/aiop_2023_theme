@@ -86,7 +86,10 @@ nav.top {
     a {
       text-decoration: none;
       &:visited {
-        color: $black;
+        color: $coal;
+      }
+      &:hover {
+        color: $dadbod-yellow;
       }
     }
 

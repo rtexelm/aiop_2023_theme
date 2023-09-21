@@ -30,6 +30,11 @@ main.schedule {
     }
 
     .pp-container {
+      position: relative;
+      a.program-link {
+        display: none;
+      }
+
       border-top: 1px solid #ff779c;
       padding-top: 0.5rem;
       margin-bottom: 2rem;
@@ -39,25 +44,14 @@ main.schedule {
     }
 
     .artist-container {
+      position: relative;
+      a.schedule-link {
+        display: none;
+      }
+
       border-top: 1px solid $pink;
       margin-bottom: 1rem;
       padding: 0.5rem 0;
-
-      background-image: linear-gradient(
-        to left,
-        transparent,
-        transparent 50%,
-        hsla(344, 100%, 73%, 75%) 50%,
-        hsla(344, 100%, 73%, 75%)
-      );
-      background-position: 100% 0;
-      background-size: 200% 100%;
-
-      transition: background-position 0.5s ease-in-out, border-color 1s ease;
-      &:hover {
-        background-position: 0 0;
-        border-color: $neon-yellow;
-      }
 
       .location {
         display: none;

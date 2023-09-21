@@ -15,6 +15,42 @@ $primary-type: "degular-variable", sans-serif;
 $display-type: "degular-variable", sans-serif;
 $text-type: "degular-text", sans-serif;
 
+@mixin nav-links {
+  font: 1rem $display-type;
+  font-variation-settings: "wght" 600, "opsz" 40, "ital" 0;
+}
+
+@mixin twelve-col-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 1rem;
+  max-width: 100%;
+}
+
+@mixin title-display {
+  font: 15vw $display-type;
+  font-variation-settings: "wght" 700, "opsz" 72, "ital" 0; //display
+  line-height: 0.8em;
+}
+
+@mixin hov-schedule {
+  background-image: linear-gradient(
+    to left,
+    transparent,
+    transparent 50%,
+    hsla(344, 100%, 73%, 75%) 50%,
+    hsla(344, 100%, 73%, 75%)
+  );
+  background-position: 100% 0;
+  background-size: 201% 100%;
+
+  transition: background-position 0.5s ease-in-out, border-color 1s ease;
+  &:hover {
+    background-position: 0 0;
+    border-color: $neon-yellow;
+  }
+}
+
 @mixin padding-calc-mobile {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -35,27 +71,4 @@ $text-type: "degular-text", sans-serif;
 @mixin padding-3rem {
   padding-left: 3rem;
   padding-right: 3rem;
-}
-
-@mixin twelve-col-grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  column-gap: 1rem;
-  max-width: 100%;
-}
-
-@mixin title-display {
-  font: 15vw $display-type;
-  font-variation-settings: "wght" 700, "opsz" 72, "ital" 0; //display
-  line-height: 0.8em;
-}
-
-// @mixin title-display-tablet {
-//   font: 14vw $display-type;
-//   font-variation-settings: "wght" 700, "opsz" 72, "ital" 0; //display
-// }
-
-@mixin nav-links {
-  font: 1rem $display-type;
-  font-variation-settings: "wght" 600, "opsz" 40, "ital" 0;
 }
