@@ -345,7 +345,7 @@ div.button p {
 nav.top {
   position: sticky;
   transition: top 0.3s;
-  z-index: 10;
+  z-index: 100;
   background-color: #f0fa00;
   padding: 0 1.5rem;
 }
@@ -651,9 +651,26 @@ main.about .dress .c-statement h2 {
   margin-bottom: 1rem;
 }
 main.about .festival {
-  background: #810061;
+  position: relative;
   margin: -1.1vh 0 0;
   padding: 4rem 1.5rem;
+  background: #810061;
+}
+main.about .festival::before {
+  content: "";
+  position: absolute;
+  background-image: url(assets/dress/textures/fabric-texture_terry.jpg);
+  background-size: 30%;
+  mix-blend-mode: multiply;
+  width: 100%;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.3;
+}
+main.about .festival > * {
+  z-index: 10;
 }
 main.about .festival .mission h2 {
   margin-bottom: 0.5rem;
@@ -665,9 +682,26 @@ main.about .festival .history h2 {
   margin-bottom: 0.5rem;
 }
 main.about .people {
-  background: #ff779c;
+  position: relative;
   padding: 4rem 1.5rem;
+  background: #ff779c;
   color: #000;
+}
+main.about .people::before {
+  content: "";
+  position: absolute;
+  background-image: url(assets/dress/textures/fabric-texture_fine-knit.jpg);
+  background-size: 20%;
+  mix-blend-mode: multiply;
+  width: 100%;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.3;
+}
+main.about .people > * {
+  z-index: 10;
 }
 main.about .people a {
   color: #000;
@@ -688,7 +722,24 @@ main.about .people .staff-item {
   padding-top: 0.5rem;
 }
 main.about .partners {
+  position: relative;
   padding: 4rem 1.5rem;
+}
+main.about .partners::before {
+  content: "";
+  position: absolute;
+  background-image: url(assets/dress/textures/fabric-texture_fine-knit.jpg);
+  background-size: 40%;
+  mix-blend-mode: multiply;
+  width: 100%;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.3;
+}
+main.about .partners > * {
+  z-index: 10;
 }
 main.about .partners h2 {
   margin-bottom: 2rem;
@@ -708,9 +759,26 @@ main.about .partners .button {
   margin-top: 1rem;
 }
 main.about .support {
-  background: #f4d4a0;
+  position: relative;
   padding: 4rem 1.5rem;
   color: #000;
+  background: #f4d4a0;
+}
+main.about .support::before {
+  content: "";
+  position: absolute;
+  background-image: url(assets/dress/textures/fabric-texture_knit.jpg);
+  background-size: 29%;
+  mix-blend-mode: multiply;
+  width: 100%;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.3;
+}
+main.about .support > * {
+  z-index: 10;
 }
 main.about .support h2 {
   margin-bottom: 2rem;

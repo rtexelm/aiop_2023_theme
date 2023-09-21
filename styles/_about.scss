@@ -29,9 +29,28 @@ main.about {
   }
 
   .festival {
-    background: $primary-magenta;
+    position: relative;
     margin: -1.1vh 0 0;
     padding: 4rem 1.5rem;
+    background: $primary-magenta;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url(assets/dress/textures/fabric-texture_terry.jpg);
+      background-size: 30%;
+      mix-blend-mode: multiply;
+      width: 100%;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.3;
+    }
+
+    & > * {
+      z-index: 10;
+    }
 
     .mission {
       h2 {
@@ -47,8 +66,28 @@ main.about {
   }
 
   .people {
-    background: $pink;
+    position: relative;
     padding: 4rem 1.5rem;
+    background: $pink;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url(assets/dress/textures/fabric-texture_fine-knit.jpg);
+      background-size: 20%;
+      mix-blend-mode: multiply;
+      width: 100%;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.3;
+    }
+
+    & > * {
+      z-index: 10;
+    }
+
     a {
       color: $black;
       &:visited {
@@ -73,7 +112,27 @@ main.about {
   }
 
   .partners {
+    position: relative;
     padding: 4rem 1.5rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url(assets/dress/textures/fabric-texture_fine-knit.jpg);
+      background-size: 40%;
+      mix-blend-mode: multiply;
+      width: 100%;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.3;
+    }
+
+    & > * {
+      z-index: 10;
+    }
+
     h2 {
       margin-bottom: 2rem;
     }
@@ -97,9 +156,30 @@ main.about {
   }
 
   .support {
-    background: $beige;
+    position: relative;
     padding: 4rem 1.5rem;
     color: $black;
+
+    background: $beige;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url(assets/dress/textures/fabric-texture_knit.jpg);
+      background-size: 29%;
+      mix-blend-mode: multiply;
+      width: 100%;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.3;
+    }
+
+    & > * {
+      z-index: 10;
+    }
+
     h2 {
       margin-bottom: 2rem;
     }
