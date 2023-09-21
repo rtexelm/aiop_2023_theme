@@ -1203,7 +1203,7 @@ footer .social .social-icon svg {
 @media screen and (min-width: 720px) {
   h1,
   .h1 {
-    font-size: 3rem;
+    font-size: 3.2rem;
   }
   h2,
   .h2 {
@@ -1531,7 +1531,7 @@ footer .social .social-icon svg {
   main.schedule div.day .pp-time,
   main.schedule div.day .artist-time {
     margin: 0;
-    width: 6vw;
+    width: 4rem;
     flex-shrink: 0;
   }
   main.schedule div.day .artist-container {
