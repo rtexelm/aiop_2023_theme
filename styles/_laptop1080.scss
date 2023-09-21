@@ -5,36 +5,33 @@
   .h1 {
     font-size: 4rem;
   }
-  // h2,
-  // .h2 {
-  //   font-size: 2.5rem;
-  // }
-  // h3,
-  // .h3 {
-  //   font-size: 1.5rem;
-  // }
-  // h4,
-  // .h4 {
-  //   font-size: 1.5rem;
-  // }
-  // h5,
-  // .h5 {
-  //   font-size: 0.875rem;
-  // }
+  h2,
+  .h2 {
+    font-size: 3rem;
+  }
+  h3,
+  .h3 {
+    font-size: 1.65rem;
+  }
+  h4,
+  .h4 {
+    font-size: 1.25rem;
+  }
 
   .p1,
   span.p1,
   .p1r,
   .p1 p {
-    font-size: 1.5rem;
+    font-size: 1.65rem;
   }
 
-  // .p2,
-  // span.p2,
-  // .p2r,
-  // .p2 p {
-  //   font-size: 1.2rem;
-  // }
+  .p2,
+  span.p2,
+  .p2r,
+  .p2 p {
+    font-size: 1.4rem;
+  }
+
   //   Nav ##############################################################
 
   nav.top {
@@ -124,6 +121,13 @@
 
   main.schedule {
     padding: 0 3rem;
+
+    div.day {
+      .pp-time,
+      .artist-time {
+        width: 5rem;
+      }
+    }
   }
 
   //   Public Programs page ################################################
@@ -169,6 +173,7 @@
   // Press ##################################################################
 
   main.press {
+    min-height: 70%;
     section.press-posts {
       @include padding-3rem;
     }

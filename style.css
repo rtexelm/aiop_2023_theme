@@ -87,7 +87,7 @@ span.p1,
 .p1r {
   font-size: 1.2rem;
   line-height: 1.1em;
-  font-variation-settings: "opsz" 12;
+  font-variation-settings: "wght" 300, "opsz" 12;
 }
 
 span.highlight {
@@ -1874,11 +1874,29 @@ footer .social .social-icon svg {
   .h1 {
     font-size: 4rem;
   }
+  h2,
+  .h2 {
+    font-size: 3rem;
+  }
+  h3,
+  .h3 {
+    font-size: 1.65rem;
+  }
+  h4,
+  .h4 {
+    font-size: 1.25rem;
+  }
   .p1,
   span.p1,
   .p1r,
   .p1 p {
-    font-size: 1.5rem;
+    font-size: 1.65rem;
+  }
+  .p2,
+  span.p2,
+  .p2r,
+  .p2 p {
+    font-size: 1.4rem;
   }
   nav.top {
     padding: 0 3rem;
@@ -1953,6 +1971,10 @@ footer .social .social-icon svg {
   main.schedule {
     padding: 0 3rem;
   }
+  main.schedule div.day .pp-time,
+  main.schedule div.day .artist-time {
+    width: 5rem;
+  }
   main.public-programs {
     min-height: 60%;
     padding-left: 3rem;
@@ -1986,6 +2008,9 @@ footer .social .social-icon svg {
     padding-right: 3rem;
     min-height: 60%;
   }
+  main.press {
+    min-height: 70%;
+  }
   main.press section.press-posts {
     padding-left: 3rem;
     padding-right: 3rem;
@@ -1998,6 +2023,45 @@ footer .social .social-icon svg {
   }
 }
 @media screen and (min-width: 1400px) {
+  h1,
+  .h1,
+  span.h1 {
+    font-size: 5rem;
+  }
+  h3,
+  .h3 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1.25rem;
+  }
+  .p1,
+  span.p1,
+  .p1r,
+  .p1 p {
+    font-size: 2rem;
+  }
+  .p2,
+  span.p2,
+  .p2r,
+  .p2 p {
+    font-size: 1.5rem;
+  }
+  a,
+  a.button {
+    font-size: 1.5rem;
+  }
+  nav.top .menuFull ul#menu-full-navigation li a {
+    font-size: 2.5rem;
+  }
+  nav.top .menuFull ul#menu-full-navigation .submenu a {
+    font-size: 2rem;
+  }
+  main.home #dates,
+  main.home #about,
+  main.home #artists {
+    padding-bottom: 10rem;
+  }
   #schedule-background {
     background-size: 25%;
   }

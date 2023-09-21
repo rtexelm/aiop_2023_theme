@@ -139,7 +139,7 @@ get_header();
                 alt="Bureau of General Services – Queer Division" class="partner-logo" id="partner-logo-bureau" />
 
             <div class="partner bureau">
-                <p class="partner-text"><?php echo $bureau; ?></p>
+                <p class="partner-text p2"><?php echo $bureau; ?></p>
                 <a target="_blank" href="https://bookshop.org/shop/bgsqd" class="button neon-yellow">bgsqd.com</a>
             </div>
         </div>
@@ -150,7 +150,7 @@ get_header();
                 class="partner-logo" id="partner-logo-center" />
 
             <div class="partner the-center">
-                <p class="partner-text"><?php echo $center; ?></p>
+                <p class="partner-text p2"><?php echo $center; ?></p>
                 <a target="_blank" href="https://gaycenter.org/" class="button neon-yellow">gaycenter.org</a>
             </div>
         </div>
@@ -161,7 +161,7 @@ get_header();
                 class="partner-logo" id="partner-logo-pollinate" />
 
             <div class="partner pollinate">
-                <p class="partner-text"><?php echo $pollinate; ?></p>
+                <p class="partner-text p2"><?php echo $pollinate; ?></p>
                 <a target="_blank" href="https://www.pollinate.co/" class="button neon-yellow">pollinate.co</a>
             </div>
         </div>

@@ -1,59 +1,72 @@
 @use "constants" as *;
 
 @media screen and (min-width: 1400px) {
-  // h1,
-  // span.h1,
+  h1,
+  .h1,
+  span.h1 {
+    font-size: 5rem;
+  }
+
   // h2,
-  // span.h2,
-  // h3,
-  // span.h3,
-  // h4,
-  // span.h4,
-  // h5,
-  // span.h5,
-  // p.p1 {
-  //   line-height: 1em;
-  // }
-  // h1,
-  // span.h1 {
+  // .h2 {
   //   font-size: 4rem;
   // }
-  // h2,
-  // span.h2 {
-  //   font-size: 4rem;
-  // }
-  // h3,
-  // span.h3 {
-  //   font-size: 2.5rem;
-  // }
+
+  h3,
+  .h3 {
+    font-size: 2rem;
+  }
+
   // h4,
-  // span.h4 {
+  // .h4 {
   //   font-size: 1.5rem;
   // }
+
   // h5,
-  // span.h5 {
+  // .h5 {
   //   font-size: 1.125rem;
   // }
-  // p,
-  // a {
-  //   font-size: 1.5rem;
-  //   font-weight: 200;
-  //   &.p1,
-  //   span.p1,
-  //   &.p1r {
-  //     font-size: 2rem;
-  //     line-height: 1.25em;
-  //   }
-  // }
-  // nav .menuFull ul#menu-full-navigation li a {
-  //   font-size: 2.5rem;
-  // }
+
+  p {
+    font-size: 1.25rem;
+  }
+
+  .p1,
+  span.p1,
+  .p1r,
+  .p1 p {
+    font-size: 2rem;
+  }
+
+  .p2,
+  span.p2,
+  .p2r,
+  .p2 p {
+    font-size: 1.5rem;
+  }
+
+  a,
+  a.button {
+    font-size: 1.5rem;
+  }
+  nav.top .menuFull ul#menu-full-navigation {
+    li a {
+      font-size: 2.5rem;
+    }
+    .submenu a {
+      font-size: 2rem;
+    }
+  }
 
   // Front page ############################################################
 
-  // main.home {
-
-  // }
+  main.home {
+    #dates,
+    #about,
+    #artists {
+      padding-bottom: 10rem;
+    }
+  }
 
   // About ###################################################################
 
