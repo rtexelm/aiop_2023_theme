@@ -111,23 +111,29 @@ get_header();
 
             <h3 class="h2 project-artists"><?php echo $displayName ?></h3>
 
+            <?php if ($friday_location): ?>
             <div class="location">
                 <h4>Friday</h4>
                 <p class="p1"><?php echo $fri_final ?></p>
                 <p class="p1"><?php echo $friday_location ?></p>
             </div>
+            <?php endif ?>
 
+            <?php if ($saturday_location): ?>
             <div class="location">
                 <h4>Saturday</h4>
                 <p class="p1"><?php echo $sat_final ?></p>
                 <p class="p1"><?php echo $saturday_location ?></p>
             </div>
+            <?php endif ?>
 
+            <?php if ($sunday_location): ?>
             <div class="location">
                 <h4>Sunday</h4>
                 <p class="p1"><?php echo $sun_final ?></p>
                 <p class="p1"><?php echo $sunday_location ?></p>
             </div>
+            <?php endif ?>
 
         </section>
 

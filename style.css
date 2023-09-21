@@ -385,6 +385,7 @@ nav.top .menuVisible {
   display: none;
 }
 nav.top .menuFull {
+  padding-top: 1rem;
   z-index: 12;
   position: fixed;
   left: 140vw;
@@ -395,15 +396,11 @@ nav.top .menuFull {
   transition: all 0.66s;
   background-color: #f74500;
 }
-nav.top .menuFull .bg-wrapper {
-  position: relative;
-  height: 100%;
-}
-nav.top .menuFull .bg-wrapper::before {
+nav.top .menuFull::before {
   content: "";
   position: absolute;
-  background-image: url(assets/dress/home-mobile-bg.png);
-  background-size: 100% auto;
+  background-image: url(assets/dress/textures/fabric-texture_knit.jpg);
+  background-size: 16%;
   mix-blend-mode: multiply;
   width: 100%;
   overflow: hidden;
@@ -411,10 +408,15 @@ nav.top .menuFull .bg-wrapper::before {
   right: 0px;
   bottom: 0px;
   left: 0px;
-  opacity: 0.6;
+  opacity: 0.4;
 }
-nav.top .menuFull .bg-wrapper .fullNav {
-  position: relative;
+nav.top .menuFull .vert-stitch {
+  position: absolute;
+  height: 100%;
+  width: auto;
+  left: 0;
+  top: 0;
+  bottom: 0;
 }
 nav.top .menuFull a {
   text-decoration: none;

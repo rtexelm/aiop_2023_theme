@@ -33,10 +33,10 @@
                 <div class="menuVisible">
                     <?php 
 						wp_nav_menu( array( 
-							'theme_location' => 'top-navigation', 
+                            'theme_location' => 'top-navigation', 
 							'container_class' => 'topNav' 
-						) );
-						?>
+                            ) );
+                            ?>
                 </div>
                 <a title="full menu" href="#menuFull" id="menuToggleAnchor">
                     <img id="menuToggle" src="<?php bloginfo('template_url'); ?>/assets/dress/hamburger24.svg"
@@ -45,8 +45,10 @@
             </div>
         </section>
         <div class="menuFull" id="menuFull">
-            <div class="bg-wrapper">
-                <?php 
+
+            <img src="<?php bloginfo('template_url'); ?>/assets/dress/textures/stitches-yellow-vert1440w.png" alt=""
+                class="vert-stitch" />
+            <?php 
 					wp_nav_menu( array( 
 						'theme_location' => 'full-navigation', 
 						'container_class' => 'fullNav' 
@@ -56,6 +58,5 @@
 					// 'container_class' => 'subNav' 
 					// ) );
 					?>
-            </div>
         </div>
     </nav>

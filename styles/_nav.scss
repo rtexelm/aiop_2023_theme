@@ -48,6 +48,7 @@ nav.top {
   }
 
   .menuFull {
+    padding-top: 1rem;
     z-index: 12;
     position: fixed;
     left: 140vw;
@@ -57,28 +58,28 @@ nav.top {
     flex-direction: column;
     transition: all 0.66s;
     background-color: $primary-orange;
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url(assets/dress/textures/fabric-texture_knit.jpg);
+      background-size: 16%;
+      mix-blend-mode: multiply;
+      width: 100%;
+      overflow: hidden;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.4;
+    }
 
-    .bg-wrapper {
-      position: relative;
+    .vert-stitch {
+      position: absolute;
       height: 100%;
-      &::before {
-        content: "";
-        position: absolute;
-        background-image: url(assets/dress/home-mobile-bg.png);
-        background-size: 100% auto;
-        mix-blend-mode: multiply;
-        width: 100%;
-        overflow: hidden;
-        top: 0px;
-        right: 0px;
-        bottom: 0px;
-        left: 0px;
-        opacity: 0.6;
-      }
-
-      .fullNav {
-        position: relative;
-      }
+      width: auto;
+      left: 0;
+      top: 0;
+      bottom: 0;
     }
 
     a {

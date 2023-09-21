@@ -9,6 +9,9 @@ function artistNameFormat($name1, $name2, $name3) {
 
 function scheduleFormat($start, $end) {
 
+    if (!$start || !$end) return;
+    if ($start == "All Day") return "All Day";
+
     [$start_h, $start_temp] = explode(":", $start);
     $start_m = substr($start_temp,0,2);
     $start_ap = substr($start_temp, -2);
