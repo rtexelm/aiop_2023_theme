@@ -12,7 +12,7 @@ jQuery(document).ready(function ($) {
       if (window.innerWidth < 720) {
         $(".menuFull").css("left", "0");
       } else {
-        $(".menuFull").css("left", "75vw");
+        $(".menuFull").css("left", "69vw");
       }
     } else {
       console.log("CLOSE MENU");

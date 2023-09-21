@@ -15,17 +15,13 @@ get_header();
 	
 ?>
 
-<?php
-    wp_reset_query();
-
-?>
 
 <div id="donate-bg"></div>
 <main class="site-content donate">
 
     <h1 class="hidden">Donate</h1>
 
-    <?php while ( have_posts() ) : the_post(); ?>
+    <h2 class="page-title f-weight-700">Donate</h2>
 
     <div class="payment-method paypal">
         <h2>PayPal</h2>
@@ -46,7 +42,6 @@ get_header();
         </p>
     </div>
 
-    <?php endwhile; // end of the loop. ?>
 </main><!-- #primary -->
 
 <?php get_footer(); ?>

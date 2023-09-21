@@ -489,10 +489,11 @@
     @include twelve-col-grid;
     min-height: 50%;
     .page-title {
-      grid-column: 2/12;
+      grid-column: 1/12;
       grid-row: 1/2;
     }
     div.payment-method {
+      margin-top: 0;
       grid-row: 2/3;
       &.paypal {
         grid-column: 1/6;
