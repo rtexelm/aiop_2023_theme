@@ -6,13 +6,24 @@ div#donate-bg {
   top: 0px;
   width: 100%;
   height: 100%;
-  background: url(assets/dress/tablet/desktop-bg-texture.png), $beige;
-  background-blend-mode: multiply;
-  background-size: cover;
+  background: $beige;
+  &::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(assets/dress/textures/fabric-texture_fine-knit.jpg);
+    mix-blend-mode: multiply;
+    background-size: 60%;
+    opacity: 0.3;
+  }
 }
 main.donate {
-  width: calc(100% - 3rem);
-  margin: 4rem 1.5rem;
+  padding: 4rem 1.5rem;
   color: $black;
 
   div.payment-method {

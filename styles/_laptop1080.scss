@@ -1,6 +1,37 @@
 @use "constants" as *;
 
 @media screen and (min-width: 1080px) {
+  h1,
+  .h1 {
+    font-size: 4rem;
+  }
+  h2,
+  .h2 {
+    font-size: 3rem;
+  }
+  h3,
+  .h3 {
+    font-size: 1.65rem;
+  }
+  h4,
+  .h4 {
+    font-size: 1.25rem;
+  }
+
+  .p1,
+  span.p1,
+  .p1r,
+  .p1 p {
+    font-size: 1.65rem;
+  }
+
+  .p2,
+  span.p2,
+  .p2r,
+  .p2 p {
+    font-size: 1.4rem;
+  }
+
   //   Nav ##############################################################
 
   nav.top {
@@ -10,25 +41,79 @@
   // Front Page ##########################################################
 
   main.home {
+    .header #title {
+      @include padding-3rem;
+      h1 {
+        font-size: 10.2rem;
+      }
+    }
+
+    #dates,
+    #about,
+    #artists {
+      padding-bottom: 9rem;
+      a.button {
+        margin-top: 1rem;
+      }
+    }
+
+    #dates {
+      padding-top: 8rem;
+    }
+
+    #about {
+      .byline {
+        padding-bottom: 12rem;
+      }
+    }
   }
 
   // About Page ############################################################
 
   main.about {
     .dress {
-      @include padding3rem;
+      @include padding-calc-3rem;
     }
     .festival {
-      @include padding3rem;
+      @include padding-calc-3rem;
     }
     .people {
-      @include padding3rem;
+      @include padding-calc-3rem;
     }
     .partners {
-      @include padding3rem;
+      @include padding-calc-3rem;
     }
     .support {
-      @include padding3rem;
+      @include padding-calc-3rem;
+    }
+  }
+
+  //   Artists listing page ################################################
+
+  main.artist-listing {
+    @include padding-3rem;
+    min-height: 60%;
+  }
+
+  // Single Artist page ####################################################
+
+  main.artist-single {
+    padding: 0 3rem;
+
+    .project-img {
+      margin: 0 -3rem;
+
+      h2.project-title {
+        width: calc(100% - 3rem);
+        padding-left: 3rem;
+      }
+    }
+
+    .project-info-grid {
+      &::before {
+        left: -3rem;
+        width: calc(100% + 6rem);
+      }
     }
   }
 
@@ -36,14 +121,20 @@
 
   main.schedule {
     padding: 0 3rem;
+
+    div.day {
+      .pp-time,
+      .artist-time {
+        width: 5rem;
+      }
+    }
   }
 
   //   Public Programs page ################################################
 
   main.public-programs {
     min-height: 60%;
-    width: calc(100% - 6rem);
-    margin: 4rem 3rem 4rem 3rem;
+    @include padding-3rem;
     .program-container {
       .date-time {
         grid-column: 6/11;
@@ -66,29 +157,25 @@
     }
   }
 
-  //   Artists listing page ################################################
+  // Donate ##################################################################
 
-  main.artist-listing {
-    section.artists {
-      width: calc(100% - 6rem);
-      margin: 4rem 3rem 0 3rem;
+  div#donate-bg {
+    &::before {
+      background-size: 40%;
     }
   }
 
-  // Donate ##################################################################
-
   main.donate {
-    width: calc(100% - 6rem);
-    margin: 4rem 3rem;
+    @include padding-3rem;
+    min-height: 60%;
   }
 
   // Press ##################################################################
 
   main.press {
-    min-height: 60%;
+    min-height: 70%;
     section.press-posts {
-      width: calc(100% - 6rem);
-      margin: 4rem 3rem;
+      @include padding-3rem;
     }
   }
 

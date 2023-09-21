@@ -111,23 +111,29 @@ get_header();
 
             <h3 class="h2 project-artists"><?php echo $displayName ?></h3>
 
+            <?php if ($friday_location): ?>
             <div class="location">
                 <h4>Friday</h4>
                 <p class="p1"><?php echo $fri_final ?></p>
                 <p class="p1"><?php echo $friday_location ?></p>
             </div>
+            <?php endif ?>
 
+            <?php if ($saturday_location): ?>
             <div class="location">
                 <h4>Saturday</h4>
                 <p class="p1"><?php echo $sat_final ?></p>
                 <p class="p1"><?php echo $saturday_location ?></p>
             </div>
+            <?php endif ?>
 
+            <?php if ($sunday_location): ?>
             <div class="location">
                 <h4>Sunday</h4>
                 <p class="p1"><?php echo $sun_final ?></p>
                 <p class="p1"><?php echo $sunday_location ?></p>
             </div>
+            <?php endif ?>
 
         </section>
 
@@ -148,19 +154,19 @@ get_header();
                 <?php 
 								
 					if($artist_1_bio){
-						echo "<p>" . $artist_1_bio . "</p>";
+						echo "<p class='bio'>" . $artist_1_bio . "</p>";
 					}
 					if($artist_1_link){
 						echo "<a target='blank' class='test' href='" . esc_url($artist_1_link['url']) . "'>" . esc_attr( $artist_1_link['title'] ) . "</a>";
 					}
 					if($artist_2_bio){
-						echo "<p>" . $artist_2_bio . "</p>";
+						echo "<p class='bio'>" . $artist_2_bio . "</p>";
 					}
 					if($artist_2_link){
 						echo "<a target='blank' class='test' href='" . esc_url($artist_2_link['url']) . "'>" . esc_attr( $artist_2_link['title'] ) . "</a>";
 					}
 					if($artist_3_bio){
-						echo "<p>" . $artist_3_bio . "</p>";
+						echo "<p class='bio'>" . $artist_3_bio . "</p>";
 					}
 					if($artist_3_link){
 						echo "<a target='blank' class='test' href='" . esc_url($artist_3_link['url']) . "'>" . esc_attr( $artist_3_link['title'] ) . "</a>";

@@ -6,16 +6,25 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: url(assets/dress/home-mobile-bg.png) 50% / cover no-repeat,
-    $primary-magenta;
-  background-blend-mode: multiply;
+  background: $primary-magenta;
   z-index: -10;
+  &::before {
+    content: "";
+    position: absolute;
+    background: url(assets/dress/textures/fabric-texture_woven-01.jpg);
+    mix-blend-mode: multiply;
+    background-size: 15%;
+    opacity: 0.3;
+    width: 100%;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+  }
 }
 
 main.public-programs {
-  padding-top: 1rem;
-  width: calc(100% - 3rem);
-  margin: 4rem 1.5rem 4rem 1.5rem;
+  padding: 5rem 1.5rem 4rem 1.5rem;
   .program-container {
     margin-top: 2rem;
     border-top: 1px solid $primary-orange;

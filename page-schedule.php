@@ -66,6 +66,7 @@ get_header();
             <article class="public-program">
                 <h3 class="f-weight-700 pp-head">Public Programming</h3>
                 <div class="pp-container">
+                    <a href="#" class="program-link" title="RSVP for Walk & Talk"></a>
                     <h4 class="pp-time">
                         6-7:30pm
                     </h4>
@@ -73,7 +74,7 @@ get_header();
                         <h3>Walk & Talk</h3>
                         <h4>BGSQD Bookstore</h4>
                     </div>
-                    <a class="button neon-yellow" title="Walk & Talk" href=#>RSVP</a>
+                    <a class="button neon-yellow" title="RSVP for Walk & Talk" href="#">RSVP</a>
                 </div>
             </article>
 
@@ -104,6 +105,8 @@ get_header();
             <?php if($friday_location): ?>
 
             <div class="artist-container">
+                <a class="schedule-link" title="view <?php echo $displayName ?>"
+                    href="<?php echo the_permalink(); ?>"></a>
                 <h4 class="artist-time">
                     <?php echo $fri_final ?>
                 </h4>
@@ -134,6 +137,7 @@ get_header();
             <article class="public-program">
                 <h3 class="f-weight-700">Public Programming</h3>
                 <div class="pp-container">
+                    <a href="#" class="program-link" title="Tickets for Paper Dress Ball"></a>
                     <h4 class="pp-time">
                         7-10pm
                     </h4>
@@ -141,7 +145,7 @@ get_header();
                         <h3>Paper Dress Ball</h3>
                         <h4>BGSQD Bookstore</h4>
                     </div>
-                    <a class="button neon-yellow" title="Paper Dress Ball" href=#>Tickets</a>
+                    <a class="button neon-yellow" title="Tickest for Paper Dress Ball" href="#">Tickets</a>
                 </div>
             </article>
 
@@ -173,6 +177,8 @@ get_header();
 
             <?php if($saturday_location): ?>
             <div class="artist-container">
+                <a class="schedule-link" title="view <?php echo $displayName ?>"
+                    href="<?php echo the_permalink(); ?>"></a>
                 <h4 class="artist-time">
                     <?php echo $sat_final ?>
                 </h4>
@@ -202,6 +208,7 @@ get_header();
             <article class="public-program">
                 <h3 class="f-weight-700">Public Programming</h3>
                 <div class="pp-container">
+                    <a href="#" class="program-link" title="RSVP for Runway"></a>
                     <h4 class="pp-time">
                         1-2pm
                     </h4>
@@ -209,7 +216,7 @@ get_header();
                         <h3>Runway</h3>
                         <h4>14th Street</h4>
                     </div>
-                    <a class="button neon-yellow" title="Runway" href=#>RSVP</a>
+                    <a class="button neon-yellow" title="RSVP for Runway" href="#">RSVP</a>
                 </div>
             </article>
 
@@ -242,6 +249,8 @@ get_header();
             <?php if($sunday_location): ?>
 
             <div class="artist-container">
+                <a class="schedule-link" title="view <?php echo $displayName ?>"
+                    href="<?php echo the_permalink(); ?>"></a>
                 <h4 class="artist-time">
                     <?php echo $sun_final ?>
                 </h4>

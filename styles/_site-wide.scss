@@ -25,30 +25,23 @@ h5,
   margin: 0px;
 }
 
-span.d1 {
+.d1 {
   font-size: 3.5rem;
   font-variation-settings: "wght" 700, "opsz" 72, "ital" 0; //display
-}
-
-span.script {
-  // Enter script mixin here when available
-}
-
-.f-weight-700 {
-  font-variation-settings: "wght" 700;
+  line-height: 0.8em;
 }
 
 h1,
 .h1 {
   font-size: 3rem;
   font-variation-settings: "wght" 400, "opsz" 72;
-
+  line-height: 0.8em;
   margin-bottom: 0.5rem;
 }
 h2,
 .h2 {
   font-size: 2.2rem;
-  font-variation-settings: "wght" 250, "opsz" 72;
+  font-variation-settings: "wght" 400, "opsz" 72;
 }
 h3,
 .h3 {
@@ -81,7 +74,23 @@ span.p1,
 .p1r {
   font-size: 1.2rem;
   line-height: 1.1em;
-  font-variation-settings: "opsz" 12;
+  font-variation-settings: "wght" 300, "opsz" 12;
+}
+
+span.highlight {
+  font-size: 5rem;
+}
+
+.lh-8em {
+  line-height: 0.8em;
+}
+
+.f-weight-700 {
+  font-variation-settings: "wght" 700;
+}
+
+.f-weight-250 {
+  font-variation-settings: "wght" 250;
 }
 
 h1.hidden {
@@ -95,11 +104,6 @@ h1.hidden {
   padding: 0 !important;
   margin: 0 !important;
   clip: rect(1px, 1px, 1px, 1px);
-}
-
-.footer-credits {
-  font-size: 0.75rem;
-  color: $neon-yellow;
 }
 
 a.button,
@@ -178,8 +182,8 @@ div.button {
         content: url(assets/dress/arrow-right-light.svg);
         margin-left: 0.5rem;
       }
-      border-color: $lavender;
-      background: $lavender;
+      border-color: $primary-magenta;
+      background: $primary-magenta;
       color: white;
     }
     &:focus {
@@ -254,6 +258,25 @@ div.button {
 
 div.button p {
   display: inline-block;
+}
+
+// Stitches positions
+.stitches-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+}
+
+.stitches-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
 }
 
 // Flex classes

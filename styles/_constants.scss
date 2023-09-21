@@ -15,16 +15,11 @@ $primary-type: "degular-variable", sans-serif;
 $display-type: "degular-variable", sans-serif;
 $text-type: "degular-text", sans-serif;
 
-@mixin padding-mobile {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  width: calc(100% - 3rem);
-}
+$seciton-padding-720: 5.5rem;
 
-@mixin padding3rem {
-  padding-left: 3rem;
-  padding-right: 3rem;
-  width: calc(100% - 6rem);
+@mixin nav-links {
+  font: 1rem $display-type;
+  font-variation-settings: "wght" 600, "opsz" 40, "ital" 0;
 }
 
 @mixin twelve-col-grid {
@@ -35,25 +30,47 @@ $text-type: "degular-text", sans-serif;
 }
 
 @mixin title-display {
-  font: 16vw $display-type;
+  font: 15vw $display-type;
   font-variation-settings: "wght" 700, "opsz" 72, "ital" 0; //display
-}
-@mixin title-display-tablet {
-  font: 14vw $display-type;
-  font-variation-settings: "wght" 700, "opsz" 72, "ital" 0; //display
+  line-height: 0.8em;
 }
 
-@mixin p-deg-text {
-  font: 1rem $text-type;
-  font-variation-settings: "wght" 400, "opsz" 6, "ital" 0; //text
-  line-height: 1.125rem;
+@mixin hov-schedule {
+  background-image: linear-gradient(
+    to left,
+    transparent,
+    transparent 50%,
+    hsla(344, 100%, 73%, 75%) 50%,
+    hsla(344, 100%, 73%, 75%)
+  );
+  background-position: 100% 0;
+  background-size: 201% 100%;
+
+  transition: background-position 0.5s ease-in-out, border-color 1s ease;
+  &:hover {
+    background-position: 0 0;
+    border-color: $neon-yellow;
+  }
 }
 
-@mixin nav-links {
-  font: 1rem $display-type;
-  font-variation-settings: "wght" 600, "opsz" 40, "ital" 0;
+@mixin padding-calc-mobile {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  width: calc(100% - 3rem);
 }
 
-@mixin script-display {
-  // Enter script mixin here
+@mixin padding-calc-3rem {
+  padding-left: 3rem;
+  padding-right: 3rem;
+  width: calc(100% - 6rem);
+}
+
+@mixin padding-mobile {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@mixin padding-3rem {
+  padding-left: 3rem;
+  padding-right: 3rem;
 }

@@ -59,7 +59,7 @@ get_header();
             <p class="press-date">
                 <?php echo $article_date ?>
             </p>
-            <a href="<?php echo $article_link ?>" target="_blank" class="button pink">Read more</a>
+            <a href="<?php echo $article_link ?>" target="_blank" class="button transparent">Read more</a>
         </div>
         <?php endif ?>
         <?php endwhile ?>

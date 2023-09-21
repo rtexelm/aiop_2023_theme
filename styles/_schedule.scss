@@ -8,9 +8,10 @@
   top: 0px;
   width: 100%;
   height: 100vh;
-  background: url(assets/dress/home-mobile-bg.png);
+  background: url(assets/dress/textures/fabric-texture_terry.jpg);
   mix-blend-mode: multiply;
-  background-size: cover;
+  background-size: 35%;
+  opacity: 0.2;
 }
 main.schedule {
   margin: 4rem 0;
@@ -26,9 +27,15 @@ main.schedule {
     }
     .geo-area {
       margin-bottom: 1.5rem;
+      min-height: 3.5rem;
     }
 
     .pp-container {
+      position: relative;
+      a.program-link {
+        display: none;
+      }
+
       border-top: 1px solid #ff779c;
       padding-top: 0.5rem;
       margin-bottom: 2rem;
@@ -38,25 +45,14 @@ main.schedule {
     }
 
     .artist-container {
+      position: relative;
+      a.schedule-link {
+        display: none;
+      }
+
       border-top: 1px solid $pink;
       margin-bottom: 1rem;
       padding: 0.5rem 0;
-
-      background-image: linear-gradient(
-        to left,
-        transparent,
-        transparent 50%,
-        hsla(344, 100%, 73%, 75%) 50%,
-        hsla(344, 100%, 73%, 75%)
-      );
-      background-position: 100% 0;
-      background-size: 200% 100%;
-
-      transition: background-position 0.5s ease-in-out, border-color 1s ease;
-      &:hover {
-        background-position: 0 0;
-        border-color: $neon-yellow;
-      }
 
       .location {
         display: none;

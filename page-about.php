@@ -38,7 +38,11 @@ get_header();
             </p>
         </div>
     </section>
-    <section class="festival">
+    <section class="festival p2">
+        <!-- Stiches -->
+        <img class="stitches-top"
+            src="<?php bloginfo('template_url'); ?>/assets/dress/textures/stitches-yellow1440w.png" alt="" />
+
         <div class="mission">
             <h2>Mission</h2>
             <p>
@@ -114,10 +118,18 @@ get_header();
         <?php wp_reset_postdata(); ?>
         <?php endif ?>
 
+        <!-- Stitches -->
+        <img src="<?php bloginfo('template_url'); ?>/assets/dress/textures/stitches-magenta-bottom.png" alt=""
+            class="stitches-bottom" />
+
     </section>
 
 
     <section class="partners">
+
+        <!-- Stitches -->
+        <img src="<?php bloginfo('template_url'); ?>/assets/dress/textures/stitches-magenta-top.png" alt=""
+            class="stitches-top" />
 
         <h2>Partners</h2>
 
@@ -127,7 +139,7 @@ get_header();
                 alt="Bureau of General Services – Queer Division" class="partner-logo" id="partner-logo-bureau" />
 
             <div class="partner bureau">
-                <p class="partner-text"><?php echo $bureau; ?></p>
+                <p class="partner-text p2"><?php echo $bureau; ?></p>
                 <a target="_blank" href="https://bookshop.org/shop/bgsqd" class="button neon-yellow">bgsqd.com</a>
             </div>
         </div>
@@ -138,7 +150,7 @@ get_header();
                 class="partner-logo" id="partner-logo-center" />
 
             <div class="partner the-center">
-                <p class="partner-text"><?php echo $center; ?></p>
+                <p class="partner-text p2"><?php echo $center; ?></p>
                 <a target="_blank" href="https://gaycenter.org/" class="button neon-yellow">gaycenter.org</a>
             </div>
         </div>
@@ -149,7 +161,7 @@ get_header();
                 class="partner-logo" id="partner-logo-pollinate" />
 
             <div class="partner pollinate">
-                <p class="partner-text"><?php echo $pollinate; ?></p>
+                <p class="partner-text p2"><?php echo $pollinate; ?></p>
                 <a target="_blank" href="https://www.pollinate.co/" class="button neon-yellow">pollinate.co</a>
             </div>
         </div>
@@ -157,13 +169,15 @@ get_header();
     </section>
 
     <section class="support">
+        <img src="<?php bloginfo('template_url'); ?>/assets/dress/textures/stitches-magenta-top.png" alt=""
+            class="stitches-top" />
         <h2>Support</h2>
         <div class="dedication">
             <p class="p1"><?php echo $dedication; ?></p>
         </div>
         <div class="thanks">
             <h3>Thanks</h3>
-            <p class="p2r"><?php echo $thanks; ?></p>
+            <p class="p2"><?php echo $thanks; ?></p>
         </div>
     </section>
 
