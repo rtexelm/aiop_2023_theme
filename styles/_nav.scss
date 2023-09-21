@@ -60,6 +60,7 @@ nav.top {
     background-color: $primary-orange;
     &::before {
       content: "";
+      z-index: -1;
       position: absolute;
       background-image: url(assets/dress/textures/fabric-texture_knit.jpg);
       background-size: 16%;

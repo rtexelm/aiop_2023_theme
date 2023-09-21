@@ -69,12 +69,14 @@
 
   main.artist-listing {
     @include padding-3rem;
+    min-height: 60%;
   }
 
   // Donate ##################################################################
 
   main.donate {
     @include padding-3rem;
+    min-height: 60%;
   }
 
   // Press ##################################################################

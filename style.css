@@ -398,6 +398,7 @@ nav.top .menuFull {
 }
 nav.top .menuFull::before {
   content: "";
+  z-index: -1;
   position: absolute;
   background-image: url(assets/dress/textures/fabric-texture_knit.jpg);
   background-size: 16%;
@@ -1772,10 +1773,12 @@ footer .social .social-icon svg {
   main.artist-listing {
     padding-left: 3rem;
     padding-right: 3rem;
+    min-height: 60%;
   }
   main.donate {
     padding-left: 3rem;
     padding-right: 3rem;
+    min-height: 60%;
   }
   main.press section.press-posts {
     padding-left: 3rem;
@@ -1804,64 +1807,6 @@ footer .social .social-icon svg {
   }
   nav .menuFull ul#menu-full-navigation li a {
     font-size: 2.5rem;
-  }
-  main.home section#artists img.number {
-    height: 8rem;
-  }
-  main.home section#schedule img.number {
-    height: 8rem;
-  }
-  main.about section.festival {
-    padding: 10rem 1.5rem;
-  }
-  main.about section.people {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    -moz-column-gap: 1rem;
-         column-gap: 1rem;
-    max-width: 100%;
-    margin-top: -8rem;
-    margin-bottom: 8rem;
-    grid-template-rows: 4rem 4rem 8rem 12rem auto auto auto;
-  }
-  main.about section.people img.blob-person-1 {
-    grid-column: 7/10;
-    grid-row: 1/4;
-    width: 85%;
-    align-self: flex-start;
-  }
-  main.about section.people img.blob-person-2 {
-    display: block;
-    grid-column: 10/12;
-    grid-row: 2/5;
-    height: 100%;
-  }
-  main.about section.people h2.staff {
-    grid-column: 2/6;
-    margin-bottom: 4rem;
-  }
-  main.about section.people div.staff.curator {
-    grid-column: 2/6;
-  }
-  main.about section.people div.staff_col_1 {
-    grid-column: 2/6;
-  }
-  main.about section.people div.staff_col_2 {
-    grid-column: 6/10;
-  }
-  main.about section.people h2.thinkers {
-    grid-column: 2/10;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
-  }
-  main.about section.people div.thinkers_col_1 {
-    grid-column: 2/7;
-  }
-  main.about section.people div.thinkers_col_2 {
-    grid-column: 6/10;
-  }
-  main.donate {
-    min-height: 60%;
   }
 }
 main.maps {
