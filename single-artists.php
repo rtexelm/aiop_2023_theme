@@ -154,19 +154,19 @@ get_header();
                 <?php 
 								
 					if($artist_1_bio){
-						echo "<p>" . $artist_1_bio . "</p>";
+						echo "<p class='bio'>" . $artist_1_bio . "</p>";
 					}
 					if($artist_1_link){
 						echo "<a target='blank' class='test' href='" . esc_url($artist_1_link['url']) . "'>" . esc_attr( $artist_1_link['title'] ) . "</a>";
 					}
 					if($artist_2_bio){
-						echo "<p>" . $artist_2_bio . "</p>";
+						echo "<p class='bio'>" . $artist_2_bio . "</p>";
 					}
 					if($artist_2_link){
 						echo "<a target='blank' class='test' href='" . esc_url($artist_2_link['url']) . "'>" . esc_attr( $artist_2_link['title'] ) . "</a>";
 					}
 					if($artist_3_bio){
-						echo "<p>" . $artist_3_bio . "</p>";
+						echo "<p class='bio'>" . $artist_3_bio . "</p>";
 					}
 					if($artist_3_link){
 						echo "<a target='blank' class='test' href='" . esc_url($artist_3_link['url']) . "'>" . esc_attr( $artist_3_link['title'] ) . "</a>";

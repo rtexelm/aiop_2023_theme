@@ -38,7 +38,7 @@ get_header();
             </p>
         </div>
     </section>
-    <section class="festival">
+    <section class="festival p2">
         <!-- Stiches -->
         <img class="stitches-top"
             src="<?php bloginfo('template_url'); ?>/assets/dress/textures/stitches-yellow1440w.png" alt="" />
@@ -169,13 +169,15 @@ get_header();
     </section>
 
     <section class="support">
+        <img src="<?php bloginfo('template_url'); ?>/assets/dress/textures/stitches-magenta-top.png" alt=""
+            class="stitches-top" />
         <h2>Support</h2>
         <div class="dedication">
             <p class="p1"><?php echo $dedication; ?></p>
         </div>
         <div class="thanks">
             <h3>Thanks</h3>
-            <p class="p2r"><?php echo $thanks; ?></p>
+            <p class="p2"><?php echo $thanks; ?></p>
         </div>
     </section>
 

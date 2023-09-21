@@ -31,7 +31,7 @@ get_header();
     <div class="partner popwalk">
         <img src="<?php bloginfo('template_url'); ?>/assets/Partners_popwalk-logo.png" alt="Popwalk logo" class="logo">
         <p class="h2">Popwalk</p>
-        <p class="p2r"><?php the_field('partners_popwalk'); ?></p>
+        <p class=""><?php the_field('partners_popwalk'); ?></p>
         <div class="links">
             <a href=" https://sitessetforknowledge.org/2020/10/16/art-in-odd-places-popwalk/"
                 class="button primary">Festival map</a>
@@ -47,7 +47,7 @@ get_header();
         <img src="<?php bloginfo('template_url'); ?>/assets/Partners_pollinate-logomark.png" alt="Pollinate logo"
             class="logo">
         <p class="h2">Pollinate</p>
-        <p class="p2r"><?php the_field('partners_pollinate'); ?></p>
+        <p class=""><?php the_field('partners_pollinate'); ?></p>
         <div class="links">
             <a href="https://events.pollinate.co/#/exhibition/168" class="button primary">Festival map</a>
             <a href="https://www.pollinate.co/" class="button secondary">View website</a>

@@ -13,10 +13,6 @@
   .h3 {
     font-size: 1.5rem;
   }
-  h4,
-  .h4 {
-    font-size: 1rem;
-  }
   h5,
   .h5 {
     font-size: 0.875rem;
@@ -27,6 +23,13 @@
   .p1r,
   .p1 p {
     font-size: 1.5rem;
+  }
+
+  .p2,
+  span.p2,
+  .p2r,
+  .p2 p {
+    font-size: 1.2rem;
   }
 
   // Nav header ###########################################################
@@ -332,6 +335,12 @@
     section.right {
       grid-row: 2;
       grid-column: 6/13;
+      .bios {
+        p {
+          margin-top: 2rem;
+          margin-bottom: 0.75rem;
+        }
+      }
     }
   }
 
@@ -559,8 +568,9 @@
       }
     }
     .festival {
+      padding: 5rem 1.5rem;
       @include twelve-col-grid;
-      grid-row-gap: 3rem;
+      grid-row-gap: 5rem;
       .mission {
         margin-right: 2rem;
         grid-column: 2/9;
@@ -630,11 +640,12 @@
     }
     .support {
       @include twelve-col-grid;
-      row-gap: 2rem;
+      row-gap: 1rem;
       padding-bottom: 6rem;
       h2 {
         grid-column: 2/12;
         grid-row: 1/2;
+        margin-bottom: 0;
       }
       div.dedication {
         grid-column: 2/9;
@@ -648,9 +659,6 @@
       div.thanks {
         grid-column: 5/12;
         grid-row: 3/4;
-      }
-      .thanks > p {
-        font-size: 1.25rem;
       }
     }
   }

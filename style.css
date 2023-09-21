@@ -1213,10 +1213,6 @@ footer .social .social-icon svg {
   .h3 {
     font-size: 1.5rem;
   }
-  h4,
-  .h4 {
-    font-size: 1rem;
-  }
   h5,
   .h5 {
     font-size: 0.875rem;
@@ -1226,6 +1222,12 @@ footer .social .social-icon svg {
   .p1r,
   .p1 p {
     font-size: 1.5rem;
+  }
+  .p2,
+  span.p2,
+  .p2r,
+  .p2 p {
+    font-size: 1.2rem;
   }
   nav.top .menuVisible {
     display: block;
@@ -1495,6 +1497,10 @@ footer .social .social-icon svg {
     grid-row: 2;
     grid-column: 6/13;
   }
+  main.artist-single section.right .bios p {
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
   #schedule-background {
     background-size: 35%;
   }
@@ -1719,12 +1725,13 @@ footer .social .social-icon svg {
     margin-bottom: 1rem;
   }
   main.about .festival {
+    padding: 5rem 1.5rem;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     -moz-column-gap: 1rem;
          column-gap: 1rem;
     max-width: 100%;
-    grid-row-gap: 3rem;
+    grid-row-gap: 5rem;
   }
   main.about .festival .mission {
     margin-right: 2rem;
@@ -1804,12 +1811,13 @@ footer .social .social-icon svg {
     -moz-column-gap: 1rem;
          column-gap: 1rem;
     max-width: 100%;
-    row-gap: 2rem;
+    row-gap: 1rem;
     padding-bottom: 6rem;
   }
   main.about .support h2 {
     grid-column: 2/12;
     grid-row: 1/2;
+    margin-bottom: 0;
   }
   main.about .support div.dedication {
     grid-column: 2/9;
@@ -1823,9 +1831,6 @@ footer .social .social-icon svg {
   main.about .support div.thanks {
     grid-column: 5/12;
     grid-row: 3/4;
-  }
-  main.about .support .thanks > p {
-    font-size: 1.25rem;
   }
   footer {
     display: grid;
@@ -1874,11 +1879,6 @@ footer .social .social-icon svg {
   }
   main.home .header #title h1 {
     font-size: 10.2rem;
-  }
-  main.home #dates,
-  main.home #about,
-  main.home #artists {
-    padding: 3rem;
   }
   main.about .dress {
     padding-left: 3rem;
