@@ -1928,6 +1928,12 @@ footer .social .social-icon svg {
     padding-left: 3rem;
     padding-right: 3rem;
     width: calc(100% - 6rem);
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url(assets/dress/tablet/about-header-2160w.jpg) fixed no-repeat;
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position-x: 50%;
   }
   main.about .festival {
     padding-left: 3rem;
