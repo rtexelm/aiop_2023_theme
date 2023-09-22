@@ -83,14 +83,14 @@ get_header();
             <h2 class="date-text h1">
 
                 <span class="month">October</span>
-                <span class="days">13&ndash;15<span class="year"> 2023</span></span>
+                <span class="days">13-15<span class="year"> 2023</span></span>
 
 
             </h2>
 
             <div class="date-buttons">
-                <a class="button neon-yellow" href="<?php bloginfo('template_url'); ?>/schedule">Schedule</a>
-                <a class="button lavender" href="<?php bloginfo('template_url'); ?>/public-programs">Public
+                <a class="button neon-yellow" href="<?php echo home_url(); ?>/schedule">Schedule</a>
+                <a class="button lavender" href="<?php echo home_url(); ?>/public-programs">Public
                     Programs</a>
             </div>
         </section>
@@ -134,7 +134,7 @@ get_header();
             <div class="about-text">
                 <p class="p1"><span class="italic">Art in Odd Places 2023: DRESS</span> features visual and performance
                     artists on 14th Street from Avenue C to the Hudson River, October 13-15, 2023.</p>
-                <a class="button pink" href="<?php bloginfo('template_url'); ?>/about">About the
+                <a class="button pink" href="<?php echo home_url(); ?>/about">About the
                     festival</a>
             </div>
         </section>
@@ -153,8 +153,8 @@ get_header();
             <div class="artists-buttons">
 
 
-                <a class="button neon-yellow" href="<?php bloginfo('template_url'); ?>/artists">Artists</a>
-                <a class="button lavender" href="<?php bloginfo('template_url'); ?>/schedule">Schedule</a>
+                <a class="button neon-yellow" href="<?php echo home_url(); ?>/artists">Artists</a>
+                <a class="button lavender" href="<?php echo home_url(); ?>/schedule">Schedule</a>
 
             </div>
         </section>

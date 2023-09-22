@@ -13,6 +13,8 @@
     <meta name="keywords" content="AiOP, Festival, Performance, New York City">
     <meta name="author" content="Laurie Waxman & Ross Mabbett">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Stop phones from turning dashes into phone numbers -->
+    <meta name="format-detection" content="telephone=no">
     <!-- fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/hoe1avd.css">
     <!-- scripts & styles -->
