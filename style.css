@@ -2074,23 +2074,4 @@ footer .social .social-icon svg {
   #press-bg::before {
     background-size: 20%;
   }
-}
-main.maps {
-  width: calc(100% - 3rem);
-  margin: 4rem 1.5rem 0 1.5rem;
-}
-main.maps img.map {
-  width: 100%;
-  height: auto;
-}
-main.maps img.logo {
-  width: 6rem;
-  margin-bottom: 1rem;
-}
-main.maps p.h2,
-main.maps img.map {
-  margin-bottom: 1rem;
-}
-main.maps div.partner {
-  margin-bottom: 4rem;
 }/*# sourceMappingURL=style.css.map */

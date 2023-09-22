@@ -2,10 +2,11 @@ jQuery(document).ready(function ($) {
   var menuOpen = false;
   var prevScroll = window.scrollY;
   var menuArea = $(".menuFull");
+  const toggle = $("#menuToggleAnchor");
 
   // Menu toggle
 
-  $("#menuToggleAnchor").on("click", function (event) {
+  toggle.on("click", function (event) {
     menuOpen = !menuOpen;
     console.log("MENU ANCHOR");
     if (menuOpen) {
@@ -32,7 +33,6 @@ jQuery(document).ready(function ($) {
   // Menu close on outside click
 
   $(document).on("click", (e) => {
-    const toggle = $("#menuToggleAnchor");
     if (
       !!menuOpen &&
       !$(e.target).closest(menuArea).length &&
@@ -47,6 +47,16 @@ jQuery(document).ready(function ($) {
       }
     }
   });
+
+  // Prevent scrolling while menu open (needs debugging)
+
+  // $(window).on("scroll", function (e) {
+  //   if (menuOpen && window.innerWidth < 720) {
+  //     $("body").css("overflow", "hidden");
+  //   } else {
+  //     $("body").css("overflow", "auto");
+  //   }
+  // });
 
   // Hide nav on scroll
 
