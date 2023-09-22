@@ -438,6 +438,7 @@ nav.top .menuFull .vert-stitch {
   bottom: 0;
 }
 nav.top .menuFull a {
+  color: #000;
   text-decoration: none;
 }
 nav.top .menuFull a:visited {
@@ -920,12 +921,6 @@ main.artist-single section.right .bios p {
   margin-top: 1rem;
   margin-bottom: 0.25rem;
 }
-main.artist-single section.right .bios a {
-  color: #c7a1d8;
-}
-main.artist-single section.right .bios a:visited {
-  color: #2c2c2c;
-}
 
 nav.artist-nav {
   position: relative;
@@ -1072,7 +1067,7 @@ main.press section.press-posts {
   padding: 4rem 1.5rem;
 }
 main.press section.press-posts .press-container {
-  border-top: 1px dashed #f74500;
+  border-top: 1px dashed #810061;
   margin: 2rem 0;
 }
 main.press section.press-posts .press-container .press-publication {
@@ -1083,7 +1078,7 @@ main.press section.press-posts .press-container p.press-title {
 }
 main.press section.press-posts .press-container p.press-date {
   padding: 0.5rem 0;
-  border-top: 1px dashed #f74500;
+  border-top: 1px dashed #810061;
   margin-bottom: 0.5rem;
 }
 main.press section.press-posts .press-container a.button {
@@ -1495,7 +1490,8 @@ footer .social .social-icon svg {
     grid-row: 2;
     grid-column: 6/13;
   }
-  main.artist-single section.right .bios p {
+  main.artist-single section.right .bios p,
+  main.artist-single section.right .project p {
     margin-top: 2rem;
     margin-bottom: 0.75rem;
   }

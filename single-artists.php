@@ -144,7 +144,7 @@ get_header();
                 <?php echo "<p class='p1'>" . $project_description . "</p>"?>
                 <?php 
 				if($project_link){
-					echo "<a class='button primary' target='blank' href='" . esc_url($project_link['url']) . "'>" . esc_attr( $project_link['title'] ) . "</a>";
+					echo "<a class='button transparent' target='blank' href='" . esc_url($project_link['url']) . "'>" . esc_attr( $project_link['title'] ) . "</a>";
 				}
 				?>
 
@@ -157,19 +157,19 @@ get_header();
 						echo "<p class='bio'>" . $artist_1_bio . "</p>";
 					}
 					if($artist_1_link){
-						echo "<a target='blank' class='test' href='" . esc_url($artist_1_link['url']) . "'>" . esc_attr( $artist_1_link['title'] ) . "</a>";
+						echo "<a target='blank' class='button transparent' href='" . esc_url($artist_1_link['url']) . "'>" . esc_attr( $artist_1_link['title'] ) . "</a>";
 					}
 					if($artist_2_bio){
 						echo "<p class='bio'>" . $artist_2_bio . "</p>";
 					}
 					if($artist_2_link){
-						echo "<a target='blank' class='test' href='" . esc_url($artist_2_link['url']) . "'>" . esc_attr( $artist_2_link['title'] ) . "</a>";
+						echo "<a target='blank' class='button transparent' href='" . esc_url($artist_2_link['url']) . "'>" . esc_attr( $artist_2_link['title'] ) . "</a>";
 					}
 					if($artist_3_bio){
 						echo "<p class='bio'>" . $artist_3_bio . "</p>";
 					}
 					if($artist_3_link){
-						echo "<a target='blank' class='test' href='" . esc_url($artist_3_link['url']) . "'>" . esc_attr( $artist_3_link['title'] ) . "</a>";
+						echo "<a target='blank' class='button transparent' href='" . esc_url($artist_3_link['url']) . "'>" . esc_attr( $artist_3_link['title'] ) . "</a>";
 					}
 								
 				?>
