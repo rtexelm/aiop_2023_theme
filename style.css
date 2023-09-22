@@ -745,6 +745,7 @@ main.about .partners {
 }
 main.about .partners::before {
   content: "";
+  z-index: -1;
   position: absolute;
   background-image: url(assets/dress/textures/fabric-texture_fine-knit.jpg);
   background-size: 40%;
@@ -755,9 +756,6 @@ main.about .partners::before {
   bottom: 0px;
   left: 0px;
   opacity: 0.3;
-}
-main.about .partners > * {
-  z-index: 10;
 }
 main.about .partners h2 {
   margin-bottom: 2rem;
@@ -793,7 +791,7 @@ main.about .support::before {
   right: 0px;
   bottom: 0px;
   left: 0px;
-  opacity: 0.3;
+  opacity: 0.25;
 }
 main.about .support > * {
   z-index: 10;

@@ -117,6 +117,9 @@ main.about {
 
     &::before {
       content: "";
+
+      // Z-index on children causing glitch with body background, necessitates a z-index on ::before
+      z-index: -1;
       position: absolute;
       background-image: url(assets/dress/textures/fabric-texture_fine-knit.jpg);
       background-size: 40%;
@@ -129,9 +132,11 @@ main.about {
       opacity: 0.3;
     }
 
-    & > * {
-      z-index: 10;
-    }
+    // The following works on every other section
+
+    // & > * {
+    //   z-index: 10;
+    // }
 
     h2 {
       margin-bottom: 2rem;
@@ -173,7 +178,7 @@ main.about {
       right: 0px;
       bottom: 0px;
       left: 0px;
-      opacity: 0.3;
+      opacity: 0.25;
     }
 
     & > * {
