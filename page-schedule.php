@@ -22,8 +22,18 @@ get_header();
 
    	$fridayArtistArgs = array(
 	    'post_type' => 'artists',
-	    'meta_key' => 'friday_start',
-		'orderby' => 'meta_value',
+        'meta_query' => array(
+            'start' => array(
+                'key' => 'friday_start',
+                'compare' => 'EXISTS',
+            ),
+            'end' => array(
+                'key' => 'friday_end',
+                'compare' => 'EXISTS',
+            ),
+        ),
+	    // 'meta_key' => 'friday_end',
+		'orderby' => 'start end',
 	    'order'	=> 'ASC',
 	    'posts_per_page' => -1
 	);
@@ -31,8 +41,17 @@ get_header();
 
 	$saturdayArtistArgs = array(
 	    'post_type' => 'artists',
-	    'meta_key' => 'saturday_start',
-		'orderby' => 'meta_value',
+        'meta_query' => array(
+            'start' => array(
+                'key' => 'saturday_start',
+                'compare' => 'EXISTS',
+            ),
+            'end' => array(
+                'key' => 'saturday_end',
+                'compare' => 'EXISTS',
+            ),
+        ),
+		'orderby' => 'start end',
 	    'order'	=> 'ASC',
 	    'posts_per_page' => -1
 	);
@@ -40,8 +59,17 @@ get_header();
 
 	$sundayArtistArgs = array(
 	    'post_type' => 'artists',
-	    'meta_key' => 'sunday_start',
-		'orderby' => 'meta_value',
+        'meta_query' => array(
+            'start' => array(
+                'key' => 'sunday_start',
+                'compare' => 'EXISTS',
+            ),
+            'end' => array(
+                'key' => 'sunday_end',
+                'compare' => 'EXISTS',
+            ),
+        ),
+		'orderby' => 'start end',
 	    'order'	=> 'ASC',
 	    'posts_per_page' => -1
 	);
@@ -154,7 +182,8 @@ get_header();
                 </div>
 
                 <div class="pp-container">
-                    <a href="#" class="program-link" target="_blank" title="Tickets for Paper Dress Ball"></a>
+                    <a href="https://www.eventbrite.com/e/paper-dress-ball-tickets-716624060857?aff=oddtdtcreator"
+                        class="program-link" target="_blank" title="Tickets for Paper Dress Ball"></a>
                     <h4 class="pp-time">
                         7-10pm
                     </h4>
@@ -163,7 +192,7 @@ get_header();
                         <h4>LGBTQIA+ Center, 208 W 13th Street</h4>
                     </div>
                     <a class="button neon-yellow" target="_blank" title="Tickest for Paper Dress Ball"
-                        href="#">Tickets</a>
+                        href="https://www.eventbrite.com/e/paper-dress-ball-tickets-716624060857?aff=oddtdtcreator">Tickets</a>
                 </div>
             </article>
 
@@ -224,11 +253,11 @@ get_header();
                 <h3 class="f-weight-700 geo-area">Seventh Avenue to the Hudson River</h3>
             </article>
 
-            <article class="public-program">
+            <!-- <article class="public-program">
                 <h3 class="f-weight-700 pp-head">Public Programming</h3>
                 <div class="pp-container">
                 </div>
-            </article>
+            </article> -->
 
             <h3 class="f-weight-700 fest-header">Festival</h3>
 
