@@ -1,49 +1,77 @@
 jQuery(document).ready(function ($) {
-  var menuOpen = false;
-  var prevScroll = window.scrollY;
-  var menuArea = $(".menuFull");
-  const toggle = $("#menuToggleAnchor");
+  const $menuArea = $(".menuFull");
+  const $toggle = $("#menuToggleAnchor");
+  let menuOpen = false;
+
+  let prevScroll = window.scrollY;
 
   // Menu toggle
 
-  toggle.on("click", function (event) {
+  function toggleMenu() {
     menuOpen = !menuOpen;
-    console.log("MENU ANCHOR");
+    moveMenuPosition();
+  }
+
+  function moveMenuPosition() {
+    const screenSize = window.innerWidth;
+    let leftPos;
+
     if (menuOpen) {
-      console.log("OPEN MENU");
-      if (window.innerWidth < 720) {
-        $(".menuFull").css("left", "0");
-      } else if (window.innerWidth < 950) {
-        $(".menuFull").css("left", "69vw");
-      } else if (window.innerWidth < 1200) {
-        $(".menuFull").css("left", "75vw");
-      } else {
-        $(".menuFull").css("left", "78vw");
-      }
+      if (screenSize < 720) leftPos = "0";
+      else if (screenSize < 950) leftPos = "69vw";
+      else if (screenSize < 1200) leftPos = "75vw";
+      else leftPos = "78vw";
     } else {
-      console.log("CLOSE MENU");
-      if (window.innerWidth < 720) {
-        $(".menuFull").css("left", "140vw");
-      } else {
-        $(".menuFull").css("left", "120vw");
-      }
+      if (screenSize < 720) leftPos = "140vw";
+      else leftPos = "120vw";
     }
-  });
+
+    $menuArea.css("left", leftPos);
+  }
+
+  $toggle.on("click", toggleMenu);
+  $(window).on("resize", moveMenuPosition);
+
+  moveMenuPosition();
+
+  // toggle.on("click", function (event) {
+  //   menuOpen = !menuOpen;
+  //   console.log("MENU ANCHOR");
+  //   if (menuOpen) {
+  //     console.log("OPEN MENU");
+  //     if (window.innerWidth < 720) {
+  //       $(".menuFull").css("left", "0");
+  //     } else if (window.innerWidth < 950) {
+  //       $(".menuFull").css("left", "69vw");
+  //     } else if (window.innerWidth < 1200) {
+  //       $(".menuFull").css("left", "75vw");
+  //     } else {
+  //       $(".menuFull").css("left", "78vw");
+  //     }
+  //   } else {
+  //     console.log("CLOSE MENU");
+  //     if (window.innerWidth < 720) {
+  //       $(".menuFull").css("left", "140vw");
+  //     } else {
+  //       $(".menuFull").css("left", "120vw");
+  //     }
+  //   }
+  // });
 
   // Menu close on outside click
 
   $(document).on("click", (e) => {
     if (
       !!menuOpen &&
-      !$(e.target).closest(menuArea).length &&
-      !$(e.target).closest(toggle).length
+      !$(e.target).closest($menuArea).length &&
+      !$(e.target).closest($toggle).length
     ) {
       console.log("CLOSE MENU from outside");
       menuOpen = !menuOpen;
       if (window.innerWidth < 720) {
-        $(".menuFull").css("left", "140vw");
+        $menuArea.css("left", "140vw");
       } else {
-        $(".menuFull").css("left", "120vw");
+        $menuArea.css("left", "120vw");
       }
     }
   });
@@ -52,22 +80,27 @@ jQuery(document).ready(function ($) {
 
   // $(window).on("scroll", function (e) {
   //   if (menuOpen && window.innerWidth < 720) {
-  //     $("body").css("overflow", "hidden");
-  //   } else {
-  //     $("body").css("overflow", "auto");
-  //   }
+  //   $("body").css("overflow", "hidden");
+  // } else {
+  //   $("body").css("overflow", "auto");
+  // }
   // });
 
   // Hide nav on scroll
 
-  $(window).on("scroll", function () {
-    let currentScroll = window.scrollY;
+  $(window).off("scroll");
 
-    if (menuOpen) {
-      return $(".top").css("top", "0");
+  $(window).on("scroll", function (e) {
+    if (menuOpen && window.innerWidth < 720) {
+      e.preventDefault();
+
+      console.log("No Scroll");
+      return false;
     }
 
-    if (prevScroll > currentScroll) {
+    let currentScroll = window.scrollY;
+
+    if (menuOpen || prevScroll > currentScroll) {
       $(".top").css("top", "0");
     } else {
       $(".top").css("top", "-65");

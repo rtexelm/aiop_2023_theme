@@ -348,7 +348,7 @@
   // Schedule Page ##################################################
 
   #schedule-background {
-    background-size: 35%;
+    background-size: 20%;
   }
   main.schedule {
     padding: 0 1.5rem;
@@ -375,6 +375,10 @@
       &#saturday,
       &#sunday {
         margin-top: 0;
+      }
+
+      .public-program {
+        min-height: 18rem;
       }
 
       .pp-time,

@@ -943,7 +943,7 @@ nav.artist-nav .arrow.next {
   height: 100vh;
   background: url(assets/dress/textures/fabric-texture_terry.jpg);
   mix-blend-mode: multiply;
-  background-size: 35%;
+  background-size: 10%;
   opacity: 0.2;
 }
 
@@ -1496,7 +1496,7 @@ footer .social .social-icon svg {
     margin-bottom: 0.75rem;
   }
   #schedule-background {
-    background-size: 35%;
+    background-size: 20%;
   }
   main.schedule {
     padding: 0 1.5rem;
@@ -1527,6 +1527,9 @@ footer .social .social-icon svg {
   }
   main.schedule div.day#saturday, main.schedule div.day#sunday {
     margin-top: 0;
+  }
+  main.schedule div.day .public-program {
+    min-height: 18rem;
   }
   main.schedule div.day .pp-time,
   main.schedule div.day .artist-time {
@@ -1872,20 +1875,6 @@ footer .social .social-icon svg {
   .h2 {
     font-size: 3rem;
   }
-  h3,
-  .h3 {
-    font-size: 1.65rem;
-  }
-  h4,
-  .h4 {
-    font-size: 1.25rem;
-  }
-  .p1,
-  span.p1,
-  .p1r,
-  .p1 p {
-    font-size: 1.65rem;
-  }
   .p2,
   span.p2,
   .p2r,
@@ -1971,6 +1960,9 @@ footer .social .social-icon svg {
   main.schedule {
     padding: 0 3rem;
   }
+  main.schedule div.day .public-program {
+    min-height: 14rem;
+  }
   main.schedule div.day .pp-time,
   main.schedule div.day .artist-time {
     width: 5rem;
@@ -2032,6 +2024,10 @@ footer .social .social-icon svg {
   .h3 {
     font-size: 2rem;
   }
+  h4,
+  .h4 {
+    font-size: 1.5rem;
+  }
   p {
     font-size: 1.25rem;
   }
@@ -2062,8 +2058,8 @@ footer .social .social-icon svg {
   main.home #artists {
     padding-bottom: 10rem;
   }
-  #schedule-background {
-    background-size: 25%;
+  main.schedule div.day .public-program {
+    min-height: 16rem;
   }
   #artists-background::before {
     background-size: 30%;

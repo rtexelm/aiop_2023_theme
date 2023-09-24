@@ -9,21 +9,21 @@
   .h2 {
     font-size: 3rem;
   }
-  h3,
-  .h3 {
-    font-size: 1.65rem;
-  }
-  h4,
-  .h4 {
-    font-size: 1.25rem;
-  }
+  // h3,
+  // .h3 {
+  //   font-size: 1.65rem;
+  // }
+  // h4,
+  // .h4 {
+  //   font-size: 1.25rem;
+  // }
 
-  .p1,
-  span.p1,
-  .p1r,
-  .p1 p {
-    font-size: 1.65rem;
-  }
+  // .p1,
+  // span.p1,
+  // .p1r,
+  // .p1 p {
+  //   font-size: 1.65rem;
+  // }
 
   .p2,
   span.p2,
@@ -135,6 +135,10 @@
     padding: 0 3rem;
 
     div.day {
+      .public-program {
+        min-height: 14rem;
+      }
+
       .pp-time,
       .artist-time {
         width: 5rem;

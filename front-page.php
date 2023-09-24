@@ -144,7 +144,7 @@ get_header();
             <div class="artists-heading">
 
                 <h2 class="lh-8em h1">
-                    <span id="artists-part">40 Participating</span>
+                    <span id="artists-part">35 Participating</span>
                     <span id="artists-art"> Artists &</span>
                     <span id="artists-groups">Groups</span>
                 </h2>

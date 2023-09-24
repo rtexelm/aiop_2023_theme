@@ -60,21 +60,24 @@ get_header();
 
             <article class="day-header">
                 <h2 class="h1">Friday</h2>
-                <h3 class="f-weight-700 geo-area">Avenue A to 3rd Avenue</h3>
+                <h3 class="f-weight-700 geo-area">Avenue A to Third Avenue</h3>
             </article>
 
             <article class="public-program">
                 <h3 class="f-weight-700 pp-head">Public Programming</h3>
                 <div class="pp-container">
-                    <a href="#" class="program-link" title="RSVP for Walk & Talk"></a>
+                    <a href="https://www.eventbrite.com/e/art-in-odd-places-2023-dress-walk-and-talk-tickets-713001214827?aff=oddtdtcreator"
+                        class="program-link" target="_blank" title="RSVP for Walk & Talk"></a>
                     <h4 class="pp-time">
                         6-7:30pm
                     </h4>
                     <div class="pp-title">
                         <h3>Walk & Talk</h3>
-                        <h4>BGSQD Bookstore</h4>
+                        <h4>Bureau of General Services: Queer Division / Room 210, LGBTQIA+ Center, 208 W 13th Street
+                        </h4>
                     </div>
-                    <a class="button neon-yellow" title="RSVP for Walk & Talk" href="#">RSVP</a>
+                    <a class="button neon-yellow" target="_blank" title="RSVP for Walk & Talk"
+                        href="https://www.eventbrite.com/e/art-in-odd-places-2023-dress-walk-and-talk-tickets-713001214827?aff=oddtdtcreator">RSVP</a>
                 </div>
             </article>
 
@@ -131,23 +134,39 @@ get_header();
 
             <article class="day-header">
                 <h2 class="h1">Saturday</h2>
-                <h3 class="f-weight-700 geo-area">University Place to 7th Avenue</h3>
+                <h3 class="f-weight-700 geo-area">University Place to Seventh Avenue</h3>
             </article>
 
             <article class="public-program">
                 <h3 class="f-weight-700">Public Programming</h3>
                 <div class="pp-container">
-                    <a href="#" class="program-link" title="Tickets for Paper Dress Ball"></a>
+                    <a href="https://maps.app.goo.gl/fuB5e8KJCZNGiaNd6" class="program-link" target="_blank"
+                        title="RSVP for Runway"></a>
+                    <h4 class="pp-time">
+                        4-6pm
+                    </h4>
+                    <div class="pp-title">
+                        <h3>Sidewalk Runway</h3>
+                        <h4>14th Street between Sixth and Seventh Avenues</h4>
+                    </div>
+                    <a class="button neon-yellow" target="_blank" title="RSVP for Runway"
+                        href="https://maps.app.goo.gl/fuB5e8KJCZNGiaNd6">Map</a>
+                </div>
+
+                <div class="pp-container">
+                    <a href="#" class="program-link" target="_blank" title="Tickets for Paper Dress Ball"></a>
                     <h4 class="pp-time">
                         7-10pm
                     </h4>
                     <div class="pp-title">
                         <h3>Paper Dress Ball</h3>
-                        <h4>BGSQD Bookstore</h4>
+                        <h4>LGBTQIA+ Center, 208 W 13th Street</h4>
                     </div>
-                    <a class="button neon-yellow" title="Tickest for Paper Dress Ball" href="#">Tickets</a>
+                    <a class="button neon-yellow" target="_blank" title="Tickest for Paper Dress Ball"
+                        href="#">Tickets</a>
                 </div>
             </article>
+
 
             <h3 class="f-weight-700 fest-header">Festival</h3>
 
@@ -202,21 +221,12 @@ get_header();
 
             <article class="day-header">
                 <h2 class="h1">Sunday</h2>
-                <h3 class="f-weight-700 geo-area">7th Avenue to the Hudson River</h3>
+                <h3 class="f-weight-700 geo-area">Seventh Avenue to the Hudson River</h3>
             </article>
 
             <article class="public-program">
-                <h3 class="f-weight-700">Public Programming</h3>
+                <h3 class="f-weight-700 pp-head">Public Programming</h3>
                 <div class="pp-container">
-                    <a href="#" class="program-link" title="RSVP for Runway"></a>
-                    <h4 class="pp-time">
-                        1-2pm
-                    </h4>
-                    <div class="pp-title">
-                        <h3>Runway</h3>
-                        <h4>14th Street</h4>
-                    </div>
-                    <a class="button neon-yellow" title="RSVP for Runway" href="#">RSVP</a>
                 </div>
             </article>
 
