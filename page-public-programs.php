@@ -62,8 +62,7 @@ get_header();
                     <p>4-6pm</p>
                 </div>
             </div>
-            <a href="https://maps.app.goo.gl/fuB5e8KJCZNGiaNd6" target="_blank" title="Map to area of Runway event"
-                class="button neon-yellow">Map</a>
+
         </div>
 
         <div class="program-container" id="program-03">

@@ -168,8 +168,6 @@ get_header();
             <article class="public-program">
                 <h3 class="f-weight-700">Public Programming</h3>
                 <div class="pp-container">
-                    <a href="https://maps.app.goo.gl/fuB5e8KJCZNGiaNd6" class="program-link" target="_blank"
-                        title="RSVP for Runway"></a>
                     <h4 class="pp-time">
                         4-6pm
                     </h4>
@@ -177,8 +175,6 @@ get_header();
                         <h3>Sidewalk Runway</h3>
                         <h4>14th Street between Sixth and Seventh Avenues</h4>
                     </div>
-                    <a class="button neon-yellow" target="_blank" title="RSVP for Runway"
-                        href="https://maps.app.goo.gl/fuB5e8KJCZNGiaNd6">Map</a>
                 </div>
 
                 <div class="pp-container">

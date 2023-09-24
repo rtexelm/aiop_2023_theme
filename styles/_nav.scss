@@ -1,8 +1,9 @@
 @use "constants" as *;
 
 nav.top {
-  position: sticky;
+  position: fixed;
   transition: top 0.3s;
+  width: calc(100% - 3rem);
   z-index: 100;
   background-color: $neon-yellow;
   padding: 0 1.5rem;

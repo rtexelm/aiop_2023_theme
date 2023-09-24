@@ -83,8 +83,11 @@ get_header();
             <h2 class="date-text h1">
 
                 <span class="month">October</span>
-                <span class="days">13-15<span class="year"> 2023</span></span>
-
+                <span class="days">
+                    <div style="display:inline-block">13&ndash;</div>15,<span class="year">
+                        2023
+                    </span>
+                </span>
 
             </h2>
 
@@ -133,7 +136,7 @@ get_header();
 
             <div class="about-text">
                 <p class="p1"><span class="italic">Art in Odd Places 2023: DRESS</span> features visual and performance
-                    artists on 14th Street from Avenue C to the Hudson River, October 13-15, 2023.</p>
+                    artists on 14th Street from Avenue C to the Hudson River, October 13&ndash;15, 2023.</p>
                 <a class="button pink" href="<?php echo home_url(); ?>/about">About the
                     festival</a>
             </div>

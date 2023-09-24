@@ -1,6 +1,9 @@
 jQuery(document).ready(function ($) {
   const $menuArea = $(".menuFull");
   const $toggle = $("#menuToggleAnchor");
+  const $html = $("html");
+  const $body = $("body");
+  const onMobile = window.innerWidth < 720;
   let menuOpen = false;
 
   let prevScroll = window.scrollY;
@@ -10,6 +13,7 @@ jQuery(document).ready(function ($) {
   function toggleMenu() {
     menuOpen = !menuOpen;
     moveMenuPosition();
+    if (onMobile) $body.toggleClass("stopScrollMenu");
   }
 
   function moveMenuPosition() {
@@ -80,10 +84,10 @@ jQuery(document).ready(function ($) {
 
   // $(window).on("scroll", function (e) {
   //   if (menuOpen && window.innerWidth < 720) {
-  //   $("body").css("overflow", "hidden");
-  // } else {
-  //   $("body").css("overflow", "auto");
-  // }
+  //     $("body").css("overflow", "hidden");
+  //   } else {
+  //     $("body").css("overflow", "auto");
+  //   }
   // });
 
   // Hide nav on scroll

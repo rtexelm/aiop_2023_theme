@@ -20,6 +20,15 @@ main.about {
     background-blend-mode: overlay;
     background-size: cover;
     background-position-x: 50%;
+    @supports (-webkit-touch-callout: none) {
+      background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.4) 0%,
+          rgba(0, 0, 0, 0.4) 100%
+        ),
+        url(assets/dress/about-header-1080w.jpg) top center no-repeat scroll;
+      background-size: cover;
+    }
 
     .c-statement {
       h2 {

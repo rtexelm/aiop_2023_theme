@@ -357,12 +357,14 @@ div.button p {
 }
 
 .stopScrollMenu {
+  height: 100vh;
   overflow: hidden;
 }
 
 nav.top {
-  position: sticky;
+  position: fixed;
   transition: top 0.3s;
+  width: calc(100% - 3rem);
   z-index: 100;
   background-color: #f0fa00;
   padding: 0 1.5rem;
@@ -482,6 +484,12 @@ main.home .header {
   background: url(assets/dress/home-header-bg.png) fixed no-repeat;
   background-size: cover;
   background-position-x: 50%;
+}
+@supports (-webkit-touch-callout: none) {
+  main.home .header {
+    background: url(assets/dress/home-header-bg.png) top center no-repeat scroll;
+    background-size: cover;
+  }
 }
 main.home .header #pattern-r-top {
   z-index: 10;
@@ -665,6 +673,12 @@ main.about .dress {
   background-blend-mode: overlay;
   background-size: cover;
   background-position-x: 50%;
+}
+@supports (-webkit-touch-callout: none) {
+  main.about .dress {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url(assets/dress/about-header-1080w.jpg) top center no-repeat scroll;
+    background-size: cover;
+  }
 }
 main.about .dress .c-statement h2 {
   margin-bottom: 1rem;
@@ -1883,6 +1897,7 @@ footer .social .social-icon svg {
   }
   nav.top {
     padding: 0 3rem;
+    width: calc(100% - 6rem);
   }
   main.home .header #title {
     padding-left: 3rem;
