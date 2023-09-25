@@ -67,13 +67,45 @@ get_header();
 
             $peopleArgs = array(
                 'post_type' => 'staff-credit',
-                'meta_key' => 'order',
-                'orderby' => 'meta_value_num',
+                'meta_query' => array(
+                    'relation' => 'AND',
+                    'nothinker' => array(
+                        'key' => 'title',
+                        'value' => 'thinker',
+                        'compare' => '!=',
+                    ),
+                    'order' => array(
+                        'key' => 'order',
+                        'compare' => 'EXISTS', 
+                    ),
+                    
+                ),
+                // 'meta_key' => 'order',
+                'orderby' => 'order',
                 'order'	=> 'ASC',
                 'posts_per_page' => -1
             );
 
+            $thinkerArgs = array(
+                'post_type' => 'staff-credit',
+                'meta_query' => array(
+                    'relation' => 'AND',
+                    'title' => array(
+                        'key' => 'title',
+                        'value' => 'thinker',
+                    ),
+                    'order' => array(
+                        'key' => 'order',
+                        'compare' => 'EXISTS',
+                    ),
+                ),
+                'orderby' => 'order',
+                'order' => 'ASC',
+                'posts_per_page' => -1
+                );
+
             $staffQuery = new WP_Query($peopleArgs);
+            $thinkerQuery = new WP_Query($thinkerArgs);
         
             ?>
         <?php if($staffQuery->have_posts()): ?>
@@ -103,20 +135,64 @@ get_header();
 				?>
                 <?php 
 				if($link2){
-					echo "<a target='blank' href='" . esc_url($link2['url']) . "'>" . esc_attr( $link2['title'] ) . "</a>" . $comma2;
+                    echo "<a target='blank' href='" . esc_url($link2['url']) . "'>" . esc_attr( $link2['title'] ) . "</a>" . $comma2;
 				}
 				?>
                 <?php 
 				if($link3){
-					echo "<a target='blank' href='" . esc_url($link3['url']) . "'>" . esc_attr( $link3['title'] ) . "</a>";
+                    echo "<a target='blank' href='" . esc_url($link3['url']) . "'>" . esc_attr( $link3['title'] ) . "</a>";
 				}
 				?>
             </div>
         </div>
         <?php endif ?>
         <?php endwhile ?>
+        <?php endif ?>
+
+        <section class="thinkers">
+            <h3 class="thinkers-title">Thinkers in Residence</h3>
+
+            <?php if($thinkerQuery->have_posts()): ?>
+            <?php while($thinkerQuery->have_posts()): $thinkerQuery->the_post(); ?>
+            <?php if (function_exists('get_field')): 
+                    
+                    $full_name			= get_field('full_name');
+                    $thinklink1			= get_field('web_link_1');
+                    $thinklink2 	    = get_field('web_link_2');
+                    $thinklink3		    = get_field('web_link_3');
+
+                    $thinkcomma1 = $thinklink2 ? "," : "";
+                    $thinkcomma2 = $thinklink3 ? "," : "";
+                ?>
+
+            <div class="thinker-item">
+
+                <h3 class="thinker-name"><?php echo $full_name ?></h3>
+
+                <div class="thinker-links">
+                    <?php 
+				if($thinklink1){
+					echo "<a target='blank' href='" . esc_url($thinklink1['url']) . "'>" . esc_attr( $thinklink1['title'] ) . "</a>" . $thinkcommma1;
+				}
+				?>
+                    <?php 
+				if($thinklink2){
+					echo "<a target='blank' href='" . esc_url($thinklink2['url']) . "'>" . esc_attr( $thinklink2['title'] ) . "</a>" . $thinkcomma2;
+				}
+				?>
+                    <?php 
+				if($thinklink3){
+					echo "<a target='blank' href='" . esc_url($thinklink3['url']) . "'>" . esc_attr( $thinklink3['title'] ) . "</a>";
+				}
+				?>
+                </div>
+            </div>
+        </section>
+        <?php endif ?>
+        <?php endwhile ?>
         <?php wp_reset_postdata(); ?>
         <?php endif ?>
+
 
         <!-- Stitches -->
         <img src="<?php bloginfo('template_url'); ?>/assets/dress/textures/stitches-magenta-bottom.png" alt=""

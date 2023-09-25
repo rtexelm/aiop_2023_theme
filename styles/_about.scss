@@ -109,11 +109,15 @@ main.about {
     }
     .thinkers {
       margin-top: 3rem;
+      .thinkers-title {
+        margin-bottom: 0.5rem;
+      }
     }
 
     color: $black;
 
-    .staff-item {
+    .staff-item,
+    .thinker-item {
       margin-bottom: 1rem;
       border-top: 1px dashed $dadbod-yellow;
       padding-top: 0.5rem;

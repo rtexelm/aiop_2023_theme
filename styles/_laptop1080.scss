@@ -92,6 +92,12 @@
     }
     .people {
       @include padding-calc-3rem;
+      .staff-item {
+        grid-column: 2/11;
+      }
+      .thinkers {
+        grid-column: 5/11;
+      }
     }
     .partners {
       @include padding-calc-3rem;

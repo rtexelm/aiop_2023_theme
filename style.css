@@ -749,7 +749,11 @@ main.about .people h2 {
 main.about .people .thinkers {
   margin-top: 3rem;
 }
-main.about .people .staff-item {
+main.about .people .thinkers .thinkers-title {
+  margin-bottom: 0.5rem;
+}
+main.about .people .staff-item,
+main.about .people .thinker-item {
   margin-bottom: 1rem;
   border-top: 1px dashed #dadb0d;
   padding-top: 0.5rem;
@@ -1785,6 +1789,9 @@ footer .social .social-icon svg {
     grid-column: 7/11;
     grid-row: 1/2;
   }
+  main.about .people .thinkers {
+    grid-column: 5/12;
+  }
   main.about .partners {
     padding-top: 4rem;
   }
@@ -1942,6 +1949,12 @@ footer .social .social-icon svg {
     padding-left: 3rem;
     padding-right: 3rem;
     width: calc(100% - 6rem);
+  }
+  main.about .people .staff-item {
+    grid-column: 2/11;
+  }
+  main.about .people .thinkers {
+    grid-column: 5/11;
   }
   main.about .partners {
     padding-left: 3rem;
