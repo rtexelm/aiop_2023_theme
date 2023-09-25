@@ -361,9 +361,14 @@ div.button p {
   overflow: hidden;
 }
 
+.nav-hide {
+  top: -65;
+}
+
 nav.top {
   position: fixed;
-  transition: top 0.3s;
+  top: 0;
+  transition: top 0.3s ease-in-out;
   width: calc(100% - 3rem);
   z-index: 100;
   background-color: #f0fa00;

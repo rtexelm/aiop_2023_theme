@@ -6,7 +6,12 @@ jQuery(document).ready(function ($) {
   const onMobile = window.innerWidth < 720;
   let menuOpen = false;
 
+  // Scroll variables
+
+  const $navTop = $("nav.top");
+  let scrollCheck;
   let prevScroll = window.scrollY;
+  let delta = 5;
 
   // Menu toggle
   // Prevent scrolling while menu open
@@ -59,22 +64,48 @@ jQuery(document).ready(function ($) {
 
   // Hide nav on scroll
 
-  $(window).off("scroll");
+  // $(window).off("scroll");
 
   $(window).on("scroll", function (e) {
-    if (menuOpen && window.innerWidth < 720) {
-      e.preventDefault();
-
-      return false;
-    }
-
-    let currentScroll = window.scrollY;
-
-    if (menuOpen || prevScroll - 65 > currentScroll) {
-      $(".top").css("top", "0");
-    } else {
-      $(".top").css("top", "-65");
-    }
-    prevScroll = currentScroll;
+    scrollCheck = true;
   });
+
+  setInterval(function () {
+    if (scrollCheck) {
+      scrollAction();
+      scrollCheck = false;
+    }
+  }, 250);
+
+  function scrollAction() {
+    const currentScroll = window.scrollY;
+
+    if (Math.abs(prevScroll - currentScroll) <= delta) return;
+
+    if (menuOpen || currentScroll < prevScroll) {
+      $navTop.css("top", "0");
+    } else {
+      console.log("Hiding nav now");
+      $navTop.css("top", "-65");
+    }
+
+    prevScroll = currentScroll;
+  }
+
+  // $(window).on("scroll", function (e) {
+  //   if (menuOpen && window.innerWidth < 720) {
+  //     e.preventDefault();
+
+  //     return false;
+  //   }
+
+  //   let currentScroll = window.scrollY;
+
+  //   if (menuOpen || prevScroll > currentScroll) {
+  //     $(".top").css("top", "0");
+  //   } else {
+  //     $(".top").css("top", "-65");
+  //   }
+  //   prevScroll = currentScroll;
+  // });
 });

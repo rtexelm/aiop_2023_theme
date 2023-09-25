@@ -2,7 +2,8 @@
 
 nav.top {
   position: fixed;
-  transition: top 0.3s;
+  top: 0;
+  transition: top 0.3s ease-in-out;
   width: calc(100% - 3rem);
   z-index: 100;
   background-color: $neon-yellow;

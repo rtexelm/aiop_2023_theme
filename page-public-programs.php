@@ -51,7 +51,7 @@ get_header();
             <div class="date-time">
                 <div class="date">
                     <h4>Date</h4>
-                    <p>Friday, October 13th, 2023</p>
+                    <p>Saturday, October 14, 2023</p>
                 </div>
                 <div class="location">
                     <h4>Location</h4>
