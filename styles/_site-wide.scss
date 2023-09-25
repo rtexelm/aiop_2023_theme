@@ -2,9 +2,10 @@
 
 // Stop overscroll on all but Safari
 
-// html, body {
-//   overscroll-behavior-y: none;
-// }
+html,
+body {
+  overscroll-behavior-y: none;
+}
 
 body {
   background: $primary-orange;
@@ -335,10 +336,4 @@ div.button p {
 .stopScrollMenu {
   height: 100vh;
   overflow: hidden;
-}
-
-// Nav hide class
-
-.nav-hide {
-  top: -65;
 }

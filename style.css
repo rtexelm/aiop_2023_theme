@@ -9,6 +9,32 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: dress, orange
 Text Domain: aiop-dress
 */
+@keyframes slide-in {
+  from {
+    top: 10rem;
+    opacity: 0;
+  }
+  to {
+    top: 0px;
+    opacity: 1;
+  }
+}
+/*
+Theme Name: AiOP 2023 DRESS
+Theme URI: https://lauriewaxman.com
+Author: Laurie Waxman & Ross Mabbett
+Author URI: https://rossmabbett.com
+Description: The 2023 theme for Art in Odd Places
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: dress, orange
+Text Domain: aiop-dress
+*/
+html,
+body {
+  overscroll-behavior-y: none;
+}
+
 body {
   background: #f74500;
   color: #fff;
@@ -361,10 +387,17 @@ div.button p {
   overflow: hidden;
 }
 
-.nav-hide {
-  top: -65;
-}
-
+/*
+Theme Name: AiOP 2023 DRESS
+Theme URI: https://lauriewaxman.com
+Author: Laurie Waxman & Ross Mabbett
+Author URI: https://rossmabbett.com
+Description: The 2023 theme for Art in Odd Places
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: dress, orange
+Text Domain: aiop-dress
+*/
 nav.top {
   position: fixed;
   top: 0;
@@ -480,6 +513,20 @@ nav.top .menuFull ul#menu-full-navigation .submenu:not(.submenu ~ .submenu) {
   margin-top: -0.2rem;
 }
 
+/*
+Theme Name: AiOP 2023 DRESS
+Theme URI: https://lauriewaxman.com
+Author: Laurie Waxman & Ross Mabbett
+Author URI: https://rossmabbett.com
+Description: The 2023 theme for Art in Odd Places
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: dress, orange
+Text Domain: aiop-dress
+*/
+main.home * :not(.bg-wrapper, .page-down) {
+  animation: slide-in 1500ms forwards;
+}
 main.home .header {
   z-index: 0;
   position: relative;
@@ -666,6 +713,17 @@ main.home #artists .artists-buttons {
   grid-area: 2/3/3/13;
 }
 
+/*
+Theme Name: AiOP 2023 DRESS
+Theme URI: https://lauriewaxman.com
+Author: Laurie Waxman & Ross Mabbett
+Author URI: https://rossmabbett.com
+Description: The 2023 theme for Art in Odd Places
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: dress, orange
+Text Domain: aiop-dress
+*/
 main.about {
   position: relative;
 }
@@ -831,6 +889,17 @@ main.about .support .dedication {
   margin-bottom: 2rem;
 }
 
+/*
+Theme Name: AiOP 2023 DRESS
+Theme URI: https://lauriewaxman.com
+Author: Laurie Waxman & Ross Mabbett
+Author URI: https://rossmabbett.com
+Description: The 2023 theme for Art in Odd Places
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: dress, orange
+Text Domain: aiop-dress
+*/
 #artists-background {
   z-index: -10;
   position: fixed;
@@ -879,6 +948,17 @@ main.artist-listing section.artists .artist-copy {
   color: #000;
 }
 
+/*
+Theme Name: AiOP 2023 DRESS
+Theme URI: https://lauriewaxman.com
+Author: Laurie Waxman & Ross Mabbett
+Author URI: https://rossmabbett.com
+Description: The 2023 theme for Art in Odd Places
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: dress, orange
+Text Domain: aiop-dress
+*/
 main.artist-single {
   box-sizing: border-box;
   position: relative;
@@ -959,6 +1039,17 @@ nav.artist-nav .arrow.next {
   right: 0px;
 }
 
+/*
+Theme Name: AiOP 2023 DRESS
+Theme URI: https://lauriewaxman.com
+Author: Laurie Waxman & Ross Mabbett
+Author URI: https://rossmabbett.com
+Description: The 2023 theme for Art in Odd Places
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: dress, orange
+Text Domain: aiop-dress
+*/
 #schedule-background {
   z-index: -10;
   position: fixed;
@@ -1016,6 +1107,17 @@ main.schedule div.day .artist-container .button {
   margin-top: 0.5rem;
 }
 
+/*
+Theme Name: AiOP 2023 DRESS
+Theme URI: https://lauriewaxman.com
+Author: Laurie Waxman & Ross Mabbett
+Author URI: https://rossmabbett.com
+Description: The 2023 theme for Art in Odd Places
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: dress, orange
+Text Domain: aiop-dress
+*/
 #program-background {
   position: fixed;
   top: 0;
@@ -1062,6 +1164,17 @@ main.public-programs .program-container .time h4 {
   display: none;
 }
 
+/*
+Theme Name: AiOP 2023 DRESS
+Theme URI: https://lauriewaxman.com
+Author: Laurie Waxman & Ross Mabbett
+Author URI: https://rossmabbett.com
+Description: The 2023 theme for Art in Odd Places
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: dress, orange
+Text Domain: aiop-dress
+*/
 #press-bg {
   position: fixed;
   top: 0;
@@ -1110,6 +1223,17 @@ main.press section.press-posts .press-container a.button {
   color: #000;
 }
 
+/*
+Theme Name: AiOP 2023 DRESS
+Theme URI: https://lauriewaxman.com
+Author: Laurie Waxman & Ross Mabbett
+Author URI: https://rossmabbett.com
+Description: The 2023 theme for Art in Odd Places
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: dress, orange
+Text Domain: aiop-dress
+*/
 div#donate-bg {
   z-index: -10;
   position: fixed;
@@ -1144,6 +1268,17 @@ main.donate div.payment-method p {
   margin: 1rem 0;
 }
 
+/*
+Theme Name: AiOP 2023 DRESS
+Theme URI: https://lauriewaxman.com
+Author: Laurie Waxman & Ross Mabbett
+Author URI: https://rossmabbett.com
+Description: The 2023 theme for Art in Odd Places
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: dress, orange
+Text Domain: aiop-dress
+*/
 main.partners {
   width: calc(100% - 3rem);
   margin: 4rem 1.5rem 0 1.5rem;
@@ -1173,6 +1308,17 @@ main.partners .partner p {
   margin-bottom: 1.5rem;
 }
 
+/*
+Theme Name: AiOP 2023 DRESS
+Theme URI: https://lauriewaxman.com
+Author: Laurie Waxman & Ross Mabbett
+Author URI: https://rossmabbett.com
+Description: The 2023 theme for Art in Odd Places
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: dress, orange
+Text Domain: aiop-dress
+*/
 footer {
   box-sizing: border-box;
   background: #05633e;
@@ -1217,6 +1363,17 @@ footer .social .social-icon svg {
   height: auto;
 }
 
+/*
+Theme Name: AiOP 2023 DRESS
+Theme URI: https://lauriewaxman.com
+Author: Laurie Waxman & Ross Mabbett
+Author URI: https://rossmabbett.com
+Description: The 2023 theme for Art in Odd Places
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: dress, orange
+Text Domain: aiop-dress
+*/
 @media screen and (min-width: 720px) {
   h1,
   .h1 {
@@ -1893,6 +2050,17 @@ footer .social .social-icon svg {
     grid-column: 11/13;
   }
 }
+/*
+Theme Name: AiOP 2023 DRESS
+Theme URI: https://lauriewaxman.com
+Author: Laurie Waxman & Ross Mabbett
+Author URI: https://rossmabbett.com
+Description: The 2023 theme for Art in Odd Places
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: dress, orange
+Text Domain: aiop-dress
+*/
 @media screen and (min-width: 1080px) {
   h1,
   .h1 {
@@ -2048,6 +2216,17 @@ footer .social .social-icon svg {
     grid-column: 9/11;
   }
 }
+/*
+Theme Name: AiOP 2023 DRESS
+Theme URI: https://lauriewaxman.com
+Author: Laurie Waxman & Ross Mabbett
+Author URI: https://rossmabbett.com
+Description: The 2023 theme for Art in Odd Places
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: dress, orange
+Text Domain: aiop-dress
+*/
 @media screen and (min-width: 1400px) {
   h1,
   .h1,

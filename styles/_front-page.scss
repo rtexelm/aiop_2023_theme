@@ -1,6 +1,9 @@
 @use "constants" as *;
 
 main.home {
+  * :not(.bg-wrapper, .page-down) {
+    @include page-slide;
+  }
   .header {
     z-index: 0;
     position: relative;
