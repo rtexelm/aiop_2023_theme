@@ -52,7 +52,6 @@ jQuery(document).ready(function ($) {
       !$(e.target).closest($menuArea).length &&
       !$(e.target).closest($toggle).length
     ) {
-      console.log("CLOSE MENU from outside");
       menuOpen = !menuOpen;
       if (window.innerWidth < 720) {
         $menuArea.css("left", "140vw");
@@ -83,7 +82,6 @@ jQuery(document).ready(function ($) {
     if (menuOpen || currentScroll < prevScroll) {
       $navTop.css("top", "0");
     } else {
-      console.log("Hiding nav now");
       $navTop.css("top", "-65");
     }
 
