@@ -9,21 +9,21 @@
   .h2 {
     font-size: 3rem;
   }
-  h3,
-  .h3 {
-    font-size: 1.65rem;
-  }
-  h4,
-  .h4 {
-    font-size: 1.25rem;
-  }
+  // h3,
+  // .h3 {
+  //   font-size: 1.65rem;
+  // }
+  // h4,
+  // .h4 {
+  //   font-size: 1.25rem;
+  // }
 
-  .p1,
-  span.p1,
-  .p1r,
-  .p1 p {
-    font-size: 1.65rem;
-  }
+  // .p1,
+  // span.p1,
+  // .p1r,
+  // .p1 p {
+  //   font-size: 1.65rem;
+  // }
 
   .p2,
   span.p2,
@@ -36,6 +36,7 @@
 
   nav.top {
     padding: 0 3rem;
+    width: calc(100% - 6rem);
   }
 
   // Front Page ##########################################################
@@ -73,12 +74,30 @@
   main.about {
     .dress {
       @include padding-calc-3rem;
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+
+      background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.4) 0%,
+          rgba(0, 0, 0, 0.4) 100%
+        ),
+        url(assets/dress/tablet/about-header-2160w.jpg) fixed no-repeat;
+      background-blend-mode: overlay;
+      background-size: cover;
+      background-position-x: 50%;
     }
     .festival {
       @include padding-calc-3rem;
     }
     .people {
       @include padding-calc-3rem;
+      .staff-item {
+        grid-column: 2/11;
+      }
+      .thinkers {
+        grid-column: 5/11;
+      }
     }
     .partners {
       @include padding-calc-3rem;
@@ -123,6 +142,10 @@
     padding: 0 3rem;
 
     div.day {
+      .public-program {
+        min-height: 14rem;
+      }
+
       .pp-time,
       .artist-time {
         width: 5rem;

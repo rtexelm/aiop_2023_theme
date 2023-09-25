@@ -28,23 +28,3 @@ Text Domain: aiop-dress
 @use "styles/tablet720";
 @use "styles/laptop1080";
 @use "styles/desktop1400";
-
-main.maps {
-  width: calc(100% - 3rem);
-  margin: 4rem 1.5rem 0 1.5rem;
-  img.map {
-    width: 100%;
-    height: auto;
-  }
-  img.logo {
-    width: 6rem;
-    margin-bottom: 1rem;
-  }
-  p.h2,
-  img.map {
-    margin-bottom: 1rem;
-  }
-  div.partner {
-    margin-bottom: 4rem;
-  }
-}

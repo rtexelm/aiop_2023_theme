@@ -1,5 +1,11 @@
 @use "constants" as *;
 
+// Stop overscroll on all but Safari
+
+// html, body {
+//   overscroll-behavior-y: none;
+// }
+
 body {
   background: $primary-orange;
   color: $white;
@@ -327,5 +333,12 @@ div.button p {
 
 // Stop mobile scrolling on menu view
 .stopScrollMenu {
+  height: 100vh;
   overflow: hidden;
+}
+
+// Nav hide class
+
+.nav-hide {
+  top: -65;
 }

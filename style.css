@@ -357,12 +357,19 @@ div.button p {
 }
 
 .stopScrollMenu {
+  height: 100vh;
   overflow: hidden;
 }
 
+.nav-hide {
+  top: -65;
+}
+
 nav.top {
-  position: sticky;
-  transition: top 0.3s;
+  position: fixed;
+  top: 0;
+  transition: top 0.3s ease-in-out;
+  width: calc(100% - 3rem);
   z-index: 100;
   background-color: #f0fa00;
   padding: 0 1.5rem;
@@ -408,7 +415,8 @@ nav.top .menuFull {
   position: fixed;
   left: 140vw;
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
+  max-height: 100%;
   display: flex;
   flex-direction: column;
   transition: all 0.66s;
@@ -438,6 +446,7 @@ nav.top .menuFull .vert-stitch {
   bottom: 0;
 }
 nav.top .menuFull a {
+  color: #000;
   text-decoration: none;
 }
 nav.top .menuFull a:visited {
@@ -481,6 +490,12 @@ main.home .header {
   background: url(assets/dress/home-header-bg.png) fixed no-repeat;
   background-size: cover;
   background-position-x: 50%;
+}
+@supports (-webkit-touch-callout: none) {
+  main.home .header {
+    background: url(assets/dress/home-header-bg.png) top center no-repeat scroll;
+    background-size: cover;
+  }
 }
 main.home .header #pattern-r-top {
   z-index: 10;
@@ -665,6 +680,12 @@ main.about .dress {
   background-size: cover;
   background-position-x: 50%;
 }
+@supports (-webkit-touch-callout: none) {
+  main.about .dress {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url(assets/dress/about-header-1080w.jpg) top center no-repeat scroll;
+    background-size: cover;
+  }
+}
 main.about .dress .c-statement h2 {
   margin-bottom: 1rem;
 }
@@ -734,7 +755,11 @@ main.about .people h2 {
 main.about .people .thinkers {
   margin-top: 3rem;
 }
-main.about .people .staff-item {
+main.about .people .thinkers .thinkers-title {
+  margin-bottom: 0.5rem;
+}
+main.about .people .staff-item,
+main.about .people .thinker-item {
   margin-bottom: 1rem;
   border-top: 1px dashed #dadb0d;
   padding-top: 0.5rem;
@@ -745,6 +770,7 @@ main.about .partners {
 }
 main.about .partners::before {
   content: "";
+  z-index: -1;
   position: absolute;
   background-image: url(assets/dress/textures/fabric-texture_fine-knit.jpg);
   background-size: 40%;
@@ -755,9 +781,6 @@ main.about .partners::before {
   bottom: 0px;
   left: 0px;
   opacity: 0.3;
-}
-main.about .partners > * {
-  z-index: 10;
 }
 main.about .partners h2 {
   margin-bottom: 2rem;
@@ -793,7 +816,7 @@ main.about .support::before {
   right: 0px;
   bottom: 0px;
   left: 0px;
-  opacity: 0.3;
+  opacity: 0.25;
 }
 main.about .support > * {
   z-index: 10;
@@ -922,12 +945,6 @@ main.artist-single section.right .bios p {
   margin-top: 1rem;
   margin-bottom: 0.25rem;
 }
-main.artist-single section.right .bios a {
-  color: #c7a1d8;
-}
-main.artist-single section.right .bios a:visited {
-  color: #2c2c2c;
-}
 
 nav.artist-nav {
   position: relative;
@@ -950,7 +967,7 @@ nav.artist-nav .arrow.next {
   height: 100vh;
   background: url(assets/dress/textures/fabric-texture_terry.jpg);
   mix-blend-mode: multiply;
-  background-size: 35%;
+  background-size: 10%;
   opacity: 0.2;
 }
 
@@ -1074,7 +1091,7 @@ main.press section.press-posts {
   padding: 4rem 1.5rem;
 }
 main.press section.press-posts .press-container {
-  border-top: 1px dashed #f74500;
+  border-top: 1px dashed #810061;
   margin: 2rem 0;
 }
 main.press section.press-posts .press-container .press-publication {
@@ -1085,7 +1102,7 @@ main.press section.press-posts .press-container p.press-title {
 }
 main.press section.press-posts .press-container p.press-date {
   padding: 0.5rem 0;
-  border-top: 1px dashed #f74500;
+  border-top: 1px dashed #810061;
   margin-bottom: 0.5rem;
 }
 main.press section.press-posts .press-container a.button {
@@ -1497,12 +1514,13 @@ footer .social .social-icon svg {
     grid-row: 2;
     grid-column: 6/13;
   }
-  main.artist-single section.right .bios p {
+  main.artist-single section.right .bios p,
+  main.artist-single section.right .project p {
     margin-top: 2rem;
     margin-bottom: 0.75rem;
   }
   #schedule-background {
-    background-size: 35%;
+    background-size: 20%;
   }
   main.schedule {
     padding: 0 1.5rem;
@@ -1533,6 +1551,9 @@ footer .social .social-icon svg {
   }
   main.schedule div.day#saturday, main.schedule div.day#sunday {
     margin-top: 0;
+  }
+  main.schedule div.day .public-program {
+    min-height: 18rem;
   }
   main.schedule div.day .pp-time,
   main.schedule div.day .artist-time {
@@ -1774,6 +1795,9 @@ footer .social .social-icon svg {
     grid-column: 7/11;
     grid-row: 1/2;
   }
+  main.about .people .thinkers {
+    grid-column: 5/12;
+  }
   main.about .partners {
     padding-top: 4rem;
   }
@@ -1878,20 +1902,6 @@ footer .social .social-icon svg {
   .h2 {
     font-size: 3rem;
   }
-  h3,
-  .h3 {
-    font-size: 1.65rem;
-  }
-  h4,
-  .h4 {
-    font-size: 1.25rem;
-  }
-  .p1,
-  span.p1,
-  .p1r,
-  .p1 p {
-    font-size: 1.65rem;
-  }
   .p2,
   span.p2,
   .p2r,
@@ -1900,6 +1910,7 @@ footer .social .social-icon svg {
   }
   nav.top {
     padding: 0 3rem;
+    width: calc(100% - 6rem);
   }
   main.home .header #title {
     padding-left: 3rem;
@@ -1928,6 +1939,12 @@ footer .social .social-icon svg {
     padding-left: 3rem;
     padding-right: 3rem;
     width: calc(100% - 6rem);
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url(assets/dress/tablet/about-header-2160w.jpg) fixed no-repeat;
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position-x: 50%;
   }
   main.about .festival {
     padding-left: 3rem;
@@ -1938,6 +1955,12 @@ footer .social .social-icon svg {
     padding-left: 3rem;
     padding-right: 3rem;
     width: calc(100% - 6rem);
+  }
+  main.about .people .staff-item {
+    grid-column: 2/11;
+  }
+  main.about .people .thinkers {
+    grid-column: 5/11;
   }
   main.about .partners {
     padding-left: 3rem;
@@ -1970,6 +1993,9 @@ footer .social .social-icon svg {
   }
   main.schedule {
     padding: 0 3rem;
+  }
+  main.schedule div.day .public-program {
+    min-height: 14rem;
   }
   main.schedule div.day .pp-time,
   main.schedule div.day .artist-time {
@@ -2032,8 +2058,12 @@ footer .social .social-icon svg {
   .h3 {
     font-size: 2rem;
   }
+  h4,
+  .h4 {
+    font-size: 1.1rem;
+  }
   p {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
   }
   .p1,
   span.p1,
@@ -2062,8 +2092,8 @@ footer .social .social-icon svg {
   main.home #artists {
     padding-bottom: 10rem;
   }
-  #schedule-background {
-    background-size: 25%;
+  main.schedule div.day .public-program {
+    min-height: 16rem;
   }
   #artists-background::before {
     background-size: 30%;
@@ -2074,23 +2104,4 @@ footer .social .social-icon svg {
   #press-bg::before {
     background-size: 20%;
   }
-}
-main.maps {
-  width: calc(100% - 3rem);
-  margin: 4rem 1.5rem 0 1.5rem;
-}
-main.maps img.map {
-  width: 100%;
-  height: auto;
-}
-main.maps img.logo {
-  width: 6rem;
-  margin-bottom: 1rem;
-}
-main.maps p.h2,
-main.maps img.map {
-  margin-bottom: 1rem;
-}
-main.maps div.partner {
-  margin-bottom: 4rem;
 }/*# sourceMappingURL=style.css.map */

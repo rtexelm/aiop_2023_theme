@@ -1,67 +1,92 @@
 jQuery(document).ready(function ($) {
-  var menuOpen = false;
-  var prevScroll = window.scrollY;
-  var menuArea = $(".menuFull");
+  const $menuArea = $(".menuFull");
+  const $toggle = $("#menuToggleAnchor");
+  const $html = $("html");
+  const $body = $("body");
+  const onMobile = window.innerWidth < 720;
+  let menuOpen = false;
+
+  // Scroll variables
+
+  const $navTop = $("nav.top");
+  let scrollCheck;
+  let prevScroll = window.scrollY;
+  let delta = 5;
 
   // Menu toggle
+  // Prevent scrolling while menu open
 
-  $("#menuToggleAnchor").on("click", function (event) {
+  function toggleMenu() {
     menuOpen = !menuOpen;
-    console.log("MENU ANCHOR");
+    moveMenuPosition();
+    if (onMobile) $body.toggleClass("stopScrollMenu");
+  }
+
+  function moveMenuPosition() {
+    const screenSize = window.innerWidth;
+    let leftPos;
+
     if (menuOpen) {
-      console.log("OPEN MENU");
-      if (window.innerWidth < 720) {
-        $(".menuFull").css("left", "0");
-      } else if (window.innerWidth < 950) {
-        $(".menuFull").css("left", "69vw");
-      } else if (window.innerWidth < 1200) {
-        $(".menuFull").css("left", "75vw");
-      } else {
-        $(".menuFull").css("left", "78vw");
-      }
+      if (screenSize < 720) leftPos = "0";
+      else if (screenSize < 950) leftPos = "69vw";
+      else if (screenSize < 1200) leftPos = "75vw";
+      else leftPos = "78vw";
     } else {
-      console.log("CLOSE MENU");
-      if (window.innerWidth < 720) {
-        $(".menuFull").css("left", "140vw");
-      } else {
-        $(".menuFull").css("left", "120vw");
-      }
+      if (screenSize < 720) leftPos = "140vw";
+      else leftPos = "120vw";
     }
-  });
+
+    $menuArea.css("left", leftPos);
+  }
+
+  $toggle.on("click", toggleMenu);
+  $(window).on("resize", moveMenuPosition);
+
+  moveMenuPosition();
 
   // Menu close on outside click
 
   $(document).on("click", (e) => {
-    const toggle = $("#menuToggleAnchor");
     if (
       !!menuOpen &&
-      !$(e.target).closest(menuArea).length &&
-      !$(e.target).closest(toggle).length
+      !$(e.target).closest($menuArea).length &&
+      !$(e.target).closest($toggle).length
     ) {
       console.log("CLOSE MENU from outside");
       menuOpen = !menuOpen;
       if (window.innerWidth < 720) {
-        $(".menuFull").css("left", "140vw");
+        $menuArea.css("left", "140vw");
       } else {
-        $(".menuFull").css("left", "120vw");
+        $menuArea.css("left", "120vw");
       }
     }
   });
 
   // Hide nav on scroll
 
-  $(window).on("scroll", function () {
-    let currentScroll = window.scrollY;
-
-    if (menuOpen) {
-      return $(".top").css("top", "0");
-    }
-
-    if (prevScroll > currentScroll) {
-      $(".top").css("top", "0");
-    } else {
-      $(".top").css("top", "-65");
-    }
-    prevScroll = currentScroll;
+  $(window).on("scroll", function (e) {
+    scrollCheck = true;
   });
+
+  setInterval(function () {
+    if (scrollCheck) {
+      scrollAction();
+      scrollCheck = false;
+    }
+  }, 250);
+
+  function scrollAction() {
+    const currentScroll = window.scrollY;
+
+    if (Math.abs(prevScroll - currentScroll) <= delta) return;
+
+    if (menuOpen || currentScroll < prevScroll) {
+      $navTop.css("top", "0");
+    } else {
+      console.log("Hiding nav now");
+      $navTop.css("top", "-65");
+    }
+
+    prevScroll = currentScroll;
+  }
 });

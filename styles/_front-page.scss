@@ -12,6 +12,11 @@ main.home {
     background: url(assets/dress/home-header-bg.png) fixed no-repeat;
     background-size: cover;
     background-position-x: 50%;
+    @supports (-webkit-touch-callout: none) {
+      background: url(assets/dress/home-header-bg.png) top center no-repeat
+        scroll;
+      background-size: cover;
+    }
 
     #pattern-r-top {
       z-index: 10;

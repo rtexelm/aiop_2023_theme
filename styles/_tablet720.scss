@@ -335,7 +335,8 @@
     section.right {
       grid-row: 2;
       grid-column: 6/13;
-      .bios {
+      .bios,
+      .project {
         p {
           margin-top: 2rem;
           margin-bottom: 0.75rem;
@@ -347,7 +348,7 @@
   // Schedule Page ##################################################
 
   #schedule-background {
-    background-size: 35%;
+    background-size: 20%;
   }
   main.schedule {
     padding: 0 1.5rem;
@@ -374,6 +375,10 @@
       &#saturday,
       &#sunday {
         margin-top: 0;
+      }
+
+      .public-program {
+        min-height: 18rem;
       }
 
       .pp-time,
@@ -606,6 +611,9 @@
           grid-column: 7/11;
           grid-row: 1/2;
         }
+      }
+      .thinkers {
+        grid-column: 5/12;
       }
     }
 

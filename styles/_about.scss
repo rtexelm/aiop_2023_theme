@@ -20,6 +20,15 @@ main.about {
     background-blend-mode: overlay;
     background-size: cover;
     background-position-x: 50%;
+    @supports (-webkit-touch-callout: none) {
+      background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.4) 0%,
+          rgba(0, 0, 0, 0.4) 100%
+        ),
+        url(assets/dress/about-header-1080w.jpg) top center no-repeat scroll;
+      background-size: cover;
+    }
 
     .c-statement {
       h2 {
@@ -100,11 +109,15 @@ main.about {
     }
     .thinkers {
       margin-top: 3rem;
+      .thinkers-title {
+        margin-bottom: 0.5rem;
+      }
     }
 
     color: $black;
 
-    .staff-item {
+    .staff-item,
+    .thinker-item {
       margin-bottom: 1rem;
       border-top: 1px dashed $dadbod-yellow;
       padding-top: 0.5rem;
@@ -117,6 +130,9 @@ main.about {
 
     &::before {
       content: "";
+
+      // Z-index on children causing glitch with body background, necessitates a z-index on ::before
+      z-index: -1;
       position: absolute;
       background-image: url(assets/dress/textures/fabric-texture_fine-knit.jpg);
       background-size: 40%;
@@ -129,9 +145,11 @@ main.about {
       opacity: 0.3;
     }
 
-    & > * {
-      z-index: 10;
-    }
+    // The following works on every other section
+
+    // & > * {
+    //   z-index: 10;
+    // }
 
     h2 {
       margin-bottom: 2rem;
@@ -173,7 +191,7 @@ main.about {
       right: 0px;
       bottom: 0px;
       left: 0px;
-      opacity: 0.3;
+      opacity: 0.25;
     }
 
     & > * {
