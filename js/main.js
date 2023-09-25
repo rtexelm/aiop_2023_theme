@@ -9,6 +9,7 @@ jQuery(document).ready(function ($) {
   let prevScroll = window.scrollY;
 
   // Menu toggle
+  // Prevent scrolling while menu open
 
   function toggleMenu() {
     menuOpen = !menuOpen;
@@ -38,30 +39,6 @@ jQuery(document).ready(function ($) {
 
   moveMenuPosition();
 
-  // toggle.on("click", function (event) {
-  //   menuOpen = !menuOpen;
-  //   console.log("MENU ANCHOR");
-  //   if (menuOpen) {
-  //     console.log("OPEN MENU");
-  //     if (window.innerWidth < 720) {
-  //       $(".menuFull").css("left", "0");
-  //     } else if (window.innerWidth < 950) {
-  //       $(".menuFull").css("left", "69vw");
-  //     } else if (window.innerWidth < 1200) {
-  //       $(".menuFull").css("left", "75vw");
-  //     } else {
-  //       $(".menuFull").css("left", "78vw");
-  //     }
-  //   } else {
-  //     console.log("CLOSE MENU");
-  //     if (window.innerWidth < 720) {
-  //       $(".menuFull").css("left", "140vw");
-  //     } else {
-  //       $(".menuFull").css("left", "120vw");
-  //     }
-  //   }
-  // });
-
   // Menu close on outside click
 
   $(document).on("click", (e) => {
@@ -80,16 +57,6 @@ jQuery(document).ready(function ($) {
     }
   });
 
-  // Prevent scrolling while menu open (needs debugging)
-
-  // $(window).on("scroll", function (e) {
-  //   if (menuOpen && window.innerWidth < 720) {
-  //     $("body").css("overflow", "hidden");
-  //   } else {
-  //     $("body").css("overflow", "auto");
-  //   }
-  // });
-
   // Hide nav on scroll
 
   $(window).off("scroll");
@@ -98,13 +65,12 @@ jQuery(document).ready(function ($) {
     if (menuOpen && window.innerWidth < 720) {
       e.preventDefault();
 
-      console.log("No Scroll");
       return false;
     }
 
     let currentScroll = window.scrollY;
 
-    if (menuOpen || prevScroll > currentScroll) {
+    if (menuOpen || prevScroll - 65 > currentScroll) {
       $(".top").css("top", "0");
     } else {
       $(".top").css("top", "-65");
