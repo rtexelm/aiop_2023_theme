@@ -64,8 +64,6 @@ jQuery(document).ready(function ($) {
 
   // Hide nav on scroll
 
-  // $(window).off("scroll");
-
   $(window).on("scroll", function (e) {
     scrollCheck = true;
   });
@@ -91,21 +89,4 @@ jQuery(document).ready(function ($) {
 
     prevScroll = currentScroll;
   }
-
-  // $(window).on("scroll", function (e) {
-  //   if (menuOpen && window.innerWidth < 720) {
-  //     e.preventDefault();
-
-  //     return false;
-  //   }
-
-  //   let currentScroll = window.scrollY;
-
-  //   if (menuOpen || prevScroll > currentScroll) {
-  //     $(".top").css("top", "0");
-  //   } else {
-  //     $(".top").css("top", "-65");
-  //   }
-  //   prevScroll = currentScroll;
-  // });
 });
