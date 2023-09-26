@@ -101,6 +101,7 @@ get_header();
 
     </section>
 
+
     <div class="project-info-grid">
 
         <h3 class="project-artists"><?php echo $displayName ?></h3>
@@ -178,31 +179,14 @@ get_header();
     </div>
 
 </main>
-
 <nav class="artist-nav">
     <div class="arrow prev">
         <?php if($prevID): ?>
         <a href="<?= get_the_permalink($prevID) ?>" rel="prev">
-            <svg id="prev-artist" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.19 87.19" width="87.19"
-                height="87.19">
-                <defs>
-                    <style>
-                    .cls-prev-1 {
-                        stroke: #dadb0d;
-                        stroke-miterlimit: 10;
-                    }
-
-                    .cls-prev-1 {
-                        fill: none;
-                        stroke-linecap: round;
-                        stroke-width: 2px;
-                    }
-                    </style>
-                </defs>
-                <g id="prev-page-arrow">
-                    <line class="cls-prev-1" x1="48.3" y1="58.78" x2="19.68" y2="58.78" />
-                    <polyline class="cls-prev-1" points="26.2 52.26 19.68 58.78 26.23 65.33" />
-                </g>
+            <svg width="24" height="24" viewBox="0 0 24 24" transform="rotate(180)" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.8571 4L19 11M19 11L11.8571 18M19 11H3" stroke="white" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" />
             </svg>
         </a>
         <?php endif; ?>
@@ -210,33 +194,17 @@ get_header();
     <div class="arrow next">
         <?php if($nextID): ?>
         <a href="<?= get_the_permalink($nextID) ?>" rel="next">
-            <svg id="next-artist" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                viewBox="0 0 87.19 87.19" width="87.19" height="87.19">
-                <defs>
-                    <style>
-                    .cls-next-3 {
-                        stroke: #dadb0d;
-                        stroke-miterlimit: 10;
-                    }
-
-                    .cls-next-3 {
-                        fill: none;
-                        stroke-linecap: round;
-                        stroke-miterlimit: 10;
-                        stroke-width: 2px;
-                    }
-                    </style>
-                </defs>
-                <g id="next-page-arrow">
-                    <line class="cls-next-3" x1="38.89" y1="58.78" x2="67.51" y2="58.78" />
-                    <polyline class="cls-next-3" points="60.99 52.26 67.51 58.78 60.96 65.33" />
-                </g>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.8571 4L19 11M19 11L11.8571 18M19 11H3" stroke="white" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" />
             </svg>
         </a>
         <?php endif; ?>
     </div>
 
 </nav>
+
+
 
 <?php endif ?>
 <?php endwhile ?>

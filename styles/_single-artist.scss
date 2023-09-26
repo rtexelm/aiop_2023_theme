@@ -33,6 +33,7 @@ main.artist-single {
   }
 
   .project-info-grid {
+    position: relative;
     h3.project-artists {
       display: none;
     }
@@ -90,16 +91,9 @@ main.artist-single {
 }
 
 nav.artist-nav {
-  position: relative;
   display: flex;
   justify-content: space-between;
-  background: $primary-orange;
   .arrow {
-    &.prev {
-      left: 0px;
-    }
-    &.next {
-      right: 0px;
-    }
+    padding: 0.5rem;
   }
 }

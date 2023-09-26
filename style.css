@@ -991,6 +991,9 @@ main.artist-single .project-img img {
 main.artist-single .project-img h2.project-title {
   display: none;
 }
+main.artist-single .project-info-grid {
+  position: relative;
+}
 main.artist-single .project-info-grid h3.project-artists {
   display: none;
 }
@@ -1035,16 +1038,11 @@ main.artist-single section.right .bios p {
 }
 
 nav.artist-nav {
-  position: relative;
   display: flex;
   justify-content: space-between;
-  background: #f74500;
 }
-nav.artist-nav .arrow.prev {
-  left: 0px;
-}
-nav.artist-nav .arrow.next {
-  right: 0px;
+nav.artist-nav .arrow {
+  padding: 0.5rem;
 }
 
 /*
