@@ -42,6 +42,14 @@ body {
   margin: 0;
 }
 
+#spacer {
+  position: relative;
+  top: 0;
+  height: 46px;
+  background-color: #f0fa00;
+  transition: top 0.3s ease-in-out;
+}
+
 .d1,
 h1,
 .h1,
