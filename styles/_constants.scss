@@ -19,17 +19,17 @@ $seciton-padding-720: 5.5rem;
 
 @keyframes slide-in {
   from {
-    top: 10rem;
+    transform: translateY(10rem);
     opacity: 0;
   }
   to {
-    top: 0px;
+    transform: translateY(0);
     opacity: 1;
   }
 }
 
 @mixin page-slide {
-  animation: slide-in 1500ms forwards;
+  animation: slide-in 1500ms;
 }
 
 @mixin nav-links {
