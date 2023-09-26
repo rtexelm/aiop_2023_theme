@@ -149,7 +149,7 @@ get_header();
         <?php endwhile ?>
         <?php endif ?>
 
-        <section class="thinkers">
+        <div class="thinkers">
             <h3 class="thinkers-title">Thinkers in Residence</h3>
 
             <?php if($thinkerQuery->have_posts()): ?>
@@ -187,7 +187,7 @@ get_header();
 				?>
                 </div>
             </div>
-        </section>
+        </div>
         <?php endif ?>
         <?php endwhile ?>
         <?php wp_reset_postdata(); ?>
