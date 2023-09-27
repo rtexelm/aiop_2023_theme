@@ -1044,6 +1044,9 @@ nav.artist-nav {
 nav.artist-nav .arrow {
   padding: 0.5rem;
 }
+nav.artist-nav .prev {
+  transform: rotate(180deg);
+}
 
 /*
 Theme Name: AiOP 2023 DRESS
@@ -1604,7 +1607,7 @@ Text Domain: aiop-dress
   }
   main.artist-single .project-img img {
     margin: 0;
-    max-height: 90vh;
+    max-height: 100dvh;
     -o-object-fit: cover;
        object-fit: cover;
   }

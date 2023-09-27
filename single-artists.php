@@ -183,8 +183,7 @@ get_header();
     <div class="arrow prev">
         <?php if($prevID): ?>
         <a href="<?= get_the_permalink($prevID) ?>" rel="prev">
-            <svg width="24" height="24" viewBox="0 0 24 24" transform="rotate(180)" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M11.8571 4L19 11M19 11L11.8571 18M19 11H3" stroke="white" stroke-width="2"
                     stroke-linecap="round" stroke-linejoin="round" />
             </svg>

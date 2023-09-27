@@ -96,4 +96,7 @@ nav.artist-nav {
   .arrow {
     padding: 0.5rem;
   }
+  .prev {
+    transform: rotate(180deg);
+  }
 }
