@@ -1964,6 +1964,20 @@ Text Domain: aiop-dress
   main.about .people .thinkers {
     grid-column: 5/12;
   }
+  main.about .people .thinkers .thinker-item {
+    margin-bottom: 0.2rem;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+    align-items: baseline;
+  }
+  main.about .people .thinkers .thinker-item .thinker-name {
+    grid-column: 1/5;
+  }
+  main.about .people .thinkers .thinker-item .think-links {
+    grid-column: 5/8;
+  }
   main.about .partners {
     padding-top: 4rem;
   }
@@ -2134,10 +2148,10 @@ Text Domain: aiop-dress
     width: calc(100% - 6rem);
   }
   main.about .people .staff-item {
-    grid-column: 2/11;
+    grid-column: 2/12;
   }
   main.about .people .thinkers {
-    grid-column: 5/11;
+    grid-column: 5/12;
   }
   main.about .partners {
     padding-left: 3rem;

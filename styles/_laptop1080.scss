@@ -93,10 +93,12 @@
     .people {
       @include padding-calc-3rem;
       .staff-item {
-        grid-column: 2/11;
+        // grid-template-columns: repeat(9, 1fr);
+
+        grid-column: 2/12;
       }
       .thinkers {
-        grid-column: 5/11;
+        grid-column: 5/12;
       }
     }
     .partners {
