@@ -42,6 +42,14 @@ body {
   margin: 0;
 }
 
+#spacer {
+  position: relative;
+  top: 0;
+  height: 46px;
+  background-color: #f0fa00;
+  transition: top 0.3s ease-in-out;
+}
+
 .d1,
 h1,
 .h1,
@@ -983,6 +991,9 @@ main.artist-single .project-img img {
 main.artist-single .project-img h2.project-title {
   display: none;
 }
+main.artist-single .project-info-grid {
+  position: relative;
+}
 main.artist-single .project-info-grid h3.project-artists {
   display: none;
 }
@@ -1027,16 +1038,14 @@ main.artist-single section.right .bios p {
 }
 
 nav.artist-nav {
-  position: relative;
   display: flex;
   justify-content: space-between;
-  background: #f74500;
 }
-nav.artist-nav .arrow.prev {
-  left: 0px;
+nav.artist-nav .arrow {
+  padding: 0.5rem;
 }
-nav.artist-nav .arrow.next {
-  right: 0px;
+nav.artist-nav .prev {
+  transform: rotate(180deg);
 }
 
 /*
@@ -1598,7 +1607,7 @@ Text Domain: aiop-dress
   }
   main.artist-single .project-img img {
     margin: 0;
-    max-height: 90vh;
+    max-height: 100dvh;
     -o-object-fit: cover;
        object-fit: cover;
   }

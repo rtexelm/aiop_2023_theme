@@ -82,7 +82,7 @@ jQuery(document).ready(function ($) {
     if (menuOpen || currentScroll < prevScroll) {
       $navTop.css("top", "0");
     } else {
-      $navTop.css("top", "-65");
+      $navTop.css("top", "-46");
     }
 
     prevScroll = currentScroll;
