@@ -76,14 +76,14 @@ get_header();
                     ),
                     'order' => array(
                         'key' => 'order',
-                        'compare' => 'EXISTS', 
+                        'compare' => 'EXISTS',
                     ),
                     
                 ),
-                // 'meta_key' => 'order',
-                'orderby' => 'order',
+                'meta_key' => 'order',
+                'orderby' => 'meta_value_num',
                 'order'	=> 'ASC',
-                'posts_per_page' => -1
+                'posts_per_page' => -1,
             );
 
             $thinkerArgs = array(
@@ -99,9 +99,10 @@ get_header();
                         'compare' => 'EXISTS',
                     ),
                 ),
-                'orderby' => 'order',
+                'meta_key' => 'order',
+                'orderby' => 'meta_value_num',
                 'order' => 'ASC',
-                'posts_per_page' => -1
+                'posts_per_page' => -1,
                 );
 
             $staffQuery = new WP_Query($peopleArgs);
