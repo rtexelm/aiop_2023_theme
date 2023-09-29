@@ -887,6 +887,12 @@ main.about .support::before {
 main.about .support > * {
   z-index: 10;
 }
+main.about .support a {
+  color: #000;
+}
+main.about .support a:visited {
+  color: #443f43;
+}
 main.about .support h2 {
   margin-bottom: 2rem;
 }

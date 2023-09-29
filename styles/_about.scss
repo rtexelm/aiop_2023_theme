@@ -127,12 +127,6 @@ main.about {
   .partners {
     position: relative;
     padding: 4rem 1.5rem;
-    a {
-      color: $black;
-      &:visited {
-        color: #443f43;
-      }
-    }
 
     &::before {
       content: "";
@@ -202,6 +196,13 @@ main.about {
 
     & > * {
       z-index: 10;
+    }
+
+    a {
+      color: $black;
+      &:visited {
+        color: #443f43;
+      }
     }
 
     h2 {
