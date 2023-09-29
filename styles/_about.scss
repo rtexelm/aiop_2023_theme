@@ -127,6 +127,12 @@ main.about {
   .partners {
     position: relative;
     padding: 4rem 1.5rem;
+    a {
+      color: $black;
+      &:visited {
+        color: #443f43;
+      }
+    }
 
     &::before {
       content: "";
