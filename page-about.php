@@ -76,14 +76,14 @@ get_header();
                     ),
                     'order' => array(
                         'key' => 'order',
-                        'compare' => 'EXISTS', 
+                        'compare' => 'EXISTS',
                     ),
                     
                 ),
-                // 'meta_key' => 'order',
-                'orderby' => 'order',
+                'meta_key' => 'order',
+                'orderby' => 'meta_value_num',
                 'order'	=> 'ASC',
-                'posts_per_page' => -1
+                'posts_per_page' => -1,
             );
 
             $thinkerArgs = array(
@@ -99,9 +99,10 @@ get_header();
                         'compare' => 'EXISTS',
                     ),
                 ),
-                'orderby' => 'order',
+                'meta_key' => 'order',
+                'orderby' => 'meta_value_num',
                 'order' => 'ASC',
-                'posts_per_page' => -1
+                'posts_per_page' => -1,
                 );
 
             $staffQuery = new WP_Query($peopleArgs);
@@ -149,7 +150,7 @@ get_header();
         <?php endwhile ?>
         <?php endif ?>
 
-        <div class="thinkers">
+        <section class="thinkers">
             <h3 class="thinkers-title">Thinkers in Residence</h3>
 
             <?php if($thinkerQuery->have_posts()): ?>
@@ -172,7 +173,7 @@ get_header();
                 <div class="thinker-links">
                     <?php 
 				if($thinklink1){
-					echo "<a target='blank' href='" . esc_url($thinklink1['url']) . "'>" . esc_attr( $thinklink1['title'] ) . "</a>" . $thinkcommma1;
+					echo "<a target='blank' href='" . esc_url($thinklink1['url']) . "'>" . esc_attr( $thinklink1['title'] ) . "</a>" . $thinkcomma1;
 				}
 				?>
                     <?php 
@@ -187,11 +188,12 @@ get_header();
 				?>
                 </div>
             </div>
-        </div>
-        <?php endif ?>
-        <?php endwhile ?>
-        <?php wp_reset_postdata(); ?>
-        <?php endif ?>
+            <?php endif ?>
+            <?php endwhile ?>
+            <?php wp_reset_postdata(); ?>
+            <?php endif ?>
+
+        </section>
 
 
         <!-- Stitches -->
