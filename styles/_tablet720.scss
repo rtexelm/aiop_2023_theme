@@ -614,6 +614,9 @@
       }
       .thinkers {
         grid-column: 5/12;
+        .thinkers-title {
+          margin-bottom: 1rem;
+        }
         .thinker-item {
           margin-bottom: 0.3rem;
           display: grid;

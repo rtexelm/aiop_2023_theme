@@ -1970,6 +1970,9 @@ Text Domain: aiop-dress
   main.about .people .thinkers {
     grid-column: 5/12;
   }
+  main.about .people .thinkers .thinkers-title {
+    margin-bottom: 1rem;
+  }
   main.about .people .thinkers .thinker-item {
     margin-bottom: 0.3rem;
     display: grid;
