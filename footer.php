@@ -6,7 +6,7 @@
 		        <p>14th Street from Avenue C to the Hudson River</p>
 		    </div>
 		    <div class="footer-col" id="footer-people">
-		        <p><a href="https://gretchenvitamvas.com" target="_blank" rel="noopener noreferrer">Gretchen Vitamvas,</a>
+		        <p><a href="http://gretchenvitamvas.com" target="_blank" rel="noopener noreferrer">Gretchen Vitamvas,</a>
 		            </br>
 		            Curator
 		        </p>
